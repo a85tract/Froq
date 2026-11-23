@@ -1,0 +1,10 @@
+__pycache__/
+.venv/
+evaluation/out/
+runs/
+froq/schedules/mqt/*.lss
+froq/schedules/mqt/*.events.json
+froq/schedules/snippets_sx/23.json
+froq/schedules/snippets_sx/47.json
+froq/schedules/snippets_sx/95.json
+*.part

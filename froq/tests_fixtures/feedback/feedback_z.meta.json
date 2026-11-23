@@ -1,0 +1,1013 @@
+{
+ "argv": [
+  "<scratch>/scoutq_v9/w10/tools/liblsqecc_w10/build/lsqecc_slicer",
+  "-q",
+  "-i",
+  "e2e/tests_fixtures/feedback/feedback_z.qasm",
+  "-L",
+  "edpc",
+  "--disttime",
+  "1",
+  "--nostagger",
+  "-P",
+  "wave",
+  "-o",
+  "e2e/tests_fixtures/feedback/feedback_z.slices.json",
+  "--metaout",
+  "e2e/tests_fixtures/feedback/feedback_z.meta.json"
+ ],
+ "compiler": {
+  "base_commit": "e88b1a4",
+  "fork": "liblsqecc_scoutq"
+ },
+ "core_qubits": [
+  0,
+  1,
+  2
+ ],
+ "flags": {
+  "cnot_ancilla_placement_default": "AncillaNextToTarget",
+  "cnot_ancilla_placement_default_note": "value after the layout override; the parser preloads the first gate before the override, so an unannotated first CNOT keeps the built-in default AncillaFreePlacement",
+  "cnot_corrections": "never",
+  "cnot_type_default": "ZXWithMBMControlFirst",
+  "compilation_mode": "nonlocal",
+  "condensed": false,
+  "disttime": 1,
+  "explicitfactories": false,
+  "input_is_qasm": true,
+  "layout": "edpc",
+  "nostagger": true,
+  "numlanes": 1,
+  "op_ids_legacy": false,
+  "pipeline": "wave",
+  "rzprecision_log_ten_negative": "10.000000",
+  "s_gate_mode": "twists"
+ },
+ "gates": [
+  {
+   "annotations": [],
+   "gate_idx": 0,
+   "is_dagger": false,
+   "name": "h",
+   "qubits": [
+    2
+   ]
+  },
+  {
+   "annotations": [],
+   "creg": "m",
+   "gate_idx": 1,
+   "is_dagger": false,
+   "name": "measure",
+   "observable": "Z",
+   "qubits": [
+    2
+   ],
+   "register": "q"
+  },
+  {
+   "annotations": [],
+   "gate_idx": 2,
+   "is_dagger": false,
+   "name": "t",
+   "qubits": [
+    0
+   ]
+  },
+  {
+   "annotations": [
+    "ZXWithMBMControlFirst",
+    "AncillaNextToTarget"
+   ],
+   "classical_control": {
+    "register": "m",
+    "value": 1
+   },
+   "gate_idx": 3,
+   "is_dagger": false,
+   "name": "cz",
+   "qubits": [
+    0,
+    1
+   ]
+  },
+  {
+   "annotations": [],
+   "gate_idx": 4,
+   "is_dagger": false,
+   "name": "h",
+   "qubits": [
+    1
+   ]
+  }
+ ],
+ "lli": [
+  {
+   "app_seq": 0,
+   "applications": 1,
+   "clients": [],
+   "idx": 0,
+   "is_dagger": false,
+   "op": "Gate",
+   "patches": [
+    2
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 0,
+    "gadget_kind": "H",
+    "gate_idx": 0,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "single_qubit_op": "H",
+   "slice": 0
+  },
+  {
+   "app_seq": 1,
+   "applications": 1,
+   "clients": [],
+   "idx": 1,
+   "op": "RotateSingleCellPatch",
+   "patches": [
+    2
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 0,
+    "gadget_kind": "H",
+    "gate_idx": 0,
+    "is_dagger": false,
+    "role": "boundary_rotation"
+   },
+   "slice": 0
+  },
+  {
+   "app_seq": 12,
+   "applications": 1,
+   "clients": [],
+   "idx": 2,
+   "is_negative": false,
+   "observable": {
+    "2": "Z"
+   },
+   "op": "MeasureSinglePatch",
+   "patches": [
+    2
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 1,
+    "gadget_kind": "MEASURE",
+    "gate_idx": 1,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 3
+  },
+  {
+   "app_seq": 3,
+   "applications": 1,
+   "clients": [
+    0
+   ],
+   "idx": 3,
+   "near_patch": 0,
+   "op": "RequestMagicState",
+   "patches": [
+    0,
+    3
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 2,
+    "gadget_kind": "T",
+    "gate_idx": 2,
+    "is_dagger": false,
+    "role": "resource"
+   },
+   "slice": 1,
+   "state": "Magic"
+  },
+  {
+   "app_seq": 4,
+   "applications": 1,
+   "clients": [],
+   "idx": 4,
+   "is_negative": false,
+   "observable": {
+    "0": "Z",
+    "3": "Z"
+   },
+   "op": "MultiBodyMeasure",
+   "patches": [
+    0,
+    3
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 2,
+    "gadget_kind": "T",
+    "gate_idx": 2,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 1
+  },
+  {
+   "app_seq": 5,
+   "applications": 1,
+   "clients": [],
+   "idx": 5,
+   "is_negative": false,
+   "observable": {
+    "3": "X"
+   },
+   "op": "MeasureSinglePatch",
+   "patches": [
+    3
+   ],
+   "provenance": {
+    "frame": "S_t^u Z_t^w (u = ZZ(t,magic) result, w = this X readout); the compiler emits the S unconditionally",
+    "gadget_id": 2,
+    "gadget_kind": "T",
+    "gate_idx": 2,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 1
+  },
+  {
+   "app_seq": 6,
+   "applications": 1,
+   "clients": [
+    0
+   ],
+   "idx": 6,
+   "near_patch": 0,
+   "op": "RequestYState",
+   "patches": [
+    0,
+    4
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 2,
+    "gadget_kind": "T",
+    "gate_idx": 2,
+    "is_dagger": false,
+    "role": "s_gadget_member"
+   },
+   "slice": 1,
+   "state": "Y"
+  },
+  {
+   "app_seq": 8,
+   "applications": 1,
+   "clients": [],
+   "idx": 7,
+   "is_negative": false,
+   "observable": {
+    "0": "Z",
+    "4": "Z"
+   },
+   "op": "MultiBodyMeasure",
+   "patches": [
+    4,
+    0
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 2,
+    "gadget_kind": "T",
+    "gate_idx": 2,
+    "is_dagger": false,
+    "role": "s_gadget_member"
+   },
+   "slice": 2
+  },
+  {
+   "app_seq": 9,
+   "applications": 1,
+   "clients": [],
+   "idx": 8,
+   "is_negative": false,
+   "observable": {
+    "4": "X"
+   },
+   "op": "MeasureSinglePatch",
+   "patches": [
+    4
+   ],
+   "provenance": {
+    "frame": "Z_t^(u xor w) (u = ZZ(y,t) result, w = this X readout of the Y state); the compiler emits the Z unconditionally",
+    "gadget_id": 2,
+    "gadget_kind": "T",
+    "gate_idx": 2,
+    "is_dagger": false,
+    "role": "s_gadget_member"
+   },
+   "slice": 2
+  },
+  {
+   "app_seq": 11,
+   "applications": 1,
+   "clients": [],
+   "idx": 9,
+   "is_dagger": false,
+   "op": "Gate",
+   "patches": [
+    0
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 2,
+    "gadget_kind": "T",
+    "gate_idx": 2,
+    "is_dagger": false,
+    "role": "s_gadget_member"
+   },
+   "single_qubit_op": "Z",
+   "slice": 3
+  },
+  {
+   "app_seq": 13,
+   "applications": 1,
+   "classical_deps": [
+    2
+   ],
+   "clients": [],
+   "idx": 10,
+   "is_dagger": false,
+   "op": "Gate",
+   "patches": [
+    1
+   ],
+   "provenance": {
+    "condition": {
+     "gate_idx": 1,
+     "patch": 2,
+     "register": "m"
+    },
+    "frame": "",
+    "gadget_id": 3,
+    "gadget_kind": "CZ",
+    "gate_idx": 3,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "single_qubit_op": "H",
+   "slice": 4
+  },
+  {
+   "app_seq": 14,
+   "applications": 1,
+   "classical_deps": [
+    2
+   ],
+   "clients": [],
+   "idx": 11,
+   "op": "RotateSingleCellPatch",
+   "patches": [
+    1
+   ],
+   "provenance": {
+    "condition": {
+     "gate_idx": 1,
+     "patch": 2,
+     "register": "m"
+    },
+    "frame": "",
+    "gadget_id": 3,
+    "gadget_kind": "CZ",
+    "gate_idx": 3,
+    "is_dagger": false,
+    "role": "boundary_rotation"
+   },
+   "slice": 4
+  },
+  {
+   "app_seq": 18,
+   "applications": 1,
+   "classical_deps": [
+    2
+   ],
+   "clients": [
+    0,
+    1
+   ],
+   "idx": 12,
+   "op": "Init",
+   "patches": [
+    0,
+    1,
+    5
+   ],
+   "place_next_to": {
+    "id": 1,
+    "op": "X"
+   },
+   "provenance": {
+    "condition": {
+     "gate_idx": 1,
+     "patch": 2,
+     "register": "m"
+    },
+    "frame": "",
+    "gadget_id": 3,
+    "gadget_kind": "CZ",
+    "gate_idx": 3,
+    "is_dagger": false,
+    "role": "mediator"
+   },
+   "slice": 7,
+   "state": "Plus"
+  },
+  {
+   "app_seq": 19,
+   "applications": 1,
+   "classical_deps": [
+    2
+   ],
+   "clients": [],
+   "idx": 13,
+   "is_negative": false,
+   "observable": {
+    "0": "Z",
+    "5": "Z"
+   },
+   "op": "MultiBodyMeasure",
+   "patches": [
+    0,
+    5
+   ],
+   "provenance": {
+    "condition": {
+     "gate_idx": 1,
+     "patch": 2,
+     "register": "m"
+    },
+    "frame": "",
+    "gadget_id": 3,
+    "gadget_kind": "CZ",
+    "gate_idx": 3,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 7
+  },
+  {
+   "app_seq": 20,
+   "applications": 1,
+   "classical_deps": [
+    2
+   ],
+   "clients": [],
+   "idx": 14,
+   "is_negative": false,
+   "observable": {
+    "1": "X",
+    "5": "X"
+   },
+   "op": "MultiBodyMeasure",
+   "patches": [
+    5,
+    1
+   ],
+   "provenance": {
+    "condition": {
+     "gate_idx": 1,
+     "patch": 2,
+     "register": "m"
+    },
+    "frame": "",
+    "gadget_id": 3,
+    "gadget_kind": "CZ",
+    "gate_idx": 3,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 8
+  },
+  {
+   "app_seq": 21,
+   "applications": 1,
+   "classical_deps": [
+    2
+   ],
+   "clients": [],
+   "idx": 15,
+   "is_negative": false,
+   "observable": {
+    "5": "Z"
+   },
+   "op": "MeasureSinglePatch",
+   "patches": [
+    5
+   ],
+   "provenance": {
+    "condition": {
+     "gate_idx": 1,
+     "patch": 2,
+     "register": "m"
+    },
+    "frame": "Z_c^v X_t^(u xor w) (u = Z_c Z_a result, v = X_a X_t result, w = this Z readout of the mediator)",
+    "gadget_id": 3,
+    "gadget_kind": "CZ",
+    "gate_idx": 3,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 8
+  },
+  {
+   "app_seq": 22,
+   "applications": 1,
+   "classical_deps": [
+    2
+   ],
+   "clients": [],
+   "idx": 16,
+   "is_dagger": false,
+   "op": "Gate",
+   "patches": [
+    1
+   ],
+   "provenance": {
+    "condition": {
+     "gate_idx": 1,
+     "patch": 2,
+     "register": "m"
+    },
+    "frame": "",
+    "gadget_id": 3,
+    "gadget_kind": "CZ",
+    "gate_idx": 3,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "single_qubit_op": "H",
+   "slice": 9
+  },
+  {
+   "app_seq": 23,
+   "applications": 1,
+   "classical_deps": [
+    2
+   ],
+   "clients": [],
+   "idx": 17,
+   "op": "RotateSingleCellPatch",
+   "patches": [
+    1
+   ],
+   "provenance": {
+    "condition": {
+     "gate_idx": 1,
+     "patch": 2,
+     "register": "m"
+    },
+    "frame": "",
+    "gadget_id": 3,
+    "gadget_kind": "CZ",
+    "gate_idx": 3,
+    "is_dagger": false,
+    "role": "boundary_rotation"
+   },
+   "slice": 9
+  },
+  {
+   "app_seq": 27,
+   "applications": 1,
+   "clients": [],
+   "idx": 18,
+   "is_dagger": false,
+   "op": "Gate",
+   "patches": [
+    1
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 4,
+    "gadget_kind": "H",
+    "gate_idx": 4,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "single_qubit_op": "H",
+   "slice": 13
+  },
+  {
+   "app_seq": 28,
+   "applications": 1,
+   "clients": [],
+   "idx": 19,
+   "op": "RotateSingleCellPatch",
+   "patches": [
+    1
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 4,
+    "gadget_kind": "H",
+    "gate_idx": 4,
+    "is_dagger": false,
+    "role": "boundary_rotation"
+   },
+   "slice": 13
+  },
+  {
+   "app_seq": 2,
+   "applications": 1,
+   "cells": [
+    {
+     "col": 2,
+     "row": 4
+    },
+    {
+     "col": 3,
+     "row": 4
+    }
+   ],
+   "clients": [],
+   "idx": 20,
+   "op": "BusyRegion",
+   "patches": [
+    2
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 0,
+    "gadget_kind": "H",
+    "gate_idx": 0,
+    "is_dagger": false,
+    "role": "busy_region"
+   },
+   "slice": 1,
+   "steps_to_clear": 2
+  },
+  {
+   "app_seq": 7,
+   "applications": 1,
+   "cells": [
+    {
+     "col": 2,
+     "row": 4
+    },
+    {
+     "col": 3,
+     "row": 4
+    }
+   ],
+   "clients": [],
+   "idx": 21,
+   "op": "BusyRegion",
+   "patches": [
+    2
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 0,
+    "gadget_kind": "H",
+    "gate_idx": 0,
+    "is_dagger": false,
+    "role": "busy_region"
+   },
+   "slice": 2,
+   "steps_to_clear": 1
+  },
+  {
+   "app_seq": 10,
+   "applications": 1,
+   "cells": [
+    {
+     "col": 2,
+     "row": 4
+    },
+    {
+     "col": 3,
+     "row": 4
+    }
+   ],
+   "clients": [],
+   "idx": 22,
+   "op": "BusyRegion",
+   "patches": [
+    2
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 0,
+    "gadget_kind": "H",
+    "gate_idx": 0,
+    "is_dagger": false,
+    "role": "busy_region"
+   },
+   "slice": 3,
+   "steps_to_clear": 0
+  },
+  {
+   "app_seq": 15,
+   "applications": 1,
+   "cells": [
+    {
+     "col": 4,
+     "row": 2
+    },
+    {
+     "col": 5,
+     "row": 2
+    }
+   ],
+   "clients": [],
+   "idx": 23,
+   "op": "BusyRegion",
+   "patches": [
+    1
+   ],
+   "provenance": {
+    "condition": {
+     "gate_idx": 1,
+     "patch": 2,
+     "register": "m"
+    },
+    "frame": "",
+    "gadget_id": 3,
+    "gadget_kind": "CZ",
+    "gate_idx": 3,
+    "is_dagger": false,
+    "role": "busy_region"
+   },
+   "slice": 5,
+   "steps_to_clear": 2
+  },
+  {
+   "app_seq": 16,
+   "applications": 1,
+   "cells": [
+    {
+     "col": 4,
+     "row": 2
+    },
+    {
+     "col": 5,
+     "row": 2
+    }
+   ],
+   "clients": [],
+   "idx": 24,
+   "op": "BusyRegion",
+   "patches": [
+    1
+   ],
+   "provenance": {
+    "condition": {
+     "gate_idx": 1,
+     "patch": 2,
+     "register": "m"
+    },
+    "frame": "",
+    "gadget_id": 3,
+    "gadget_kind": "CZ",
+    "gate_idx": 3,
+    "is_dagger": false,
+    "role": "busy_region"
+   },
+   "slice": 6,
+   "steps_to_clear": 1
+  },
+  {
+   "app_seq": 17,
+   "applications": 1,
+   "cells": [
+    {
+     "col": 4,
+     "row": 2
+    },
+    {
+     "col": 5,
+     "row": 2
+    }
+   ],
+   "clients": [],
+   "idx": 25,
+   "op": "BusyRegion",
+   "patches": [
+    1
+   ],
+   "provenance": {
+    "condition": {
+     "gate_idx": 1,
+     "patch": 2,
+     "register": "m"
+    },
+    "frame": "",
+    "gadget_id": 3,
+    "gadget_kind": "CZ",
+    "gate_idx": 3,
+    "is_dagger": false,
+    "role": "busy_region"
+   },
+   "slice": 7,
+   "steps_to_clear": 0
+  },
+  {
+   "app_seq": 24,
+   "applications": 1,
+   "cells": [
+    {
+     "col": 4,
+     "row": 2
+    },
+    {
+     "col": 5,
+     "row": 2
+    }
+   ],
+   "clients": [],
+   "idx": 26,
+   "op": "BusyRegion",
+   "patches": [
+    1
+   ],
+   "provenance": {
+    "condition": {
+     "gate_idx": 1,
+     "patch": 2,
+     "register": "m"
+    },
+    "frame": "",
+    "gadget_id": 3,
+    "gadget_kind": "CZ",
+    "gate_idx": 3,
+    "is_dagger": false,
+    "role": "busy_region"
+   },
+   "slice": 10,
+   "steps_to_clear": 2
+  },
+  {
+   "app_seq": 25,
+   "applications": 1,
+   "cells": [
+    {
+     "col": 4,
+     "row": 2
+    },
+    {
+     "col": 5,
+     "row": 2
+    }
+   ],
+   "clients": [],
+   "idx": 27,
+   "op": "BusyRegion",
+   "patches": [
+    1
+   ],
+   "provenance": {
+    "condition": {
+     "gate_idx": 1,
+     "patch": 2,
+     "register": "m"
+    },
+    "frame": "",
+    "gadget_id": 3,
+    "gadget_kind": "CZ",
+    "gate_idx": 3,
+    "is_dagger": false,
+    "role": "busy_region"
+   },
+   "slice": 11,
+   "steps_to_clear": 1
+  },
+  {
+   "app_seq": 26,
+   "applications": 1,
+   "cells": [
+    {
+     "col": 4,
+     "row": 2
+    },
+    {
+     "col": 5,
+     "row": 2
+    }
+   ],
+   "clients": [],
+   "idx": 28,
+   "op": "BusyRegion",
+   "patches": [
+    1
+   ],
+   "provenance": {
+    "condition": {
+     "gate_idx": 1,
+     "patch": 2,
+     "register": "m"
+    },
+    "frame": "",
+    "gadget_id": 3,
+    "gadget_kind": "CZ",
+    "gate_idx": 3,
+    "is_dagger": false,
+    "role": "busy_region"
+   },
+   "slice": 12,
+   "steps_to_clear": 0
+  },
+  {
+   "app_seq": 29,
+   "applications": 1,
+   "cells": [
+    {
+     "col": 4,
+     "row": 2
+    },
+    {
+     "col": 5,
+     "row": 2
+    }
+   ],
+   "clients": [],
+   "idx": 29,
+   "op": "BusyRegion",
+   "patches": [
+    1
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 4,
+    "gadget_kind": "H",
+    "gate_idx": 4,
+    "is_dagger": false,
+    "role": "busy_region"
+   },
+   "slice": 14,
+   "steps_to_clear": 2
+  },
+  {
+   "app_seq": 30,
+   "applications": 1,
+   "cells": [
+    {
+     "col": 4,
+     "row": 2
+    },
+    {
+     "col": 5,
+     "row": 2
+    }
+   ],
+   "clients": [],
+   "idx": 30,
+   "op": "BusyRegion",
+   "patches": [
+    1
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 4,
+    "gadget_kind": "H",
+    "gate_idx": 4,
+    "is_dagger": false,
+    "role": "busy_region"
+   },
+   "slice": 15,
+   "steps_to_clear": 1
+  },
+  {
+   "app_seq": 31,
+   "applications": 1,
+   "cells": [
+    {
+     "col": 4,
+     "row": 2
+    },
+    {
+     "col": 5,
+     "row": 2
+    }
+   ],
+   "clients": [],
+   "idx": 31,
+   "op": "BusyRegion",
+   "patches": [
+    1
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 4,
+    "gadget_kind": "H",
+    "gate_idx": 4,
+    "is_dagger": false,
+    "role": "busy_region"
+   },
+   "slice": 16,
+   "steps_to_clear": 0
+  }
+ ],
+ "ls_instructions_count": 32,
+ "schema": "scoutq-lsqecc-meta-1",
+ "slice_count": 18
+}

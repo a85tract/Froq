@@ -1,0 +1,35 @@
+\begin{figure}[t]
+\centering
+\resizebox{\columnwidth}{!}{%
+\begin{tikzpicture}
+\begin{axis}[width=0.56\columnwidth, height=2.9cm, scale only axis,
+  yticklabel pos=right, yticklabel style={font=\footnotesize, align=left},
+  xmin=-0.5, xmax=13.5, ymin=0.4, ymax=8.6,
+  xtick={0,3,6,9,12}, xticklabels={0\%,3\%,6\%,9\%,12\%},
+  xticklabel style={font=\footnotesize},
+  ytick={1,...,8},
+  yticklabels={slowest decodes mispredicted, mispredictions $\times 1{,}000$, reported error $\times 10$,
+    published 128 rounds later, no predictions, decode time $\times 0.125$, controller 4$\times$ slower,
+    reference},
+  major y tick style={draw=none},
+  axis line style={cMute}, tick style={cMute}, xmajorgrids, grid style={cGrid,line width=0.3pt}]
+  \draw[cInk,line width=0.6pt] (axis cs:0,0.4) -- (axis cs:0,8.6);
+  \draw[cMute,dashed,line width=0.5pt] (axis cs:11.11,0.4) -- (axis cs:11.11,8.6);
+  \addplot+[only marks, mark=*, mark size=1.4pt, color=cBlue, mark options={fill=cBlue},
+    error bars/.cd, x dir=both, x explicit, error bar style={line width=0.5pt}]
+    table[row sep=\\, x=r, y=y, x error plus expr=\thisrow{hi}-\thisrow{r}, x error minus expr=\thisrow{r}-\thisrow{lo}] {
+    y r lo hi \\
+    8 11.11 10.64 11.57 \\
+    7 11.56 11.41 11.71 \\
+    6 3.50 3.26 3.73 \\
+    5 7.01 6.70 7.31 \\
+    4 7.23 6.97 7.48 \\
+    3 11.11 10.64 11.57 \\
+    2 9.15 8.26 10.04 \\
+    1 11.04 10.52 11.55 \\
+  };
+\end{axis}
+\end{tikzpicture}}
+\caption{Sensitivity of \sys{}'s reduction of quantum-side time against SWIPER alone at the most extreme setting of each stress, with $95\%$ intervals. Higher is better. The dashed line shows the reference.}
+\label{fig:stress}
+\end{figure}

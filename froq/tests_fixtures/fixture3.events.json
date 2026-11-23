@@ -1,0 +1,1426 @@
+{
+ "header": {
+  "bench": "fixture3",
+  "program_wires": [
+   "q0",
+   "q1",
+   "q2"
+  ],
+  "conventions": {
+   "bit0": "+1 eigenvalue of the signed observable",
+   "durations": "symbolic D / HALF_D / HALF_D_PLUS_2 as in the .lss"
+  },
+  "template_inventory": [
+   "CNOT_cf_patched",
+   "H",
+   "S",
+   "T"
+  ],
+  "generator": "e2e/tests_fixtures/make_fixture.py"
+ },
+ "events": [
+  {
+   "event_id": "init_q0",
+   "kind": "init",
+   "deps": [],
+   "gadget": null,
+   "lifetime": "L_q0",
+   "wire": "q0",
+   "state": "Zero",
+   "role": "program",
+   "cells": [
+    [
+     0,
+     0
+    ]
+   ],
+   "slice": 0
+  },
+  {
+   "event_id": "io_in_q0",
+   "kind": "io",
+   "deps": [
+    {
+     "on": "init_q0",
+     "kind": "quantum"
+    }
+   ],
+   "gadget": null,
+   "io_kind": "input",
+   "wire": "q0"
+  },
+  {
+   "event_id": "init_q1",
+   "kind": "init",
+   "deps": [],
+   "gadget": null,
+   "lifetime": "L_q1",
+   "wire": "q1",
+   "state": "Zero",
+   "role": "program",
+   "cells": [
+    [
+     0,
+     2
+    ]
+   ],
+   "slice": 0
+  },
+  {
+   "event_id": "io_in_q1",
+   "kind": "io",
+   "deps": [
+    {
+     "on": "init_q1",
+     "kind": "quantum"
+    }
+   ],
+   "gadget": null,
+   "io_kind": "input",
+   "wire": "q1"
+  },
+  {
+   "event_id": "init_q2",
+   "kind": "init",
+   "deps": [],
+   "gadget": null,
+   "lifetime": "L_q2",
+   "wire": "q2",
+   "state": "Zero",
+   "role": "program",
+   "cells": [
+    [
+     0,
+     4
+    ]
+   ],
+   "slice": 0
+  },
+  {
+   "event_id": "io_in_q2",
+   "kind": "io",
+   "deps": [
+    {
+     "on": "init_q2",
+     "kind": "quantum"
+    }
+   ],
+   "gadget": null,
+   "io_kind": "input",
+   "wire": "q2"
+  },
+  {
+   "event_id": "g_T0_res_init",
+   "kind": "init",
+   "deps": [],
+   "gadget": "g_T0",
+   "lifetime": "L_r0",
+   "wire": "r0",
+   "state": "T",
+   "role": "resource",
+   "cells": [
+    [
+     1,
+     0
+    ]
+   ]
+  },
+  {
+   "event_id": "g_T0_zz",
+   "kind": "measure_product",
+   "deps": [
+    {
+     "on": "init_q0",
+     "kind": "quantum"
+    },
+    {
+     "on": "g_T0_res_init",
+     "kind": "quantum"
+    }
+   ],
+   "gadget": "g_T0",
+   "signed_observable": {
+    "q0": "Z",
+    "r0": "Z"
+   },
+   "sign": 1,
+   "result_id": "u0",
+   "lifetimes": [
+    "L_q0",
+    "L_r0"
+   ],
+   "cells": [
+    [
+     0,
+     0
+    ],
+    [
+     1,
+     0
+    ]
+   ]
+  },
+  {
+   "event_id": "g_T0_xread",
+   "kind": "measure_single",
+   "deps": [
+    {
+     "on": "g_T0_zz",
+     "kind": "quantum"
+    }
+   ],
+   "gadget": "g_T0",
+   "wire": "r0",
+   "observable": "X",
+   "sign": 1,
+   "result_id": "w0",
+   "destructive": true
+  },
+  {
+   "event_id": "g_T0_res_discard",
+   "kind": "discard",
+   "deps": [
+    {
+     "on": "g_T0_xread",
+     "kind": "quantum"
+    }
+   ],
+   "gadget": "g_T0",
+   "lifetime": "L_r0",
+   "wire": "r0",
+   "discard_kind": "measured"
+  },
+  {
+   "event_id": "g_T0_S_res_init",
+   "kind": "init",
+   "deps": [
+    {
+     "on": "g_T0_res_discard",
+     "kind": "physical"
+    }
+   ],
+   "gadget": "g_T0_S",
+   "lifetime": "L_y0",
+   "wire": "y0",
+   "state": "Y",
+   "role": "resource",
+   "cells": [
+    [
+     1,
+     0
+    ]
+   ]
+  },
+  {
+   "event_id": "g_T0_S_zz",
+   "kind": "measure_product",
+   "deps": [
+    {
+     "on": "g_T0_zz",
+     "kind": "quantum"
+    },
+    {
+     "on": "g_T0_S_res_init",
+     "kind": "quantum"
+    },
+    {
+     "on": "g_T0_zz",
+     "kind": "classical"
+    }
+   ],
+   "gadget": "g_T0_S",
+   "signed_observable": {
+    "q0": "Z",
+    "y0": "Z"
+   },
+   "sign": 1,
+   "result_id": "u0s",
+   "lifetimes": [
+    "L_q0",
+    "L_y0"
+   ],
+   "cells": [
+    [
+     0,
+     0
+    ],
+    [
+     1,
+     0
+    ]
+   ],
+   "predicate": {
+    "xor": [
+     "u0"
+    ]
+   }
+  },
+  {
+   "event_id": "g_T0_S_xread",
+   "kind": "measure_single",
+   "deps": [
+    {
+     "on": "g_T0_S_zz",
+     "kind": "quantum"
+    }
+   ],
+   "gadget": "g_T0_S",
+   "wire": "y0",
+   "observable": "X",
+   "sign": 1,
+   "result_id": "w0s",
+   "destructive": true,
+   "predicate": {
+    "xor": [
+     "u0"
+    ]
+   }
+  },
+  {
+   "event_id": "g_T0_S_target_busy",
+   "kind": "busy_region",
+   "deps": [
+    {
+     "on": "g_T0_S_zz",
+     "kind": "quantum"
+    }
+   ],
+   "gadget": "g_T0_S",
+   "lifetime": "L_q0",
+   "cells": [
+    [
+     0,
+     0
+    ]
+   ],
+   "duration": "HALF_D_PLUS_2",
+   "reason": "S gadget target idle",
+   "predicate": {
+    "xor": [
+     "u0"
+    ]
+   }
+  },
+  {
+   "event_id": "g_T0_S_res_discard",
+   "kind": "discard",
+   "deps": [
+    {
+     "on": "g_T0_S_xread",
+     "kind": "quantum"
+    }
+   ],
+   "gadget": "g_T0_S",
+   "lifetime": "L_y0",
+   "wire": "y0",
+   "discard_kind": "measured",
+   "predicate": {
+    "xor": [
+     "u0"
+    ]
+   }
+  },
+  {
+   "event_id": "g_T0_S_frame",
+   "kind": "frame_update",
+   "deps": [
+    {
+     "on": "g_T0_S_target_busy",
+     "kind": "quantum"
+    },
+    {
+     "on": "g_T0_S_zz",
+     "kind": "classical"
+    },
+    {
+     "on": "g_T0_S_xread",
+     "kind": "classical"
+    }
+   ],
+   "gadget": "g_T0_S",
+   "wire": "q0",
+   "pauli": "Z",
+   "predicate": {
+    "xor": [
+     "u0s",
+     "w0s"
+    ]
+   }
+  },
+  {
+   "event_id": "g_T0_frame",
+   "kind": "frame_update",
+   "deps": [
+    {
+     "on": "g_T0_S_frame",
+     "kind": "quantum"
+    },
+    {
+     "on": "g_T0_xread",
+     "kind": "classical"
+    }
+   ],
+   "gadget": "g_T0",
+   "wire": "q0",
+   "pauli": "Z",
+   "predicate": {
+    "xor": [
+     "w0"
+    ]
+   }
+  },
+  {
+   "event_id": "g_CX0_med_init",
+   "kind": "init",
+   "deps": [],
+   "gadget": "g_CX0",
+   "lifetime": "L_a0",
+   "wire": "a0",
+   "state": "Plus",
+   "role": "mediator",
+   "cells": [
+    [
+     0,
+     1
+    ]
+   ]
+  },
+  {
+   "event_id": "g_CX0_zz",
+   "kind": "measure_product",
+   "deps": [
+    {
+     "on": "g_T0_frame",
+     "kind": "quantum"
+    },
+    {
+     "on": "g_CX0_med_init",
+     "kind": "quantum"
+    }
+   ],
+   "gadget": "g_CX0",
+   "signed_observable": {
+    "q0": "Z",
+    "a0": "Z"
+   },
+   "sign": 1,
+   "result_id": "cu0",
+   "lifetimes": [
+    "L_q0",
+    "L_a0"
+   ],
+   "cells": [
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     1
+    ]
+   ]
+  },
+  {
+   "event_id": "g_CX0_xx",
+   "kind": "measure_product",
+   "deps": [
+    {
+     "on": "g_CX0_zz",
+     "kind": "quantum"
+    },
+    {
+     "on": "init_q1",
+     "kind": "quantum"
+    }
+   ],
+   "gadget": "g_CX0",
+   "signed_observable": {
+    "a0": "X",
+    "q1": "X"
+   },
+   "sign": 1,
+   "result_id": "cv0",
+   "lifetimes": [
+    "L_a0",
+    "L_q1"
+   ],
+   "cells": [
+    [
+     0,
+     1
+    ],
+    [
+     0,
+     2
+    ]
+   ]
+  },
+  {
+   "event_id": "g_CX0_zread",
+   "kind": "measure_single",
+   "deps": [
+    {
+     "on": "g_CX0_xx",
+     "kind": "quantum"
+    }
+   ],
+   "gadget": "g_CX0",
+   "wire": "a0",
+   "observable": "Z",
+   "sign": 1,
+   "result_id": "cw0",
+   "destructive": true
+  },
+  {
+   "event_id": "g_CX0_med_discard",
+   "kind": "discard",
+   "deps": [
+    {
+     "on": "g_CX0_zread",
+     "kind": "quantum"
+    }
+   ],
+   "gadget": "g_CX0",
+   "lifetime": "L_a0",
+   "wire": "a0",
+   "discard_kind": "measured"
+  },
+  {
+   "event_id": "g_CX0_frame_c",
+   "kind": "frame_update",
+   "deps": [
+    {
+     "on": "g_CX0_zz",
+     "kind": "quantum"
+    },
+    {
+     "on": "g_CX0_xx",
+     "kind": "classical"
+    }
+   ],
+   "gadget": "g_CX0",
+   "wire": "q0",
+   "pauli": "Z",
+   "predicate": {
+    "xor": [
+     "cv0"
+    ]
+   }
+  },
+  {
+   "event_id": "g_CX0_frame_t",
+   "kind": "frame_update",
+   "deps": [
+    {
+     "on": "g_CX0_xx",
+     "kind": "quantum"
+    },
+    {
+     "on": "g_CX0_zz",
+     "kind": "classical"
+    },
+    {
+     "on": "g_CX0_zread",
+     "kind": "classical"
+    }
+   ],
+   "gadget": "g_CX0",
+   "wire": "q1",
+   "pauli": "X",
+   "predicate": {
+    "xor": [
+     "cu0",
+     "cw0"
+    ]
+   }
+  },
+  {
+   "event_id": "g_H0_rotate",
+   "kind": "rotate_boundary",
+   "deps": [
+    {
+     "on": "g_CX0_frame_c",
+     "kind": "quantum"
+    }
+   ],
+   "gadget": "g_H0",
+   "lifetime": "L_q0",
+   "busy_region": [
+    [
+     0,
+     0
+    ]
+   ],
+   "duration": "D",
+   "from_orientation": "ZX",
+   "to_orientation": "XZ"
+  },
+  {
+   "event_id": "g_H0_clifford",
+   "kind": "clifford",
+   "deps": [
+    {
+     "on": "g_H0_rotate",
+     "kind": "quantum"
+    }
+   ],
+   "gadget": "g_H0",
+   "wires": [
+    "q0"
+   ],
+   "gate": "H"
+  },
+  {
+   "event_id": "g_CX1_med_init",
+   "kind": "init",
+   "deps": [],
+   "gadget": "g_CX1",
+   "lifetime": "L_a1",
+   "wire": "a1",
+   "state": "Plus",
+   "role": "mediator",
+   "cells": [
+    [
+     0,
+     3
+    ]
+   ]
+  },
+  {
+   "event_id": "g_CX1_zz",
+   "kind": "measure_product",
+   "deps": [
+    {
+     "on": "g_CX0_frame_t",
+     "kind": "quantum"
+    },
+    {
+     "on": "g_CX1_med_init",
+     "kind": "quantum"
+    }
+   ],
+   "gadget": "g_CX1",
+   "signed_observable": {
+    "q1": "Z",
+    "a1": "Z"
+   },
+   "sign": 1,
+   "result_id": "cu1",
+   "lifetimes": [
+    "L_q1",
+    "L_a1"
+   ],
+   "cells": [
+    [
+     0,
+     2
+    ],
+    [
+     0,
+     3
+    ]
+   ]
+  },
+  {
+   "event_id": "g_CX1_xx",
+   "kind": "measure_product",
+   "deps": [
+    {
+     "on": "g_CX1_zz",
+     "kind": "quantum"
+    },
+    {
+     "on": "init_q2",
+     "kind": "quantum"
+    }
+   ],
+   "gadget": "g_CX1",
+   "signed_observable": {
+    "a1": "X",
+    "q2": "X"
+   },
+   "sign": 1,
+   "result_id": "cv1",
+   "lifetimes": [
+    "L_a1",
+    "L_q2"
+   ],
+   "cells": [
+    [
+     0,
+     3
+    ],
+    [
+     0,
+     4
+    ]
+   ]
+  },
+  {
+   "event_id": "g_CX1_zread",
+   "kind": "measure_single",
+   "deps": [
+    {
+     "on": "g_CX1_xx",
+     "kind": "quantum"
+    }
+   ],
+   "gadget": "g_CX1",
+   "wire": "a1",
+   "observable": "Z",
+   "sign": 1,
+   "result_id": "cw1",
+   "destructive": true
+  },
+  {
+   "event_id": "g_CX1_med_discard",
+   "kind": "discard",
+   "deps": [
+    {
+     "on": "g_CX1_zread",
+     "kind": "quantum"
+    }
+   ],
+   "gadget": "g_CX1",
+   "lifetime": "L_a1",
+   "wire": "a1",
+   "discard_kind": "measured"
+  },
+  {
+   "event_id": "g_CX1_frame_c",
+   "kind": "frame_update",
+   "deps": [
+    {
+     "on": "g_CX1_zz",
+     "kind": "quantum"
+    },
+    {
+     "on": "g_CX1_xx",
+     "kind": "classical"
+    }
+   ],
+   "gadget": "g_CX1",
+   "wire": "q1",
+   "pauli": "Z",
+   "predicate": {
+    "xor": [
+     "cv1"
+    ]
+   }
+  },
+  {
+   "event_id": "g_CX1_frame_t",
+   "kind": "frame_update",
+   "deps": [
+    {
+     "on": "g_CX1_xx",
+     "kind": "quantum"
+    },
+    {
+     "on": "g_CX1_zz",
+     "kind": "classical"
+    },
+    {
+     "on": "g_CX1_zread",
+     "kind": "classical"
+    }
+   ],
+   "gadget": "g_CX1",
+   "wire": "q2",
+   "pauli": "X",
+   "predicate": {
+    "xor": [
+     "cu1",
+     "cw1"
+    ]
+   }
+  },
+  {
+   "event_id": "g_T1_res_init",
+   "kind": "init",
+   "deps": [],
+   "gadget": "g_T1",
+   "lifetime": "L_r1",
+   "wire": "r1",
+   "state": "T",
+   "role": "resource",
+   "cells": [
+    [
+     1,
+     2
+    ]
+   ]
+  },
+  {
+   "event_id": "g_T1_zz",
+   "kind": "measure_product",
+   "deps": [
+    {
+     "on": "g_CX1_frame_c",
+     "kind": "quantum"
+    },
+    {
+     "on": "g_T1_res_init",
+     "kind": "quantum"
+    }
+   ],
+   "gadget": "g_T1",
+   "signed_observable": {
+    "q1": "Z",
+    "r1": "Z"
+   },
+   "sign": 1,
+   "result_id": "u1",
+   "lifetimes": [
+    "L_q1",
+    "L_r1"
+   ],
+   "cells": [
+    [
+     0,
+     2
+    ],
+    [
+     1,
+     2
+    ]
+   ]
+  },
+  {
+   "event_id": "g_T1_xread",
+   "kind": "measure_single",
+   "deps": [
+    {
+     "on": "g_T1_zz",
+     "kind": "quantum"
+    }
+   ],
+   "gadget": "g_T1",
+   "wire": "r1",
+   "observable": "X",
+   "sign": 1,
+   "result_id": "w1",
+   "destructive": true
+  },
+  {
+   "event_id": "g_T1_res_discard",
+   "kind": "discard",
+   "deps": [
+    {
+     "on": "g_T1_xread",
+     "kind": "quantum"
+    }
+   ],
+   "gadget": "g_T1",
+   "lifetime": "L_r1",
+   "wire": "r1",
+   "discard_kind": "measured"
+  },
+  {
+   "event_id": "g_T1_S_res_init",
+   "kind": "init",
+   "deps": [
+    {
+     "on": "g_T1_res_discard",
+     "kind": "physical"
+    }
+   ],
+   "gadget": "g_T1_S",
+   "lifetime": "L_y1",
+   "wire": "y1",
+   "state": "Y",
+   "role": "resource",
+   "cells": [
+    [
+     1,
+     2
+    ]
+   ]
+  },
+  {
+   "event_id": "g_T1_S_zz",
+   "kind": "measure_product",
+   "deps": [
+    {
+     "on": "g_T1_zz",
+     "kind": "quantum"
+    },
+    {
+     "on": "g_T1_S_res_init",
+     "kind": "quantum"
+    },
+    {
+     "on": "g_T1_zz",
+     "kind": "classical"
+    }
+   ],
+   "gadget": "g_T1_S",
+   "signed_observable": {
+    "q1": "Z",
+    "y1": "Z"
+   },
+   "sign": 1,
+   "result_id": "u1s",
+   "lifetimes": [
+    "L_q1",
+    "L_y1"
+   ],
+   "cells": [
+    [
+     0,
+     2
+    ],
+    [
+     1,
+     2
+    ]
+   ],
+   "predicate": {
+    "xor": [
+     "u1"
+    ]
+   }
+  },
+  {
+   "event_id": "g_T1_S_xread",
+   "kind": "measure_single",
+   "deps": [
+    {
+     "on": "g_T1_S_zz",
+     "kind": "quantum"
+    }
+   ],
+   "gadget": "g_T1_S",
+   "wire": "y1",
+   "observable": "X",
+   "sign": 1,
+   "result_id": "w1s",
+   "destructive": true,
+   "predicate": {
+    "xor": [
+     "u1"
+    ]
+   }
+  },
+  {
+   "event_id": "g_T1_S_target_busy",
+   "kind": "busy_region",
+   "deps": [
+    {
+     "on": "g_T1_S_zz",
+     "kind": "quantum"
+    }
+   ],
+   "gadget": "g_T1_S",
+   "lifetime": "L_q1",
+   "cells": [
+    [
+     0,
+     2
+    ]
+   ],
+   "duration": "HALF_D_PLUS_2",
+   "reason": "S gadget target idle",
+   "predicate": {
+    "xor": [
+     "u1"
+    ]
+   }
+  },
+  {
+   "event_id": "g_T1_S_res_discard",
+   "kind": "discard",
+   "deps": [
+    {
+     "on": "g_T1_S_xread",
+     "kind": "quantum"
+    }
+   ],
+   "gadget": "g_T1_S",
+   "lifetime": "L_y1",
+   "wire": "y1",
+   "discard_kind": "measured",
+   "predicate": {
+    "xor": [
+     "u1"
+    ]
+   }
+  },
+  {
+   "event_id": "g_T1_S_frame",
+   "kind": "frame_update",
+   "deps": [
+    {
+     "on": "g_T1_S_target_busy",
+     "kind": "quantum"
+    },
+    {
+     "on": "g_T1_S_zz",
+     "kind": "classical"
+    },
+    {
+     "on": "g_T1_S_xread",
+     "kind": "classical"
+    }
+   ],
+   "gadget": "g_T1_S",
+   "wire": "q1",
+   "pauli": "Z",
+   "predicate": {
+    "xor": [
+     "u1s",
+     "w1s"
+    ]
+   }
+  },
+  {
+   "event_id": "g_T1_frame",
+   "kind": "frame_update",
+   "deps": [
+    {
+     "on": "g_T1_S_frame",
+     "kind": "quantum"
+    },
+    {
+     "on": "g_T1_xread",
+     "kind": "classical"
+    }
+   ],
+   "gadget": "g_T1",
+   "wire": "q1",
+   "pauli": "Z",
+   "predicate": {
+    "xor": [
+     "w1"
+    ]
+   }
+  },
+  {
+   "event_id": "meas_q0",
+   "kind": "measure_single",
+   "deps": [
+    {
+     "on": "g_H0_clifford",
+     "kind": "quantum"
+    }
+   ],
+   "gadget": null,
+   "wire": "q0",
+   "observable": "Z",
+   "sign": 1,
+   "result_id": "m0",
+   "destructive": true
+  },
+  {
+   "event_id": "discard_q0",
+   "kind": "discard",
+   "deps": [
+    {
+     "on": "meas_q0",
+     "kind": "quantum"
+    }
+   ],
+   "gadget": null,
+   "lifetime": "L_q0",
+   "wire": "q0",
+   "discard_kind": "measured"
+  },
+  {
+   "event_id": "io_out_q0",
+   "kind": "io",
+   "deps": [
+    {
+     "on": "meas_q0",
+     "kind": "classical"
+    }
+   ],
+   "gadget": null,
+   "io_kind": "output",
+   "wire": "q0",
+   "commit_event": "meas_q0"
+  },
+  {
+   "event_id": "meas_q1",
+   "kind": "measure_single",
+   "deps": [
+    {
+     "on": "g_T1_frame",
+     "kind": "quantum"
+    }
+   ],
+   "gadget": null,
+   "wire": "q1",
+   "observable": "Z",
+   "sign": 1,
+   "result_id": "m1",
+   "destructive": true
+  },
+  {
+   "event_id": "discard_q1",
+   "kind": "discard",
+   "deps": [
+    {
+     "on": "meas_q1",
+     "kind": "quantum"
+    }
+   ],
+   "gadget": null,
+   "lifetime": "L_q1",
+   "wire": "q1",
+   "discard_kind": "measured"
+  },
+  {
+   "event_id": "io_out_q1",
+   "kind": "io",
+   "deps": [
+    {
+     "on": "meas_q1",
+     "kind": "classical"
+    }
+   ],
+   "gadget": null,
+   "io_kind": "output",
+   "wire": "q1",
+   "commit_event": "meas_q1"
+  },
+  {
+   "event_id": "meas_q2",
+   "kind": "measure_single",
+   "deps": [
+    {
+     "on": "g_CX1_frame_t",
+     "kind": "quantum"
+    }
+   ],
+   "gadget": null,
+   "wire": "q2",
+   "observable": "Z",
+   "sign": 1,
+   "result_id": "m2",
+   "destructive": true
+  },
+  {
+   "event_id": "discard_q2",
+   "kind": "discard",
+   "deps": [
+    {
+     "on": "meas_q2",
+     "kind": "quantum"
+    }
+   ],
+   "gadget": null,
+   "lifetime": "L_q2",
+   "wire": "q2",
+   "discard_kind": "measured"
+  },
+  {
+   "event_id": "io_out_q2",
+   "kind": "io",
+   "deps": [
+    {
+     "on": "meas_q2",
+     "kind": "classical"
+    }
+   ],
+   "gadget": null,
+   "io_kind": "output",
+   "wire": "q2",
+   "commit_event": "meas_q2"
+  }
+ ],
+ "gadgets": {
+  "g_T0_S": {
+   "gadget_id": "g_T0_S",
+   "template_id": "S",
+   "events": [
+    "g_T0_S_res_init",
+    "g_T0_S_zz",
+    "g_T0_S_xread",
+    "g_T0_S_target_busy",
+    "g_T0_S_res_discard",
+    "g_T0_S_frame"
+   ],
+   "inputs": {
+    "q": "q0"
+   },
+   "outputs": {
+    "q": "q0"
+   },
+   "result_bits": {
+    "u": "u0s",
+    "w": "w0s"
+   },
+   "predicate": {
+    "xor": [
+     "u0"
+    ]
+   },
+   "parent": "g_T0"
+  },
+  "g_T0": {
+   "gadget_id": "g_T0",
+   "template_id": "T",
+   "events": [
+    "g_T0_res_init",
+    "g_T0_zz",
+    "g_T0_xread",
+    "g_T0_res_discard",
+    "g_T0_S",
+    "g_T0_frame"
+   ],
+   "inputs": {
+    "q": "q0"
+   },
+   "outputs": {
+    "q": "q0"
+   },
+   "result_bits": {
+    "u": "u0",
+    "w": "w0"
+   },
+   "predicate": null,
+   "parent": null
+  },
+  "g_CX0": {
+   "gadget_id": "g_CX0",
+   "template_id": "CNOT_cf_patched",
+   "events": [
+    "g_CX0_med_init",
+    "g_CX0_zz",
+    "g_CX0_xx",
+    "g_CX0_zread",
+    "g_CX0_med_discard",
+    "g_CX0_frame_c",
+    "g_CX0_frame_t"
+   ],
+   "inputs": {
+    "c": "q0",
+    "t": "q1"
+   },
+   "outputs": {
+    "c": "q0",
+    "t": "q1"
+   },
+   "result_bits": {
+    "u": "cu0",
+    "v": "cv0",
+    "w": "cw0"
+   },
+   "predicate": null,
+   "parent": null
+  },
+  "g_H0": {
+   "gadget_id": "g_H0",
+   "template_id": "H",
+   "events": [
+    "g_H0_rotate",
+    "g_H0_clifford"
+   ],
+   "inputs": {
+    "q": "q0"
+   },
+   "outputs": {
+    "q": "q0"
+   },
+   "result_bits": {},
+   "predicate": null,
+   "parent": null
+  },
+  "g_CX1": {
+   "gadget_id": "g_CX1",
+   "template_id": "CNOT_cf_patched",
+   "events": [
+    "g_CX1_med_init",
+    "g_CX1_zz",
+    "g_CX1_xx",
+    "g_CX1_zread",
+    "g_CX1_med_discard",
+    "g_CX1_frame_c",
+    "g_CX1_frame_t"
+   ],
+   "inputs": {
+    "c": "q1",
+    "t": "q2"
+   },
+   "outputs": {
+    "c": "q1",
+    "t": "q2"
+   },
+   "result_bits": {
+    "u": "cu1",
+    "v": "cv1",
+    "w": "cw1"
+   },
+   "predicate": null,
+   "parent": null
+  },
+  "g_T1_S": {
+   "gadget_id": "g_T1_S",
+   "template_id": "S",
+   "events": [
+    "g_T1_S_res_init",
+    "g_T1_S_zz",
+    "g_T1_S_xread",
+    "g_T1_S_target_busy",
+    "g_T1_S_res_discard",
+    "g_T1_S_frame"
+   ],
+   "inputs": {
+    "q": "q1"
+   },
+   "outputs": {
+    "q": "q1"
+   },
+   "result_bits": {
+    "u": "u1s",
+    "w": "w1s"
+   },
+   "predicate": {
+    "xor": [
+     "u1"
+    ]
+   },
+   "parent": "g_T1"
+  },
+  "g_T1": {
+   "gadget_id": "g_T1",
+   "template_id": "T",
+   "events": [
+    "g_T1_res_init",
+    "g_T1_zz",
+    "g_T1_xread",
+    "g_T1_res_discard",
+    "g_T1_S",
+    "g_T1_frame"
+   ],
+   "inputs": {
+    "q": "q1"
+   },
+   "outputs": {
+    "q": "q1"
+   },
+   "result_bits": {
+    "u": "u1",
+    "w": "w1"
+   },
+   "predicate": null,
+   "parent": null
+  }
+ },
+ "lss_map": {
+  "init_q0": [
+   0
+  ],
+  "init_q1": [
+   1
+  ],
+  "init_q2": [
+   2
+  ],
+  "g_T0_res_init": [
+   3
+  ],
+  "g_T0_zz": [
+   4
+  ],
+  "g_T0_xread": [
+   5
+  ],
+  "g_T0_res_discard": [
+   5
+  ],
+  "g_T0_S_res_init": [
+   6
+  ],
+  "g_T0_S_zz": [
+   6
+  ],
+  "g_T0_S_xread": [
+   7
+  ],
+  "g_T0_S_target_busy": [
+   8
+  ],
+  "g_T0_S_res_discard": [
+   9
+  ],
+  "g_CX0_med_init": [
+   10
+  ],
+  "g_CX0_zz": [
+   10
+  ],
+  "g_CX0_xx": [
+   11
+  ],
+  "g_CX0_zread": [
+   12
+  ],
+  "g_CX0_med_discard": [
+   12
+  ],
+  "g_H0_rotate": [
+   13
+  ],
+  "g_CX1_med_init": [
+   14
+  ],
+  "g_CX1_zz": [
+   14
+  ],
+  "g_CX1_xx": [
+   15
+  ],
+  "g_CX1_zread": [
+   16
+  ],
+  "g_CX1_med_discard": [
+   16
+  ],
+  "g_T1_res_init": [
+   17
+  ],
+  "g_T1_zz": [
+   18
+  ],
+  "g_T1_xread": [
+   19
+  ],
+  "g_T1_res_discard": [
+   19
+  ],
+  "g_T1_S_res_init": [
+   20
+  ],
+  "g_T1_S_zz": [
+   20
+  ],
+  "g_T1_S_xread": [
+   21
+  ],
+  "g_T1_S_target_busy": [
+   22
+  ],
+  "g_T1_S_res_discard": [
+   23
+  ],
+  "meas_q0": [
+   24
+  ],
+  "discard_q0": [
+   24
+  ],
+  "meas_q1": [
+   25
+  ],
+  "discard_q1": [
+   25
+  ],
+  "meas_q2": [
+   26
+  ],
+  "discard_q2": [
+   26
+  ]
+ }
+}

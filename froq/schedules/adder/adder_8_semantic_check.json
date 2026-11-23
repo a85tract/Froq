@@ -1,0 +1,29 @@
+{
+ "bits": 8,
+ "n_qubits": 23,
+ "measurements": 7,
+ "branches": 128,
+ "branches_total": 128,
+ "inputs": [
+  "random:0 (64 terms)",
+  "random:1 (64 terms)",
+  "random:2 (64 terms)",
+  "random:3 (64 terms)"
+ ],
+ "worst_branch_fidelity": 0.9999999999999996,
+ "worst_branch_probability_deviation": 3.642919299551295e-17,
+ "max_terms": 64,
+ "negative_control_worst_register_fidelity": 0.07373046874999978,
+ "simulator": "sparse",
+ "PASS": true,
+ "source": "e2e/schedules/adder/adder_8.events.json",
+ "ops": {
+  "cx": 81,
+  "cz_if": 7,
+  "h": 21,
+  "measure": 7,
+  "s": 21,
+  "t": 28,
+  "z": 14
+ }
+}

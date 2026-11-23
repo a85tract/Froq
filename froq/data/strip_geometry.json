@@ -1,0 +1,103 @@
+{
+ "check": {
+  "class_changes": 0,
+  "largest_count_error": 0.03195,
+  "windows": 528
+ },
+ "densities": {
+  "13": {
+   "CNOTt_far": 61.531,
+   "CNOTt_near": 145.048,
+   "CNOTt_post": 38.98,
+   "SH_far": 88.781,
+   "SH_nearH": 170.846,
+   "SH_nearS": 261.468,
+   "SH_post": 169.501,
+   "T_near": 58.154,
+   "T_pre": 42.0,
+   "hist": 49.0,
+   "max_far": 88.781,
+   "max_near": 261.468,
+   "max_post": 169.501,
+   "merge": 109.667,
+   "pre": 98.0
+  },
+  "17": {
+   "CNOTt_far": 105.688,
+   "CNOTt_near": 249.498,
+   "CNOTt_post": 78.692,
+   "SH_far": 150.6,
+   "SH_nearH": 280.974,
+   "SH_nearS": 445.81,
+   "SH_post": 276.431,
+   "T_near": 93.176,
+   "T_pre": 72.0,
+   "hist": 81.0,
+   "max_far": 150.6,
+   "max_near": 445.81,
+   "max_post": 276.431,
+   "merge": 177.75,
+   "pre": 162.0
+  },
+  "21": {
+   "CNOTt_far": 161.846,
+   "CNOTt_near": 381.955,
+   "CNOTt_post": 130.345,
+   "SH_far": 228.39,
+   "SH_nearH": 418.155,
+   "SH_nearS": 678.46,
+   "SH_post": 409.274,
+   "T_near": 136.19,
+   "T_pre": 110.0,
+   "hist": 121.0,
+   "max_far": 228.39,
+   "max_near": 678.46,
+   "max_post": 409.274,
+   "merge": 261.8,
+   "pre": 242.0
+  }
+ },
+ "fit": {
+  "CNOTt_d13": {
+   "rms": 39.272,
+   "windows": 22
+  },
+  "CNOTt_d17": {
+   "rms": 65.227,
+   "windows": 22
+  },
+  "CNOTt_d21": {
+   "rms": 97.783,
+   "windows": 22
+  },
+  "SH_d13": {
+   "rms": 89.955,
+   "windows": 22
+  },
+  "SH_d17": {
+   "rms": 193.195,
+   "windows": 22
+  },
+  "SH_d21": {
+   "rms": 354.541,
+   "windows": 22
+  },
+  "T_d13": {
+   "rms": 0.0,
+   "windows": 22
+  },
+  "T_d17": {
+   "rms": 0.0,
+   "windows": 22
+  },
+  "T_d21": {
+   "rms": 0.0,
+   "windows": 22
+  }
+ },
+ "rule": "count = strip densities over the window's rounds + per-gadget densities over their phases (e2e/strip.Geometry)",
+ "source": {
+  "shards_sha256": "shards.sha256",
+  "what": "The strip client's decoding windows, extracted from the client's records."
+ }
+}

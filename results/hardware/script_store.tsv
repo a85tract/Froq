@@ -1,0 +1,7 @@
+program	scripts	words	sites	uram288_base	rebased_levels	uram288_resident
+Adder-4	42	2580	12	4	1	21
+Grover-5	83	6586	14085	11	8	59
+QFT-10	258	23249	9428	12	8	60
+QPE-10	258	23249	8644	11	7	60
+QPE-5	83	6586	1813	5	2	39
+# store logic, unit cost: 500 LUTs

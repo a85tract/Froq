@@ -1,0 +1,38 @@
+\begin{figure}[t]
+\centering
+\resizebox{\columnwidth}{!}{%
+\begin{tikzpicture}
+\begin{axis}[width=\columnwidth, height=3.6cm, ybar, bar width=5.4pt,
+  xmin=0.45, xmax=8.55, ymin=-2.5, ymax=31, xtick={1,...,8},
+  xticklabels={Grover-5,QFT-10,QPE-10,QPE-5,Adder-4,Adder-8,Adder-16,Adder-32},
+  xticklabel style={font=\scriptsize, rotate=30, anchor=north east, inner sep=1pt},
+  major x tick style={draw=none}, ytick={0,10,20,30}, yticklabel style={font=\footnotesize},
+  ylabel={quantum-side time reduction\\against SWIPER alone (\%)}, ylabel style={font=\footnotesize, align=center, yshift=-4pt},
+  axis x line*=bottom, axis y line*=left, axis line style={cMute}, tick style={cMute}, ymajorgrids,
+  grid style={cGrid,line width=0.3pt},
+  legend style={at={(0.99,0.98)}, anchor=north east, draw=none, fill=none, font=\scriptsize, legend columns=1,
+    row sep=-1pt},
+  legend image code/.code={\fill[#1] (0pt,-2pt) rectangle (7pt,3.5pt);}]
+  \addplot[fill=cBlue!50, draw=none, bar shift=-6.4pt, error bars/.cd, y dir=both, y explicit, error mark=none,
+    error bar style={cInk,line width=0.5pt}]
+    table[x=x, y=c13, y error plus expr=\thisrow{hi13}-\thisrow{c13}, y error minus expr=\thisrow{c13}-\thisrow{lo13}] {data/cutbars.dat};
+  \addplot[fill=cBlue!75, draw=none, bar shift=0pt, error bars/.cd, y dir=both, y explicit, error mark=none,
+    error bar style={cInk,line width=0.5pt}]
+    table[x=x, y=c17, y error plus expr=\thisrow{hi17}-\thisrow{c17}, y error minus expr=\thisrow{c17}-\thisrow{lo17}] {data/cutbars.dat};
+  \addplot[fill=cBlue, draw=none, bar shift=6.4pt, error bars/.cd, y dir=both, y explicit, error mark=none,
+    error bar style={cInk,line width=0.5pt}]
+    table[x=x, y=c21, y error plus expr=\thisrow{hi21}-\thisrow{c21}, y error minus expr=\thisrow{c21}-\thisrow{lo21}] {data/cutbars.dat};
+  \legend{$d=13$, $d=17$, $d=21$}
+  \draw[cInk,line width=0.6pt] (axis cs:0.45,0) -- (axis cs:8.55,0);
+  \foreach \s in {-6.4pt, 6.4pt} {
+    \edef\tmp{\noexpand\node[rotate=90, anchor=west, font=\noexpand\scriptsize, text=cMute, inner sep=0.5pt]
+      at ([xshift=\s]axis cs:5,0.4) {waits};}\tmp}
+  \node[rotate=90, anchor=west, font=\scriptsize, text=cMute, inner sep=0.5pt] at ([xshift=6.4pt]axis cs:6,0.4) {waits};
+  \foreach \p in {7,8} {
+    \edef\tmp{\noexpand\node[anchor=south, font=\noexpand\scriptsize, text=cMute, inner sep=0.5pt]
+      at (axis cs:\p,0.4) {waits};}\tmp}
+\end{axis}
+\end{tikzpicture}}
+\caption{Reduction of quantum-side time per program and code distance with $95\%$ intervals. ``waits'' marks a program and distance where \sys{} waits in every configuration.}
+\label{fig:cuts}
+\end{figure}

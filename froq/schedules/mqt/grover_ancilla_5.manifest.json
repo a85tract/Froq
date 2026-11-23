@@ -1,0 +1,102 @@
+{
+ "bench": "grover_ancilla_5",
+ "converter_version": "scoutq-wp3-compile/0.3",
+ "events_schema": "scoutq-events/1",
+ "slicer": "lsqecc_slicer",
+ "slicer_sha256": "879d2ec83ae49cc9578566794efcaa06356ad42acdc026c44ab6f74ce283ab5a",
+ "slicer_argv": [
+  "lsqecc_slicer",
+  "-q",
+  "-i",
+  "chain_fixed.qasm",
+  "-L",
+  "edpc",
+  "--disttime",
+  "1",
+  "--nostagger",
+  "-P",
+  "wave",
+  "--metaout",
+  "grover_ancilla_5.meta.json",
+  "-o",
+  "grover_ancilla_5.json"
+ ],
+ "compiler": {
+  "base_commit": "e88b1a4",
+  "fork": "liblsqecc_scoutq",
+  "fork_commit": "6523b4d6a3ceacee5e4465ec799f1d1372639d7a"
+ },
+ "compiler_flags": {
+  "cnot_ancilla_placement_default": "AncillaNextToTarget",
+  "cnot_ancilla_placement_default_note": "value after the layout override; the parser preloads the first gate before the override, so an unannotated first CNOT keeps the built-in default AncillaFreePlacement",
+  "cnot_corrections": "never",
+  "cnot_type_default": "ZXWithMBMControlFirst",
+  "compilation_mode": "nonlocal",
+  "condensed": false,
+  "disttime": 1,
+  "explicitfactories": false,
+  "input_is_qasm": true,
+  "layout": "edpc",
+  "nostagger": true,
+  "numlanes": 1,
+  "op_ids_legacy": false,
+  "pipeline": "wave",
+  "rzprecision_log_ten_negative": "10.000000",
+  "s_gate_mode": "twists"
+ },
+ "inputs": {
+  "slices_json": "grover_ancilla_5.json",
+  "meta": "grover_ancilla_5.meta.json",
+  "qasm": "chain_fixed.qasm"
+ },
+ "fingerprints": {
+  "qasm": "3f8b901da0fa9d3f24716220845144eaf531d356a7ba7733c9dd95b48ab2e683",
+  "slices_json": "1f6b3530ebf9c60c9e9b8ded900ecb7d6d1ec853920b7dcfe699b1e28a4331ed",
+  "meta": "7a9d92965b5eaa25b1f90111db3b0cad8682a10dd033b27bff973092df704f8f",
+  "lss": "c594fef9fdcef71e27da2d2bde9c9db0136d9933ef515e43abb3b70716204e28",
+  "events": "ec5665d868b124ebdb30f54611150afc6d60d894474b6c68e6d0ccd6503d623c"
+ },
+ "inventory_templates": {
+  "H": 14376,
+  "Z": 247,
+  "X": 76,
+  "T": 14085,
+  "T1": 14085,
+  "T2": 14085,
+  "S": 22600,
+  "CNOT_cf_patched": 168
+ },
+ "inventory_gadget_kinds": {
+  "H": 14376,
+  "Z": 247,
+  "X": 76,
+  "T": 14085,
+  "S": 8515,
+  "CNOT": 168
+ },
+ "source_gate_counts": {
+  "h": 14376,
+  "z": 247,
+  "x": 76,
+  "t": 14085,
+  "s": 8515,
+  "cx": 168
+ },
+ "deviations": {
+  "tdg_as_t": 0,
+  "sdg_as_s": 0,
+  "reset_dropped": 0,
+  "cz_composite": 0,
+  "cnot_placements": {
+   "requested=target|resolved=next_to_target": 168
+  },
+  "terminal_measurements": 0
+ },
+ "counts": {
+  "slices": 71064,
+  "lss_instructions": 207951,
+  "events": 307503,
+  "lli": 205530,
+  "lli_skipped": 43128
+ }
+}

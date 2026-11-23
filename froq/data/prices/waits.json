@@ -1,0 +1,316 @@
+{
+ "entries": [
+  {
+   "W": 12.5359,
+   "branch": 0,
+   "d": 13,
+   "items": 99513,
+   "level": "0.5P",
+   "per_program": {
+    "adder_16": [
+     0.0,
+     185
+    ],
+    "adder_32": [
+     1.6667,
+     18
+    ],
+    "adder_4": [
+     0.0,
+     1
+    ],
+    "adder_8": [
+     0.0,
+     7
+    ],
+    "grover_ancilla_5": [
+     23.9533,
+     7095
+    ],
+    "qft_10": [
+     23.7586,
+     72002
+    ],
+    "qpeexact_10": [
+     25.4236,
+     4313
+    ],
+    "qpeexact_5": [
+     25.4848,
+     15892
+    ]
+   },
+   "programs": 8
+  },
+  {
+   "W": 38.6663,
+   "branch": 1,
+   "d": 13,
+   "items": 3002,
+   "level": "0.5P",
+   "per_program": {
+    "adder_16": [
+     0.0,
+     14
+    ],
+    "qft_10": [
+     57.8369,
+     2667
+    ],
+    "qpeexact_5": [
+     58.162,
+     321
+    ]
+   },
+   "programs": 3
+  },
+  {
+   "W": 20.2808,
+   "branch": 0,
+   "d": 13,
+   "items": 40077,
+   "level": "1.5P",
+   "per_program": {
+    "adder_16": [
+     0.0,
+     4
+    ],
+    "grover_ancilla_5": [
+     24.1218,
+     6980
+    ],
+    "qft_10": [
+     24.2639,
+     23776
+    ],
+    "qpeexact_10": [
+     25.7883,
+     4270
+    ],
+    "qpeexact_5": [
+     27.23,
+     5047
+    ]
+   },
+   "programs": 5
+  },
+  {
+   "W": 45.6788,
+   "branch": 1,
+   "d": 13,
+   "items": 1163,
+   "level": "1.5P",
+   "per_program": {
+    "adder_16": [
+     0.0,
+     3
+    ],
+    "qft_10": [
+     67.2176,
+     1011
+    ],
+    "qpeexact_5": [
+     69.8188,
+     149
+    ]
+   },
+   "programs": 3
+  },
+  {
+   "W": 5.7,
+   "branch": 0,
+   "d": 17,
+   "items": 16550,
+   "level": "0.5P",
+   "per_program": {
+    "adder_16": [
+     0.0,
+     12
+    ],
+    "adder_32": [
+     4.125,
+     24
+    ],
+    "adder_4": [
+     0.0,
+     3
+    ],
+    "adder_8": [
+     0.0,
+     8
+    ],
+    "grover_ancilla_5": [
+     10.2799,
+     6966
+    ],
+    "qft_10": [
+     10.5269,
+     4337
+    ],
+    "qpeexact_10": [
+     11.0941,
+     4239
+    ],
+    "qpeexact_5": [
+     9.5744,
+     961
+    ]
+   },
+   "programs": 8
+  },
+  {
+   "W": 9.1396,
+   "branch": 0,
+   "d": 17,
+   "items": 14518,
+   "level": "1.5P",
+   "per_program": {
+    "adder_32": [
+     0.0,
+     5
+    ],
+    "adder_8": [
+     0.0,
+     2
+    ],
+    "grover_ancilla_5": [
+     11.5846,
+     6096
+    ],
+    "qft_10": [
+     12.117,
+     3897
+    ],
+    "qpeexact_10": [
+     14.5995,
+     3670
+    ],
+    "qpeexact_5": [
+     16.5366,
+     848
+    ]
+   },
+   "programs": 6
+  },
+  {
+   "W": 10.5758,
+   "branch": 0,
+   "d": 21,
+   "items": 20,
+   "level": "0.5P",
+   "per_program": {
+    "adder_16": [
+     1.7273,
+     11
+    ],
+    "adder_4": [
+     30.0,
+     2
+    ],
+    "adder_8": [
+     0.0,
+     7
+    ]
+   },
+   "programs": 3
+  },
+  {
+   "W": 2.8927,
+   "branch": 0,
+   "d": 21,
+   "items": 12418,
+   "level": "1.5P",
+   "per_program": {
+    "adder_16": [
+     1.7083,
+     24
+    ],
+    "adder_32": [
+     0.0,
+     13
+    ],
+    "adder_4": [
+     0.0,
+     1
+    ],
+    "adder_8": [
+     0.0,
+     3
+    ],
+    "grover_ancilla_5": [
+     4.4746,
+     1555
+    ],
+    "qft_10": [
+     4.1218,
+     7954
+    ],
+    "qpeexact_10": [
+     5.9227,
+     1268
+    ],
+    "qpeexact_5": [
+     6.9144,
+     1600
+    ]
+   },
+   "programs": 8
+  },
+  {
+   "W": 11.0515,
+   "branch": 1,
+   "d": 21,
+   "items": 4696,
+   "level": "1.5P",
+   "per_program": {
+    "adder_16": [
+     11.6111,
+     18
+    ],
+    "grover_ancilla_5": [
+     10.6667,
+     3
+    ],
+    "qft_10": [
+     11.5492,
+     4031
+    ],
+    "qpeexact_5": [
+     10.3789,
+     644
+    ]
+   },
+   "programs": 4
+  }
+ ],
+ "frozen": true,
+ "provenance": {
+  "excluded": [
+   {
+    "file": "qft_10_d21_W2Puk1aSd_s1_settledecode_B42_dec42_strip_pool_plsw_ff0p127511_hwi_hd2_local.json",
+    "outcome": "censored"
+   },
+   {
+    "file": "qpeexact_10_d21_W2Puk1aSd_s1_settledecode_B42_dec42_strip_pool_plsw_ff0p127511_hwi_hd2_local.json",
+    "outcome": "censored"
+   }
+  ],
+  "files": 183,
+  "fitted_when": {
+   "items": 20,
+   "programs": 2
+  },
+  "log_cut_at_20000": [],
+  "manifest": "r2_fit_sources_hold.sha256",
+  "manifest_sha256": "5f6bb2371e21ef6e1a3f5403ca27254fc9fb3e2502b3547ef5a3673e7a7a3c2c",
+  "note": "R2, the fitted mean wait before a recovery script starts (Section 5.2, Recovery price). Fitted on seed-1 W2Puk1aSd training records, with the wait W measured to the recovery script's end round, made with the compiled recovery-script library (--library sx) and two ordinary rounds per H round (--h-depth 2).",
+  "profiles_unused": [],
+  "rule": "Section 5.2 of the paper (Recovery price): seed-1 records only",
+  "runs_used": 157,
+  "settle": "decode",
+  "skipped": {},
+  "status": "frozen",
+  "w_end": "recovery_end_round (plan-v3 D2)"
+ },
+ "version": 1
+}

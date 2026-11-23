@@ -1,0 +1,21 @@
+\begin{table}[t]
+\caption{Programs and peak decoder demand in cores.}
+\label{tab:programs}
+\centering
+\setlength{\tabcolsep}{4pt}
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{@{}lrrrlrrr@{}}
+\toprule
+\textbf{Program} & \textbf{Qubits} & \textbf{{\boldmath$T$} gates} & \textbf{{\boldmath$T$} depth} & \textbf{Feedback} & \textbf{{\boldmath$d=13$}} & \textbf{17} & \textbf{21} \\
+\midrule
+QPE-5 & 5 & 1,813 & 957 & $S$ & 22 & 30 & 43 \\
+QPE-10 & 10 & 8,644 & 2,520 & $S$ & 47 & 61 & 84 \\
+QFT-10 & 10 & 9,428 & 2,466 & $S$ & 46 & 64 & 84 \\
+Grover-5 & 5 & 14,085 & 9,699 & $S$ & 25 & 35 & 45 \\
+Adder-4 & 11 & 12 & 4 & $S$, $CZ$ & 39 & 57 & 86 \\
+Adder-8 & 23 & 28 & 8 & $S$, $CZ$ & 57 & 88 & 143 \\
+Adder-16 & 47 & 60 & 16 & $S$, $CZ$ & 114 & 172 & 277 \\
+Adder-32 & 95 & 124 & 32 & $S$, $CZ$ & 259 & 362 & 506 \\
+\bottomrule
+\end{tabular}}
+\end{table}

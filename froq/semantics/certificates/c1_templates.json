@@ -1,0 +1,615 @@
+{
+ "X": {
+  "wires": [
+   "q"
+  ],
+  "outcome_bits": [],
+  "description": "Pauli X: frame_update only",
+  "source": "frame",
+  "n_records": 1,
+  "intended_unitary": "X",
+  "PASS": true,
+  "lambda_sq": {
+   "": 1.0
+  },
+  "sum_lambda_sq": 1.0
+ },
+ "Y": {
+  "wires": [
+   "q"
+  ],
+  "outcome_bits": [],
+  "description": "Pauli Y: frame_update only",
+  "source": "frame",
+  "n_records": 1,
+  "intended_unitary": "Y",
+  "PASS": true,
+  "lambda_sq": {
+   "": 1.0
+  },
+  "sum_lambda_sq": 1.0
+ },
+ "Z": {
+  "wires": [
+   "q"
+  ],
+  "outcome_bits": [],
+  "description": "Pauli Z: frame_update only",
+  "source": "frame",
+  "n_records": 1,
+  "intended_unitary": "Z",
+  "PASS": true,
+  "lambda_sq": {
+   "": 1.0
+  },
+  "sum_lambda_sq": 1.0
+ },
+ "H": {
+  "wires": [
+   "q"
+  ],
+  "outcome_bits": [],
+  "description": "transversal logical H (SingleQubitOp H)",
+  "source": "ls_instructions_from_gates.cpp",
+  "n_records": 1,
+  "intended_unitary": "H",
+  "PASS": true,
+  "lambda_sq": {
+   "": 1.0
+  },
+  "sum_lambda_sq": 1.0
+ },
+ "S": {
+  "wires": [
+   "q"
+  ],
+  "outcome_bits": [
+   "u",
+   "w"
+  ],
+  "description": "teleported S: |Y> resource; Z_q Z_y (u); X_y readout (w); frame Z_q^(u xor w)",
+  "source": "teleported_s_gate_injection_stream.cpp",
+  "n_records": 4,
+  "intended_unitary": "S",
+  "PASS": true,
+  "lambda_sq": {
+   "00": 0.25,
+   "01": 0.25,
+   "10": 0.25,
+   "11": 0.25
+  },
+  "sum_lambda_sq": 1.0
+ },
+ "Sdg": {
+  "wires": [
+   "q"
+  ],
+  "outcome_bits": [
+   "u",
+   "w"
+  ],
+  "description": "S^dagger for recovery: the S gadget followed by frame Z_q  (frame Z_q^(u xor w xor 1))",
+  "source": "teleported_s_gate_injection_stream.cpp + frame",
+  "n_records": 4,
+  "intended_unitary": "S^dagger",
+  "PASS": true,
+  "lambda_sq": {
+   "00": 0.25,
+   "01": 0.25,
+   "10": 0.25,
+   "11": 0.25
+  },
+  "sum_lambda_sq": 1.0
+ },
+ "T1": {
+  "wires": [
+   "q"
+  ],
+  "outcome_bits": [
+   "u",
+   "w"
+  ],
+  "description": "T injection segment T1: |T> resource; Z_q Z_a (u); X_a readout (w); frame Z_q^w.  Branch operator ~ T for u = 0 and ~ T^dagger for u = 1 (S^u is applied by T2)",
+  "source": "ls_instructions_from_gates.cpp",
+  "n_records": 4,
+  "intended_unitary": "T if u = 0 else T^dagger (S^u applied by T2)",
+  "PASS": true,
+  "lambda_sq": {
+   "00": 0.25,
+   "01": 0.25,
+   "10": 0.25,
+   "11": 0.25
+  },
+  "sum_lambda_sq": 1.0
+ },
+ "T2": {
+  "wires": [
+   "q"
+  ],
+  "outcome_bits": [
+   "u(pred)",
+   "..."
+  ],
+  "description": "T injection segment T2: S iff u = 1 (records: '0' = skip; '1uw' = the S gadget with its bits u, w)",
+  "source": "ls_instructions_from_gates.cpp (SingleQubitOp S, predicated on u) -> teleported_s_gate_injection_stream.cpp",
+  "n_records": 5,
+  "intended_unitary": "S^u (u = the decoded T1 ZZ result)",
+  "PASS": true,
+  "lambda_sq": {
+   "0": 1.0,
+   "100": 0.25,
+   "101": 0.25,
+   "110": 0.25,
+   "111": 0.25
+  },
+  "note": "records for u = 1 sum to 1 over the S gadget's private bits; u = 0 is one record"
+ },
+ "T2_S": {
+  "wires": [
+   "q"
+  ],
+  "outcome_bits": [
+   "u",
+   "w"
+  ],
+  "description": "T2 taken branch (u = 1): the teleported S gadget",
+  "source": "teleported_s_gate_injection_stream.cpp",
+  "n_records": 4,
+  "intended_unitary": "S",
+  "PASS": true,
+  "lambda_sq": {
+   "00": 0.25,
+   "01": 0.25,
+   "10": 0.25,
+   "11": 0.25
+  },
+  "sum_lambda_sq": 1.0
+ },
+ "T2_skip": {
+  "wires": [
+   "q"
+  ],
+  "outcome_bits": [],
+  "description": "T2 skipped branch (u = 0): nothing executed",
+  "source": "ls_instructions_from_gates.cpp",
+  "n_records": 1,
+  "intended_unitary": "I",
+  "PASS": true,
+  "lambda_sq": {
+   "": 1.0
+  },
+  "sum_lambda_sq": 1.0
+ },
+ "T": {
+  "wires": [
+   "q"
+  ],
+  "outcome_bits": [
+   "u",
+   "w",
+   "..."
+  ],
+  "description": "T injection = T1 then T2 (records: 'uw' for u = 0; 'uw' + S gadget bits for u = 1)",
+  "source": "ls_instructions_from_gates.cpp",
+  "n_records": 10,
+  "intended_unitary": "T",
+  "PASS": true,
+  "lambda_sq": {
+   "00": 0.25,
+   "01": 0.25,
+   "1000": 0.0625,
+   "1001": 0.0625,
+   "1010": 0.0625,
+   "1011": 0.0625,
+   "1100": 0.0625,
+   "1101": 0.0625,
+   "1110": 0.0625,
+   "1111": 0.0625
+  },
+  "sum_lambda_sq": 1.0
+ },
+ "T_ideal": {
+  "wires": [
+   "q"
+  ],
+  "outcome_bits": [
+   "u",
+   "w"
+  ],
+  "description": "T injection with T2 modelled as an ideal conditional S (4 records; used for the C2 T row)",
+  "source": "ls_instructions_from_gates.cpp",
+  "n_records": 4,
+  "intended_unitary": "T",
+  "PASS": true,
+  "lambda_sq": {
+   "00": 0.25,
+   "01": 0.25,
+   "10": 0.25,
+   "11": 0.25
+  },
+  "sum_lambda_sq": 1.0
+ },
+ "Tdg_as_compiled": {
+  "wires": [
+   "q"
+  ],
+  "outcome_bits": [
+   "u",
+   "w",
+   "..."
+  ],
+  "description": "T^dagger as the compiler lowers it: make_t_gate_instructions ignores is_dagger, so the SAME instructions are emitted and T is executed.  Deliberately failing certificate (documentation).",
+  "source": "ls_instructions_from_gates.cpp",
+  "n_records": 10,
+  "intended_unitary": "T^dagger",
+  "PASS": false,
+  "lambda_sq": {
+   "00": null,
+   "01": null,
+   "1000": null,
+   "1001": null,
+   "1010": null,
+   "1011": null,
+   "1100": null,
+   "1101": null,
+   "1110": null,
+   "1111": null
+  },
+  "sum_lambda_sq": 0,
+  "branch_ranks": {
+   "00": 2,
+   "01": 2,
+   "1000": 2,
+   "1001": 2,
+   "1010": 2,
+   "1011": 2,
+   "1100": 2,
+   "1101": 2,
+   "1110": 2,
+   "1111": 2
+  },
+  "eig_KdagK": {
+   "00": [
+    0.25,
+    0.25
+   ],
+   "01": [
+    0.25,
+    0.25
+   ],
+   "1000": [
+    0.0625,
+    0.0625
+   ],
+   "1001": [
+    0.0625,
+    0.0625
+   ],
+   "1010": [
+    0.0625,
+    0.0625
+   ],
+   "1011": [
+    0.0625,
+    0.0625
+   ],
+   "1100": [
+    0.0625,
+    0.0625
+   ],
+   "1101": [
+    0.0625,
+    0.0625
+   ],
+   "1110": [
+    0.0625,
+    0.0625
+   ],
+   "1111": [
+    0.0625,
+    0.0625
+   ]
+  },
+  "deviation": "compiler executes T for a T^dagger gate (is_dagger ignored); recorded, not fixed (design Sec. 1.2)"
+ },
+ "CNOT_cf_patched": {
+  "wires": [
+   "c",
+   "t"
+  ],
+  "outcome_bits": [
+   "u",
+   "v",
+   "w"
+  ],
+  "description": "patched ZX_WITH_MBM_CONTROL_FIRST: a in |+>; Z_c Z_a (u); X_a X_t (v); Z_a readout (w); frame Z_c^v X_t^(u xor w)",
+  "source": "ls_instructions_from_gates.cpp + D1 patch",
+  "n_records": 8,
+  "intended_unitary": "CNOT(c->t)",
+  "PASS": true,
+  "lambda_sq": {
+   "000": 0.125,
+   "001": 0.125,
+   "010": 0.125,
+   "011": 0.125,
+   "100": 0.125,
+   "101": 0.125,
+   "110": 0.125,
+   "111": 0.125
+  },
+  "sum_lambda_sq": 1.0
+ },
+ "CZ": {
+  "wires": [
+   "c",
+   "t"
+  ],
+  "outcome_bits": [
+   "u",
+   "v",
+   "w"
+  ],
+  "description": "CZ as emitted: H(t); ZX_WITH_MBM_CONTROL_FIRST CNOT(c -> t) [patched: Z_a readout + frame]; H(t).  Mediator placement = the CNOT's annotation / default rule.  With the unpatched CNOT inside, every branch has rank 2 (H is unitary), i.e. the emitted CZ is not a CZ before the D1 patch.",
+  "source": "ls_instruction_stream.cpp (ControlledGate, target gate Z) + ls_instructions_from_gates.cpp + D1 patch",
+  "n_records": 8,
+  "intended_unitary": "CZ(c,t)",
+  "PASS": true,
+  "lambda_sq": {
+   "000": 0.125,
+   "001": 0.125,
+   "010": 0.125,
+   "011": 0.125,
+   "100": 0.125,
+   "101": 0.125,
+   "110": 0.125,
+   "111": 0.125
+  },
+  "sum_lambda_sq": 1.0
+ },
+ "CNOT_cf_unpatched": {
+  "wires": [
+   "c",
+   "t"
+  ],
+  "outcome_bits": [
+   "u",
+   "v",
+   "w"
+  ],
+  "description": "pinned ZX_WITH_MBM_CONTROL_FIRST as emitted: a in |+>; Z_c Z_a (u); X_a X_t (v); X_a readout (w). Deliberately failing certificate (Finding R2): every branch has rank 2.",
+  "source": "ls_instructions_from_gates.cpp",
+  "n_records": 8,
+  "intended_unitary": "CNOT(c->t)",
+  "PASS": false,
+  "lambda_sq": {
+   "000": null,
+   "001": null,
+   "010": null,
+   "011": null,
+   "100": null,
+   "101": null,
+   "110": null,
+   "111": null
+  },
+  "sum_lambda_sq": 0,
+  "branch_ranks": {
+   "000": 2,
+   "001": 2,
+   "010": 2,
+   "011": 2,
+   "100": 2,
+   "101": 2,
+   "110": 2,
+   "111": 2
+  },
+  "eig_KdagK": {
+   "000": [
+    0.0,
+    0.0,
+    0.25,
+    0.25
+   ],
+   "001": [
+    0.0,
+    0.0,
+    0.25,
+    0.25
+   ],
+   "010": [
+    0.0,
+    0.0,
+    0.25,
+    0.25
+   ],
+   "011": [
+    0.0,
+    0.0,
+    0.25,
+    0.25
+   ],
+   "100": [
+    0.0,
+    0.0,
+    0.25,
+    0.25
+   ],
+   "101": [
+    0.0,
+    0.0,
+    0.25,
+    0.25
+   ],
+   "110": [
+    0.0,
+    0.0,
+    0.25,
+    0.25
+   ],
+   "111": [
+    0.0,
+    0.0,
+    0.25,
+    0.25
+   ]
+  }
+ },
+ "CNOT_tf_Zreadout": {
+  "wires": [
+   "c",
+   "t"
+  ],
+  "outcome_bits": [
+   "u",
+   "v",
+   "w"
+  ],
+  "description": "ZX_WITH_MBM_TARGET_FIRST with the compiler's |+> ancilla and a Z readout: X_a X_t (v); Z_c Z_a (u); Z_a readout (w).  NO Pauli frame makes it a CNOT: X_a X_t on a fresh |+> ancilla measures X_t.",
+  "source": "ls_instructions_from_gates.cpp",
+  "n_records": 8,
+  "intended_unitary": "CNOT(c->t)",
+  "PASS": false,
+  "lambda_sq": {
+   "000": null,
+   "001": null,
+   "010": null,
+   "011": null,
+   "100": null,
+   "101": null,
+   "110": null,
+   "111": null
+  },
+  "sum_lambda_sq": 0,
+  "branch_ranks": {
+   "000": 1,
+   "001": 1,
+   "010": 1,
+   "011": 1,
+   "100": 1,
+   "101": 1,
+   "110": 1,
+   "111": 1
+  },
+  "eig_KdagK": {
+   "000": [
+    0.0,
+    0.0,
+    0.0,
+    0.5
+   ],
+   "001": [
+    0.0,
+    0.0,
+    0.0,
+    0.5
+   ],
+   "010": [
+    0.0,
+    0.0,
+    0.0,
+    0.5
+   ],
+   "011": [
+    0.0,
+    0.0,
+    0.0,
+    0.5
+   ],
+   "100": [
+    0.0,
+    0.0,
+    0.0,
+    0.5
+   ],
+   "101": [
+    0.0,
+    0.0,
+    0.0,
+    0.5
+   ],
+   "110": [
+    0.0,
+    0.0,
+    0.0,
+    0.5
+   ],
+   "111": [
+    0.0,
+    0.0,
+    0.0,
+    0.5
+   ]
+  },
+  "deviation": "target-first with the compiler's |+> ancilla: the first merge X_a X_t projects the target onto an X eigenstate; no frame repairs a rank loss"
+ },
+ "CNOT_tf_dual": {
+  "wires": [
+   "c",
+   "t"
+  ],
+  "outcome_bits": [
+   "u",
+   "v",
+   "w"
+  ],
+  "description": "target-first dual (NOT what the compiler emits): a in |0>; X_a X_t (v); Z_c Z_a (u); X_a readout (w); derived frame Z0^(u+w).X1^(v)",
+  "source": "derived",
+  "n_records": 8,
+  "intended_unitary": "CNOT(c->t)",
+  "PASS": true,
+  "lambda_sq": {
+   "000": 0.125,
+   "001": 0.125,
+   "010": 0.125,
+   "011": 0.125,
+   "100": 0.125,
+   "101": 0.125,
+   "110": 0.125,
+   "111": 0.125
+  },
+  "sum_lambda_sq": 1.0,
+  "derived_frame": {
+   "formula": "Z0^(u+w).X1^(v)",
+   "table": {
+    "000": "I",
+    "001": "Z0",
+    "010": "X1",
+    "011": "Z0.X1",
+    "100": "Z0",
+    "101": "I",
+    "110": "Z0.X1",
+    "111": "X1"
+   }
+  }
+ },
+ "RESET": {
+  "wires": [
+   "q"
+  ],
+  "outcome_bits": [],
+  "n_records": 0,
+  "kind": "non-unitary",
+  "PASS": null,
+  "intended_unitary": null,
+  "description": "QASM `reset q[i]` -> PatchReset{i} (ls_instruction_stream.cpp).  Contract semantics: a reset of a program wire is a destructive operation on that wire -- the state is discarded and a fresh |0> patch appears; the design (Sec. 1.3) treats it as `discard {traced}` of the old lifetime followed by `init {Zero}` of a new one, so a reset of a wire in L is a fence (Sec. 2.2 discard rule).  Not a gadget a residual passes through: no Kraus certificate.",
+  "compiler_semantics": "pinned slicer: dense_patch_computation.cpp try_apply_instruction_direct_followup returns {nullptr, {}} for PatchReset -- no patch change, no measurement, no follow-up instruction; wave_scheduler.cpp is_immediate -> true (zero duration); ls_instructions.cpp lists the target as an operating patch and prints the .lss line `Reset <id>`.  The pinned compiler therefore executes NO reset (the patch keeps its state); the discard + init semantics is executed only if the fork implements it.",
+  "source": "ls_instruction_stream.cpp:154-160, dense_patch_computation.cpp:1442, wave_scheduler.cpp:258, ls_instructions.cpp:56,210"
+ },
+ "MEASURE": {
+  "wires": [
+   "q"
+  ],
+  "outcome_bits": [
+   "m"
+  ],
+  "n_records": 2,
+  "kind": "measurement",
+  "intended_instrument": "projective Z measurement {m: |m><m|}; the wire is discarded after it",
+  "PASS": true,
+  "lambda_sq": {
+   "0": 1.0,
+   "1": 1.0
+  },
+  "description": "QASM `measure q[i] -> m[0]` (w10 fork) -> MeasureSinglePatch{i, Z}: a destructive readout of a program patch whose bit m is a program result (the classically controlled CZ of the uncomputation reads it).  The contract walk treats it as an elementary destructive measurement (signed-commutation test and instrument reduction).",
+  "source": "ls_instruction_stream.cpp (Measure, w10) + dense_patch_computation.cpp (SinglePatchMeasurement)"
+ }
+}

@@ -1,0 +1,903 @@
+{
+ "all_pooled": {
+  "commits": 125045,
+  "pairs": 124,
+  "per_program": {
+   "adder_16": [
+    -0.4566,
+    633,
+    45
+   ],
+   "adder_8": [
+    -0.0208,
+    96,
+    12
+   ],
+   "qft_10": [
+    33.5651,
+    99548,
+    23
+   ],
+   "qpeexact_5": [
+    31.5968,
+    24768,
+    37
+   ]
+  },
+  "programs": 4,
+  "xi": 16.1711
+ },
+ "cells": [
+  {
+   "commits": 90,
+   "d": 13,
+   "level": "P",
+   "pairs": 16,
+   "per_program": {
+    "adder_16": [
+     -0.2381,
+     42,
+     3
+    ],
+    "adder_8": [
+     -0.0625,
+     48,
+     6
+    ]
+   },
+   "programs": 2,
+   "xi": -0.1503
+  },
+  {
+   "commits": 90,
+   "d": 13,
+   "level": "1.5P",
+   "pairs": 15,
+   "per_program": {
+    "adder_16": [
+     -0.2857,
+     42,
+     3
+    ],
+    "adder_8": [
+     0.0208,
+     48,
+     6
+    ]
+   },
+   "programs": 2,
+   "xi": -0.1324
+  },
+  {
+   "commits": 124841,
+   "d": 21,
+   "level": "1.5P",
+   "pairs": 90,
+   "per_program": {
+    "adder_16": [
+     -0.4863,
+     549,
+     39
+    ],
+    "qft_10": [
+     33.5651,
+     99548,
+     23
+    ],
+    "qpeexact_5": [
+     24.2792,
+     24744,
+     28
+    ]
+   },
+   "programs": 3,
+   "xi": 19.1193
+  }
+ ],
+ "d_pooled": [
+  {
+   "commits": 204,
+   "d": 13,
+   "pairs": 34,
+   "per_program": {
+    "adder_16": [
+     -0.2619,
+     84,
+     6
+    ],
+    "adder_8": [
+     -0.0208,
+     96,
+     12
+    ],
+    "qpeexact_5": [
+     7576.0417,
+     24,
+     9
+    ]
+   },
+   "programs": 3,
+   "xi": 2525.253
+  },
+  {
+   "commits": 124841,
+   "d": 21,
+   "pairs": 90,
+   "per_program": {
+    "adder_16": [
+     -0.4863,
+     549,
+     39
+    ],
+    "qft_10": [
+     33.5651,
+     99548,
+     23
+    ],
+    "qpeexact_5": [
+     24.2792,
+     24744,
+     28
+    ]
+   },
+   "programs": 3,
+   "xi": 19.1193
+  }
+ ],
+ "frozen": true,
+ "programs": [
+  {
+   "commits": 42,
+   "d": 13,
+   "level": "P",
+   "pairs": 3,
+   "program": "adder_16",
+   "programs": 1,
+   "xi": -0.2381
+  },
+  {
+   "commits": 42,
+   "d": 13,
+   "level": "1.5P",
+   "pairs": 3,
+   "program": "adder_16",
+   "programs": 1,
+   "xi": -0.2857
+  },
+  {
+   "commits": 549,
+   "d": 21,
+   "level": "1.5P",
+   "pairs": 39,
+   "program": "adder_16",
+   "programs": 1,
+   "xi": -0.4863
+  },
+  {
+   "commits": 11,
+   "d": 13,
+   "level": "P",
+   "pairs": 4,
+   "program": "adder_4",
+   "programs": 1,
+   "xi": -5.6364
+  },
+  {
+   "commits": 8,
+   "d": 13,
+   "level": "1.5P",
+   "pairs": 3,
+   "program": "adder_4",
+   "programs": 1,
+   "xi": -6.375
+  },
+  {
+   "commits": 48,
+   "d": 13,
+   "level": "P",
+   "pairs": 6,
+   "program": "adder_8",
+   "programs": 1,
+   "xi": -0.0625
+  },
+  {
+   "commits": 48,
+   "d": 13,
+   "level": "1.5P",
+   "pairs": 6,
+   "program": "adder_8",
+   "programs": 1,
+   "xi": 0.0208
+  },
+  {
+   "commits": 99548,
+   "d": 21,
+   "level": "1.5P",
+   "pairs": 23,
+   "program": "qft_10",
+   "programs": 1,
+   "xi": 33.5651
+  },
+  {
+   "commits": 8,
+   "d": 13,
+   "level": "0.75P",
+   "pairs": 3,
+   "program": "qpeexact_5",
+   "programs": 1,
+   "xi": 7638.5
+  },
+  {
+   "commits": 8,
+   "d": 13,
+   "level": "P",
+   "pairs": 3,
+   "program": "qpeexact_5",
+   "programs": 1,
+   "xi": 7545.25
+  },
+  {
+   "commits": 8,
+   "d": 13,
+   "level": "1.5P",
+   "pairs": 3,
+   "program": "qpeexact_5",
+   "programs": 1,
+   "xi": 7544.375
+  },
+  {
+   "commits": 24744,
+   "d": 21,
+   "level": "1.5P",
+   "pairs": 28,
+   "program": "qpeexact_5",
+   "programs": 1,
+   "xi": 24.2792
+  }
+ ],
+ "provenance": {
+  "excluded": [],
+  "files": 388,
+  "fitted_when": {
+   "commits": 20,
+   "programs": 2
+  },
+  "frame_logs_max": 9424,
+  "l2_min": 0.9,
+  "loaded": [
+   [
+    "adder_16_d13_W2YBl1Sd_s1_settledecode_c0p5_q0p5_pl4_B57_dec57_plsw_ff0p127096_hwi_salt1_hd2_local.json",
+    0.1293
+   ],
+   [
+    "adder_16_d13_W2YBl1Sd_s1_settledecode_c0p5_q0p5_pl4_B57_dec57_plsw_ff0p127096_hwi_salt2_hd2_local.json",
+    0.1266
+   ],
+   [
+    "adder_16_d13_W2YBl1Sd_s1_settledecode_c0p5_q0p5_pl4_B57_dec57_plsw_ff0p127096_hwi_salt3_hd2_local.json",
+    0.1276
+   ],
+   [
+    "adder_16_d13_W2YBl1Sd_s1_settledecode_c0p5_q0p5_pl4_B57_dec57_plsw_ff0p127096_hwi_salt4_hd2_local.json",
+    0.1347
+   ],
+   [
+    "adder_16_d13_W2YBl1Sd_s1_settledecode_c0p5_q0p5_pl4_B57_dec57_plsw_ff0p127096_hwi_salt5_hd2_local.json",
+    0.1325
+   ],
+   [
+    "adder_16_d13_W2YBl1Sd_s1_settledecode_c0p5_q0p5_pl4_B57_dec57_plsw_ff0p127096_hwi_salt6_hd2_local.json",
+    0.133
+   ],
+   [
+    "adder_16_d13_W2YBl1Sd_s1_settledecode_c0p7_q0p7_B57_dec57_plsw_ff0p127096_hwi_salt1_hd2_local.json",
+    0.1227
+   ],
+   [
+    "adder_16_d13_W2YBl1Sd_s1_settledecode_c0p7_q0p7_B57_dec57_plsw_ff0p127096_hwi_salt2_hd2_local.json",
+    0.1267
+   ],
+   [
+    "adder_16_d13_W2YBl1Sd_s1_settledecode_c0p7_q0p7_B57_dec57_plsw_ff0p127096_hwi_salt3_hd2_local.json",
+    0.1199
+   ],
+   [
+    "adder_16_d13_W2YBl1Sd_s1_settledecode_c0p7_q0p7_B57_dec57_plsw_ff0p127096_hwi_salt4_hd2_local.json",
+    0.1221
+   ],
+   [
+    "adder_16_d13_W2YBl1Sd_s1_settledecode_c0p7_q0p7_B57_dec57_plsw_ff0p127096_hwi_salt5_hd2_local.json",
+    0.122
+   ],
+   [
+    "adder_16_d13_W2YBl1Sd_s1_settledecode_c0p7_q0p7_B57_dec57_plsw_ff0p127096_hwi_salt6_hd2_local.json",
+    0.1282
+   ],
+   [
+    "adder_16_d13_W2YBl1Sd_s1_settledecode_c0p7_q0p7_pl52_B57_dec57_plsw_ff0p127096_hwi_salt1_hd2_local.json",
+    0.1252
+   ],
+   [
+    "adder_16_d13_W2YBl1Sd_s1_settledecode_c0p7_q0p7_pl52_B57_dec57_plsw_ff0p127096_hwi_salt2_hd2_local.json",
+    0.1286
+   ],
+   [
+    "adder_16_d13_W2YBl1Sd_s1_settledecode_c0p7_q0p7_pl52_B57_dec57_plsw_ff0p127096_hwi_salt3_hd2_local.json",
+    0.1271
+   ],
+   [
+    "adder_16_d13_W2YBl1Sd_s1_settledecode_c0p7_q0p7_pl4_B57_dec57_plsw_ff0p127096_hwi_salt1_hd2_local.json",
+    0.1227
+   ],
+   [
+    "adder_16_d13_W2YBl1Sd_s1_settledecode_c0p7_q0p7_pl4_B57_dec57_plsw_ff0p127096_hwi_salt2_hd2_local.json",
+    0.1267
+   ],
+   [
+    "adder_16_d13_W2YBl1Sd_s1_settledecode_c0p7_q0p7_pl4_B57_dec57_plsw_ff0p127096_hwi_salt3_hd2_local.json",
+    0.1199
+   ],
+   [
+    "adder_16_d13_W2YBl1Sd_s1_settledecode_c0p7_q0p7_pl4_B57_dec57_plsw_ff0p127096_hwi_salt4_hd2_local.json",
+    0.1221
+   ],
+   [
+    "adder_16_d13_W2YBl1Sd_s1_settledecode_c0p7_q0p7_pl4_B57_dec57_plsw_ff0p127096_hwi_salt5_hd2_local.json",
+    0.122
+   ],
+   [
+    "adder_16_d13_W2YBl1Sd_s1_settledecode_c0p7_q0p7_pl4_B57_dec57_plsw_ff0p127096_hwi_salt6_hd2_local.json",
+    0.1282
+   ],
+   [
+    "adder_16_d13_W2YBl1Sd_s1_settledecode_c0p7_q0p7_pl13_B57_dec57_plsw_ff0p127096_hwi_salt1_hd2_local.json",
+    0.1202
+   ],
+   [
+    "adder_16_d13_W2YBl1Sd_s1_settledecode_c0p7_q0p7_pl13_B57_dec57_plsw_ff0p127096_hwi_salt2_hd2_local.json",
+    0.1236
+   ],
+   [
+    "adder_16_d13_W2YBl1Sd_s1_settledecode_c0p7_q0p7_pl13_B57_dec57_plsw_ff0p127096_hwi_salt3_hd2_local.json",
+    0.1199
+   ],
+   [
+    "adder_16_d13_W2YBl1Sd_s1_settledecode_c0p7_q0p7_pl13_B57_dec57_plsw_ff0p127096_hwi_salt4_hd2_local.json",
+    0.1224
+   ],
+   [
+    "adder_16_d13_W2YBl1Sd_s1_settledecode_c0p7_q0p7_pl13_B57_dec57_plsw_ff0p127096_hwi_salt5_hd2_local.json",
+    0.1228
+   ],
+   [
+    "adder_16_d13_W2YBl1Sd_s1_settledecode_c0p7_q0p7_pl13_B57_dec57_plsw_ff0p127096_hwi_salt6_hd2_local.json",
+    0.1275
+   ],
+   [
+    "adder_16_d13_W2YBl1Sd_s1_settledecode_c0p99_q0p7_pl4_B57_dec57_plsw_ff0p127096_hwi_salt1_hd2_local.json",
+    0.1227
+   ],
+   [
+    "adder_16_d13_W2YBl1Sd_s1_settledecode_c0p99_q0p7_pl4_B57_dec57_plsw_ff0p127096_hwi_salt2_hd2_local.json",
+    0.1267
+   ],
+   [
+    "adder_16_d13_W2YBl1Sd_s1_settledecode_c0p99_q0p7_pl4_B57_dec57_plsw_ff0p127096_hwi_salt3_hd2_local.json",
+    0.1199
+   ],
+   [
+    "adder_16_d13_W2YBl1Sd_s1_settledecode_c0p99_q0p7_pl4_B57_dec57_plsw_ff0p127096_hwi_salt4_hd2_local.json",
+    0.1239
+   ],
+   [
+    "adder_16_d13_W2YBl1Sd_s1_settledecode_c0p99_q0p7_pl4_B57_dec57_plsw_ff0p127096_hwi_salt5_hd2_local.json",
+    0.122
+   ],
+   [
+    "adder_16_d13_W2YBl1Sd_s1_settledecode_c0p99_q0p7_pl4_B57_dec57_plsw_ff0p127096_hwi_salt6_hd2_local.json",
+    0.1282
+   ],
+   [
+    "adder_16_d13_W2YBl1Sd_s1_settledecode_c0p999_q0p999_pl52_B57_dec57_plsw_ff0p127096_hwi_salt1_hd2_local.json",
+    0.1215
+   ],
+   [
+    "adder_16_d13_W2YBl1Sd_s1_settledecode_c0p999_q0p999_pl52_B57_dec57_plsw_ff0p127096_hwi_salt2_hd2_local.json",
+    0.1302
+   ],
+   [
+    "adder_16_d13_W2YBl1Sd_s1_settledecode_c0p999_q0p999_pl52_B57_dec57_plsw_ff0p127096_hwi_salt3_hd2_local.json",
+    0.1283
+   ],
+   [
+    "adder_16_d13_W2YBl1Sd_s1_settledecode_c0p999_q0p999_pl52_B57_dec57_plsw_ff0p127096_hwi_salt4_hd2_local.json",
+    0.1254
+   ],
+   [
+    "adder_16_d13_W2YBl1Sd_s1_settledecode_c0p999_q0p999_pl52_B57_dec57_plsw_ff0p127096_hwi_salt5_hd2_local.json",
+    0.1301
+   ],
+   [
+    "adder_16_d13_W2YBl1Sd_s1_settledecode_c0p999_q0p999_pl52_B57_dec57_plsw_ff0p127096_hwi_salt6_hd2_local.json",
+    0.1211
+   ],
+   [
+    "adder_16_d13_W2YBl1Sd_s1_settledecode_c0p99_q0p99_pl52_B57_dec57_plsw_ff0p127096_hwi_salt1_hd2_local.json",
+    0.1215
+   ],
+   [
+    "adder_16_d13_W2YBl1Sd_s1_settledecode_c0p99_q0p99_pl52_B57_dec57_plsw_ff0p127096_hwi_salt2_hd2_local.json",
+    0.1302
+   ],
+   [
+    "adder_16_d13_W2YBl1Sd_s1_settledecode_c0p99_q0p99_pl52_B57_dec57_plsw_ff0p127096_hwi_salt3_hd2_local.json",
+    0.1283
+   ],
+   [
+    "adder_16_d13_W2YBl1Sd_s1_settledecode_c0p99_q0p99_pl52_B57_dec57_plsw_ff0p127096_hwi_salt4_hd2_local.json",
+    0.1254
+   ],
+   [
+    "adder_16_d13_W2YBl1Sd_s1_settledecode_c0p99_q0p99_pl52_B57_dec57_plsw_ff0p127096_hwi_salt5_hd2_local.json",
+    0.1301
+   ],
+   [
+    "adder_16_d13_W2YBl1Sd_s1_settledecode_c0p99_q0p99_pl52_B57_dec57_plsw_ff0p127096_hwi_salt6_hd2_local.json",
+    0.1211
+   ],
+   [
+    "adder_16_d13_W2YBl1Sd_s1_settledecode_pl52_B57_dec57_plsw_ff0p127096_hwi_salt1_hd2_local.json",
+    0.1272
+   ],
+   [
+    "adder_16_d13_W2YBl1Sd_s1_settledecode_pl52_B57_dec57_plsw_ff0p127096_hwi_salt2_hd2_local.json",
+    0.1302
+   ],
+   [
+    "adder_16_d13_W2YBl1Sd_s1_settledecode_pl52_B57_dec57_plsw_ff0p127096_hwi_salt3_hd2_local.json",
+    0.1283
+   ],
+   [
+    "adder_16_d13_W2YBl1Sd_s1_settledecode_pl52_B57_dec57_plsw_ff0p127096_hwi_salt4_hd2_local.json",
+    0.1242
+   ],
+   [
+    "adder_16_d13_W2YBl1Sd_s1_settledecode_pl52_B57_dec57_plsw_ff0p127096_hwi_salt5_hd2_local.json",
+    0.1273
+   ],
+   [
+    "adder_16_d13_W2YBl1Sd_s1_settledecode_pl52_B57_dec57_plsw_ff0p127096_hwi_salt6_hd2_local.json",
+    0.1249
+   ],
+   [
+    "adder_16_d13_W2YBl1Sd_s1_settledecode_B57_dec57_strip_pool_plsw_ff0p127096_hwi_salt1_hd2_local.json",
+    0.1126
+   ],
+   [
+    "adder_16_d13_W2YBl1Sd_s1_settledecode_B57_dec57_strip_pool_plsw_ff0p127096_hwi_salt2_hd2_local.json",
+    0.1139
+   ],
+   [
+    "adder_16_d13_W2YBl1Sd_s1_settledecode_B57_dec57_strip_pool_plsw_ff0p127096_hwi_salt3_hd2_local.json",
+    0.1253
+   ],
+   [
+    "adder_16_d13_W2YBl1Sd_s1_settledecode_B86_dec86_strip_pool_plsw_ff0p127096_hwi_salt1_hd2_local.json",
+    0.6925
+   ],
+   [
+    "adder_16_d13_W2YBl1Sd_s1_settledecode_B86_dec86_strip_pool_plsw_ff0p127096_hwi_salt2_hd2_local.json",
+    0.687
+   ],
+   [
+    "adder_16_d13_W2YBl1Sd_s1_settledecode_B86_dec86_strip_pool_plsw_ff0p127096_hwi_salt3_hd2_local.json",
+    0.696
+   ],
+   [
+    "adder_16_d13_W2YBl1Sd_s1_settledecode_B86_dec86_strip_pool_plsw_ff0p127096_hwi_salt4_hd2_local.json",
+    0.6666
+   ],
+   [
+    "adder_16_d13_W2YBl1Sd_s1_settledecode_B86_dec86_strip_pool_plsw_ff0p127096_hwi_salt5_hd2_local.json",
+    0.6722
+   ],
+   [
+    "adder_16_d13_W2YBl1Sd_s1_settledecode_B86_dec86_strip_pool_plsw_ff0p127096_hwi_salt6_hd2_local.json",
+    0.6877
+   ],
+   [
+    "adder_4_d13_W2YBl1Sd_s1_settledecode_B20_dec20_strip_pool_plsw_ff0p127096_hwi_salt1_hd2_local.json",
+    0.3365
+   ],
+   [
+    "adder_4_d13_W2YBl1Sd_s1_settledecode_B20_dec20_strip_pool_plsw_ff0p127096_hwi_salt2_hd2_local.json",
+    0.3625
+   ],
+   [
+    "adder_4_d13_W2YBl1Sd_s1_settledecode_B20_dec20_strip_pool_plsw_ff0p127096_hwi_salt3_hd2_local.json",
+    0.3659
+   ],
+   [
+    "adder_4_d13_W2YBl1Sd_s1_settledecode_B20_dec20_strip_pool_plsw_ff0p127096_hwi_salt4_hd2_local.json",
+    0.3399
+   ],
+   [
+    "adder_4_d13_W2YBl1Sd_s1_settledecode_B20_dec20_strip_pool_plsw_ff0p127096_hwi_salt5_hd2_local.json",
+    0.3743
+   ],
+   [
+    "adder_4_d13_W2YBl1Sd_s1_settledecode_B20_dec20_strip_pool_plsw_ff0p127096_hwi_salt6_hd2_local.json",
+    0.3495
+   ],
+   [
+    "adder_4_d13_W2YBl1Sd_s1_settledecode_B30_dec30_strip_pool_plsw_ff0p127096_hwi_salt1_hd2_local.json",
+    0.8533
+   ],
+   [
+    "adder_4_d13_W2YBl1Sd_s1_settledecode_B30_dec30_strip_pool_plsw_ff0p127096_hwi_salt2_hd2_local.json",
+    0.8393
+   ],
+   [
+    "adder_4_d13_W2YBl1Sd_s1_settledecode_B30_dec30_strip_pool_plsw_ff0p127096_hwi_salt3_hd2_local.json",
+    0.8713
+   ],
+   [
+    "adder_4_d13_W2YBl1Sd_s1_settledecode_B30_dec30_strip_pool_plsw_ff0p127096_hwi_salt4_hd2_local.json",
+    0.8432
+   ],
+   [
+    "adder_4_d13_W2YBl1Sd_s1_settledecode_B30_dec30_strip_pool_plsw_ff0p127096_hwi_salt5_hd2_local.json",
+    0.8276
+   ],
+   [
+    "adder_4_d13_W2YBl1Sd_s1_settledecode_B30_dec30_strip_pool_plsw_ff0p127096_hwi_salt6_hd2_local.json",
+    0.8347
+   ],
+   [
+    "adder_8_d13_W2YBl1Sd_s1_settledecode_B29_dec29_strip_pool_plsw_ff0p127096_hwi_salt1_hd2_local.json",
+    0.1354
+   ],
+   [
+    "adder_8_d13_W2YBl1Sd_s1_settledecode_B29_dec29_strip_pool_plsw_ff0p127096_hwi_salt2_hd2_local.json",
+    0.139
+   ],
+   [
+    "adder_8_d13_W2YBl1Sd_s1_settledecode_B29_dec29_strip_pool_plsw_ff0p127096_hwi_salt3_hd2_local.json",
+    0.1436
+   ],
+   [
+    "adder_8_d13_W2YBl1Sd_s1_settledecode_B29_dec29_strip_pool_plsw_ff0p127096_hwi_salt4_hd2_local.json",
+    0.1208
+   ],
+   [
+    "adder_8_d13_W2YBl1Sd_s1_settledecode_B29_dec29_strip_pool_plsw_ff0p127096_hwi_salt5_hd2_local.json",
+    0.1287
+   ],
+   [
+    "adder_8_d13_W2YBl1Sd_s1_settledecode_B29_dec29_strip_pool_plsw_ff0p127096_hwi_salt6_hd2_local.json",
+    0.1301
+   ],
+   [
+    "adder_8_d13_W2YBl1Sd_s1_settledecode_B43_dec43_strip_pool_plsw_ff0p127096_hwi_salt1_hd2_local.json",
+    0.6062
+   ],
+   [
+    "adder_8_d13_W2YBl1Sd_s1_settledecode_B43_dec43_strip_pool_plsw_ff0p127096_hwi_salt2_hd2_local.json",
+    0.6085
+   ],
+   [
+    "adder_8_d13_W2YBl1Sd_s1_settledecode_B43_dec43_strip_pool_plsw_ff0p127096_hwi_salt3_hd2_local.json",
+    0.6197
+   ],
+   [
+    "adder_8_d13_W2YBl1Sd_s1_settledecode_B43_dec43_strip_pool_plsw_ff0p127096_hwi_salt4_hd2_local.json",
+    0.6213
+   ],
+   [
+    "adder_8_d13_W2YBl1Sd_s1_settledecode_B43_dec43_strip_pool_plsw_ff0p127096_hwi_salt5_hd2_local.json",
+    0.6237
+   ],
+   [
+    "adder_8_d13_W2YBl1Sd_s1_settledecode_B43_dec43_strip_pool_plsw_ff0p127096_hwi_salt6_hd2_local.json",
+    0.6003
+   ],
+   [
+    "qft_10_d13_W2YBl1Sd_s1_settledecode_c0p5_q0p5_pl4_B23_dec23_plsw_ff0p127096_hwi_salt1_hd2_local.json",
+    0.8312
+   ],
+   [
+    "qft_10_d13_W2YBl1Sd_s1_settledecode_c0p5_q0p5_pl4_B23_dec23_plsw_ff0p127096_hwi_salt2_hd2_local.json",
+    0.8357
+   ],
+   [
+    "qft_10_d13_W2YBl1Sd_s1_settledecode_c0p5_q0p5_pl4_B23_dec23_plsw_ff0p127096_hwi_salt3_hd2_local.json",
+    0.833
+   ],
+   [
+    "qft_10_d13_W2YBl1Sd_s1_settledecode_c0p7_q0p7_B23_dec23_plsw_ff0p127096_hwi_salt1_hd2_local.json",
+    0.7565
+   ],
+   [
+    "qft_10_d13_W2YBl1Sd_s1_settledecode_c0p7_q0p7_B23_dec23_plsw_ff0p127096_hwi_salt2_hd2_local.json",
+    0.7545
+   ],
+   [
+    "qft_10_d13_W2YBl1Sd_s1_settledecode_c0p7_q0p7_B23_dec23_plsw_ff0p127096_hwi_salt3_hd2_local.json",
+    0.7516
+   ],
+   [
+    "qft_10_d13_W2YBl1Sd_s1_settledecode_c0p7_q0p7_pl52_B23_dec23_plsw_ff0p127096_hwi_salt1_hd2_local.json",
+    0.8433
+   ],
+   [
+    "qft_10_d13_W2YBl1Sd_s1_settledecode_c0p7_q0p7_pl52_B23_dec23_plsw_ff0p127096_hwi_salt2_hd2_local.json",
+    0.8407
+   ],
+   [
+    "qft_10_d13_W2YBl1Sd_s1_settledecode_c0p7_q0p7_pl52_B23_dec23_plsw_ff0p127096_hwi_salt3_hd2_local.json",
+    0.8433
+   ],
+   [
+    "qft_10_d13_W2YBl1Sd_s1_settledecode_c0p7_q0p7_pl4_B23_dec23_plsw_ff0p127096_hwi_salt1_hd2_local.json",
+    0.8417
+   ],
+   [
+    "qft_10_d13_W2YBl1Sd_s1_settledecode_c0p7_q0p7_pl4_B23_dec23_plsw_ff0p127096_hwi_salt2_hd2_local.json",
+    0.8399
+   ],
+   [
+    "qft_10_d13_W2YBl1Sd_s1_settledecode_c0p7_q0p7_pl4_B23_dec23_plsw_ff0p127096_hwi_salt3_hd2_local.json",
+    0.8392
+   ],
+   [
+    "qft_10_d13_W2YBl1Sd_s1_settledecode_c0p7_q0p7_pl13_B23_dec23_plsw_ff0p127096_hwi_salt1_hd2_local.json",
+    0.839
+   ],
+   [
+    "qft_10_d13_W2YBl1Sd_s1_settledecode_c0p7_q0p7_pl13_B23_dec23_plsw_ff0p127096_hwi_salt2_hd2_local.json",
+    0.8402
+   ],
+   [
+    "qft_10_d13_W2YBl1Sd_s1_settledecode_c0p7_q0p7_pl13_B23_dec23_plsw_ff0p127096_hwi_salt3_hd2_local.json",
+    0.8396
+   ],
+   [
+    "qft_10_d13_W2YBl1Sd_s1_settledecode_c0p99_q0p7_pl4_B23_dec23_plsw_ff0p127096_hwi_salt1_hd2_local.json",
+    0.8393
+   ],
+   [
+    "qft_10_d13_W2YBl1Sd_s1_settledecode_c0p99_q0p7_pl4_B23_dec23_plsw_ff0p127096_hwi_salt2_hd2_local.json",
+    0.8391
+   ],
+   [
+    "qft_10_d13_W2YBl1Sd_s1_settledecode_c0p99_q0p7_pl4_B23_dec23_plsw_ff0p127096_hwi_salt3_hd2_local.json",
+    0.8395
+   ],
+   [
+    "qft_10_d13_W2YBl1Sd_s1_settledecode_c0p999_q0p999_pl52_B23_dec23_plsw_ff0p127096_hwi_salt1_hd2_local.json",
+    0.8435
+   ],
+   [
+    "qft_10_d13_W2YBl1Sd_s1_settledecode_c0p999_q0p999_pl52_B23_dec23_plsw_ff0p127096_hwi_salt2_hd2_local.json",
+    0.841
+   ],
+   [
+    "qft_10_d13_W2YBl1Sd_s1_settledecode_c0p999_q0p999_pl52_B23_dec23_plsw_ff0p127096_hwi_salt3_hd2_local.json",
+    0.842
+   ],
+   [
+    "qft_10_d13_W2YBl1Sd_s1_settledecode_c0p99_q0p99_pl52_B23_dec23_plsw_ff0p127096_hwi_salt1_hd2_local.json",
+    0.8435
+   ],
+   [
+    "qft_10_d13_W2YBl1Sd_s1_settledecode_c0p99_q0p99_pl52_B23_dec23_plsw_ff0p127096_hwi_salt2_hd2_local.json",
+    0.841
+   ],
+   [
+    "qft_10_d13_W2YBl1Sd_s1_settledecode_c0p99_q0p99_pl52_B23_dec23_plsw_ff0p127096_hwi_salt3_hd2_local.json",
+    0.8432
+   ],
+   [
+    "qft_10_d13_W2YBl1Sd_s1_settledecode_pl52_B23_dec23_plsw_ff0p127096_hwi_salt1_hd2_local.json",
+    0.8413
+   ],
+   [
+    "qft_10_d13_W2YBl1Sd_s1_settledecode_pl52_B23_dec23_plsw_ff0p127096_hwi_salt2_hd2_local.json",
+    0.8434
+   ],
+   [
+    "qft_10_d13_W2YBl1Sd_s1_settledecode_pl52_B23_dec23_plsw_ff0p127096_hwi_salt3_hd2_local.json",
+    0.8431
+   ],
+   [
+    "qpeexact_5_d13_W2YBl1Sd_s1_settledecode_c0p5_q0p5_pl4_B11_dec11_plsw_ff0p127096_hwi_salt1_hd2_local.json",
+    0.4749
+   ],
+   [
+    "qpeexact_5_d13_W2YBl1Sd_s1_settledecode_c0p5_q0p5_pl4_B11_dec11_plsw_ff0p127096_hwi_salt2_hd2_local.json",
+    0.476
+   ],
+   [
+    "qpeexact_5_d13_W2YBl1Sd_s1_settledecode_c0p5_q0p5_pl4_B11_dec11_plsw_ff0p127096_hwi_salt3_hd2_local.json",
+    0.4738
+   ],
+   [
+    "qpeexact_5_d13_W2YBl1Sd_s1_settledecode_c0p5_q0p5_pl4_B11_dec11_plsw_ff0p127096_hwi_salt4_hd2_local.json",
+    0.4767
+   ],
+   [
+    "qpeexact_5_d13_W2YBl1Sd_s1_settledecode_c0p7_q0p7_B11_dec11_plsw_ff0p127096_hwi_salt1_hd2_local.json",
+    0.4875
+   ],
+   [
+    "qpeexact_5_d13_W2YBl1Sd_s1_settledecode_c0p7_q0p7_B11_dec11_plsw_ff0p127096_hwi_salt2_hd2_local.json",
+    0.4873
+   ],
+   [
+    "qpeexact_5_d13_W2YBl1Sd_s1_settledecode_c0p7_q0p7_B11_dec11_plsw_ff0p127096_hwi_salt3_hd2_local.json",
+    0.4917
+   ],
+   [
+    "qpeexact_5_d13_W2YBl1Sd_s1_settledecode_c0p7_q0p7_pl52_B11_dec11_plsw_ff0p127096_hwi_salt1_hd2_local.json",
+    0.4789
+   ],
+   [
+    "qpeexact_5_d13_W2YBl1Sd_s1_settledecode_c0p7_q0p7_pl52_B11_dec11_plsw_ff0p127096_hwi_salt2_hd2_local.json",
+    0.4764
+   ],
+   [
+    "qpeexact_5_d13_W2YBl1Sd_s1_settledecode_c0p7_q0p7_pl52_B11_dec11_plsw_ff0p127096_hwi_salt3_hd2_local.json",
+    0.4706
+   ],
+   [
+    "qpeexact_5_d13_W2YBl1Sd_s1_settledecode_c0p7_q0p7_pl52_B11_dec11_plsw_ff0p127096_hwi_salt4_hd2_local.json",
+    0.4773
+   ],
+   [
+    "qpeexact_5_d13_W2YBl1Sd_s1_settledecode_c0p7_q0p7_pl52_B11_dec11_plsw_ff0p127096_hwi_salt5_hd2_local.json",
+    0.4775
+   ],
+   [
+    "qpeexact_5_d13_W2YBl1Sd_s1_settledecode_c0p7_q0p7_pl4_B11_dec11_plsw_ff0p127096_hwi_salt1_hd2_local.json",
+    0.4766
+   ],
+   [
+    "qpeexact_5_d13_W2YBl1Sd_s1_settledecode_c0p7_q0p7_pl4_B11_dec11_plsw_ff0p127096_hwi_salt2_hd2_local.json",
+    0.4727
+   ],
+   [
+    "qpeexact_5_d13_W2YBl1Sd_s1_settledecode_c0p7_q0p7_pl4_B11_dec11_plsw_ff0p127096_hwi_salt3_hd2_local.json",
+    0.4748
+   ],
+   [
+    "qpeexact_5_d13_W2YBl1Sd_s1_settledecode_c0p7_q0p7_pl4_B11_dec11_plsw_ff0p127096_hwi_salt4_hd2_local.json",
+    0.479
+   ],
+   [
+    "qpeexact_5_d13_W2YBl1Sd_s1_settledecode_c0p7_q0p7_pl4_B11_dec11_plsw_ff0p127096_hwi_salt5_hd2_local.json",
+    0.4794
+   ],
+   [
+    "qpeexact_5_d13_W2YBl1Sd_s1_settledecode_c0p7_q0p7_pl4_B11_dec11_plsw_ff0p127096_hwi_salt6_hd2_local.json",
+    0.4758
+   ],
+   [
+    "qpeexact_5_d13_W2YBl1Sd_s1_settledecode_c0p7_q0p7_pl13_B11_dec11_plsw_ff0p127096_hwi_salt1_hd2_local.json",
+    0.4766
+   ],
+   [
+    "qpeexact_5_d13_W2YBl1Sd_s1_settledecode_c0p7_q0p7_pl13_B11_dec11_plsw_ff0p127096_hwi_salt2_hd2_local.json",
+    0.4727
+   ],
+   [
+    "qpeexact_5_d13_W2YBl1Sd_s1_settledecode_c0p7_q0p7_pl13_B11_dec11_plsw_ff0p127096_hwi_salt3_hd2_local.json",
+    0.4747
+   ],
+   [
+    "qpeexact_5_d13_W2YBl1Sd_s1_settledecode_c0p7_q0p7_pl13_B11_dec11_plsw_ff0p127096_hwi_salt4_hd2_local.json",
+    0.479
+   ],
+   [
+    "qpeexact_5_d13_W2YBl1Sd_s1_settledecode_c0p7_q0p7_pl13_B11_dec11_plsw_ff0p127096_hwi_salt5_hd2_local.json",
+    0.4794
+   ],
+   [
+    "qpeexact_5_d13_W2YBl1Sd_s1_settledecode_c0p7_q0p7_pl13_B11_dec11_plsw_ff0p127096_hwi_salt6_hd2_local.json",
+    0.4758
+   ],
+   [
+    "qpeexact_5_d13_W2YBl1Sd_s1_settledecode_c0p99_q0p7_pl4_B11_dec11_plsw_ff0p127096_hwi_salt1_hd2_local.json",
+    0.4746
+   ],
+   [
+    "qpeexact_5_d13_W2YBl1Sd_s1_settledecode_c0p99_q0p7_pl4_B11_dec11_plsw_ff0p127096_hwi_salt2_hd2_local.json",
+    0.4742
+   ],
+   [
+    "qpeexact_5_d13_W2YBl1Sd_s1_settledecode_c0p99_q0p7_pl4_B11_dec11_plsw_ff0p127096_hwi_salt3_hd2_local.json",
+    0.4755
+   ],
+   [
+    "qpeexact_5_d13_W2YBl1Sd_s1_settledecode_c0p99_q0p7_pl4_B11_dec11_plsw_ff0p127096_hwi_salt4_hd2_local.json",
+    0.4767
+   ],
+   [
+    "qpeexact_5_d13_W2YBl1Sd_s1_settledecode_c0p999_q0p999_pl52_B11_dec11_plsw_ff0p127096_hwi_salt1_hd2_local.json",
+    0.4766
+   ],
+   [
+    "qpeexact_5_d13_W2YBl1Sd_s1_settledecode_c0p999_q0p999_pl52_B11_dec11_plsw_ff0p127096_hwi_salt2_hd2_local.json",
+    0.4763
+   ],
+   [
+    "qpeexact_5_d13_W2YBl1Sd_s1_settledecode_c0p999_q0p999_pl52_B11_dec11_plsw_ff0p127096_hwi_salt3_hd2_local.json",
+    0.4703
+   ],
+   [
+    "qpeexact_5_d13_W2YBl1Sd_s1_settledecode_c0p99_q0p99_pl52_B11_dec11_plsw_ff0p127096_hwi_salt1_hd2_local.json",
+    0.4766
+   ],
+   [
+    "qpeexact_5_d13_W2YBl1Sd_s1_settledecode_c0p99_q0p99_pl52_B11_dec11_plsw_ff0p127096_hwi_salt2_hd2_local.json",
+    0.4763
+   ],
+   [
+    "qpeexact_5_d13_W2YBl1Sd_s1_settledecode_c0p99_q0p99_pl52_B11_dec11_plsw_ff0p127096_hwi_salt3_hd2_local.json",
+    0.4703
+   ],
+   [
+    "qpeexact_5_d13_W2YBl1Sd_s1_settledecode_pl52_B11_dec11_plsw_ff0p127096_hwi_salt1_hd2_local.json",
+    0.4787
+   ],
+   [
+    "qpeexact_5_d13_W2YBl1Sd_s1_settledecode_pl52_B11_dec11_plsw_ff0p127096_hwi_salt2_hd2_local.json",
+    0.4764
+   ],
+   [
+    "qpeexact_5_d13_W2YBl1Sd_s1_settledecode_pl52_B11_dec11_plsw_ff0p127096_hwi_salt3_hd2_local.json",
+    0.4704
+   ],
+   [
+    "qpeexact_5_d13_W2YBl1Sd_s1_settledecode_pl52_B11_dec11_plsw_ff0p127096_hwi_salt4_hd2_local.json",
+    0.479
+   ],
+   [
+    "qpeexact_5_d13_W2YBl1Sd_s1_settledecode_pl52_B11_dec11_plsw_ff0p127096_hwi_salt5_hd2_local.json",
+    0.4783
+   ],
+   [
+    "qpeexact_5_d13_W2YBl1Sd_s1_settledecode_pl52_B11_dec11_plsw_ff0p127096_hwi_salt6_hd2_local.json",
+    0.4766
+   ],
+   [
+    "qpeexact_5_d13_W2YBl1Sd_s1_settledecode_B11_dec11_strip_pool_plsw_ff0p127096_hwi_salt1_hd2_local.json",
+    0.4766
+   ],
+   [
+    "qpeexact_5_d13_W2YBl1Sd_s1_settledecode_B11_dec11_strip_pool_plsw_ff0p127096_hwi_salt2_hd2_local.json",
+    0.4779
+   ],
+   [
+    "qpeexact_5_d13_W2YBl1Sd_s1_settledecode_B11_dec11_strip_pool_plsw_ff0p127096_hwi_salt3_hd2_local.json",
+    0.4704
+   ],
+   [
+    "qpeexact_5_d13_W2YBl1Sd_s1_settledecode_B11_dec11_strip_pool_plsw_ff0p127096_hwi_salt4_hd2_local.json",
+    0.4789
+   ]
+  ],
+  "manifest": "xic_fit_sources_hold.sha256",
+  "manifest_sha256": "2a95319b9fe1738f9762a917dbeca230a7b8ee84d901df424b360614251a8d81",
+  "n_runs": 109,
+  "note": "xi_C, the price for the delay a deferred step adds to later decodes (Section 5.2). A cell's mean, a distance's mean and the all-pooled mean are taken only over the programs with at least 20 early commits there (the fit's own minimum), with equal program weights, and the support is counted from the programs kept. Fitted on seed-1 W2YBl1Sd runs paired with SWIPER alone (N), both made with the compiled recovery-script library (--library sx) and two ordinary rounds per H round (--h-depth 2).",
+  "pairs": 279,
+  "pairs_used": 124,
+  "rule": "Section 5.2 of the paper: seed-1 W2YBl1 runs against SWIPER alone (N), paired",
+  "settle": "decode",
+  "source_arm": "W2YBl1Sd",
+  "status": "frozen",
+  "unpaired": [],
+  "w2_runs": 279
+ },
+ "version": 1
+}

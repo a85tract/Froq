@@ -1,0 +1,8 @@
+# Python 3.11 or 3.12.  The versions the release was checked with:
+numpy==2.2.6
+networkx==3.4.2
+stim==1.16.0
+pymatching==2.4.0
+scipy==1.18.1
+matplotlib==3.11.2
+tqdm==4.70.1

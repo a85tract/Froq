@@ -1,0 +1,108 @@
+# Each number of the paper's evaluation as the arXiv version prints it (key, value, tolerance, where).  Tolerance empty:
+# the regenerated text must be identical.  Section numbers are the paper's.
+main.cut88	9.81		Abstract, 1, 7.1: reduction over all 88 configurations (%)
+main.cut50	16.62		7.1, 8: over the 50 speculating configurations (%)
+main.cut45	18.34		Abstract, 1, 7.1: over the 45 configurations allowing concurrent predictions (%)
+main.peak	31.1		Abstract, 1, 7.1: peak reduction (%)
+main.peak_at	QPE-5 d=21 budgets 100/150		7.1: the peak is QPE-5 at d=21, budgets 100 and 150 % of peak demand
+main.n_configs	88		6: configurations
+main.n_wait	38		1, 6, 7.1: configurations where Froq always waits
+main.n_spec	50		6, 7: speculating configurations
+main.n_concurrent	45		6: settings allowing concurrent predictions
+main.n_one	5		6: one prediction at a time
+main.margins	33/10/7		6: margin 0, d, 4d
+main.n_runs	1,200		6: runs of the two systems, all within the censoring bound
+main.adder16_32_wait	True		7.1: every configuration of Adder-16 and Adder-32 waits
+main.p_max	True		7.1: each comparison p < 10^-23
+main.holm	both rejected: True		7.1: significant under Holm's procedure
+main.four_range	10.6-30.2		7.1: Grover-5, QFT-10, QPE-10, QPE-5 with 10.6 to 30.2 % each
+main.d13_range	10.6-14.4		7.1: 10.6-14.4 % at d=13
+main.d21_range	24.8-30.2		7.1: 24.8-30.2 % at d=21
+main.qpe5_d21_bar	30.2		7.1: QPE-5 at d=21, geometric mean over three budgets (%)
+main.adder4	d=17: 0.4, interval includes zero: True		7.1: Adder-4 speculates only at d=17, 0.4 %, interval includes zero
+main.adder8_train	0.52-0.73		7.1: waiting was 0.52-0.73 % slower on the training seeds
+main.adder8_d	13,17 one		7.1: Adder-8 speculates at d=13 and 17, one prediction at a time
+main.adder8_test	d=13 interval includes zero: True; d=17 -0.8, interval includes zero: False		7.1: no significant change at d=13, a 0.8 % slowdown at d=17
+ws.froq	21.5		7.3: most cells in use at once under Froq
+ws.swiper	19.9		7.3: under SWIPER alone
+ws.extra	1.6		7.3: more cells on average
+ws.extra_max	4.3 at Grover-5 d=21		7.3: at most 4.3 more, Grover-5 at d=21
+flow.pending	7,440		7.2, Figure flow: pending corrections in a run
+flow.registered	99.5		7.2, Figure flow: registered (%)
+flow.not_registered	0.5		Figure flow: not registered (%)
+flow.apply	12.5		7.2, Figure flow: apply (%)
+flow.defer	85.8		7.2, Figure flow: defer (%)
+flow.wait	1.7		7.2, Figure flow: wait (%)
+flow.unreg_decoded_first	72.0		7.2: decoded before they could be registered (%)
+flow.unreg_cone	25.6		7.2: rejected, light-cone work already started (%)
+flow.unreg_one	2.3		7.2: rejected by the limit of one prediction at a time (%)
+flow.unreg_capacity	0		7.2: the capacity of 64 live corrections rejected none
+flow.apply_right	907		Figure flow: prediction right
+flow.apply_first	15.0		Figure flow: decoded first
+flow.apply_wrong	0.2		7.2, Figure flow: mispredictions per run (wrong: recovery)
+flow.apply_total	922	1	7.2: out of about 922 (the paper rounds 922.6 down)
+flow.defer_total	6,354		7.2: deferred corrections per run
+flow.defer_s_not_needed	3,615		Figure flow: S not needed
+flow.defer_s_needed	2,739		7.2, Figure flow: later needed S and ran a recovery
+flow.defer_s_needed_share	43		7.2: (43 %)
+flow.wait_s_not_needed	87.8		Figure flow: S not needed
+flow.wait_s_needed	37.5		Figure flow: S needed
+flow.bars	0.499 3.433 0.068	0.001	Figure flow: heights of the apply, defer and wait bars (4.160-3.661, 3.501-0.068, -0.092-(-0.160))
+delay.removed	61		7.2: Froq removed 61 % of the waiting
+delay.remaining	39		7.2: 39 % of those under SWIPER alone
+delay.contract_end	56.5		7.2: delayed at the end of a contract (%)
+delay.script	31.9		7.2: waited for a recovery script (%)
+delay.not_registered	0.3		7.2: waited for corrections that were not registered (%)
+delay.other	11.3		7.2: the other 11.3 %
+delay.decision_waits	6.1		7.2: the decision chose to wait before the contract's end (%)
+delay.admission	4.8		7.2: admission of a step the decision allowed (%)
+delay.cell_or_cz	0.3		7.2: a cell held by a recovery script or a conditioned CZ (%)
+rules.n	39 of 50		7.2: configurations where the selector chose the decision
+rules.decision	11.1		7.2: the decision's reduction, one prediction at a time, three seeds (%)
+rules.always	10.0		7.2: always deferring (%)
+rules.always_paired	1.25 (0.64 to 1.87)		7.2: paired with the decision's runs, took 1.25 % longer
+rules.flat	10.9		7.2: deferring while the script's volume stays flat (%)
+rules.flat_paired	0.22 (-0.03 to 0.46)		7.2: paired difference, not significant
+price.gm	1.07		7.2: recovery price over measured recovery time, geometric mean
+price.n	48		7.2: configurations with such recoveries
+price.range	0.87-1.47		7.2: per-configuration ratios
+price.d13	8.8		7.2: underestimated at d=13 (%)
+price.d17	16.0		7.2: overestimated at d=17 (%)
+price.d21	13.9		7.2: overestimated at d=21 (%)
+caps.one.cap_swiper_peak	7.88		7.2: workspace capped at SWIPER alone's median peak, one prediction at a time (%)
+caps.one.cap_mid	7.90		7.2: capped midway, one prediction at a time (%)
+caps.concurrent.cap_swiper_peak	12.85		7.2: capped at SWIPER alone's median peak, concurrent predictions (%)
+caps.concurrent.cap_mid	12.86		7.2: capped midway, concurrent predictions (%)
+hw.guarded_vs_static	241.1 k against 18.7 k (13 times)		7.3: a runtime that rules out the cycle at every step needs about 13 times the logic
+admission.concurrent	1.19 (1.11 to 1.27) over 45		7.3: simpler admission, concurrent predictions (%)
+admission.one	0.10 (0.06 to 0.15) over 88		7.3: simpler admission, one prediction at a time (%)
+compile.scripts_checked	77,295		7.3: recovery scripts the evaluation used, all passed the check
+compile.max_seconds	471		7.3: generating scripts and profiles, at most per program and distance (s)
+stress.ref	11.1		7.2, 7.4: the reference reduction (%)
+stress.s2	10.9		7.4: controller two times slower (%)
+stress.s4	11.6 over 45, reference 12.4		7.4: four times slower, over the other 45, against the reference (%)
+stress.decode	7.3 4.9 3.5		7.4: decodes a half, a quarter, an eighth of their time (%)
+stress.avail	9.1 7.0		7.2, 7.4: predictions for half of the corrections, and none (%)
+stress.later	10.6 8.6 7.2		7.4: predictions published 16, 64, 128 rounds later (%)
+stress.calibration	11.1 11.1		7.4: error probabilities reported ten times smaller and larger (%)
+stress.mispred_10_100	11.1 10.8 / 11.1 10.8		7.4: mispredictions 10 and 100 times as frequent, original / corrected confidence (%)
+stress.mispred_1000	9.2 9.1		7.4: 1,000 times as frequent, original and corrected confidence (%)
+stress.mispred_rate	31		7.4: a misprediction rate of about 31 %
+source.lead_swiper	2.5		7.4: SWIPER's unconfirmed decode arrives 2.5 rounds before SWIPER confirms it
+source.lead_local	32.9		7.4: against 32.9 rounds for the local-decoding predictor
+source.vs_local	3.92 (3.80 to 4.04) over 50		7.4: with SWIPER's unconfirmed decode, Froq ran 3.92 % longer than with the local predictor
+source.vs_swiper	4.43		7.4: yet still reduced quantum-side time against SWIPER alone by 4.43 % over all 88
+tables.max_uncorrected	59		5.5: the uncorrected branch needed at most 59 profiles
+tables.applied_over_64	37 of 50		5.5: the applied branch needed more than 64 at 37 of the 50
+tables.no_slot	1.5		5.5: 1.5 % of the pairs cannot apply
+hw.decision_unit_luts	3,146		5.6: the decision unit's LUTs
+hw.round_cycles	286		5.6: cycles in a 1 us round at 3.5 ns
+hw.read	5		5.6: dependent access (cycles)
+hw.registration	18 cycles, 6.3 %		5.6: registration
+hw.settlement	28 cycles, 9.8 %, 18 routed, 10 estimated		5.6: settlement to the script's first instruction
+hw.store_blocks	21 to 60		5.6: the script store's sizing estimate (URAM288)
+programs.P_range	22 QPE-5 d=13, 506 Adder-32 d=21		6: peak decoder demand from 22 to 506 cores
+programs.t_counts	12 to 124 against 1,813 to 14,085		7.1: the adders' T gates against the other programs'
+programs.budgets_checked	88		6: every decoder budget is ceil(level x P)
+intro.wait_d13	56.3		1: median over the eight programs of SWIPER alone's mean wait per T gate at d=13 (rounds)
+intro.wait_d21	214.7		1: the same at d=21 (rounds)

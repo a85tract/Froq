@@ -1,0 +1,30 @@
+{
+ "bits": 4,
+ "n_qubits": 11,
+ "measurements": 3,
+ "branches": 8,
+ "inputs": [
+  "uniform",
+  "random:0",
+  "random:1",
+  "random:2",
+  "random:3",
+  "random:4",
+  "basis:15+1",
+  "basis:2+9"
+ ],
+ "worst_branch_fidelity": 0.9999999999999991,
+ "worst_branch_probability_deviation": 2.636779683484747e-16,
+ "negative_control_worst_register_fidelity": 0.21050505450419893,
+ "PASS": true,
+ "source": "e2e/schedules/adder/adder_4.events.json",
+ "ops": {
+  "cx": 33,
+  "cz_if": 3,
+  "h": 9,
+  "measure": 3,
+  "s": 9,
+  "t": 12,
+  "z": 6
+ }
+}

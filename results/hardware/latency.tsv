@@ -1,0 +1,4 @@
+path	cycles	routed_cycles	estimated_cycles	round_cycles
+registration	18	0	18	286
+settlement	28	18	10	286
+dependent_read	5	-	5	286

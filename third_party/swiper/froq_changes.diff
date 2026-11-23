@@ -1,0 +1,97 @@
+diff --git a/swiper/decoder_manager.py b/swiper/decoder_manager.py
+index 993b409..b9beeea 100644
+--- a/swiper/decoder_manager.py
++++ b/swiper/decoder_manager.py
+@@ -3,6 +3,7 @@ from typing import Callable
+ import numpy as np
+ import networkx as nx
+ import itertools
++import os
+ from swiper.window_builder import DecodingWindow
+ 
+ @dataclass
+@@ -122,6 +123,15 @@ class DecoderManager:
+         self._instruction_tasks: dict[int, set[int]] = {} # maps each instruction to the set of tasks that cover it
+         self._instruction_unverified_task_counts: dict[int, int] = {} # maps each instruction to the number of unverified tasks that depend on it
+         self._seen_instructions: set[int] = set()
++        # successors of x that are in _seen_instructions, kept as x's list (2026-09-15 profile: _instruction_dag_descendants
++        # iterated all successors of every seen node and tested membership; a spliced recovery release has ~10^5 successors,
++        # so one walk through it cost ~10 ms and the per-round query ran at ~5 walks per round)
++        self._seen_succ: dict[int, list[int]] = {}
++        self._check_descendants = bool(os.environ.get("E2E_SCAN_CHECK"))
++        # edges the device adds after construction without putting them into instruction_idx_dag (the recovery release ->
++        # later-user edges, ~10^5 per recovery): predecessor / successor lists, read together with the graph's own
++        self._extra_pred: dict[int, list[int]] = {}
++        self._extra_succ: dict[int, list[int]] = {}
+         self._not_fully_decoded_instructions = set()
+         self._decoded_unverified_tasks: set[int] = set()
+         self._num_failed_speculations: int = 0
+@@ -276,14 +286,39 @@ class DecoderManager:
+ 
+         return verified_tasks
+ 
++    def note_edge(self, a: int, b: int, in_graph: bool = True) -> None:
++        """An edge a -> b added after construction (the device's recovery splices).  in_graph=False: the edge is NOT in
++        instruction_idx_dag and is recorded in the extra lists instead.  Either way the seen-successor lists stay exact: a b
++        that is not seen yet is appended when it becomes seen (its predecessors, graph and extra, are read then)."""
++        if not in_graph:
++            self._extra_pred.setdefault(b, []).append(a); self._extra_succ.setdefault(a, []).append(b)
++        if b in self._seen_instructions:
++            self._seen_succ.setdefault(a, []).append(b)
++
++    def _preds(self, x: int):
++        return itertools.chain(self.instruction_idx_dag.predecessors(x), self._extra_pred.get(x, ()))
++
++    def _succs(self, x: int):
++        return itertools.chain(self.instruction_idx_dag.successors(x), self._extra_succ.get(x, ()))
++
+     def _instruction_dag_descendants(self, instr_idx: int) -> set[int]:
+         """Get descendants of an instruction in the schedule DAG, up to
+-        instructions that have begun decoding."""
++        instructions that have begun decoding.  Same set as the original walk over all successors (kept below for
++        E2E_SCAN_CHECK), visiting only the seen ones."""
++        descendants = set()
++        for child_idx in self._seen_succ.get(instr_idx, ()):
++            descendants.add(child_idx)
++            descendants |= self._instruction_dag_descendants(child_idx)
++        if self._check_descendants:
++            assert descendants == self._instruction_dag_descendants_slow(instr_idx), instr_idx
++        return descendants
++
++    def _instruction_dag_descendants_slow(self, instr_idx: int) -> set[int]:
+         descendants = set()
+-        for child_idx in self.instruction_idx_dag.successors(instr_idx):
++        for child_idx in self._succs(instr_idx):
+             if child_idx in self._seen_instructions:
+                 descendants.add(child_idx)
+-                descendants |= self._instruction_dag_descendants(child_idx)
++                descendants |= self._instruction_dag_descendants_slow(child_idx)
+         return descendants
+ 
+     def _topologically_sort(self, task_indices):
+@@ -385,7 +420,10 @@ class DecoderManager:
+                     self._instruction_unverified_task_counts[instr_idx] = self._instruction_unverified_task_counts.get(instr_idx, 0) + 1
+                     self._not_fully_decoded_instructions.add(instr_idx)
+                     self._instruction_tasks[instr_idx] = self._instruction_tasks.get(instr_idx, set()) | {task.window_idx}
+-                    self._seen_instructions.add(instr_idx)
++                    if instr_idx not in self._seen_instructions:
++                        self._seen_instructions.add(instr_idx)
++                        for pred_idx in self._preds(instr_idx):
++                            self._seen_succ.setdefault(pred_idx, []).append(instr_idx)
+         unprocessed_task_indices = self._pending_decode_tasks | self._pending_speculate_tasks
+         while len(unprocessed_task_indices) > 0:
+             task_idx = unprocessed_task_indices.pop()
+diff --git a/swiper/device_manager.py b/swiper/device_manager.py
+index 11fe58d..090c7bc 100644
+--- a/swiper/device_manager.py
++++ b/swiper/device_manager.py
+@@ -424,7 +424,8 @@ class DeviceManager:
+         if self.is_done():
+             return []
+ 
+-        init_active_patches = copy.deepcopy(self._active_patches)
++        init_active_patches = set(self._active_patches)   # patches are hashable coordinate tuples (immutable): the same set as the
++                                                            # deep copy, without cloning ~560 tuples per round (10 % of a Q round at d = 21)
+         generated_syndrome_rounds, completed_instructions = self._generate_syndrome_round()
+         self._clean_completed_instructions(completed_instructions)
+ 

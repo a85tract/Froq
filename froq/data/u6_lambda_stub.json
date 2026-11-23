@@ -1,0 +1,10 @@
+{
+  "provenance": {
+    "rule": "gap analysis r04 rule 51b (research/rounds/r04/gap-analysis.md on scoutq)",
+    "status": "STUB, for tests and development runs off the selection's and the evaluation's seeds only (e2e/run.py refuses it there): no entries, so no floor applies",
+    "fit": "the median of t_verdict - t_end per (verdict class, d, budget level), from seed-1 D-nci runs on the mask programs and distances at budgets 0.5P, 0.75P, P and 1.5P",
+    "verdict_class": "the producer instruction's name, patch count and duration in rounds (e2e/u6.py, U6State.vclass)",
+    "frozen": false
+  },
+  "entries": []
+}

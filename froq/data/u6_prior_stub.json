@@ -1,0 +1,8 @@
+{
+ "provenance": {
+  "rule": "gap analysis r04 rule 50d (research/rounds/r04/gap-analysis.md on scoutq)",
+  "status": "STUB: no entry, for the fixture's tests (d = 5, outside the fit): p_corr stays 1 without a prediction",
+  "frozen": false
+ },
+ "entries": []
+}

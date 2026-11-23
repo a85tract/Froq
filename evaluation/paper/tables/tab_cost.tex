@@ -1,0 +1,16 @@
+\begin{table}[t]
+\caption{Controller's cost on the V80 sums the routed part, the estimated part and the part counted by unit cost.}
+\label{tab:cost}
+\centering
+\setlength{\tabcolsep}{4pt}
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{@{}lll@{}}
+\toprule
+\textbf{Block} & \textbf{Memory blocks} & \textbf{LUTs (k)} \\
+\midrule
+static reservation & \textbf{21} RAMB36 & \textbf{18.7} + 30.5 (22.8--{}54.2) + \textit{3.1} \\
+script store & 21 to 60 URAM288 & \textit{0.5} \\
+splice engine & 2 (1.5--{}2) RAMB36 & 1.0 (1.0--{}2.0) + \textit{1.8} \\
+\bottomrule
+\end{tabular}}
+\end{table}

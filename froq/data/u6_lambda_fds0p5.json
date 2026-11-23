@@ -1,0 +1,454 @@
+{
+ "provenance": {
+  "rule": "gap analysis r04 rule 51b, amended by rule 50a (research/rounds/r04/gap-analysis.md on scoutq)",
+  "status": "FROZEN: fitted 2026-10-04 16:15 by e2e/tools/u6_lambda_fit.py at deploy 649fb17",
+  "coverage": {
+   "programs": [
+    "adder_16:17",
+    "adder_16:21",
+    "adder_32:17",
+    "adder_32:21",
+    "adder_4:17",
+    "adder_4:21",
+    "adder_8:17",
+    "adder_8:21",
+    "grover_ancilla_5:17",
+    "grover_ancilla_5:21",
+    "qft_10:17",
+    "qft_10:21",
+    "qpeexact_10:17",
+    "qpeexact_10:21",
+    "qpeexact_5:17",
+    "qpeexact_5:21"
+   ],
+   "levels": {
+    "adder_16:17": [
+     "0.5P"
+    ],
+    "adder_16:21": [
+     "1.5P"
+    ],
+    "adder_32:17": [
+     "0.5P"
+    ],
+    "adder_32:21": [
+     "1.5P"
+    ],
+    "adder_4:17": [
+     "0.5P"
+    ],
+    "adder_4:21": [
+     "1.5P"
+    ],
+    "adder_8:17": [
+     "0.5P"
+    ],
+    "adder_8:21": [
+     "1.5P"
+    ],
+    "grover_ancilla_5:17": [
+     "0.5P"
+    ],
+    "grover_ancilla_5:21": [
+     "1.5P"
+    ],
+    "qft_10:17": [
+     "0.5P"
+    ],
+    "qft_10:21": [
+     "1.5P"
+    ],
+    "qpeexact_10:17": [
+     "0.5P"
+    ],
+    "qpeexact_10:21": [
+     "1.5P"
+    ],
+    "qpeexact_5:17": [
+     "0.5P"
+    ],
+    "qpeexact_5:21": [
+     "1.5P"
+    ]
+   },
+   "keys_needed": 100,
+   "missing": []
+  },
+  "fit": "the median of t_verdict - t_end (the values table's resolution) per (d, budget level, producer decode class), over every resolved value of the seed-1 D-nci runs listed in sources",
+  "verdict_class": "the producer instruction's name, patch count and duration in rounds (e2e/u6.py, U6State.vclass)",
+  "note": "The decoding-speed variant: seed-1 D-nci reference runs at --full-decode-scale 0.5 in its two cells.",
+  "sources": [
+   {
+    "stage": "fds_B05",
+    "level": "0.5P",
+    "runs": [
+     {
+      "id": "run:adder_16:17:Dnci:1:fds_B05",
+      "result": "adder_16_d17_Dnci_s1_no_cost_increase_B86_dec86_swiper_ff0p130592_fds0p5_local.json",
+      "sha256": "1873117cca7f3487c137b9189d844a5ced8c9160fd1c02360a98df1e0ed0c27f",
+      "budget": 86,
+      "stopping": "completed",
+      "resolved": 60,
+      "unresolved": 0
+     },
+     {
+      "id": "run:adder_32:17:Dnci:1:fds_B05",
+      "result": "adder_32_d17_Dnci_s1_no_cost_increase_B181_dec181_swiper_ff0p130592_fds0p5_local.json",
+      "sha256": "73e7e68501f9c3adf8a606e8345bce54eb17b4a7b5c46f713c7497c824f66843",
+      "budget": 181,
+      "stopping": "completed",
+      "resolved": 124,
+      "unresolved": 0
+     },
+     {
+      "id": "run:adder_4:17:Dnci:1:fds_B05",
+      "result": "adder_4_d17_Dnci_s1_no_cost_increase_B29_dec29_swiper_ff0p130592_fds0p5_local.json",
+      "sha256": "39e5e73285d685bc2047ce5663cd158a79defcd1799676e8eb8de5c7e896a7fe",
+      "budget": 29,
+      "stopping": "completed",
+      "resolved": 12,
+      "unresolved": 0
+     },
+     {
+      "id": "run:adder_8:17:Dnci:1:fds_B05",
+      "result": "adder_8_d17_Dnci_s1_no_cost_increase_B44_dec44_swiper_ff0p130592_fds0p5_local.json",
+      "sha256": "0a793133f397af1ad8e3631d00e92ad9e6e1701e139bddfc5505a3088838fdfb",
+      "budget": 44,
+      "stopping": "completed",
+      "resolved": 28,
+      "unresolved": 0
+     },
+     {
+      "id": "run:grover_ancilla_5:17:Dnci:1:fds_B05",
+      "result": "grover_ancilla_5_d17_Dnci_s1_no_cost_increase_B18_dec18_swiper_ff0p130592_fds0p5_local.json",
+      "sha256": "a848fb0426634524862a177b8def6258f74acbc231f3cb9c90101b7ae8ed433f",
+      "budget": 18,
+      "stopping": "completed",
+      "resolved": 14085,
+      "unresolved": 0
+     },
+     {
+      "id": "run:qft_10:17:Dnci:1:fds_B05",
+      "result": "qft_10_d17_Dnci_s1_no_cost_increase_B32_dec32_swiper_ff0p130592_fds0p5_local.json",
+      "sha256": "e419ed7262ce00613847c85043cc0e87292465beb8741fd5549c82f19ed797a5",
+      "budget": 32,
+      "stopping": "completed",
+      "resolved": 9428,
+      "unresolved": 0
+     },
+     {
+      "id": "run:qpeexact_10:17:Dnci:1:fds_B05",
+      "result": "qpeexact_10_d17_Dnci_s1_no_cost_increase_B31_dec31_swiper_ff0p130592_fds0p5_local.json",
+      "sha256": "cd2a52e17f56448d9d3ec7f418dde223e3f90915ff2ace7f647da09e901c857a",
+      "budget": 31,
+      "stopping": "completed",
+      "resolved": 8644,
+      "unresolved": 0
+     },
+     {
+      "id": "run:qpeexact_5:17:Dnci:1:fds_B05",
+      "result": "qpeexact_5_d17_Dnci_s1_no_cost_increase_B15_dec15_swiper_ff0p130592_fds0p5_local.json",
+      "sha256": "aa1dda19cc17d6cc9cce089c1f536719f416fc1f3d536b2b2e514cde4549fed7",
+      "budget": 15,
+      "stopping": "completed",
+      "resolved": 1813,
+      "unresolved": 0
+     }
+    ]
+   },
+   {
+    "stage": "fds_B15",
+    "level": "1.5P",
+    "runs": [
+     {
+      "id": "run:adder_16:21:Dnci:1:fds_B15",
+      "result": "adder_16_d21_Dnci_s1_no_cost_increase_B416_dec416_swiper_ff0p127511_fds0p5_local.json",
+      "sha256": "159ceea93ce04b0d9d69ae40c68f41324ba8ff883ead8ca16d75c7d82acaf587",
+      "budget": 416,
+      "stopping": "completed",
+      "resolved": 60,
+      "unresolved": 0
+     },
+     {
+      "id": "run:adder_32:21:Dnci:1:fds_B15",
+      "result": "adder_32_d21_Dnci_s1_no_cost_increase_B759_dec759_swiper_ff0p127511_fds0p5_local.json",
+      "sha256": "eb195a881c38544b2076891a188909a4caff34463dcc08f4e7fcd6533de23215",
+      "budget": 759,
+      "stopping": "completed",
+      "resolved": 124,
+      "unresolved": 0
+     },
+     {
+      "id": "run:adder_4:21:Dnci:1:fds_B15",
+      "result": "adder_4_d21_Dnci_s1_no_cost_increase_B129_dec129_swiper_ff0p127511_fds0p5_local.json",
+      "sha256": "74cfb3c7edd8b49dce89cb3ae050a462e03a64b79364f9d7c1db3cba659dc7b4",
+      "budget": 129,
+      "stopping": "completed",
+      "resolved": 12,
+      "unresolved": 0
+     },
+     {
+      "id": "run:adder_8:21:Dnci:1:fds_B15",
+      "result": "adder_8_d21_Dnci_s1_no_cost_increase_B215_dec215_swiper_ff0p127511_fds0p5_local.json",
+      "sha256": "66e7d74a2f87421cfc1cf84751ac1c36ab4e6ee995bcc397cbefa7301ba8ad05",
+      "budget": 215,
+      "stopping": "completed",
+      "resolved": 28,
+      "unresolved": 0
+     },
+     {
+      "id": "run:grover_ancilla_5:21:Dnci:1:fds_B15",
+      "result": "grover_ancilla_5_d21_Dnci_s1_no_cost_increase_B68_dec68_swiper_ff0p127511_fds0p5_local.json",
+      "sha256": "b08171dfc238575652ec74e450aa6e4ce517ecbb5e2058346426fea2a5ca12ee",
+      "budget": 68,
+      "stopping": "completed",
+      "resolved": 14085,
+      "unresolved": 0
+     },
+     {
+      "id": "run:qft_10:21:Dnci:1:fds_B15",
+      "result": "qft_10_d21_Dnci_s1_no_cost_increase_B126_dec126_swiper_ff0p127511_fds0p5_local.json",
+      "sha256": "3804bc6ab6e69e5caf75618ecdcf07882ea7157ec4db2fd259abc4744676851c",
+      "budget": 126,
+      "stopping": "completed",
+      "resolved": 9428,
+      "unresolved": 0
+     },
+     {
+      "id": "run:qpeexact_10:21:Dnci:1:fds_B15",
+      "result": "qpeexact_10_d21_Dnci_s1_no_cost_increase_B126_dec126_swiper_ff0p127511_fds0p5_local.json",
+      "sha256": "c8d6a54f605d6d04503a2d2ae024df94e1cd390e268c2575b56df8324c9686bc",
+      "budget": 126,
+      "stopping": "completed",
+      "resolved": 8644,
+      "unresolved": 0
+     },
+     {
+      "id": "run:qpeexact_5:21:Dnci:1:fds_B15",
+      "result": "qpeexact_5_d21_Dnci_s1_no_cost_increase_B65_dec65_swiper_ff0p127511_fds0p5_local.json",
+      "sha256": "79e08ba43adba8798cdf75c4f0b25988fd95668d8d6be93eadd6c42b29cae2a0",
+      "budget": 65,
+      "stopping": "completed",
+      "resolved": 1813,
+      "unresolved": 0
+     }
+    ]
+   }
+  ],
+  "frozen": true,
+  "full_decode_scale": 0.5,
+  "variant": "r04 rule 57's decoding speed: every source ran with --full-decode-scale 0.5 (msg40), and a run with that switch reads this file"
+ },
+ "entries": [
+  {
+   "d": 17,
+   "B": "0.5P",
+   "vclass": "MERGE/11/17",
+   "n": 93,
+   "lambda": 52.0
+  },
+  {
+   "d": 17,
+   "B": "0.5P",
+   "vclass": "MERGE/13/17",
+   "n": 8,
+   "lambda": 53.5
+  },
+  {
+   "d": 17,
+   "B": "0.5P",
+   "vclass": "MERGE/15/17",
+   "n": 4,
+   "lambda": 52.5
+  },
+  {
+   "d": 17,
+   "B": "0.5P",
+   "vclass": "MERGE/17/17",
+   "n": 5,
+   "lambda": 48.0
+  },
+  {
+   "d": 17,
+   "B": "0.5P",
+   "vclass": "MERGE/19/17",
+   "n": 2,
+   "lambda": 62.5
+  },
+  {
+   "d": 17,
+   "B": "0.5P",
+   "vclass": "MERGE/21/17",
+   "n": 2,
+   "lambda": 63.0
+  },
+  {
+   "d": 17,
+   "B": "0.5P",
+   "vclass": "MERGE/23/17",
+   "n": 2,
+   "lambda": 62.0
+  },
+  {
+   "d": 17,
+   "B": "0.5P",
+   "vclass": "MERGE/25/17",
+   "n": 2,
+   "lambda": 64.0
+  },
+  {
+   "d": 17,
+   "B": "0.5P",
+   "vclass": "MERGE/27/17",
+   "n": 1,
+   "lambda": 49.0
+  },
+  {
+   "d": 17,
+   "B": "0.5P",
+   "vclass": "MERGE/3/17",
+   "n": 21211,
+   "lambda": 49.0
+  },
+  {
+   "d": 17,
+   "B": "0.5P",
+   "vclass": "MERGE/33/17",
+   "n": 1,
+   "lambda": 55.0
+  },
+  {
+   "d": 17,
+   "B": "0.5P",
+   "vclass": "MERGE/5/17",
+   "n": 6975,
+   "lambda": 47.0
+  },
+  {
+   "d": 17,
+   "B": "0.5P",
+   "vclass": "MERGE/51/17",
+   "n": 1,
+   "lambda": 83.0
+  },
+  {
+   "d": 17,
+   "B": "0.5P",
+   "vclass": "MERGE/7/17",
+   "n": 5782,
+   "lambda": 50.0
+  },
+  {
+   "d": 17,
+   "B": "0.5P",
+   "vclass": "MERGE/9/17",
+   "n": 105,
+   "lambda": 44.0
+  },
+  {
+   "d": 21,
+   "B": "1.5P",
+   "vclass": "MERGE/11/21",
+   "n": 93,
+   "lambda": 96.0
+  },
+  {
+   "d": 21,
+   "B": "1.5P",
+   "vclass": "MERGE/13/21",
+   "n": 8,
+   "lambda": 92.5
+  },
+  {
+   "d": 21,
+   "B": "1.5P",
+   "vclass": "MERGE/15/21",
+   "n": 4,
+   "lambda": 94.5
+  },
+  {
+   "d": 21,
+   "B": "1.5P",
+   "vclass": "MERGE/17/21",
+   "n": 5,
+   "lambda": 107.0
+  },
+  {
+   "d": 21,
+   "B": "1.5P",
+   "vclass": "MERGE/19/21",
+   "n": 2,
+   "lambda": 113.5
+  },
+  {
+   "d": 21,
+   "B": "1.5P",
+   "vclass": "MERGE/21/21",
+   "n": 2,
+   "lambda": 108.0
+  },
+  {
+   "d": 21,
+   "B": "1.5P",
+   "vclass": "MERGE/23/21",
+   "n": 2,
+   "lambda": 129.0
+  },
+  {
+   "d": 21,
+   "B": "1.5P",
+   "vclass": "MERGE/25/21",
+   "n": 2,
+   "lambda": 124.5
+  },
+  {
+   "d": 21,
+   "B": "1.5P",
+   "vclass": "MERGE/27/21",
+   "n": 1,
+   "lambda": 86.0
+  },
+  {
+   "d": 21,
+   "B": "1.5P",
+   "vclass": "MERGE/3/21",
+   "n": 21211,
+   "lambda": 90.0
+  },
+  {
+   "d": 21,
+   "B": "1.5P",
+   "vclass": "MERGE/33/21",
+   "n": 1,
+   "lambda": 98.0
+  },
+  {
+   "d": 21,
+   "B": "1.5P",
+   "vclass": "MERGE/5/21",
+   "n": 6975,
+   "lambda": 87.0
+  },
+  {
+   "d": 21,
+   "B": "1.5P",
+   "vclass": "MERGE/51/21",
+   "n": 1,
+   "lambda": 119.0
+  },
+  {
+   "d": 21,
+   "B": "1.5P",
+   "vclass": "MERGE/7/21",
+   "n": 5782,
+   "lambda": 92.0
+  },
+  {
+   "d": 21,
+   "B": "1.5P",
+   "vclass": "MERGE/9/21",
+   "n": 105,
+   "lambda": 83.0
+  }
+ ]
+}

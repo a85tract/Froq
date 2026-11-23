@@ -1,0 +1,128 @@
+{
+ "bench": "feedback_z",
+ "converter_version": "scoutq-wp3-compile/0.3",
+ "events_schema": "scoutq-events/1",
+ "slicer": "<scratch>/scoutq_v9/w10/tools/liblsqecc_w10/build/lsqecc_slicer",
+ "slicer_sha256": "25bc28b991f913c39234655b7889c10a649f2470e741cb92091493e62614c8fc",
+ "slicer_argv": [
+  "<scratch>/scoutq_v9/w10/tools/liblsqecc_w10/build/lsqecc_slicer",
+  "-q",
+  "-i",
+  "e2e/tests_fixtures/feedback/feedback_z.qasm",
+  "-L",
+  "edpc",
+  "--disttime",
+  "1",
+  "--nostagger",
+  "-P",
+  "wave",
+  "-o",
+  "e2e/tests_fixtures/feedback/feedback_z.slices.json",
+  "--metaout",
+  "e2e/tests_fixtures/feedback/feedback_z.meta.json"
+ ],
+ "compiler": {
+  "base_commit": "e88b1a4",
+  "fork": "liblsqecc_scoutq",
+  "fork_commit": "ba4d74e1ec7b465beb0c4d4585cad73a7360122e"
+ },
+ "compiler_flags": {
+  "cnot_ancilla_placement_default": "AncillaNextToTarget",
+  "cnot_ancilla_placement_default_note": "value after the layout override; the parser preloads the first gate before the override, so an unannotated first CNOT keeps the built-in default AncillaFreePlacement",
+  "cnot_corrections": "never",
+  "cnot_type_default": "ZXWithMBMControlFirst",
+  "compilation_mode": "nonlocal",
+  "condensed": false,
+  "disttime": 1,
+  "explicitfactories": false,
+  "input_is_qasm": true,
+  "layout": "edpc",
+  "nostagger": true,
+  "numlanes": 1,
+  "op_ids_legacy": false,
+  "pipeline": "wave",
+  "rzprecision_log_ten_negative": "10.000000",
+  "s_gate_mode": "twists"
+ },
+ "inputs": {
+  "slices_json": "<scratch>/scoutq_v9/w10/dev/scoutq/e2e/tests_fixtures/feedback/feedback_z.slices.json",
+  "meta": "<scratch>/scoutq_v9/w10/dev/scoutq/e2e/tests_fixtures/feedback/feedback_z.meta.json",
+  "qasm": "e2e/tests_fixtures/feedback/feedback_z.qasm"
+ },
+ "fingerprints": {
+  "qasm": "5ec65372bdffb9ac8ce27c143b814927c0649ea91a5bddd7a4cc546cb5393739",
+  "slices_json": "c326324960cde9c36f69a07340b58a55d13f84079ebbd989e8593227ebbd90c5",
+  "meta": "e6632722b9a2efb78cd000ef83d9b75a32b5e9823a350753ad60571700a0f653",
+  "lss": "4ee529013b912149bc2927d712b570085a8b42957d5040345fb53cb978f64f23",
+  "events": "6a19ef68c5577a80b11f1f93fe4b03cb257eadde280d49a5825342ba12378e00"
+ },
+ "inventory_templates": {
+  "H": 4,
+  "MEASURE": 1,
+  "T": 1,
+  "T1": 1,
+  "T2": 1,
+  "S": 1,
+  "CZ": 1,
+  "CNOT_cf_patched": 1
+ },
+ "inventory_gadget_kinds": {
+  "H": 2,
+  "MEASURE": 1,
+  "T": 1,
+  "CZ": 1
+ },
+ "source_gate_counts": {
+  "h": 2,
+  "measure": 1,
+  "t": 1,
+  "cz": 1
+ },
+ "deviations": {
+  "tdg_as_t": 0,
+  "sdg_as_s": 0,
+  "reset_dropped": 0,
+  "cz_composite": 1,
+  "measurements_kept": 1,
+  "conditional_cz": 1,
+  "cnot_placements": {
+   "requested=target|resolved=next_to_target": 1
+  },
+  "terminal_measurements": 0
+ },
+ "counts": {
+  "slices": 17,
+  "lss_instructions": 32,
+  "events": 49,
+  "lli": 32,
+  "lli_skipped": 12
+ },
+ "classical_feedback": {
+  "conditional_cz": 1,
+  "groups": [
+   {
+    "gadget": "g6",
+    "result_id": "r2",
+    "register": "m",
+    "measured_patch": 2,
+    "readout_lss": 12,
+    "decode_anchor": 2,
+    "lss_group": [
+     13,
+     14,
+     15,
+     16,
+     17,
+     18,
+     19,
+     20,
+     21,
+     22,
+     23,
+     24,
+     25
+    ]
+   }
+  ]
+ }
+}

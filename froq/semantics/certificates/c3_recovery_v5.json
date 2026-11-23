@@ -1,0 +1,2280 @@
+{
+ "I": {
+  "script": [],
+  "n_private_bits": 0,
+  "member_count": {
+   "S_gadget": 0,
+   "H": 0,
+   "CNOT": 0,
+   "frame": 0,
+   "templates_total": 0
+  },
+  "frame_after_rule": {
+   "rule": "E^dagger = (Q^dagger P^dagger Q) Q^dagger; table P -> Q^dagger P^dagger Q",
+   "table": {
+    "I": "I",
+    "X1": "X1",
+    "Y1": "Y1",
+    "Z1": "Z1",
+    "X0": "X0",
+    "X0.X1": "X0.X1",
+    "X0.Y1": "X0.Y1",
+    "X0.Z1": "X0.Z1",
+    "Y0": "Y0",
+    "Y0.X1": "Y0.X1",
+    "Y0.Y1": "Y0.Y1",
+    "Y0.Z1": "Y0.Z1",
+    "Z0": "Z0",
+    "Z0.X1": "Z0.X1",
+    "Z0.Y1": "Z0.Y1",
+    "Z0.Z1": "Z0.Z1"
+   },
+   "PASS": true
+  },
+  "channel_equals_conj_by_Qdagger": true,
+  "trace_preserving": true,
+  "PASS": true
+ },
+ "rot(+1,X1)": {
+  "script": [
+   {
+    "template": "H",
+    "wires": [
+     1
+    ]
+   },
+   {
+    "template": "S",
+    "wires": [
+     1
+    ]
+   },
+   {
+    "template": "H",
+    "wires": [
+     1
+    ]
+   }
+  ],
+  "n_private_bits": 2,
+  "member_count": {
+   "S_gadget": 1,
+   "H": 2,
+   "CNOT": 0,
+   "frame": 0,
+   "templates_total": 3
+  },
+  "frame_after_rule": {
+   "rule": "E^dagger = (Q^dagger P^dagger Q) Q^dagger; table P -> Q^dagger P^dagger Q",
+   "table": {
+    "I": "I",
+    "X1": "X1",
+    "Y1": "Z1",
+    "Z1": "Y1",
+    "X0": "X0",
+    "X0.X1": "X0.X1",
+    "X0.Y1": "X0.Z1",
+    "X0.Z1": "X0.Y1",
+    "Y0": "Y0",
+    "Y0.X1": "Y0.X1",
+    "Y0.Y1": "Y0.Z1",
+    "Y0.Z1": "Y0.Y1",
+    "Z0": "Z0",
+    "Z0.X1": "Z0.X1",
+    "Z0.Y1": "Z0.Z1",
+    "Z0.Z1": "Z0.Y1"
+   },
+   "PASS": true
+  },
+  "channel_equals_conj_by_Qdagger": true,
+  "trace_preserving": true,
+  "PASS": true
+ },
+ "rot(-1,X1)": {
+  "script": [
+   {
+    "template": "H",
+    "wires": [
+     1
+    ]
+   },
+   {
+    "template": "S",
+    "wires": [
+     1
+    ]
+   },
+   {
+    "template": "frame",
+    "pauli": "Z1"
+   },
+   {
+    "template": "H",
+    "wires": [
+     1
+    ]
+   }
+  ],
+  "n_private_bits": 2,
+  "member_count": {
+   "S_gadget": 1,
+   "H": 2,
+   "CNOT": 0,
+   "frame": 1,
+   "templates_total": 3
+  },
+  "frame_after_rule": {
+   "rule": "E^dagger = (Q^dagger P^dagger Q) Q^dagger; table P -> Q^dagger P^dagger Q",
+   "table": {
+    "I": "I",
+    "X1": "X1",
+    "Y1": "Z1",
+    "Z1": "Y1",
+    "X0": "X0",
+    "X0.X1": "X0.X1",
+    "X0.Y1": "X0.Z1",
+    "X0.Z1": "X0.Y1",
+    "Y0": "Y0",
+    "Y0.X1": "Y0.X1",
+    "Y0.Y1": "Y0.Z1",
+    "Y0.Z1": "Y0.Y1",
+    "Z0": "Z0",
+    "Z0.X1": "Z0.X1",
+    "Z0.Y1": "Z0.Z1",
+    "Z0.Z1": "Z0.Y1"
+   },
+   "PASS": true
+  },
+  "channel_equals_conj_by_Qdagger": true,
+  "trace_preserving": true,
+  "PASS": true
+ },
+ "rot(+1,Y1)": {
+  "script": [
+   {
+    "template": "S",
+    "wires": [
+     1
+    ]
+   },
+   {
+    "template": "frame",
+    "pauli": "Z1"
+   },
+   {
+    "template": "H",
+    "wires": [
+     1
+    ]
+   },
+   {
+    "template": "S",
+    "wires": [
+     1
+    ]
+   },
+   {
+    "template": "H",
+    "wires": [
+     1
+    ]
+   },
+   {
+    "template": "S",
+    "wires": [
+     1
+    ]
+   }
+  ],
+  "n_private_bits": 6,
+  "member_count": {
+   "S_gadget": 3,
+   "H": 2,
+   "CNOT": 0,
+   "frame": 1,
+   "templates_total": 5
+  },
+  "frame_after_rule": {
+   "rule": "E^dagger = (Q^dagger P^dagger Q) Q^dagger; table P -> Q^dagger P^dagger Q",
+   "table": {
+    "I": "I",
+    "X1": "Z1",
+    "Y1": "Y1",
+    "Z1": "X1",
+    "X0": "X0",
+    "X0.X1": "X0.Z1",
+    "X0.Y1": "X0.Y1",
+    "X0.Z1": "X0.X1",
+    "Y0": "Y0",
+    "Y0.X1": "Y0.Z1",
+    "Y0.Y1": "Y0.Y1",
+    "Y0.Z1": "Y0.X1",
+    "Z0": "Z0",
+    "Z0.X1": "Z0.Z1",
+    "Z0.Y1": "Z0.Y1",
+    "Z0.Z1": "Z0.X1"
+   },
+   "PASS": true
+  },
+  "channel_equals_conj_by_Qdagger": true,
+  "trace_preserving": true,
+  "PASS": true
+ },
+ "rot(-1,Y1)": {
+  "script": [
+   {
+    "template": "S",
+    "wires": [
+     1
+    ]
+   },
+   {
+    "template": "frame",
+    "pauli": "Z1"
+   },
+   {
+    "template": "H",
+    "wires": [
+     1
+    ]
+   },
+   {
+    "template": "S",
+    "wires": [
+     1
+    ]
+   },
+   {
+    "template": "frame",
+    "pauli": "Z1"
+   },
+   {
+    "template": "H",
+    "wires": [
+     1
+    ]
+   },
+   {
+    "template": "S",
+    "wires": [
+     1
+    ]
+   }
+  ],
+  "n_private_bits": 6,
+  "member_count": {
+   "S_gadget": 3,
+   "H": 2,
+   "CNOT": 0,
+   "frame": 2,
+   "templates_total": 5
+  },
+  "frame_after_rule": {
+   "rule": "E^dagger = (Q^dagger P^dagger Q) Q^dagger; table P -> Q^dagger P^dagger Q",
+   "table": {
+    "I": "I",
+    "X1": "Z1",
+    "Y1": "Y1",
+    "Z1": "X1",
+    "X0": "X0",
+    "X0.X1": "X0.Z1",
+    "X0.Y1": "X0.Y1",
+    "X0.Z1": "X0.X1",
+    "Y0": "Y0",
+    "Y0.X1": "Y0.Z1",
+    "Y0.Y1": "Y0.Y1",
+    "Y0.Z1": "Y0.X1",
+    "Z0": "Z0",
+    "Z0.X1": "Z0.Z1",
+    "Z0.Y1": "Z0.Y1",
+    "Z0.Z1": "Z0.X1"
+   },
+   "PASS": true
+  },
+  "channel_equals_conj_by_Qdagger": true,
+  "trace_preserving": true,
+  "PASS": true
+ },
+ "rot(+1,Z1)": {
+  "script": [
+   {
+    "template": "S",
+    "wires": [
+     1
+    ]
+   }
+  ],
+  "n_private_bits": 2,
+  "member_count": {
+   "S_gadget": 1,
+   "H": 0,
+   "CNOT": 0,
+   "frame": 0,
+   "templates_total": 1
+  },
+  "frame_after_rule": {
+   "rule": "E^dagger = (Q^dagger P^dagger Q) Q^dagger; table P -> Q^dagger P^dagger Q",
+   "table": {
+    "I": "I",
+    "X1": "Y1",
+    "Y1": "X1",
+    "Z1": "Z1",
+    "X0": "X0",
+    "X0.X1": "X0.Y1",
+    "X0.Y1": "X0.X1",
+    "X0.Z1": "X0.Z1",
+    "Y0": "Y0",
+    "Y0.X1": "Y0.Y1",
+    "Y0.Y1": "Y0.X1",
+    "Y0.Z1": "Y0.Z1",
+    "Z0": "Z0",
+    "Z0.X1": "Z0.Y1",
+    "Z0.Y1": "Z0.X1",
+    "Z0.Z1": "Z0.Z1"
+   },
+   "PASS": true
+  },
+  "channel_equals_conj_by_Qdagger": true,
+  "trace_preserving": true,
+  "PASS": true
+ },
+ "rot(-1,Z1)": {
+  "script": [
+   {
+    "template": "S",
+    "wires": [
+     1
+    ]
+   },
+   {
+    "template": "frame",
+    "pauli": "Z1"
+   }
+  ],
+  "n_private_bits": 2,
+  "member_count": {
+   "S_gadget": 1,
+   "H": 0,
+   "CNOT": 0,
+   "frame": 1,
+   "templates_total": 1
+  },
+  "frame_after_rule": {
+   "rule": "E^dagger = (Q^dagger P^dagger Q) Q^dagger; table P -> Q^dagger P^dagger Q",
+   "table": {
+    "I": "I",
+    "X1": "Y1",
+    "Y1": "X1",
+    "Z1": "Z1",
+    "X0": "X0",
+    "X0.X1": "X0.Y1",
+    "X0.Y1": "X0.X1",
+    "X0.Z1": "X0.Z1",
+    "Y0": "Y0",
+    "Y0.X1": "Y0.Y1",
+    "Y0.Y1": "Y0.X1",
+    "Y0.Z1": "Y0.Z1",
+    "Z0": "Z0",
+    "Z0.X1": "Z0.Y1",
+    "Z0.Y1": "Z0.X1",
+    "Z0.Z1": "Z0.Z1"
+   },
+   "PASS": true
+  },
+  "channel_equals_conj_by_Qdagger": true,
+  "trace_preserving": true,
+  "PASS": true
+ },
+ "rot(+1,X0)": {
+  "script": [
+   {
+    "template": "H",
+    "wires": [
+     0
+    ]
+   },
+   {
+    "template": "S",
+    "wires": [
+     0
+    ]
+   },
+   {
+    "template": "H",
+    "wires": [
+     0
+    ]
+   }
+  ],
+  "n_private_bits": 2,
+  "member_count": {
+   "S_gadget": 1,
+   "H": 2,
+   "CNOT": 0,
+   "frame": 0,
+   "templates_total": 3
+  },
+  "frame_after_rule": {
+   "rule": "E^dagger = (Q^dagger P^dagger Q) Q^dagger; table P -> Q^dagger P^dagger Q",
+   "table": {
+    "I": "I",
+    "X1": "X1",
+    "Y1": "Y1",
+    "Z1": "Z1",
+    "X0": "X0",
+    "X0.X1": "X0.X1",
+    "X0.Y1": "X0.Y1",
+    "X0.Z1": "X0.Z1",
+    "Y0": "Z0",
+    "Y0.X1": "Z0.X1",
+    "Y0.Y1": "Z0.Y1",
+    "Y0.Z1": "Z0.Z1",
+    "Z0": "Y0",
+    "Z0.X1": "Y0.X1",
+    "Z0.Y1": "Y0.Y1",
+    "Z0.Z1": "Y0.Z1"
+   },
+   "PASS": true
+  },
+  "channel_equals_conj_by_Qdagger": true,
+  "trace_preserving": true,
+  "PASS": true
+ },
+ "rot(-1,X0)": {
+  "script": [
+   {
+    "template": "H",
+    "wires": [
+     0
+    ]
+   },
+   {
+    "template": "S",
+    "wires": [
+     0
+    ]
+   },
+   {
+    "template": "frame",
+    "pauli": "Z0"
+   },
+   {
+    "template": "H",
+    "wires": [
+     0
+    ]
+   }
+  ],
+  "n_private_bits": 2,
+  "member_count": {
+   "S_gadget": 1,
+   "H": 2,
+   "CNOT": 0,
+   "frame": 1,
+   "templates_total": 3
+  },
+  "frame_after_rule": {
+   "rule": "E^dagger = (Q^dagger P^dagger Q) Q^dagger; table P -> Q^dagger P^dagger Q",
+   "table": {
+    "I": "I",
+    "X1": "X1",
+    "Y1": "Y1",
+    "Z1": "Z1",
+    "X0": "X0",
+    "X0.X1": "X0.X1",
+    "X0.Y1": "X0.Y1",
+    "X0.Z1": "X0.Z1",
+    "Y0": "Z0",
+    "Y0.X1": "Z0.X1",
+    "Y0.Y1": "Z0.Y1",
+    "Y0.Z1": "Z0.Z1",
+    "Z0": "Y0",
+    "Z0.X1": "Y0.X1",
+    "Z0.Y1": "Y0.Y1",
+    "Z0.Z1": "Y0.Z1"
+   },
+   "PASS": true
+  },
+  "channel_equals_conj_by_Qdagger": true,
+  "trace_preserving": true,
+  "PASS": true
+ },
+ "rot(+1,X0X1)": {
+  "script": [
+   {
+    "template": "H",
+    "wires": [
+     0
+    ]
+   },
+   {
+    "template": "H",
+    "wires": [
+     1
+    ]
+   },
+   {
+    "template": "CNOT_cf_patched",
+    "wires": [
+     0,
+     1
+    ]
+   },
+   {
+    "template": "S",
+    "wires": [
+     1
+    ]
+   },
+   {
+    "template": "CNOT_cf_patched",
+    "wires": [
+     0,
+     1
+    ]
+   },
+   {
+    "template": "H",
+    "wires": [
+     1
+    ]
+   },
+   {
+    "template": "H",
+    "wires": [
+     0
+    ]
+   }
+  ],
+  "n_private_bits": 8,
+  "member_count": {
+   "S_gadget": 1,
+   "H": 4,
+   "CNOT": 2,
+   "frame": 0,
+   "templates_total": 7
+  },
+  "frame_after_rule": {
+   "rule": "E^dagger = (Q^dagger P^dagger Q) Q^dagger; table P -> Q^dagger P^dagger Q",
+   "table": {
+    "I": "I",
+    "X1": "X1",
+    "Y1": "X0.Z1",
+    "Z1": "X0.Y1",
+    "X0": "X0",
+    "X0.X1": "X0.X1",
+    "X0.Y1": "Z1",
+    "X0.Z1": "Y1",
+    "Y0": "Z0.X1",
+    "Y0.X1": "Z0",
+    "Y0.Y1": "Y0.Y1",
+    "Y0.Z1": "Y0.Z1",
+    "Z0": "Y0.X1",
+    "Z0.X1": "Y0",
+    "Z0.Y1": "Z0.Y1",
+    "Z0.Z1": "Z0.Z1"
+   },
+   "PASS": true
+  },
+  "channel_equals_conj_by_Qdagger": true,
+  "trace_preserving": true,
+  "PASS": true
+ },
+ "rot(-1,X0X1)": {
+  "script": [
+   {
+    "template": "H",
+    "wires": [
+     0
+    ]
+   },
+   {
+    "template": "H",
+    "wires": [
+     1
+    ]
+   },
+   {
+    "template": "CNOT_cf_patched",
+    "wires": [
+     0,
+     1
+    ]
+   },
+   {
+    "template": "S",
+    "wires": [
+     1
+    ]
+   },
+   {
+    "template": "frame",
+    "pauli": "Z1"
+   },
+   {
+    "template": "CNOT_cf_patched",
+    "wires": [
+     0,
+     1
+    ]
+   },
+   {
+    "template": "H",
+    "wires": [
+     1
+    ]
+   },
+   {
+    "template": "H",
+    "wires": [
+     0
+    ]
+   }
+  ],
+  "n_private_bits": 8,
+  "member_count": {
+   "S_gadget": 1,
+   "H": 4,
+   "CNOT": 2,
+   "frame": 1,
+   "templates_total": 7
+  },
+  "frame_after_rule": {
+   "rule": "E^dagger = (Q^dagger P^dagger Q) Q^dagger; table P -> Q^dagger P^dagger Q",
+   "table": {
+    "I": "I",
+    "X1": "X1",
+    "Y1": "X0.Z1",
+    "Z1": "X0.Y1",
+    "X0": "X0",
+    "X0.X1": "X0.X1",
+    "X0.Y1": "Z1",
+    "X0.Z1": "Y1",
+    "Y0": "Z0.X1",
+    "Y0.X1": "Z0",
+    "Y0.Y1": "Y0.Y1",
+    "Y0.Z1": "Y0.Z1",
+    "Z0": "Y0.X1",
+    "Z0.X1": "Y0",
+    "Z0.Y1": "Z0.Y1",
+    "Z0.Z1": "Z0.Z1"
+   },
+   "PASS": true
+  },
+  "channel_equals_conj_by_Qdagger": true,
+  "trace_preserving": true,
+  "PASS": true
+ },
+ "rot(+1,X0Y1)": {
+  "script": [
+   {
+    "template": "H",
+    "wires": [
+     0
+    ]
+   },
+   {
+    "template": "S",
+    "wires": [
+     1
+    ]
+   },
+   {
+    "template": "frame",
+    "pauli": "Z1"
+   },
+   {
+    "template": "H",
+    "wires": [
+     1
+    ]
+   },
+   {
+    "template": "CNOT_cf_patched",
+    "wires": [
+     0,
+     1
+    ]
+   },
+   {
+    "template": "S",
+    "wires": [
+     1
+    ]
+   },
+   {
+    "template": "CNOT_cf_patched",
+    "wires": [
+     0,
+     1
+    ]
+   },
+   {
+    "template": "H",
+    "wires": [
+     1
+    ]
+   },
+   {
+    "template": "S",
+    "wires": [
+     1
+    ]
+   },
+   {
+    "template": "H",
+    "wires": [
+     0
+    ]
+   }
+  ],
+  "n_private_bits": 12,
+  "member_count": {
+   "S_gadget": 3,
+   "H": 4,
+   "CNOT": 2,
+   "frame": 1,
+   "templates_total": 9
+  },
+  "frame_after_rule": {
+   "rule": "E^dagger = (Q^dagger P^dagger Q) Q^dagger; table P -> Q^dagger P^dagger Q",
+   "table": {
+    "I": "I",
+    "X1": "X0.Z1",
+    "Y1": "Y1",
+    "Z1": "X0.X1",
+    "X0": "X0",
+    "X0.X1": "Z1",
+    "X0.Y1": "X0.Y1",
+    "X0.Z1": "X1",
+    "Y0": "Z0.Y1",
+    "Y0.X1": "Y0.X1",
+    "Y0.Y1": "Z0",
+    "Y0.Z1": "Y0.Z1",
+    "Z0": "Y0.Y1",
+    "Z0.X1": "Z0.X1",
+    "Z0.Y1": "Y0",
+    "Z0.Z1": "Z0.Z1"
+   },
+   "PASS": true
+  },
+  "channel_equals_conj_by_Qdagger": true,
+  "trace_preserving": true,
+  "PASS": true
+ },
+ "rot(-1,X0Y1)": {
+  "script": [
+   {
+    "template": "H",
+    "wires": [
+     0
+    ]
+   },
+   {
+    "template": "S",
+    "wires": [
+     1
+    ]
+   },
+   {
+    "template": "frame",
+    "pauli": "Z1"
+   },
+   {
+    "template": "H",
+    "wires": [
+     1
+    ]
+   },
+   {
+    "template": "CNOT_cf_patched",
+    "wires": [
+     0,
+     1
+    ]
+   },
+   {
+    "template": "S",
+    "wires": [
+     1
+    ]
+   },
+   {
+    "template": "frame",
+    "pauli": "Z1"
+   },
+   {
+    "template": "CNOT_cf_patched",
+    "wires": [
+     0,
+     1
+    ]
+   },
+   {
+    "template": "H",
+    "wires": [
+     1
+    ]
+   },
+   {
+    "template": "S",
+    "wires": [
+     1
+    ]
+   },
+   {
+    "template": "H",
+    "wires": [
+     0
+    ]
+   }
+  ],
+  "n_private_bits": 12,
+  "member_count": {
+   "S_gadget": 3,
+   "H": 4,
+   "CNOT": 2,
+   "frame": 2,
+   "templates_total": 9
+  },
+  "frame_after_rule": {
+   "rule": "E^dagger = (Q^dagger P^dagger Q) Q^dagger; table P -> Q^dagger P^dagger Q",
+   "table": {
+    "I": "I",
+    "X1": "X0.Z1",
+    "Y1": "Y1",
+    "Z1": "X0.X1",
+    "X0": "X0",
+    "X0.X1": "Z1",
+    "X0.Y1": "X0.Y1",
+    "X0.Z1": "X1",
+    "Y0": "Z0.Y1",
+    "Y0.X1": "Y0.X1",
+    "Y0.Y1": "Z0",
+    "Y0.Z1": "Y0.Z1",
+    "Z0": "Y0.Y1",
+    "Z0.X1": "Z0.X1",
+    "Z0.Y1": "Y0",
+    "Z0.Z1": "Z0.Z1"
+   },
+   "PASS": true
+  },
+  "channel_equals_conj_by_Qdagger": true,
+  "trace_preserving": true,
+  "PASS": true
+ },
+ "rot(+1,X0Z1)": {
+  "script": [
+   {
+    "template": "H",
+    "wires": [
+     0
+    ]
+   },
+   {
+    "template": "CNOT_cf_patched",
+    "wires": [
+     0,
+     1
+    ]
+   },
+   {
+    "template": "S",
+    "wires": [
+     1
+    ]
+   },
+   {
+    "template": "CNOT_cf_patched",
+    "wires": [
+     0,
+     1
+    ]
+   },
+   {
+    "template": "H",
+    "wires": [
+     0
+    ]
+   }
+  ],
+  "n_private_bits": 8,
+  "member_count": {
+   "S_gadget": 1,
+   "H": 2,
+   "CNOT": 2,
+   "frame": 0,
+   "templates_total": 5
+  },
+  "frame_after_rule": {
+   "rule": "E^dagger = (Q^dagger P^dagger Q) Q^dagger; table P -> Q^dagger P^dagger Q",
+   "table": {
+    "I": "I",
+    "X1": "X0.Y1",
+    "Y1": "X0.X1",
+    "Z1": "Z1",
+    "X0": "X0",
+    "X0.X1": "Y1",
+    "X0.Y1": "X1",
+    "X0.Z1": "X0.Z1",
+    "Y0": "Z0.Z1",
+    "Y0.X1": "Y0.X1",
+    "Y0.Y1": "Y0.Y1",
+    "Y0.Z1": "Z0",
+    "Z0": "Y0.Z1",
+    "Z0.X1": "Z0.X1",
+    "Z0.Y1": "Z0.Y1",
+    "Z0.Z1": "Y0"
+   },
+   "PASS": true
+  },
+  "channel_equals_conj_by_Qdagger": true,
+  "trace_preserving": true,
+  "PASS": true
+ },
+ "rot(-1,X0Z1)": {
+  "script": [
+   {
+    "template": "H",
+    "wires": [
+     0
+    ]
+   },
+   {
+    "template": "CNOT_cf_patched",
+    "wires": [
+     0,
+     1
+    ]
+   },
+   {
+    "template": "S",
+    "wires": [
+     1
+    ]
+   },
+   {
+    "template": "frame",
+    "pauli": "Z1"
+   },
+   {
+    "template": "CNOT_cf_patched",
+    "wires": [
+     0,
+     1
+    ]
+   },
+   {
+    "template": "H",
+    "wires": [
+     0
+    ]
+   }
+  ],
+  "n_private_bits": 8,
+  "member_count": {
+   "S_gadget": 1,
+   "H": 2,
+   "CNOT": 2,
+   "frame": 1,
+   "templates_total": 5
+  },
+  "frame_after_rule": {
+   "rule": "E^dagger = (Q^dagger P^dagger Q) Q^dagger; table P -> Q^dagger P^dagger Q",
+   "table": {
+    "I": "I",
+    "X1": "X0.Y1",
+    "Y1": "X0.X1",
+    "Z1": "Z1",
+    "X0": "X0",
+    "X0.X1": "Y1",
+    "X0.Y1": "X1",
+    "X0.Z1": "X0.Z1",
+    "Y0": "Z0.Z1",
+    "Y0.X1": "Y0.X1",
+    "Y0.Y1": "Y0.Y1",
+    "Y0.Z1": "Z0",
+    "Z0": "Y0.Z1",
+    "Z0.X1": "Z0.X1",
+    "Z0.Y1": "Z0.Y1",
+    "Z0.Z1": "Y0"
+   },
+   "PASS": true
+  },
+  "channel_equals_conj_by_Qdagger": true,
+  "trace_preserving": true,
+  "PASS": true
+ },
+ "rot(+1,Y0)": {
+  "script": [
+   {
+    "template": "S",
+    "wires": [
+     0
+    ]
+   },
+   {
+    "template": "frame",
+    "pauli": "Z0"
+   },
+   {
+    "template": "H",
+    "wires": [
+     0
+    ]
+   },
+   {
+    "template": "S",
+    "wires": [
+     0
+    ]
+   },
+   {
+    "template": "H",
+    "wires": [
+     0
+    ]
+   },
+   {
+    "template": "S",
+    "wires": [
+     0
+    ]
+   }
+  ],
+  "n_private_bits": 6,
+  "member_count": {
+   "S_gadget": 3,
+   "H": 2,
+   "CNOT": 0,
+   "frame": 1,
+   "templates_total": 5
+  },
+  "frame_after_rule": {
+   "rule": "E^dagger = (Q^dagger P^dagger Q) Q^dagger; table P -> Q^dagger P^dagger Q",
+   "table": {
+    "I": "I",
+    "X1": "X1",
+    "Y1": "Y1",
+    "Z1": "Z1",
+    "X0": "Z0",
+    "X0.X1": "Z0.X1",
+    "X0.Y1": "Z0.Y1",
+    "X0.Z1": "Z0.Z1",
+    "Y0": "Y0",
+    "Y0.X1": "Y0.X1",
+    "Y0.Y1": "Y0.Y1",
+    "Y0.Z1": "Y0.Z1",
+    "Z0": "X0",
+    "Z0.X1": "X0.X1",
+    "Z0.Y1": "X0.Y1",
+    "Z0.Z1": "X0.Z1"
+   },
+   "PASS": true
+  },
+  "channel_equals_conj_by_Qdagger": true,
+  "trace_preserving": true,
+  "PASS": true
+ },
+ "rot(-1,Y0)": {
+  "script": [
+   {
+    "template": "S",
+    "wires": [
+     0
+    ]
+   },
+   {
+    "template": "frame",
+    "pauli": "Z0"
+   },
+   {
+    "template": "H",
+    "wires": [
+     0
+    ]
+   },
+   {
+    "template": "S",
+    "wires": [
+     0
+    ]
+   },
+   {
+    "template": "frame",
+    "pauli": "Z0"
+   },
+   {
+    "template": "H",
+    "wires": [
+     0
+    ]
+   },
+   {
+    "template": "S",
+    "wires": [
+     0
+    ]
+   }
+  ],
+  "n_private_bits": 6,
+  "member_count": {
+   "S_gadget": 3,
+   "H": 2,
+   "CNOT": 0,
+   "frame": 2,
+   "templates_total": 5
+  },
+  "frame_after_rule": {
+   "rule": "E^dagger = (Q^dagger P^dagger Q) Q^dagger; table P -> Q^dagger P^dagger Q",
+   "table": {
+    "I": "I",
+    "X1": "X1",
+    "Y1": "Y1",
+    "Z1": "Z1",
+    "X0": "Z0",
+    "X0.X1": "Z0.X1",
+    "X0.Y1": "Z0.Y1",
+    "X0.Z1": "Z0.Z1",
+    "Y0": "Y0",
+    "Y0.X1": "Y0.X1",
+    "Y0.Y1": "Y0.Y1",
+    "Y0.Z1": "Y0.Z1",
+    "Z0": "X0",
+    "Z0.X1": "X0.X1",
+    "Z0.Y1": "X0.Y1",
+    "Z0.Z1": "X0.Z1"
+   },
+   "PASS": true
+  },
+  "channel_equals_conj_by_Qdagger": true,
+  "trace_preserving": true,
+  "PASS": true
+ },
+ "rot(+1,Y0X1)": {
+  "script": [
+   {
+    "template": "S",
+    "wires": [
+     0
+    ]
+   },
+   {
+    "template": "frame",
+    "pauli": "Z0"
+   },
+   {
+    "template": "H",
+    "wires": [
+     0
+    ]
+   },
+   {
+    "template": "H",
+    "wires": [
+     1
+    ]
+   },
+   {
+    "template": "CNOT_cf_patched",
+    "wires": [
+     0,
+     1
+    ]
+   },
+   {
+    "template": "S",
+    "wires": [
+     1
+    ]
+   },
+   {
+    "template": "CNOT_cf_patched",
+    "wires": [
+     0,
+     1
+    ]
+   },
+   {
+    "template": "H",
+    "wires": [
+     1
+    ]
+   },
+   {
+    "template": "H",
+    "wires": [
+     0
+    ]
+   },
+   {
+    "template": "S",
+    "wires": [
+     0
+    ]
+   }
+  ],
+  "n_private_bits": 12,
+  "member_count": {
+   "S_gadget": 3,
+   "H": 4,
+   "CNOT": 2,
+   "frame": 1,
+   "templates_total": 9
+  },
+  "frame_after_rule": {
+   "rule": "E^dagger = (Q^dagger P^dagger Q) Q^dagger; table P -> Q^dagger P^dagger Q",
+   "table": {
+    "I": "I",
+    "X1": "X1",
+    "Y1": "Y0.Z1",
+    "Z1": "Y0.Y1",
+    "X0": "Z0.X1",
+    "X0.X1": "Z0",
+    "X0.Y1": "X0.Y1",
+    "X0.Z1": "X0.Z1",
+    "Y0": "Y0",
+    "Y0.X1": "Y0.X1",
+    "Y0.Y1": "Z1",
+    "Y0.Z1": "Y1",
+    "Z0": "X0.X1",
+    "Z0.X1": "X0",
+    "Z0.Y1": "Z0.Y1",
+    "Z0.Z1": "Z0.Z1"
+   },
+   "PASS": true
+  },
+  "channel_equals_conj_by_Qdagger": true,
+  "trace_preserving": true,
+  "PASS": true
+ },
+ "rot(-1,Y0X1)": {
+  "script": [
+   {
+    "template": "S",
+    "wires": [
+     0
+    ]
+   },
+   {
+    "template": "frame",
+    "pauli": "Z0"
+   },
+   {
+    "template": "H",
+    "wires": [
+     0
+    ]
+   },
+   {
+    "template": "H",
+    "wires": [
+     1
+    ]
+   },
+   {
+    "template": "CNOT_cf_patched",
+    "wires": [
+     0,
+     1
+    ]
+   },
+   {
+    "template": "S",
+    "wires": [
+     1
+    ]
+   },
+   {
+    "template": "frame",
+    "pauli": "Z1"
+   },
+   {
+    "template": "CNOT_cf_patched",
+    "wires": [
+     0,
+     1
+    ]
+   },
+   {
+    "template": "H",
+    "wires": [
+     1
+    ]
+   },
+   {
+    "template": "H",
+    "wires": [
+     0
+    ]
+   },
+   {
+    "template": "S",
+    "wires": [
+     0
+    ]
+   }
+  ],
+  "n_private_bits": 12,
+  "member_count": {
+   "S_gadget": 3,
+   "H": 4,
+   "CNOT": 2,
+   "frame": 2,
+   "templates_total": 9
+  },
+  "frame_after_rule": {
+   "rule": "E^dagger = (Q^dagger P^dagger Q) Q^dagger; table P -> Q^dagger P^dagger Q",
+   "table": {
+    "I": "I",
+    "X1": "X1",
+    "Y1": "Y0.Z1",
+    "Z1": "Y0.Y1",
+    "X0": "Z0.X1",
+    "X0.X1": "Z0",
+    "X0.Y1": "X0.Y1",
+    "X0.Z1": "X0.Z1",
+    "Y0": "Y0",
+    "Y0.X1": "Y0.X1",
+    "Y0.Y1": "Z1",
+    "Y0.Z1": "Y1",
+    "Z0": "X0.X1",
+    "Z0.X1": "X0",
+    "Z0.Y1": "Z0.Y1",
+    "Z0.Z1": "Z0.Z1"
+   },
+   "PASS": true
+  },
+  "channel_equals_conj_by_Qdagger": true,
+  "trace_preserving": true,
+  "PASS": true
+ },
+ "rot(+1,Y0Y1)": {
+  "script": [
+   {
+    "template": "S",
+    "wires": [
+     0
+    ]
+   },
+   {
+    "template": "frame",
+    "pauli": "Z0"
+   },
+   {
+    "template": "H",
+    "wires": [
+     0
+    ]
+   },
+   {
+    "template": "S",
+    "wires": [
+     1
+    ]
+   },
+   {
+    "template": "frame",
+    "pauli": "Z1"
+   },
+   {
+    "template": "H",
+    "wires": [
+     1
+    ]
+   },
+   {
+    "template": "CNOT_cf_patched",
+    "wires": [
+     0,
+     1
+    ]
+   },
+   {
+    "template": "S",
+    "wires": [
+     1
+    ]
+   },
+   {
+    "template": "CNOT_cf_patched",
+    "wires": [
+     0,
+     1
+    ]
+   },
+   {
+    "template": "H",
+    "wires": [
+     1
+    ]
+   },
+   {
+    "template": "S",
+    "wires": [
+     1
+    ]
+   },
+   {
+    "template": "H",
+    "wires": [
+     0
+    ]
+   },
+   {
+    "template": "S",
+    "wires": [
+     0
+    ]
+   }
+  ],
+  "n_private_bits": 16,
+  "member_count": {
+   "S_gadget": 5,
+   "H": 4,
+   "CNOT": 2,
+   "frame": 2,
+   "templates_total": 11
+  },
+  "frame_after_rule": {
+   "rule": "E^dagger = (Q^dagger P^dagger Q) Q^dagger; table P -> Q^dagger P^dagger Q",
+   "table": {
+    "I": "I",
+    "X1": "Y0.Z1",
+    "Y1": "Y1",
+    "Z1": "Y0.X1",
+    "X0": "Z0.Y1",
+    "X0.X1": "X0.X1",
+    "X0.Y1": "Z0",
+    "X0.Z1": "X0.Z1",
+    "Y0": "Y0",
+    "Y0.X1": "Z1",
+    "Y0.Y1": "Y0.Y1",
+    "Y0.Z1": "X1",
+    "Z0": "X0.Y1",
+    "Z0.X1": "Z0.X1",
+    "Z0.Y1": "X0",
+    "Z0.Z1": "Z0.Z1"
+   },
+   "PASS": true
+  },
+  "channel_equals_conj_by_Qdagger": true,
+  "trace_preserving": true,
+  "PASS": true
+ },
+ "rot(-1,Y0Y1)": {
+  "script": [
+   {
+    "template": "S",
+    "wires": [
+     0
+    ]
+   },
+   {
+    "template": "frame",
+    "pauli": "Z0"
+   },
+   {
+    "template": "H",
+    "wires": [
+     0
+    ]
+   },
+   {
+    "template": "S",
+    "wires": [
+     1
+    ]
+   },
+   {
+    "template": "frame",
+    "pauli": "Z1"
+   },
+   {
+    "template": "H",
+    "wires": [
+     1
+    ]
+   },
+   {
+    "template": "CNOT_cf_patched",
+    "wires": [
+     0,
+     1
+    ]
+   },
+   {
+    "template": "S",
+    "wires": [
+     1
+    ]
+   },
+   {
+    "template": "frame",
+    "pauli": "Z1"
+   },
+   {
+    "template": "CNOT_cf_patched",
+    "wires": [
+     0,
+     1
+    ]
+   },
+   {
+    "template": "H",
+    "wires": [
+     1
+    ]
+   },
+   {
+    "template": "S",
+    "wires": [
+     1
+    ]
+   },
+   {
+    "template": "H",
+    "wires": [
+     0
+    ]
+   },
+   {
+    "template": "S",
+    "wires": [
+     0
+    ]
+   }
+  ],
+  "n_private_bits": 16,
+  "member_count": {
+   "S_gadget": 5,
+   "H": 4,
+   "CNOT": 2,
+   "frame": 3,
+   "templates_total": 11
+  },
+  "frame_after_rule": {
+   "rule": "E^dagger = (Q^dagger P^dagger Q) Q^dagger; table P -> Q^dagger P^dagger Q",
+   "table": {
+    "I": "I",
+    "X1": "Y0.Z1",
+    "Y1": "Y1",
+    "Z1": "Y0.X1",
+    "X0": "Z0.Y1",
+    "X0.X1": "X0.X1",
+    "X0.Y1": "Z0",
+    "X0.Z1": "X0.Z1",
+    "Y0": "Y0",
+    "Y0.X1": "Z1",
+    "Y0.Y1": "Y0.Y1",
+    "Y0.Z1": "X1",
+    "Z0": "X0.Y1",
+    "Z0.X1": "Z0.X1",
+    "Z0.Y1": "X0",
+    "Z0.Z1": "Z0.Z1"
+   },
+   "PASS": true
+  },
+  "channel_equals_conj_by_Qdagger": true,
+  "trace_preserving": true,
+  "PASS": true
+ },
+ "rot(+1,Y0Z1)": {
+  "script": [
+   {
+    "template": "S",
+    "wires": [
+     0
+    ]
+   },
+   {
+    "template": "frame",
+    "pauli": "Z0"
+   },
+   {
+    "template": "H",
+    "wires": [
+     0
+    ]
+   },
+   {
+    "template": "CNOT_cf_patched",
+    "wires": [
+     0,
+     1
+    ]
+   },
+   {
+    "template": "S",
+    "wires": [
+     1
+    ]
+   },
+   {
+    "template": "CNOT_cf_patched",
+    "wires": [
+     0,
+     1
+    ]
+   },
+   {
+    "template": "H",
+    "wires": [
+     0
+    ]
+   },
+   {
+    "template": "S",
+    "wires": [
+     0
+    ]
+   }
+  ],
+  "n_private_bits": 12,
+  "member_count": {
+   "S_gadget": 3,
+   "H": 2,
+   "CNOT": 2,
+   "frame": 1,
+   "templates_total": 7
+  },
+  "frame_after_rule": {
+   "rule": "E^dagger = (Q^dagger P^dagger Q) Q^dagger; table P -> Q^dagger P^dagger Q",
+   "table": {
+    "I": "I",
+    "X1": "Y0.Y1",
+    "Y1": "Y0.X1",
+    "Z1": "Z1",
+    "X0": "Z0.Z1",
+    "X0.X1": "X0.X1",
+    "X0.Y1": "X0.Y1",
+    "X0.Z1": "Z0",
+    "Y0": "Y0",
+    "Y0.X1": "Y1",
+    "Y0.Y1": "X1",
+    "Y0.Z1": "Y0.Z1",
+    "Z0": "X0.Z1",
+    "Z0.X1": "Z0.X1",
+    "Z0.Y1": "Z0.Y1",
+    "Z0.Z1": "X0"
+   },
+   "PASS": true
+  },
+  "channel_equals_conj_by_Qdagger": true,
+  "trace_preserving": true,
+  "PASS": true
+ },
+ "rot(-1,Y0Z1)": {
+  "script": [
+   {
+    "template": "S",
+    "wires": [
+     0
+    ]
+   },
+   {
+    "template": "frame",
+    "pauli": "Z0"
+   },
+   {
+    "template": "H",
+    "wires": [
+     0
+    ]
+   },
+   {
+    "template": "CNOT_cf_patched",
+    "wires": [
+     0,
+     1
+    ]
+   },
+   {
+    "template": "S",
+    "wires": [
+     1
+    ]
+   },
+   {
+    "template": "frame",
+    "pauli": "Z1"
+   },
+   {
+    "template": "CNOT_cf_patched",
+    "wires": [
+     0,
+     1
+    ]
+   },
+   {
+    "template": "H",
+    "wires": [
+     0
+    ]
+   },
+   {
+    "template": "S",
+    "wires": [
+     0
+    ]
+   }
+  ],
+  "n_private_bits": 12,
+  "member_count": {
+   "S_gadget": 3,
+   "H": 2,
+   "CNOT": 2,
+   "frame": 2,
+   "templates_total": 7
+  },
+  "frame_after_rule": {
+   "rule": "E^dagger = (Q^dagger P^dagger Q) Q^dagger; table P -> Q^dagger P^dagger Q",
+   "table": {
+    "I": "I",
+    "X1": "Y0.Y1",
+    "Y1": "Y0.X1",
+    "Z1": "Z1",
+    "X0": "Z0.Z1",
+    "X0.X1": "X0.X1",
+    "X0.Y1": "X0.Y1",
+    "X0.Z1": "Z0",
+    "Y0": "Y0",
+    "Y0.X1": "Y1",
+    "Y0.Y1": "X1",
+    "Y0.Z1": "Y0.Z1",
+    "Z0": "X0.Z1",
+    "Z0.X1": "Z0.X1",
+    "Z0.Y1": "Z0.Y1",
+    "Z0.Z1": "X0"
+   },
+   "PASS": true
+  },
+  "channel_equals_conj_by_Qdagger": true,
+  "trace_preserving": true,
+  "PASS": true
+ },
+ "rot(+1,Z0)": {
+  "script": [
+   {
+    "template": "S",
+    "wires": [
+     0
+    ]
+   }
+  ],
+  "n_private_bits": 2,
+  "member_count": {
+   "S_gadget": 1,
+   "H": 0,
+   "CNOT": 0,
+   "frame": 0,
+   "templates_total": 1
+  },
+  "frame_after_rule": {
+   "rule": "E^dagger = (Q^dagger P^dagger Q) Q^dagger; table P -> Q^dagger P^dagger Q",
+   "table": {
+    "I": "I",
+    "X1": "X1",
+    "Y1": "Y1",
+    "Z1": "Z1",
+    "X0": "Y0",
+    "X0.X1": "Y0.X1",
+    "X0.Y1": "Y0.Y1",
+    "X0.Z1": "Y0.Z1",
+    "Y0": "X0",
+    "Y0.X1": "X0.X1",
+    "Y0.Y1": "X0.Y1",
+    "Y0.Z1": "X0.Z1",
+    "Z0": "Z0",
+    "Z0.X1": "Z0.X1",
+    "Z0.Y1": "Z0.Y1",
+    "Z0.Z1": "Z0.Z1"
+   },
+   "PASS": true
+  },
+  "channel_equals_conj_by_Qdagger": true,
+  "trace_preserving": true,
+  "PASS": true
+ },
+ "rot(-1,Z0)": {
+  "script": [
+   {
+    "template": "S",
+    "wires": [
+     0
+    ]
+   },
+   {
+    "template": "frame",
+    "pauli": "Z0"
+   }
+  ],
+  "n_private_bits": 2,
+  "member_count": {
+   "S_gadget": 1,
+   "H": 0,
+   "CNOT": 0,
+   "frame": 1,
+   "templates_total": 1
+  },
+  "frame_after_rule": {
+   "rule": "E^dagger = (Q^dagger P^dagger Q) Q^dagger; table P -> Q^dagger P^dagger Q",
+   "table": {
+    "I": "I",
+    "X1": "X1",
+    "Y1": "Y1",
+    "Z1": "Z1",
+    "X0": "Y0",
+    "X0.X1": "Y0.X1",
+    "X0.Y1": "Y0.Y1",
+    "X0.Z1": "Y0.Z1",
+    "Y0": "X0",
+    "Y0.X1": "X0.X1",
+    "Y0.Y1": "X0.Y1",
+    "Y0.Z1": "X0.Z1",
+    "Z0": "Z0",
+    "Z0.X1": "Z0.X1",
+    "Z0.Y1": "Z0.Y1",
+    "Z0.Z1": "Z0.Z1"
+   },
+   "PASS": true
+  },
+  "channel_equals_conj_by_Qdagger": true,
+  "trace_preserving": true,
+  "PASS": true
+ },
+ "rot(+1,Z0X1)": {
+  "script": [
+   {
+    "template": "H",
+    "wires": [
+     1
+    ]
+   },
+   {
+    "template": "CNOT_cf_patched",
+    "wires": [
+     0,
+     1
+    ]
+   },
+   {
+    "template": "S",
+    "wires": [
+     1
+    ]
+   },
+   {
+    "template": "CNOT_cf_patched",
+    "wires": [
+     0,
+     1
+    ]
+   },
+   {
+    "template": "H",
+    "wires": [
+     1
+    ]
+   }
+  ],
+  "n_private_bits": 8,
+  "member_count": {
+   "S_gadget": 1,
+   "H": 2,
+   "CNOT": 2,
+   "frame": 0,
+   "templates_total": 5
+  },
+  "frame_after_rule": {
+   "rule": "E^dagger = (Q^dagger P^dagger Q) Q^dagger; table P -> Q^dagger P^dagger Q",
+   "table": {
+    "I": "I",
+    "X1": "X1",
+    "Y1": "Z0.Z1",
+    "Z1": "Z0.Y1",
+    "X0": "Y0.X1",
+    "X0.X1": "Y0",
+    "X0.Y1": "X0.Y1",
+    "X0.Z1": "X0.Z1",
+    "Y0": "X0.X1",
+    "Y0.X1": "X0",
+    "Y0.Y1": "Y0.Y1",
+    "Y0.Z1": "Y0.Z1",
+    "Z0": "Z0",
+    "Z0.X1": "Z0.X1",
+    "Z0.Y1": "Z1",
+    "Z0.Z1": "Y1"
+   },
+   "PASS": true
+  },
+  "channel_equals_conj_by_Qdagger": true,
+  "trace_preserving": true,
+  "PASS": true
+ },
+ "rot(-1,Z0X1)": {
+  "script": [
+   {
+    "template": "H",
+    "wires": [
+     1
+    ]
+   },
+   {
+    "template": "CNOT_cf_patched",
+    "wires": [
+     0,
+     1
+    ]
+   },
+   {
+    "template": "S",
+    "wires": [
+     1
+    ]
+   },
+   {
+    "template": "frame",
+    "pauli": "Z1"
+   },
+   {
+    "template": "CNOT_cf_patched",
+    "wires": [
+     0,
+     1
+    ]
+   },
+   {
+    "template": "H",
+    "wires": [
+     1
+    ]
+   }
+  ],
+  "n_private_bits": 8,
+  "member_count": {
+   "S_gadget": 1,
+   "H": 2,
+   "CNOT": 2,
+   "frame": 1,
+   "templates_total": 5
+  },
+  "frame_after_rule": {
+   "rule": "E^dagger = (Q^dagger P^dagger Q) Q^dagger; table P -> Q^dagger P^dagger Q",
+   "table": {
+    "I": "I",
+    "X1": "X1",
+    "Y1": "Z0.Z1",
+    "Z1": "Z0.Y1",
+    "X0": "Y0.X1",
+    "X0.X1": "Y0",
+    "X0.Y1": "X0.Y1",
+    "X0.Z1": "X0.Z1",
+    "Y0": "X0.X1",
+    "Y0.X1": "X0",
+    "Y0.Y1": "Y0.Y1",
+    "Y0.Z1": "Y0.Z1",
+    "Z0": "Z0",
+    "Z0.X1": "Z0.X1",
+    "Z0.Y1": "Z1",
+    "Z0.Z1": "Y1"
+   },
+   "PASS": true
+  },
+  "channel_equals_conj_by_Qdagger": true,
+  "trace_preserving": true,
+  "PASS": true
+ },
+ "rot(+1,Z0Y1)": {
+  "script": [
+   {
+    "template": "S",
+    "wires": [
+     1
+    ]
+   },
+   {
+    "template": "frame",
+    "pauli": "Z1"
+   },
+   {
+    "template": "H",
+    "wires": [
+     1
+    ]
+   },
+   {
+    "template": "CNOT_cf_patched",
+    "wires": [
+     0,
+     1
+    ]
+   },
+   {
+    "template": "S",
+    "wires": [
+     1
+    ]
+   },
+   {
+    "template": "CNOT_cf_patched",
+    "wires": [
+     0,
+     1
+    ]
+   },
+   {
+    "template": "H",
+    "wires": [
+     1
+    ]
+   },
+   {
+    "template": "S",
+    "wires": [
+     1
+    ]
+   }
+  ],
+  "n_private_bits": 12,
+  "member_count": {
+   "S_gadget": 3,
+   "H": 2,
+   "CNOT": 2,
+   "frame": 1,
+   "templates_total": 7
+  },
+  "frame_after_rule": {
+   "rule": "E^dagger = (Q^dagger P^dagger Q) Q^dagger; table P -> Q^dagger P^dagger Q",
+   "table": {
+    "I": "I",
+    "X1": "Z0.Z1",
+    "Y1": "Y1",
+    "Z1": "Z0.X1",
+    "X0": "Y0.Y1",
+    "X0.X1": "X0.X1",
+    "X0.Y1": "Y0",
+    "X0.Z1": "X0.Z1",
+    "Y0": "X0.Y1",
+    "Y0.X1": "Y0.X1",
+    "Y0.Y1": "X0",
+    "Y0.Z1": "Y0.Z1",
+    "Z0": "Z0",
+    "Z0.X1": "Z1",
+    "Z0.Y1": "Z0.Y1",
+    "Z0.Z1": "X1"
+   },
+   "PASS": true
+  },
+  "channel_equals_conj_by_Qdagger": true,
+  "trace_preserving": true,
+  "PASS": true
+ },
+ "rot(-1,Z0Y1)": {
+  "script": [
+   {
+    "template": "S",
+    "wires": [
+     1
+    ]
+   },
+   {
+    "template": "frame",
+    "pauli": "Z1"
+   },
+   {
+    "template": "H",
+    "wires": [
+     1
+    ]
+   },
+   {
+    "template": "CNOT_cf_patched",
+    "wires": [
+     0,
+     1
+    ]
+   },
+   {
+    "template": "S",
+    "wires": [
+     1
+    ]
+   },
+   {
+    "template": "frame",
+    "pauli": "Z1"
+   },
+   {
+    "template": "CNOT_cf_patched",
+    "wires": [
+     0,
+     1
+    ]
+   },
+   {
+    "template": "H",
+    "wires": [
+     1
+    ]
+   },
+   {
+    "template": "S",
+    "wires": [
+     1
+    ]
+   }
+  ],
+  "n_private_bits": 12,
+  "member_count": {
+   "S_gadget": 3,
+   "H": 2,
+   "CNOT": 2,
+   "frame": 2,
+   "templates_total": 7
+  },
+  "frame_after_rule": {
+   "rule": "E^dagger = (Q^dagger P^dagger Q) Q^dagger; table P -> Q^dagger P^dagger Q",
+   "table": {
+    "I": "I",
+    "X1": "Z0.Z1",
+    "Y1": "Y1",
+    "Z1": "Z0.X1",
+    "X0": "Y0.Y1",
+    "X0.X1": "X0.X1",
+    "X0.Y1": "Y0",
+    "X0.Z1": "X0.Z1",
+    "Y0": "X0.Y1",
+    "Y0.X1": "Y0.X1",
+    "Y0.Y1": "X0",
+    "Y0.Z1": "Y0.Z1",
+    "Z0": "Z0",
+    "Z0.X1": "Z1",
+    "Z0.Y1": "Z0.Y1",
+    "Z0.Z1": "X1"
+   },
+   "PASS": true
+  },
+  "channel_equals_conj_by_Qdagger": true,
+  "trace_preserving": true,
+  "PASS": true
+ },
+ "rot(+1,Z0Z1)": {
+  "script": [
+   {
+    "template": "CNOT_cf_patched",
+    "wires": [
+     0,
+     1
+    ]
+   },
+   {
+    "template": "S",
+    "wires": [
+     1
+    ]
+   },
+   {
+    "template": "CNOT_cf_patched",
+    "wires": [
+     0,
+     1
+    ]
+   }
+  ],
+  "n_private_bits": 8,
+  "member_count": {
+   "S_gadget": 1,
+   "H": 0,
+   "CNOT": 2,
+   "frame": 0,
+   "templates_total": 3
+  },
+  "frame_after_rule": {
+   "rule": "E^dagger = (Q^dagger P^dagger Q) Q^dagger; table P -> Q^dagger P^dagger Q",
+   "table": {
+    "I": "I",
+    "X1": "Z0.Y1",
+    "Y1": "Z0.X1",
+    "Z1": "Z1",
+    "X0": "Y0.Z1",
+    "X0.X1": "X0.X1",
+    "X0.Y1": "X0.Y1",
+    "X0.Z1": "Y0",
+    "Y0": "X0.Z1",
+    "Y0.X1": "Y0.X1",
+    "Y0.Y1": "Y0.Y1",
+    "Y0.Z1": "X0",
+    "Z0": "Z0",
+    "Z0.X1": "Y1",
+    "Z0.Y1": "X1",
+    "Z0.Z1": "Z0.Z1"
+   },
+   "PASS": true
+  },
+  "channel_equals_conj_by_Qdagger": true,
+  "trace_preserving": true,
+  "PASS": true
+ },
+ "rot(-1,Z0Z1)": {
+  "script": [
+   {
+    "template": "CNOT_cf_patched",
+    "wires": [
+     0,
+     1
+    ]
+   },
+   {
+    "template": "S",
+    "wires": [
+     1
+    ]
+   },
+   {
+    "template": "frame",
+    "pauli": "Z1"
+   },
+   {
+    "template": "CNOT_cf_patched",
+    "wires": [
+     0,
+     1
+    ]
+   }
+  ],
+  "n_private_bits": 8,
+  "member_count": {
+   "S_gadget": 1,
+   "H": 0,
+   "CNOT": 2,
+   "frame": 1,
+   "templates_total": 3
+  },
+  "frame_after_rule": {
+   "rule": "E^dagger = (Q^dagger P^dagger Q) Q^dagger; table P -> Q^dagger P^dagger Q",
+   "table": {
+    "I": "I",
+    "X1": "Z0.Y1",
+    "Y1": "Z0.X1",
+    "Z1": "Z1",
+    "X0": "Y0.Z1",
+    "X0.X1": "X0.X1",
+    "X0.Y1": "X0.Y1",
+    "X0.Z1": "Y0",
+    "Y0": "X0.Z1",
+    "Y0.X1": "Y0.X1",
+    "Y0.Y1": "Y0.Y1",
+    "Y0.Z1": "X0",
+    "Z0": "Z0",
+    "Z0.X1": "Y1",
+    "Z0.Y1": "X1",
+    "Z0.Z1": "Z0.Z1"
+   },
+   "PASS": true
+  },
+  "channel_equals_conj_by_Qdagger": true,
+  "trace_preserving": true,
+  "PASS": true
+ }
+}

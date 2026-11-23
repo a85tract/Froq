@@ -1,0 +1,5 @@
+part	luts	luts_lo	luts_hi	ramb36	ramb36_lo	ramb36_hi
+lut_ram	1024	1024	2048	-	-	-
+logic_unit_cost	1476	-	-	-	-	-
+rebase_unit_cost	300	-	-	-	-	-
+hold_tags	-	-	-	2	1.5	2

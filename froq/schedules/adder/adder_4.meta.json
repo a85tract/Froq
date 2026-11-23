@@ -1,0 +1,9817 @@
+{
+ "argv": [
+  "lsqecc_slicer",
+  "-q",
+  "-i",
+  "e2e/schedules/adder/adder_4.qasm",
+  "-L",
+  "edpc",
+  "--disttime",
+  "1",
+  "--nostagger",
+  "-P",
+  "wave",
+  "-o",
+  "e2e/schedules/adder/adder_4.slices.json",
+  "--metaout",
+  "e2e/schedules/adder/adder_4.meta.json"
+ ],
+ "compiler": {
+  "base_commit": "e88b1a4",
+  "fork": "liblsqecc_scoutq"
+ },
+ "core_qubits": [
+  0,
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10
+ ],
+ "flags": {
+  "cnot_ancilla_placement_default": "AncillaNextToTarget",
+  "cnot_ancilla_placement_default_note": "value after the layout override; the parser preloads the first gate before the override, so an unannotated first CNOT keeps the built-in default AncillaFreePlacement",
+  "cnot_corrections": "never",
+  "cnot_type_default": "ZXWithMBMControlFirst",
+  "compilation_mode": "nonlocal",
+  "condensed": false,
+  "disttime": 1,
+  "explicitfactories": false,
+  "input_is_qasm": true,
+  "layout": "edpc",
+  "nostagger": true,
+  "numlanes": 1,
+  "op_ids_legacy": false,
+  "pipeline": "wave",
+  "rzprecision_log_ten_negative": "10.000000",
+  "s_gate_mode": "twists"
+ },
+ "gates": [
+  {
+   "annotations": [],
+   "gate_idx": 0,
+   "is_dagger": false,
+   "name": "h",
+   "qubits": [
+    8
+   ]
+  },
+  {
+   "annotations": [],
+   "gate_idx": 1,
+   "is_dagger": false,
+   "name": "t",
+   "qubits": [
+    8
+   ]
+  },
+  {
+   "annotations": [
+    "ZXWithMBMControlFirst",
+    "AncillaNextToTarget"
+   ],
+   "gate_idx": 2,
+   "is_dagger": false,
+   "name": "cx",
+   "qubits": [
+    0,
+    8
+   ]
+  },
+  {
+   "annotations": [
+    "ZXWithMBMControlFirst",
+    "AncillaNextToTarget"
+   ],
+   "gate_idx": 3,
+   "is_dagger": false,
+   "name": "cx",
+   "qubits": [
+    4,
+    8
+   ]
+  },
+  {
+   "annotations": [
+    "ZXWithMBMControlFirst",
+    "AncillaNextToTarget"
+   ],
+   "gate_idx": 4,
+   "is_dagger": false,
+   "name": "cx",
+   "qubits": [
+    8,
+    0
+   ]
+  },
+  {
+   "annotations": [
+    "ZXWithMBMControlFirst",
+    "AncillaNextToTarget"
+   ],
+   "gate_idx": 5,
+   "is_dagger": false,
+   "name": "cx",
+   "qubits": [
+    8,
+    4
+   ]
+  },
+  {
+   "annotations": [],
+   "gate_idx": 6,
+   "is_dagger": false,
+   "name": "t",
+   "qubits": [
+    0
+   ]
+  },
+  {
+   "annotations": [],
+   "gate_idx": 7,
+   "is_dagger": false,
+   "name": "s",
+   "qubits": [
+    0
+   ]
+  },
+  {
+   "annotations": [],
+   "gate_idx": 8,
+   "is_dagger": false,
+   "name": "z",
+   "qubits": [
+    0
+   ]
+  },
+  {
+   "annotations": [],
+   "gate_idx": 9,
+   "is_dagger": false,
+   "name": "t",
+   "qubits": [
+    4
+   ]
+  },
+  {
+   "annotations": [],
+   "gate_idx": 10,
+   "is_dagger": false,
+   "name": "s",
+   "qubits": [
+    4
+   ]
+  },
+  {
+   "annotations": [],
+   "gate_idx": 11,
+   "is_dagger": false,
+   "name": "z",
+   "qubits": [
+    4
+   ]
+  },
+  {
+   "annotations": [],
+   "gate_idx": 12,
+   "is_dagger": false,
+   "name": "t",
+   "qubits": [
+    8
+   ]
+  },
+  {
+   "annotations": [
+    "ZXWithMBMControlFirst",
+    "AncillaNextToTarget"
+   ],
+   "gate_idx": 13,
+   "is_dagger": false,
+   "name": "cx",
+   "qubits": [
+    8,
+    0
+   ]
+  },
+  {
+   "annotations": [
+    "ZXWithMBMControlFirst",
+    "AncillaNextToTarget"
+   ],
+   "gate_idx": 14,
+   "is_dagger": false,
+   "name": "cx",
+   "qubits": [
+    8,
+    4
+   ]
+  },
+  {
+   "annotations": [],
+   "gate_idx": 15,
+   "is_dagger": false,
+   "name": "h",
+   "qubits": [
+    8
+   ]
+  },
+  {
+   "annotations": [],
+   "gate_idx": 16,
+   "is_dagger": false,
+   "name": "s",
+   "qubits": [
+    8
+   ]
+  },
+  {
+   "annotations": [
+    "ZXWithMBMControlFirst",
+    "AncillaNextToTarget"
+   ],
+   "gate_idx": 17,
+   "is_dagger": false,
+   "name": "cx",
+   "qubits": [
+    8,
+    1
+   ]
+  },
+  {
+   "annotations": [
+    "ZXWithMBMControlFirst",
+    "AncillaNextToTarget"
+   ],
+   "gate_idx": 18,
+   "is_dagger": false,
+   "name": "cx",
+   "qubits": [
+    8,
+    5
+   ]
+  },
+  {
+   "annotations": [],
+   "gate_idx": 19,
+   "is_dagger": false,
+   "name": "h",
+   "qubits": [
+    9
+   ]
+  },
+  {
+   "annotations": [],
+   "gate_idx": 20,
+   "is_dagger": false,
+   "name": "t",
+   "qubits": [
+    9
+   ]
+  },
+  {
+   "annotations": [
+    "ZXWithMBMControlFirst",
+    "AncillaNextToTarget"
+   ],
+   "gate_idx": 21,
+   "is_dagger": false,
+   "name": "cx",
+   "qubits": [
+    1,
+    9
+   ]
+  },
+  {
+   "annotations": [
+    "ZXWithMBMControlFirst",
+    "AncillaNextToTarget"
+   ],
+   "gate_idx": 22,
+   "is_dagger": false,
+   "name": "cx",
+   "qubits": [
+    5,
+    9
+   ]
+  },
+  {
+   "annotations": [
+    "ZXWithMBMControlFirst",
+    "AncillaNextToTarget"
+   ],
+   "gate_idx": 23,
+   "is_dagger": false,
+   "name": "cx",
+   "qubits": [
+    9,
+    1
+   ]
+  },
+  {
+   "annotations": [
+    "ZXWithMBMControlFirst",
+    "AncillaNextToTarget"
+   ],
+   "gate_idx": 24,
+   "is_dagger": false,
+   "name": "cx",
+   "qubits": [
+    9,
+    5
+   ]
+  },
+  {
+   "annotations": [],
+   "gate_idx": 25,
+   "is_dagger": false,
+   "name": "t",
+   "qubits": [
+    1
+   ]
+  },
+  {
+   "annotations": [],
+   "gate_idx": 26,
+   "is_dagger": false,
+   "name": "s",
+   "qubits": [
+    1
+   ]
+  },
+  {
+   "annotations": [],
+   "gate_idx": 27,
+   "is_dagger": false,
+   "name": "z",
+   "qubits": [
+    1
+   ]
+  },
+  {
+   "annotations": [],
+   "gate_idx": 28,
+   "is_dagger": false,
+   "name": "t",
+   "qubits": [
+    5
+   ]
+  },
+  {
+   "annotations": [],
+   "gate_idx": 29,
+   "is_dagger": false,
+   "name": "s",
+   "qubits": [
+    5
+   ]
+  },
+  {
+   "annotations": [],
+   "gate_idx": 30,
+   "is_dagger": false,
+   "name": "z",
+   "qubits": [
+    5
+   ]
+  },
+  {
+   "annotations": [],
+   "gate_idx": 31,
+   "is_dagger": false,
+   "name": "t",
+   "qubits": [
+    9
+   ]
+  },
+  {
+   "annotations": [
+    "ZXWithMBMControlFirst",
+    "AncillaNextToTarget"
+   ],
+   "gate_idx": 32,
+   "is_dagger": false,
+   "name": "cx",
+   "qubits": [
+    9,
+    1
+   ]
+  },
+  {
+   "annotations": [
+    "ZXWithMBMControlFirst",
+    "AncillaNextToTarget"
+   ],
+   "gate_idx": 33,
+   "is_dagger": false,
+   "name": "cx",
+   "qubits": [
+    9,
+    5
+   ]
+  },
+  {
+   "annotations": [],
+   "gate_idx": 34,
+   "is_dagger": false,
+   "name": "h",
+   "qubits": [
+    9
+   ]
+  },
+  {
+   "annotations": [],
+   "gate_idx": 35,
+   "is_dagger": false,
+   "name": "s",
+   "qubits": [
+    9
+   ]
+  },
+  {
+   "annotations": [
+    "ZXWithMBMControlFirst",
+    "AncillaNextToTarget"
+   ],
+   "gate_idx": 36,
+   "is_dagger": false,
+   "name": "cx",
+   "qubits": [
+    8,
+    9
+   ]
+  },
+  {
+   "annotations": [
+    "ZXWithMBMControlFirst",
+    "AncillaNextToTarget"
+   ],
+   "gate_idx": 37,
+   "is_dagger": false,
+   "name": "cx",
+   "qubits": [
+    9,
+    2
+   ]
+  },
+  {
+   "annotations": [
+    "ZXWithMBMControlFirst",
+    "AncillaNextToTarget"
+   ],
+   "gate_idx": 38,
+   "is_dagger": false,
+   "name": "cx",
+   "qubits": [
+    9,
+    6
+   ]
+  },
+  {
+   "annotations": [],
+   "gate_idx": 39,
+   "is_dagger": false,
+   "name": "h",
+   "qubits": [
+    10
+   ]
+  },
+  {
+   "annotations": [],
+   "gate_idx": 40,
+   "is_dagger": false,
+   "name": "t",
+   "qubits": [
+    10
+   ]
+  },
+  {
+   "annotations": [
+    "ZXWithMBMControlFirst",
+    "AncillaNextToTarget"
+   ],
+   "gate_idx": 41,
+   "is_dagger": false,
+   "name": "cx",
+   "qubits": [
+    2,
+    10
+   ]
+  },
+  {
+   "annotations": [
+    "ZXWithMBMControlFirst",
+    "AncillaNextToTarget"
+   ],
+   "gate_idx": 42,
+   "is_dagger": false,
+   "name": "cx",
+   "qubits": [
+    6,
+    10
+   ]
+  },
+  {
+   "annotations": [
+    "ZXWithMBMControlFirst",
+    "AncillaNextToTarget"
+   ],
+   "gate_idx": 43,
+   "is_dagger": false,
+   "name": "cx",
+   "qubits": [
+    10,
+    2
+   ]
+  },
+  {
+   "annotations": [
+    "ZXWithMBMControlFirst",
+    "AncillaNextToTarget"
+   ],
+   "gate_idx": 44,
+   "is_dagger": false,
+   "name": "cx",
+   "qubits": [
+    10,
+    6
+   ]
+  },
+  {
+   "annotations": [],
+   "gate_idx": 45,
+   "is_dagger": false,
+   "name": "t",
+   "qubits": [
+    2
+   ]
+  },
+  {
+   "annotations": [],
+   "gate_idx": 46,
+   "is_dagger": false,
+   "name": "s",
+   "qubits": [
+    2
+   ]
+  },
+  {
+   "annotations": [],
+   "gate_idx": 47,
+   "is_dagger": false,
+   "name": "z",
+   "qubits": [
+    2
+   ]
+  },
+  {
+   "annotations": [],
+   "gate_idx": 48,
+   "is_dagger": false,
+   "name": "t",
+   "qubits": [
+    6
+   ]
+  },
+  {
+   "annotations": [],
+   "gate_idx": 49,
+   "is_dagger": false,
+   "name": "s",
+   "qubits": [
+    6
+   ]
+  },
+  {
+   "annotations": [],
+   "gate_idx": 50,
+   "is_dagger": false,
+   "name": "z",
+   "qubits": [
+    6
+   ]
+  },
+  {
+   "annotations": [],
+   "gate_idx": 51,
+   "is_dagger": false,
+   "name": "t",
+   "qubits": [
+    10
+   ]
+  },
+  {
+   "annotations": [
+    "ZXWithMBMControlFirst",
+    "AncillaNextToTarget"
+   ],
+   "gate_idx": 52,
+   "is_dagger": false,
+   "name": "cx",
+   "qubits": [
+    10,
+    2
+   ]
+  },
+  {
+   "annotations": [
+    "ZXWithMBMControlFirst",
+    "AncillaNextToTarget"
+   ],
+   "gate_idx": 53,
+   "is_dagger": false,
+   "name": "cx",
+   "qubits": [
+    10,
+    6
+   ]
+  },
+  {
+   "annotations": [],
+   "gate_idx": 54,
+   "is_dagger": false,
+   "name": "h",
+   "qubits": [
+    10
+   ]
+  },
+  {
+   "annotations": [],
+   "gate_idx": 55,
+   "is_dagger": false,
+   "name": "s",
+   "qubits": [
+    10
+   ]
+  },
+  {
+   "annotations": [
+    "ZXWithMBMControlFirst",
+    "AncillaNextToTarget"
+   ],
+   "gate_idx": 56,
+   "is_dagger": false,
+   "name": "cx",
+   "qubits": [
+    9,
+    10
+   ]
+  },
+  {
+   "annotations": [
+    "ZXWithMBMControlFirst",
+    "AncillaNextToTarget"
+   ],
+   "gate_idx": 57,
+   "is_dagger": false,
+   "name": "cx",
+   "qubits": [
+    10,
+    7
+   ]
+  },
+  {
+   "annotations": [
+    "ZXWithMBMControlFirst",
+    "AncillaNextToTarget"
+   ],
+   "gate_idx": 58,
+   "is_dagger": false,
+   "name": "cx",
+   "qubits": [
+    3,
+    7
+   ]
+  },
+  {
+   "annotations": [
+    "ZXWithMBMControlFirst",
+    "AncillaNextToTarget"
+   ],
+   "gate_idx": 59,
+   "is_dagger": false,
+   "name": "cx",
+   "qubits": [
+    9,
+    10
+   ]
+  },
+  {
+   "annotations": [],
+   "gate_idx": 60,
+   "is_dagger": false,
+   "name": "h",
+   "qubits": [
+    10
+   ]
+  },
+  {
+   "annotations": [],
+   "creg": "m3",
+   "gate_idx": 61,
+   "is_dagger": false,
+   "name": "measure",
+   "observable": "Z",
+   "qubits": [
+    10
+   ],
+   "register": "q"
+  },
+  {
+   "annotations": [
+    "ZXWithMBMControlFirst",
+    "AncillaNextToTarget"
+   ],
+   "classical_control": {
+    "register": "m3",
+    "value": 1
+   },
+   "gate_idx": 62,
+   "is_dagger": false,
+   "name": "cz",
+   "qubits": [
+    2,
+    6
+   ]
+  },
+  {
+   "annotations": [
+    "ZXWithMBMControlFirst",
+    "AncillaNextToTarget"
+   ],
+   "gate_idx": 63,
+   "is_dagger": false,
+   "name": "cx",
+   "qubits": [
+    9,
+    2
+   ]
+  },
+  {
+   "annotations": [
+    "ZXWithMBMControlFirst",
+    "AncillaNextToTarget"
+   ],
+   "gate_idx": 64,
+   "is_dagger": false,
+   "name": "cx",
+   "qubits": [
+    2,
+    6
+   ]
+  },
+  {
+   "annotations": [
+    "ZXWithMBMControlFirst",
+    "AncillaNextToTarget"
+   ],
+   "gate_idx": 65,
+   "is_dagger": false,
+   "name": "cx",
+   "qubits": [
+    8,
+    9
+   ]
+  },
+  {
+   "annotations": [],
+   "gate_idx": 66,
+   "is_dagger": false,
+   "name": "h",
+   "qubits": [
+    9
+   ]
+  },
+  {
+   "annotations": [],
+   "creg": "m2",
+   "gate_idx": 67,
+   "is_dagger": false,
+   "name": "measure",
+   "observable": "Z",
+   "qubits": [
+    9
+   ],
+   "register": "q"
+  },
+  {
+   "annotations": [
+    "ZXWithMBMControlFirst",
+    "AncillaNextToTarget"
+   ],
+   "classical_control": {
+    "register": "m2",
+    "value": 1
+   },
+   "gate_idx": 68,
+   "is_dagger": false,
+   "name": "cz",
+   "qubits": [
+    1,
+    5
+   ]
+  },
+  {
+   "annotations": [
+    "ZXWithMBMControlFirst",
+    "AncillaNextToTarget"
+   ],
+   "gate_idx": 69,
+   "is_dagger": false,
+   "name": "cx",
+   "qubits": [
+    8,
+    1
+   ]
+  },
+  {
+   "annotations": [
+    "ZXWithMBMControlFirst",
+    "AncillaNextToTarget"
+   ],
+   "gate_idx": 70,
+   "is_dagger": false,
+   "name": "cx",
+   "qubits": [
+    1,
+    5
+   ]
+  },
+  {
+   "annotations": [],
+   "gate_idx": 71,
+   "is_dagger": false,
+   "name": "h",
+   "qubits": [
+    8
+   ]
+  },
+  {
+   "annotations": [],
+   "creg": "m1",
+   "gate_idx": 72,
+   "is_dagger": false,
+   "name": "measure",
+   "observable": "Z",
+   "qubits": [
+    8
+   ],
+   "register": "q"
+  },
+  {
+   "annotations": [
+    "ZXWithMBMControlFirst",
+    "AncillaNextToTarget"
+   ],
+   "classical_control": {
+    "register": "m1",
+    "value": 1
+   },
+   "gate_idx": 73,
+   "is_dagger": false,
+   "name": "cz",
+   "qubits": [
+    0,
+    4
+   ]
+  },
+  {
+   "annotations": [
+    "ZXWithMBMControlFirst",
+    "AncillaNextToTarget"
+   ],
+   "gate_idx": 74,
+   "is_dagger": false,
+   "name": "cx",
+   "qubits": [
+    0,
+    4
+   ]
+  }
+ ],
+ "lli": [
+  {
+   "app_seq": 0,
+   "applications": 1,
+   "clients": [],
+   "idx": 0,
+   "is_dagger": false,
+   "op": "Gate",
+   "patches": [
+    8
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 0,
+    "gadget_kind": "H",
+    "gate_idx": 0,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "single_qubit_op": "H",
+   "slice": 0
+  },
+  {
+   "app_seq": 1,
+   "applications": 1,
+   "clients": [],
+   "idx": 1,
+   "op": "RotateSingleCellPatch",
+   "patches": [
+    8
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 0,
+    "gadget_kind": "H",
+    "gate_idx": 0,
+    "is_dagger": false,
+    "role": "boundary_rotation"
+   },
+   "slice": 0
+  },
+  {
+   "app_seq": 15,
+   "applications": 1,
+   "clients": [
+    8
+   ],
+   "idx": 2,
+   "near_patch": 8,
+   "op": "RequestMagicState",
+   "patches": [
+    8,
+    11
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 1,
+    "gadget_kind": "T",
+    "gate_idx": 1,
+    "is_dagger": false,
+    "role": "resource"
+   },
+   "slice": 3,
+   "state": "Magic"
+  },
+  {
+   "app_seq": 16,
+   "applications": 1,
+   "clients": [],
+   "idx": 3,
+   "is_negative": false,
+   "observable": {
+    "11": "Z",
+    "8": "Z"
+   },
+   "op": "MultiBodyMeasure",
+   "patches": [
+    8,
+    11
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 1,
+    "gadget_kind": "T",
+    "gate_idx": 1,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 3
+  },
+  {
+   "app_seq": 17,
+   "applications": 1,
+   "clients": [],
+   "idx": 4,
+   "is_negative": false,
+   "observable": {
+    "11": "X"
+   },
+   "op": "MeasureSinglePatch",
+   "patches": [
+    11
+   ],
+   "provenance": {
+    "frame": "S_t^u Z_t^w (u = ZZ(t,magic) result, w = this X readout); the compiler emits the S unconditionally",
+    "gadget_id": 1,
+    "gadget_kind": "T",
+    "gate_idx": 1,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 3
+  },
+  {
+   "app_seq": 18,
+   "applications": 1,
+   "clients": [
+    8
+   ],
+   "idx": 5,
+   "near_patch": 8,
+   "op": "RequestYState",
+   "patches": [
+    8,
+    12
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 1,
+    "gadget_kind": "T",
+    "gate_idx": 1,
+    "is_dagger": false,
+    "role": "s_gadget_member"
+   },
+   "slice": 3,
+   "state": "Y"
+  },
+  {
+   "app_seq": 27,
+   "applications": 1,
+   "clients": [],
+   "idx": 6,
+   "is_negative": false,
+   "observable": {
+    "12": "Z",
+    "8": "Z"
+   },
+   "op": "MultiBodyMeasure",
+   "patches": [
+    12,
+    8
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 1,
+    "gadget_kind": "T",
+    "gate_idx": 1,
+    "is_dagger": false,
+    "role": "s_gadget_member"
+   },
+   "slice": 4
+  },
+  {
+   "app_seq": 28,
+   "applications": 1,
+   "clients": [],
+   "idx": 7,
+   "is_negative": false,
+   "observable": {
+    "12": "X"
+   },
+   "op": "MeasureSinglePatch",
+   "patches": [
+    12
+   ],
+   "provenance": {
+    "frame": "Z_t^(u xor w) (u = ZZ(y,t) result, w = this X readout of the Y state); the compiler emits the Z unconditionally",
+    "gadget_id": 1,
+    "gadget_kind": "T",
+    "gate_idx": 1,
+    "is_dagger": false,
+    "role": "s_gadget_member"
+   },
+   "slice": 4
+  },
+  {
+   "app_seq": 33,
+   "applications": 1,
+   "clients": [],
+   "idx": 8,
+   "is_dagger": false,
+   "op": "Gate",
+   "patches": [
+    8
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 1,
+    "gadget_kind": "T",
+    "gate_idx": 1,
+    "is_dagger": false,
+    "role": "s_gadget_member"
+   },
+   "single_qubit_op": "Z",
+   "slice": 5
+  },
+  {
+   "app_seq": 34,
+   "applications": 1,
+   "clients": [
+    0,
+    8
+   ],
+   "idx": 9,
+   "op": "Init",
+   "patches": [
+    0,
+    8,
+    13
+   ],
+   "place_next_to": {
+    "id": 8,
+    "op": "X"
+   },
+   "provenance": {
+    "frame": "",
+    "gadget_id": 2,
+    "gadget_kind": "CNOT",
+    "gate_idx": 2,
+    "is_dagger": false,
+    "role": "mediator"
+   },
+   "slice": 5,
+   "state": "Plus"
+  },
+  {
+   "app_seq": 35,
+   "applications": 1,
+   "clients": [],
+   "idx": 10,
+   "is_negative": false,
+   "observable": {
+    "0": "Z",
+    "13": "Z"
+   },
+   "op": "MultiBodyMeasure",
+   "patches": [
+    0,
+    13
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 2,
+    "gadget_kind": "CNOT",
+    "gate_idx": 2,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 5
+  },
+  {
+   "app_seq": 38,
+   "applications": 1,
+   "clients": [],
+   "idx": 11,
+   "is_negative": false,
+   "observable": {
+    "13": "X",
+    "8": "X"
+   },
+   "op": "MultiBodyMeasure",
+   "patches": [
+    13,
+    8
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 2,
+    "gadget_kind": "CNOT",
+    "gate_idx": 2,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 6
+  },
+  {
+   "app_seq": 39,
+   "applications": 1,
+   "clients": [],
+   "idx": 12,
+   "is_negative": false,
+   "observable": {
+    "13": "Z"
+   },
+   "op": "MeasureSinglePatch",
+   "patches": [
+    13
+   ],
+   "provenance": {
+    "frame": "Z_c^v X_t^(u xor w) (u = Z_c Z_a result, v = X_a X_t result, w = this Z readout of the mediator)",
+    "gadget_id": 2,
+    "gadget_kind": "CNOT",
+    "gate_idx": 2,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 6
+  },
+  {
+   "app_seq": 40,
+   "applications": 1,
+   "clients": [
+    4,
+    8
+   ],
+   "idx": 13,
+   "op": "Init",
+   "patches": [
+    4,
+    8,
+    14
+   ],
+   "place_next_to": {
+    "id": 8,
+    "op": "X"
+   },
+   "provenance": {
+    "frame": "",
+    "gadget_id": 3,
+    "gadget_kind": "CNOT",
+    "gate_idx": 3,
+    "is_dagger": false,
+    "role": "mediator"
+   },
+   "slice": 6,
+   "state": "Plus"
+  },
+  {
+   "app_seq": 41,
+   "applications": 1,
+   "clients": [],
+   "idx": 14,
+   "is_negative": false,
+   "observable": {
+    "14": "Z",
+    "4": "Z"
+   },
+   "op": "MultiBodyMeasure",
+   "patches": [
+    4,
+    14
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 3,
+    "gadget_kind": "CNOT",
+    "gate_idx": 3,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 6
+  },
+  {
+   "app_seq": 42,
+   "applications": 1,
+   "clients": [],
+   "idx": 15,
+   "is_negative": false,
+   "observable": {
+    "14": "X",
+    "8": "X"
+   },
+   "op": "MultiBodyMeasure",
+   "patches": [
+    14,
+    8
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 3,
+    "gadget_kind": "CNOT",
+    "gate_idx": 3,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 7
+  },
+  {
+   "app_seq": 43,
+   "applications": 1,
+   "clients": [],
+   "idx": 16,
+   "is_negative": false,
+   "observable": {
+    "14": "Z"
+   },
+   "op": "MeasureSinglePatch",
+   "patches": [
+    14
+   ],
+   "provenance": {
+    "frame": "Z_c^v X_t^(u xor w) (u = Z_c Z_a result, v = X_a X_t result, w = this Z readout of the mediator)",
+    "gadget_id": 3,
+    "gadget_kind": "CNOT",
+    "gate_idx": 3,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 7
+  },
+  {
+   "app_seq": 44,
+   "applications": 1,
+   "clients": [
+    8,
+    0
+   ],
+   "idx": 17,
+   "op": "Init",
+   "patches": [
+    8,
+    0,
+    15
+   ],
+   "place_next_to": {
+    "id": 0,
+    "op": "X"
+   },
+   "provenance": {
+    "frame": "",
+    "gadget_id": 4,
+    "gadget_kind": "CNOT",
+    "gate_idx": 4,
+    "is_dagger": false,
+    "role": "mediator"
+   },
+   "slice": 7,
+   "state": "Plus"
+  },
+  {
+   "app_seq": 45,
+   "applications": 1,
+   "clients": [],
+   "idx": 18,
+   "is_negative": false,
+   "observable": {
+    "15": "Z",
+    "8": "Z"
+   },
+   "op": "MultiBodyMeasure",
+   "patches": [
+    8,
+    15
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 4,
+    "gadget_kind": "CNOT",
+    "gate_idx": 4,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 8
+  },
+  {
+   "app_seq": 47,
+   "applications": 1,
+   "clients": [],
+   "idx": 19,
+   "is_negative": false,
+   "observable": {
+    "0": "X",
+    "15": "X"
+   },
+   "op": "MultiBodyMeasure",
+   "patches": [
+    15,
+    0
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 4,
+    "gadget_kind": "CNOT",
+    "gate_idx": 4,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 9
+  },
+  {
+   "app_seq": 48,
+   "applications": 1,
+   "clients": [],
+   "idx": 20,
+   "is_negative": false,
+   "observable": {
+    "15": "Z"
+   },
+   "op": "MeasureSinglePatch",
+   "patches": [
+    15
+   ],
+   "provenance": {
+    "frame": "Z_c^v X_t^(u xor w) (u = Z_c Z_a result, v = X_a X_t result, w = this Z readout of the mediator)",
+    "gadget_id": 4,
+    "gadget_kind": "CNOT",
+    "gate_idx": 4,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 9
+  },
+  {
+   "app_seq": 46,
+   "applications": 1,
+   "clients": [
+    8,
+    4
+   ],
+   "idx": 21,
+   "op": "Init",
+   "patches": [
+    8,
+    4,
+    16
+   ],
+   "place_next_to": {
+    "id": 4,
+    "op": "X"
+   },
+   "provenance": {
+    "frame": "",
+    "gadget_id": 5,
+    "gadget_kind": "CNOT",
+    "gate_idx": 5,
+    "is_dagger": false,
+    "role": "mediator"
+   },
+   "slice": 8,
+   "state": "Plus"
+  },
+  {
+   "app_seq": 50,
+   "applications": 1,
+   "clients": [],
+   "idx": 22,
+   "is_negative": false,
+   "observable": {
+    "16": "Z",
+    "8": "Z"
+   },
+   "op": "MultiBodyMeasure",
+   "patches": [
+    8,
+    16
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 5,
+    "gadget_kind": "CNOT",
+    "gate_idx": 5,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 9
+  },
+  {
+   "app_seq": 55,
+   "applications": 1,
+   "clients": [],
+   "idx": 23,
+   "is_negative": false,
+   "observable": {
+    "16": "X",
+    "4": "X"
+   },
+   "op": "MultiBodyMeasure",
+   "patches": [
+    16,
+    4
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 5,
+    "gadget_kind": "CNOT",
+    "gate_idx": 5,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 10
+  },
+  {
+   "app_seq": 56,
+   "applications": 1,
+   "clients": [],
+   "idx": 24,
+   "is_negative": false,
+   "observable": {
+    "16": "Z"
+   },
+   "op": "MeasureSinglePatch",
+   "patches": [
+    16
+   ],
+   "provenance": {
+    "frame": "Z_c^v X_t^(u xor w) (u = Z_c Z_a result, v = X_a X_t result, w = this Z readout of the mediator)",
+    "gadget_id": 5,
+    "gadget_kind": "CNOT",
+    "gate_idx": 5,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 10
+  },
+  {
+   "app_seq": 49,
+   "applications": 1,
+   "clients": [
+    0
+   ],
+   "idx": 25,
+   "near_patch": 0,
+   "op": "RequestMagicState",
+   "patches": [
+    0,
+    17
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 6,
+    "gadget_kind": "T",
+    "gate_idx": 6,
+    "is_dagger": false,
+    "role": "resource"
+   },
+   "slice": 9,
+   "state": "Magic"
+  },
+  {
+   "app_seq": 52,
+   "applications": 1,
+   "clients": [],
+   "idx": 26,
+   "is_negative": false,
+   "observable": {
+    "0": "Z",
+    "17": "Z"
+   },
+   "op": "MultiBodyMeasure",
+   "patches": [
+    0,
+    17
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 6,
+    "gadget_kind": "T",
+    "gate_idx": 6,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 10
+  },
+  {
+   "app_seq": 53,
+   "applications": 1,
+   "clients": [],
+   "idx": 27,
+   "is_negative": false,
+   "observable": {
+    "17": "X"
+   },
+   "op": "MeasureSinglePatch",
+   "patches": [
+    17
+   ],
+   "provenance": {
+    "frame": "S_t^u Z_t^w (u = ZZ(t,magic) result, w = this X readout); the compiler emits the S unconditionally",
+    "gadget_id": 6,
+    "gadget_kind": "T",
+    "gate_idx": 6,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 10
+  },
+  {
+   "app_seq": 54,
+   "applications": 1,
+   "clients": [
+    0
+   ],
+   "idx": 28,
+   "near_patch": 0,
+   "op": "RequestYState",
+   "patches": [
+    0,
+    18
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 6,
+    "gadget_kind": "T",
+    "gate_idx": 6,
+    "is_dagger": false,
+    "role": "s_gadget_member"
+   },
+   "slice": 10,
+   "state": "Y"
+  },
+  {
+   "app_seq": 61,
+   "applications": 1,
+   "clients": [],
+   "idx": 29,
+   "is_negative": false,
+   "observable": {
+    "0": "Z",
+    "18": "Z"
+   },
+   "op": "MultiBodyMeasure",
+   "patches": [
+    18,
+    0
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 6,
+    "gadget_kind": "T",
+    "gate_idx": 6,
+    "is_dagger": false,
+    "role": "s_gadget_member"
+   },
+   "slice": 11
+  },
+  {
+   "app_seq": 62,
+   "applications": 1,
+   "clients": [],
+   "idx": 30,
+   "is_negative": false,
+   "observable": {
+    "18": "X"
+   },
+   "op": "MeasureSinglePatch",
+   "patches": [
+    18
+   ],
+   "provenance": {
+    "frame": "Z_t^(u xor w) (u = ZZ(y,t) result, w = this X readout of the Y state); the compiler emits the Z unconditionally",
+    "gadget_id": 6,
+    "gadget_kind": "T",
+    "gate_idx": 6,
+    "is_dagger": false,
+    "role": "s_gadget_member"
+   },
+   "slice": 11
+  },
+  {
+   "app_seq": 65,
+   "applications": 1,
+   "clients": [],
+   "idx": 31,
+   "is_dagger": false,
+   "op": "Gate",
+   "patches": [
+    0
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 6,
+    "gadget_kind": "T",
+    "gate_idx": 6,
+    "is_dagger": false,
+    "role": "s_gadget_member"
+   },
+   "single_qubit_op": "Z",
+   "slice": 12
+  },
+  {
+   "app_seq": 66,
+   "applications": 1,
+   "clients": [
+    0
+   ],
+   "idx": 32,
+   "near_patch": 0,
+   "op": "RequestYState",
+   "patches": [
+    0,
+    19
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 7,
+    "gadget_kind": "S",
+    "gate_idx": 7,
+    "is_dagger": false,
+    "role": "s_gadget_member"
+   },
+   "slice": 12,
+   "state": "Y"
+  },
+  {
+   "app_seq": 70,
+   "applications": 1,
+   "clients": [],
+   "idx": 33,
+   "is_negative": false,
+   "observable": {
+    "0": "Z",
+    "19": "Z"
+   },
+   "op": "MultiBodyMeasure",
+   "patches": [
+    19,
+    0
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 7,
+    "gadget_kind": "S",
+    "gate_idx": 7,
+    "is_dagger": false,
+    "role": "s_gadget_member"
+   },
+   "slice": 13
+  },
+  {
+   "app_seq": 71,
+   "applications": 1,
+   "clients": [],
+   "idx": 34,
+   "is_negative": false,
+   "observable": {
+    "19": "X"
+   },
+   "op": "MeasureSinglePatch",
+   "patches": [
+    19
+   ],
+   "provenance": {
+    "frame": "Z_t^(u xor w) (u = ZZ(y,t) result, w = this X readout of the Y state); the compiler emits the Z unconditionally",
+    "gadget_id": 7,
+    "gadget_kind": "S",
+    "gate_idx": 7,
+    "is_dagger": false,
+    "role": "s_gadget_member"
+   },
+   "slice": 13
+  },
+  {
+   "app_seq": 73,
+   "applications": 1,
+   "clients": [],
+   "idx": 35,
+   "is_dagger": false,
+   "op": "Gate",
+   "patches": [
+    0
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 7,
+    "gadget_kind": "S",
+    "gate_idx": 7,
+    "is_dagger": false,
+    "role": "s_gadget_member"
+   },
+   "single_qubit_op": "Z",
+   "slice": 14
+  },
+  {
+   "app_seq": 74,
+   "applications": 1,
+   "clients": [],
+   "idx": 36,
+   "is_dagger": false,
+   "op": "Gate",
+   "patches": [
+    0
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 8,
+    "gadget_kind": "Z",
+    "gate_idx": 8,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "single_qubit_op": "Z",
+   "slice": 14
+  },
+  {
+   "app_seq": 57,
+   "applications": 1,
+   "clients": [
+    4
+   ],
+   "idx": 37,
+   "near_patch": 4,
+   "op": "RequestMagicState",
+   "patches": [
+    4,
+    20
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 9,
+    "gadget_kind": "T",
+    "gate_idx": 9,
+    "is_dagger": false,
+    "role": "resource"
+   },
+   "slice": 10,
+   "state": "Magic"
+  },
+  {
+   "app_seq": 67,
+   "applications": 1,
+   "clients": [],
+   "idx": 38,
+   "is_negative": false,
+   "observable": {
+    "20": "Z",
+    "4": "Z"
+   },
+   "op": "MultiBodyMeasure",
+   "patches": [
+    4,
+    20
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 9,
+    "gadget_kind": "T",
+    "gate_idx": 9,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 12
+  },
+  {
+   "app_seq": 68,
+   "applications": 1,
+   "clients": [],
+   "idx": 39,
+   "is_negative": false,
+   "observable": {
+    "20": "X"
+   },
+   "op": "MeasureSinglePatch",
+   "patches": [
+    20
+   ],
+   "provenance": {
+    "frame": "S_t^u Z_t^w (u = ZZ(t,magic) result, w = this X readout); the compiler emits the S unconditionally",
+    "gadget_id": 9,
+    "gadget_kind": "T",
+    "gate_idx": 9,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 12
+  },
+  {
+   "app_seq": 72,
+   "applications": 1,
+   "clients": [
+    4
+   ],
+   "idx": 40,
+   "near_patch": 4,
+   "op": "RequestYState",
+   "patches": [
+    4,
+    21
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 9,
+    "gadget_kind": "T",
+    "gate_idx": 9,
+    "is_dagger": false,
+    "role": "s_gadget_member"
+   },
+   "slice": 13,
+   "state": "Y"
+  },
+  {
+   "app_seq": 77,
+   "applications": 1,
+   "clients": [],
+   "idx": 41,
+   "is_negative": false,
+   "observable": {
+    "21": "Z",
+    "4": "Z"
+   },
+   "op": "MultiBodyMeasure",
+   "patches": [
+    21,
+    4
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 9,
+    "gadget_kind": "T",
+    "gate_idx": 9,
+    "is_dagger": false,
+    "role": "s_gadget_member"
+   },
+   "slice": 14
+  },
+  {
+   "app_seq": 78,
+   "applications": 1,
+   "clients": [],
+   "idx": 42,
+   "is_negative": false,
+   "observable": {
+    "21": "X"
+   },
+   "op": "MeasureSinglePatch",
+   "patches": [
+    21
+   ],
+   "provenance": {
+    "frame": "Z_t^(u xor w) (u = ZZ(y,t) result, w = this X readout of the Y state); the compiler emits the Z unconditionally",
+    "gadget_id": 9,
+    "gadget_kind": "T",
+    "gate_idx": 9,
+    "is_dagger": false,
+    "role": "s_gadget_member"
+   },
+   "slice": 14
+  },
+  {
+   "app_seq": 81,
+   "applications": 1,
+   "clients": [],
+   "idx": 43,
+   "is_dagger": false,
+   "op": "Gate",
+   "patches": [
+    4
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 9,
+    "gadget_kind": "T",
+    "gate_idx": 9,
+    "is_dagger": false,
+    "role": "s_gadget_member"
+   },
+   "single_qubit_op": "Z",
+   "slice": 15
+  },
+  {
+   "app_seq": 82,
+   "applications": 1,
+   "clients": [
+    4
+   ],
+   "idx": 44,
+   "near_patch": 4,
+   "op": "RequestYState",
+   "patches": [
+    4,
+    22
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 10,
+    "gadget_kind": "S",
+    "gate_idx": 10,
+    "is_dagger": false,
+    "role": "s_gadget_member"
+   },
+   "slice": 15,
+   "state": "Y"
+  },
+  {
+   "app_seq": 83,
+   "applications": 1,
+   "clients": [],
+   "idx": 45,
+   "is_negative": false,
+   "observable": {
+    "22": "Z",
+    "4": "Z"
+   },
+   "op": "MultiBodyMeasure",
+   "patches": [
+    22,
+    4
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 10,
+    "gadget_kind": "S",
+    "gate_idx": 10,
+    "is_dagger": false,
+    "role": "s_gadget_member"
+   },
+   "slice": 16
+  },
+  {
+   "app_seq": 84,
+   "applications": 1,
+   "clients": [],
+   "idx": 46,
+   "is_negative": false,
+   "observable": {
+    "22": "X"
+   },
+   "op": "MeasureSinglePatch",
+   "patches": [
+    22
+   ],
+   "provenance": {
+    "frame": "Z_t^(u xor w) (u = ZZ(y,t) result, w = this X readout of the Y state); the compiler emits the Z unconditionally",
+    "gadget_id": 10,
+    "gadget_kind": "S",
+    "gate_idx": 10,
+    "is_dagger": false,
+    "role": "s_gadget_member"
+   },
+   "slice": 16
+  },
+  {
+   "app_seq": 85,
+   "applications": 1,
+   "clients": [],
+   "idx": 47,
+   "is_dagger": false,
+   "op": "Gate",
+   "patches": [
+    4
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 10,
+    "gadget_kind": "S",
+    "gate_idx": 10,
+    "is_dagger": false,
+    "role": "s_gadget_member"
+   },
+   "single_qubit_op": "Z",
+   "slice": 17
+  },
+  {
+   "app_seq": 86,
+   "applications": 1,
+   "clients": [],
+   "idx": 48,
+   "is_dagger": false,
+   "op": "Gate",
+   "patches": [
+    4
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 11,
+    "gadget_kind": "Z",
+    "gate_idx": 11,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "single_qubit_op": "Z",
+   "slice": 17
+  },
+  {
+   "app_seq": 51,
+   "applications": 1,
+   "clients": [
+    8
+   ],
+   "idx": 49,
+   "near_patch": 8,
+   "op": "RequestMagicState",
+   "patches": [
+    8,
+    23
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 12,
+    "gadget_kind": "T",
+    "gate_idx": 12,
+    "is_dagger": false,
+    "role": "resource"
+   },
+   "slice": 9,
+   "state": "Magic"
+  },
+  {
+   "app_seq": 58,
+   "applications": 1,
+   "clients": [],
+   "idx": 50,
+   "is_negative": false,
+   "observable": {
+    "23": "Z",
+    "8": "Z"
+   },
+   "op": "MultiBodyMeasure",
+   "patches": [
+    8,
+    23
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 12,
+    "gadget_kind": "T",
+    "gate_idx": 12,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 10
+  },
+  {
+   "app_seq": 59,
+   "applications": 1,
+   "clients": [],
+   "idx": 51,
+   "is_negative": false,
+   "observable": {
+    "23": "X"
+   },
+   "op": "MeasureSinglePatch",
+   "patches": [
+    23
+   ],
+   "provenance": {
+    "frame": "S_t^u Z_t^w (u = ZZ(t,magic) result, w = this X readout); the compiler emits the S unconditionally",
+    "gadget_id": 12,
+    "gadget_kind": "T",
+    "gate_idx": 12,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 10
+  },
+  {
+   "app_seq": 60,
+   "applications": 1,
+   "clients": [
+    8
+   ],
+   "idx": 52,
+   "near_patch": 8,
+   "op": "RequestYState",
+   "patches": [
+    8,
+    24
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 12,
+    "gadget_kind": "T",
+    "gate_idx": 12,
+    "is_dagger": false,
+    "role": "s_gadget_member"
+   },
+   "slice": 10,
+   "state": "Y"
+  },
+  {
+   "app_seq": 63,
+   "applications": 1,
+   "clients": [],
+   "idx": 53,
+   "is_negative": false,
+   "observable": {
+    "24": "Z",
+    "8": "Z"
+   },
+   "op": "MultiBodyMeasure",
+   "patches": [
+    24,
+    8
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 12,
+    "gadget_kind": "T",
+    "gate_idx": 12,
+    "is_dagger": false,
+    "role": "s_gadget_member"
+   },
+   "slice": 11
+  },
+  {
+   "app_seq": 64,
+   "applications": 1,
+   "clients": [],
+   "idx": 54,
+   "is_negative": false,
+   "observable": {
+    "24": "X"
+   },
+   "op": "MeasureSinglePatch",
+   "patches": [
+    24
+   ],
+   "provenance": {
+    "frame": "Z_t^(u xor w) (u = ZZ(y,t) result, w = this X readout of the Y state); the compiler emits the Z unconditionally",
+    "gadget_id": 12,
+    "gadget_kind": "T",
+    "gate_idx": 12,
+    "is_dagger": false,
+    "role": "s_gadget_member"
+   },
+   "slice": 11
+  },
+  {
+   "app_seq": 69,
+   "applications": 1,
+   "clients": [],
+   "idx": 55,
+   "is_dagger": false,
+   "op": "Gate",
+   "patches": [
+    8
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 12,
+    "gadget_kind": "T",
+    "gate_idx": 12,
+    "is_dagger": false,
+    "role": "s_gadget_member"
+   },
+   "single_qubit_op": "Z",
+   "slice": 12
+  },
+  {
+   "app_seq": 75,
+   "applications": 1,
+   "clients": [
+    8,
+    0
+   ],
+   "idx": 56,
+   "op": "Init",
+   "patches": [
+    8,
+    0,
+    25
+   ],
+   "place_next_to": {
+    "id": 0,
+    "op": "X"
+   },
+   "provenance": {
+    "frame": "",
+    "gadget_id": 13,
+    "gadget_kind": "CNOT",
+    "gate_idx": 13,
+    "is_dagger": false,
+    "role": "mediator"
+   },
+   "slice": 14,
+   "state": "Plus"
+  },
+  {
+   "app_seq": 76,
+   "applications": 1,
+   "clients": [],
+   "idx": 57,
+   "is_negative": false,
+   "observable": {
+    "25": "Z",
+    "8": "Z"
+   },
+   "op": "MultiBodyMeasure",
+   "patches": [
+    8,
+    25
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 13,
+    "gadget_kind": "CNOT",
+    "gate_idx": 13,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 14
+  },
+  {
+   "app_seq": 79,
+   "applications": 1,
+   "clients": [],
+   "idx": 58,
+   "is_negative": false,
+   "observable": {
+    "0": "X",
+    "25": "X"
+   },
+   "op": "MultiBodyMeasure",
+   "patches": [
+    25,
+    0
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 13,
+    "gadget_kind": "CNOT",
+    "gate_idx": 13,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 15
+  },
+  {
+   "app_seq": 80,
+   "applications": 1,
+   "clients": [],
+   "idx": 59,
+   "is_negative": false,
+   "observable": {
+    "25": "Z"
+   },
+   "op": "MeasureSinglePatch",
+   "patches": [
+    25
+   ],
+   "provenance": {
+    "frame": "Z_c^v X_t^(u xor w) (u = Z_c Z_a result, v = X_a X_t result, w = this Z readout of the mediator)",
+    "gadget_id": 13,
+    "gadget_kind": "CNOT",
+    "gate_idx": 13,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 15
+  },
+  {
+   "app_seq": 87,
+   "applications": 1,
+   "clients": [
+    8,
+    4
+   ],
+   "idx": 60,
+   "op": "Init",
+   "patches": [
+    8,
+    4,
+    26
+   ],
+   "place_next_to": {
+    "id": 4,
+    "op": "X"
+   },
+   "provenance": {
+    "frame": "",
+    "gadget_id": 14,
+    "gadget_kind": "CNOT",
+    "gate_idx": 14,
+    "is_dagger": false,
+    "role": "mediator"
+   },
+   "slice": 17,
+   "state": "Plus"
+  },
+  {
+   "app_seq": 88,
+   "applications": 1,
+   "clients": [],
+   "idx": 61,
+   "is_negative": false,
+   "observable": {
+    "26": "Z",
+    "8": "Z"
+   },
+   "op": "MultiBodyMeasure",
+   "patches": [
+    8,
+    26
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 14,
+    "gadget_kind": "CNOT",
+    "gate_idx": 14,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 17
+  },
+  {
+   "app_seq": 91,
+   "applications": 1,
+   "clients": [],
+   "idx": 62,
+   "is_negative": false,
+   "observable": {
+    "26": "X",
+    "4": "X"
+   },
+   "op": "MultiBodyMeasure",
+   "patches": [
+    26,
+    4
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 14,
+    "gadget_kind": "CNOT",
+    "gate_idx": 14,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 18
+  },
+  {
+   "app_seq": 92,
+   "applications": 1,
+   "clients": [],
+   "idx": 63,
+   "is_negative": false,
+   "observable": {
+    "26": "Z"
+   },
+   "op": "MeasureSinglePatch",
+   "patches": [
+    26
+   ],
+   "provenance": {
+    "frame": "Z_c^v X_t^(u xor w) (u = Z_c Z_a result, v = X_a X_t result, w = this Z readout of the mediator)",
+    "gadget_id": 14,
+    "gadget_kind": "CNOT",
+    "gate_idx": 14,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 18
+  },
+  {
+   "app_seq": 89,
+   "applications": 1,
+   "clients": [],
+   "idx": 64,
+   "is_dagger": false,
+   "op": "Gate",
+   "patches": [
+    8
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 15,
+    "gadget_kind": "H",
+    "gate_idx": 15,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "single_qubit_op": "H",
+   "slice": 18
+  },
+  {
+   "app_seq": 90,
+   "applications": 1,
+   "clients": [],
+   "idx": 65,
+   "op": "RotateSingleCellPatch",
+   "patches": [
+    8
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 15,
+    "gadget_kind": "H",
+    "gate_idx": 15,
+    "is_dagger": false,
+    "role": "boundary_rotation"
+   },
+   "slice": 18
+  },
+  {
+   "app_seq": 96,
+   "applications": 1,
+   "clients": [
+    8
+   ],
+   "idx": 66,
+   "near_patch": 8,
+   "op": "RequestYState",
+   "patches": [
+    8,
+    27
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 16,
+    "gadget_kind": "S",
+    "gate_idx": 16,
+    "is_dagger": false,
+    "role": "s_gadget_member"
+   },
+   "slice": 21,
+   "state": "Y"
+  },
+  {
+   "app_seq": 97,
+   "applications": 1,
+   "clients": [],
+   "idx": 67,
+   "is_negative": false,
+   "observable": {
+    "27": "Z",
+    "8": "Z"
+   },
+   "op": "MultiBodyMeasure",
+   "patches": [
+    27,
+    8
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 16,
+    "gadget_kind": "S",
+    "gate_idx": 16,
+    "is_dagger": false,
+    "role": "s_gadget_member"
+   },
+   "slice": 22
+  },
+  {
+   "app_seq": 98,
+   "applications": 1,
+   "clients": [],
+   "idx": 68,
+   "is_negative": false,
+   "observable": {
+    "27": "X"
+   },
+   "op": "MeasureSinglePatch",
+   "patches": [
+    27
+   ],
+   "provenance": {
+    "frame": "Z_t^(u xor w) (u = ZZ(y,t) result, w = this X readout of the Y state); the compiler emits the Z unconditionally",
+    "gadget_id": 16,
+    "gadget_kind": "S",
+    "gate_idx": 16,
+    "is_dagger": false,
+    "role": "s_gadget_member"
+   },
+   "slice": 22
+  },
+  {
+   "app_seq": 99,
+   "applications": 1,
+   "clients": [],
+   "idx": 69,
+   "is_dagger": false,
+   "op": "Gate",
+   "patches": [
+    8
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 16,
+    "gadget_kind": "S",
+    "gate_idx": 16,
+    "is_dagger": false,
+    "role": "s_gadget_member"
+   },
+   "single_qubit_op": "Z",
+   "slice": 23
+  },
+  {
+   "app_seq": 100,
+   "applications": 1,
+   "clients": [
+    8,
+    1
+   ],
+   "idx": 70,
+   "op": "Init",
+   "patches": [
+    8,
+    1,
+    28
+   ],
+   "place_next_to": {
+    "id": 1,
+    "op": "X"
+   },
+   "provenance": {
+    "frame": "",
+    "gadget_id": 17,
+    "gadget_kind": "CNOT",
+    "gate_idx": 17,
+    "is_dagger": false,
+    "role": "mediator"
+   },
+   "slice": 23,
+   "state": "Plus"
+  },
+  {
+   "app_seq": 101,
+   "applications": 1,
+   "clients": [],
+   "idx": 71,
+   "is_negative": false,
+   "observable": {
+    "28": "Z",
+    "8": "Z"
+   },
+   "op": "MultiBodyMeasure",
+   "patches": [
+    8,
+    28
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 17,
+    "gadget_kind": "CNOT",
+    "gate_idx": 17,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 23
+  },
+  {
+   "app_seq": 104,
+   "applications": 1,
+   "clients": [],
+   "idx": 72,
+   "is_negative": false,
+   "observable": {
+    "1": "X",
+    "28": "X"
+   },
+   "op": "MultiBodyMeasure",
+   "patches": [
+    28,
+    1
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 17,
+    "gadget_kind": "CNOT",
+    "gate_idx": 17,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 24
+  },
+  {
+   "app_seq": 105,
+   "applications": 1,
+   "clients": [],
+   "idx": 73,
+   "is_negative": false,
+   "observable": {
+    "28": "Z"
+   },
+   "op": "MeasureSinglePatch",
+   "patches": [
+    28
+   ],
+   "provenance": {
+    "frame": "Z_c^v X_t^(u xor w) (u = Z_c Z_a result, v = X_a X_t result, w = this Z readout of the mediator)",
+    "gadget_id": 17,
+    "gadget_kind": "CNOT",
+    "gate_idx": 17,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 24
+  },
+  {
+   "app_seq": 102,
+   "applications": 1,
+   "clients": [
+    8,
+    5
+   ],
+   "idx": 74,
+   "op": "Init",
+   "patches": [
+    8,
+    5,
+    29
+   ],
+   "place_next_to": {
+    "id": 5,
+    "op": "X"
+   },
+   "provenance": {
+    "frame": "",
+    "gadget_id": 18,
+    "gadget_kind": "CNOT",
+    "gate_idx": 18,
+    "is_dagger": false,
+    "role": "mediator"
+   },
+   "slice": 23,
+   "state": "Plus"
+  },
+  {
+   "app_seq": 103,
+   "applications": 1,
+   "clients": [],
+   "idx": 75,
+   "is_negative": false,
+   "observable": {
+    "29": "Z",
+    "8": "Z"
+   },
+   "op": "MultiBodyMeasure",
+   "patches": [
+    8,
+    29
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 18,
+    "gadget_kind": "CNOT",
+    "gate_idx": 18,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 24
+  },
+  {
+   "app_seq": 107,
+   "applications": 1,
+   "clients": [],
+   "idx": 76,
+   "is_negative": false,
+   "observable": {
+    "29": "X",
+    "5": "X"
+   },
+   "op": "MultiBodyMeasure",
+   "patches": [
+    29,
+    5
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 18,
+    "gadget_kind": "CNOT",
+    "gate_idx": 18,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 25
+  },
+  {
+   "app_seq": 108,
+   "applications": 1,
+   "clients": [],
+   "idx": 77,
+   "is_negative": false,
+   "observable": {
+    "29": "Z"
+   },
+   "op": "MeasureSinglePatch",
+   "patches": [
+    29
+   ],
+   "provenance": {
+    "frame": "Z_c^v X_t^(u xor w) (u = Z_c Z_a result, v = X_a X_t result, w = this Z readout of the mediator)",
+    "gadget_id": 18,
+    "gadget_kind": "CNOT",
+    "gate_idx": 18,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 25
+  },
+  {
+   "app_seq": 2,
+   "applications": 1,
+   "clients": [],
+   "idx": 78,
+   "is_dagger": false,
+   "op": "Gate",
+   "patches": [
+    9
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 19,
+    "gadget_kind": "H",
+    "gate_idx": 19,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "single_qubit_op": "H",
+   "slice": 0
+  },
+  {
+   "app_seq": 3,
+   "applications": 1,
+   "clients": [],
+   "idx": 79,
+   "op": "RotateSingleCellPatch",
+   "patches": [
+    9
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 19,
+    "gadget_kind": "H",
+    "gate_idx": 19,
+    "is_dagger": false,
+    "role": "boundary_rotation"
+   },
+   "slice": 0
+  },
+  {
+   "app_seq": 19,
+   "applications": 1,
+   "clients": [
+    9
+   ],
+   "idx": 80,
+   "near_patch": 9,
+   "op": "RequestMagicState",
+   "patches": [
+    9,
+    30
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 20,
+    "gadget_kind": "T",
+    "gate_idx": 20,
+    "is_dagger": false,
+    "role": "resource"
+   },
+   "slice": 3,
+   "state": "Magic"
+  },
+  {
+   "app_seq": 20,
+   "applications": 1,
+   "clients": [],
+   "idx": 81,
+   "is_negative": false,
+   "observable": {
+    "30": "Z",
+    "9": "Z"
+   },
+   "op": "MultiBodyMeasure",
+   "patches": [
+    9,
+    30
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 20,
+    "gadget_kind": "T",
+    "gate_idx": 20,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 3
+  },
+  {
+   "app_seq": 21,
+   "applications": 1,
+   "clients": [],
+   "idx": 82,
+   "is_negative": false,
+   "observable": {
+    "30": "X"
+   },
+   "op": "MeasureSinglePatch",
+   "patches": [
+    30
+   ],
+   "provenance": {
+    "frame": "S_t^u Z_t^w (u = ZZ(t,magic) result, w = this X readout); the compiler emits the S unconditionally",
+    "gadget_id": 20,
+    "gadget_kind": "T",
+    "gate_idx": 20,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 3
+  },
+  {
+   "app_seq": 22,
+   "applications": 1,
+   "clients": [
+    9
+   ],
+   "idx": 83,
+   "near_patch": 9,
+   "op": "RequestYState",
+   "patches": [
+    9,
+    31
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 20,
+    "gadget_kind": "T",
+    "gate_idx": 20,
+    "is_dagger": false,
+    "role": "s_gadget_member"
+   },
+   "slice": 3,
+   "state": "Y"
+  },
+  {
+   "app_seq": 29,
+   "applications": 1,
+   "clients": [],
+   "idx": 84,
+   "is_negative": false,
+   "observable": {
+    "31": "Z",
+    "9": "Z"
+   },
+   "op": "MultiBodyMeasure",
+   "patches": [
+    31,
+    9
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 20,
+    "gadget_kind": "T",
+    "gate_idx": 20,
+    "is_dagger": false,
+    "role": "s_gadget_member"
+   },
+   "slice": 4
+  },
+  {
+   "app_seq": 30,
+   "applications": 1,
+   "clients": [],
+   "idx": 85,
+   "is_negative": false,
+   "observable": {
+    "31": "X"
+   },
+   "op": "MeasureSinglePatch",
+   "patches": [
+    31
+   ],
+   "provenance": {
+    "frame": "Z_t^(u xor w) (u = ZZ(y,t) result, w = this X readout of the Y state); the compiler emits the Z unconditionally",
+    "gadget_id": 20,
+    "gadget_kind": "T",
+    "gate_idx": 20,
+    "is_dagger": false,
+    "role": "s_gadget_member"
+   },
+   "slice": 4
+  },
+  {
+   "app_seq": 36,
+   "applications": 1,
+   "clients": [],
+   "idx": 86,
+   "is_dagger": false,
+   "op": "Gate",
+   "patches": [
+    9
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 20,
+    "gadget_kind": "T",
+    "gate_idx": 20,
+    "is_dagger": false,
+    "role": "s_gadget_member"
+   },
+   "single_qubit_op": "Z",
+   "slice": 5
+  },
+  {
+   "app_seq": 106,
+   "applications": 1,
+   "clients": [
+    1,
+    9
+   ],
+   "idx": 87,
+   "op": "Init",
+   "patches": [
+    1,
+    9,
+    32
+   ],
+   "place_next_to": {
+    "id": 9,
+    "op": "X"
+   },
+   "provenance": {
+    "frame": "",
+    "gadget_id": 21,
+    "gadget_kind": "CNOT",
+    "gate_idx": 21,
+    "is_dagger": false,
+    "role": "mediator"
+   },
+   "slice": 24,
+   "state": "Plus"
+  },
+  {
+   "app_seq": 109,
+   "applications": 1,
+   "clients": [],
+   "idx": 88,
+   "is_negative": false,
+   "observable": {
+    "1": "Z",
+    "32": "Z"
+   },
+   "op": "MultiBodyMeasure",
+   "patches": [
+    1,
+    32
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 21,
+    "gadget_kind": "CNOT",
+    "gate_idx": 21,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 25
+  },
+  {
+   "app_seq": 110,
+   "applications": 1,
+   "clients": [],
+   "idx": 89,
+   "is_negative": false,
+   "observable": {
+    "32": "X",
+    "9": "X"
+   },
+   "op": "MultiBodyMeasure",
+   "patches": [
+    32,
+    9
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 21,
+    "gadget_kind": "CNOT",
+    "gate_idx": 21,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 26
+  },
+  {
+   "app_seq": 111,
+   "applications": 1,
+   "clients": [],
+   "idx": 90,
+   "is_negative": false,
+   "observable": {
+    "32": "Z"
+   },
+   "op": "MeasureSinglePatch",
+   "patches": [
+    32
+   ],
+   "provenance": {
+    "frame": "Z_c^v X_t^(u xor w) (u = Z_c Z_a result, v = X_a X_t result, w = this Z readout of the mediator)",
+    "gadget_id": 21,
+    "gadget_kind": "CNOT",
+    "gate_idx": 21,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 26
+  },
+  {
+   "app_seq": 112,
+   "applications": 1,
+   "clients": [
+    5,
+    9
+   ],
+   "idx": 91,
+   "op": "Init",
+   "patches": [
+    5,
+    9,
+    33
+   ],
+   "place_next_to": {
+    "id": 9,
+    "op": "X"
+   },
+   "provenance": {
+    "frame": "",
+    "gadget_id": 22,
+    "gadget_kind": "CNOT",
+    "gate_idx": 22,
+    "is_dagger": false,
+    "role": "mediator"
+   },
+   "slice": 26,
+   "state": "Plus"
+  },
+  {
+   "app_seq": 113,
+   "applications": 1,
+   "clients": [],
+   "idx": 92,
+   "is_negative": false,
+   "observable": {
+    "33": "Z",
+    "5": "Z"
+   },
+   "op": "MultiBodyMeasure",
+   "patches": [
+    5,
+    33
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 22,
+    "gadget_kind": "CNOT",
+    "gate_idx": 22,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 26
+  },
+  {
+   "app_seq": 114,
+   "applications": 1,
+   "clients": [],
+   "idx": 93,
+   "is_negative": false,
+   "observable": {
+    "33": "X",
+    "9": "X"
+   },
+   "op": "MultiBodyMeasure",
+   "patches": [
+    33,
+    9
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 22,
+    "gadget_kind": "CNOT",
+    "gate_idx": 22,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 27
+  },
+  {
+   "app_seq": 115,
+   "applications": 1,
+   "clients": [],
+   "idx": 94,
+   "is_negative": false,
+   "observable": {
+    "33": "Z"
+   },
+   "op": "MeasureSinglePatch",
+   "patches": [
+    33
+   ],
+   "provenance": {
+    "frame": "Z_c^v X_t^(u xor w) (u = Z_c Z_a result, v = X_a X_t result, w = this Z readout of the mediator)",
+    "gadget_id": 22,
+    "gadget_kind": "CNOT",
+    "gate_idx": 22,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 27
+  },
+  {
+   "app_seq": 116,
+   "applications": 1,
+   "clients": [
+    9,
+    1
+   ],
+   "idx": 95,
+   "op": "Init",
+   "patches": [
+    9,
+    1,
+    34
+   ],
+   "place_next_to": {
+    "id": 1,
+    "op": "X"
+   },
+   "provenance": {
+    "frame": "",
+    "gadget_id": 23,
+    "gadget_kind": "CNOT",
+    "gate_idx": 23,
+    "is_dagger": false,
+    "role": "mediator"
+   },
+   "slice": 27,
+   "state": "Plus"
+  },
+  {
+   "app_seq": 117,
+   "applications": 1,
+   "clients": [],
+   "idx": 96,
+   "is_negative": false,
+   "observable": {
+    "34": "Z",
+    "9": "Z"
+   },
+   "op": "MultiBodyMeasure",
+   "patches": [
+    9,
+    34
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 23,
+    "gadget_kind": "CNOT",
+    "gate_idx": 23,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 28
+  },
+  {
+   "app_seq": 119,
+   "applications": 1,
+   "clients": [],
+   "idx": 97,
+   "is_negative": false,
+   "observable": {
+    "1": "X",
+    "34": "X"
+   },
+   "op": "MultiBodyMeasure",
+   "patches": [
+    34,
+    1
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 23,
+    "gadget_kind": "CNOT",
+    "gate_idx": 23,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 29
+  },
+  {
+   "app_seq": 120,
+   "applications": 1,
+   "clients": [],
+   "idx": 98,
+   "is_negative": false,
+   "observable": {
+    "34": "Z"
+   },
+   "op": "MeasureSinglePatch",
+   "patches": [
+    34
+   ],
+   "provenance": {
+    "frame": "Z_c^v X_t^(u xor w) (u = Z_c Z_a result, v = X_a X_t result, w = this Z readout of the mediator)",
+    "gadget_id": 23,
+    "gadget_kind": "CNOT",
+    "gate_idx": 23,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 29
+  },
+  {
+   "app_seq": 118,
+   "applications": 1,
+   "clients": [
+    9,
+    5
+   ],
+   "idx": 99,
+   "op": "Init",
+   "patches": [
+    9,
+    5,
+    35
+   ],
+   "place_next_to": {
+    "id": 5,
+    "op": "X"
+   },
+   "provenance": {
+    "frame": "",
+    "gadget_id": 24,
+    "gadget_kind": "CNOT",
+    "gate_idx": 24,
+    "is_dagger": false,
+    "role": "mediator"
+   },
+   "slice": 28,
+   "state": "Plus"
+  },
+  {
+   "app_seq": 122,
+   "applications": 1,
+   "clients": [],
+   "idx": 100,
+   "is_negative": false,
+   "observable": {
+    "35": "Z",
+    "9": "Z"
+   },
+   "op": "MultiBodyMeasure",
+   "patches": [
+    9,
+    35
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 24,
+    "gadget_kind": "CNOT",
+    "gate_idx": 24,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 29
+  },
+  {
+   "app_seq": 127,
+   "applications": 1,
+   "clients": [],
+   "idx": 101,
+   "is_negative": false,
+   "observable": {
+    "35": "X",
+    "5": "X"
+   },
+   "op": "MultiBodyMeasure",
+   "patches": [
+    35,
+    5
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 24,
+    "gadget_kind": "CNOT",
+    "gate_idx": 24,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 30
+  },
+  {
+   "app_seq": 128,
+   "applications": 1,
+   "clients": [],
+   "idx": 102,
+   "is_negative": false,
+   "observable": {
+    "35": "Z"
+   },
+   "op": "MeasureSinglePatch",
+   "patches": [
+    35
+   ],
+   "provenance": {
+    "frame": "Z_c^v X_t^(u xor w) (u = Z_c Z_a result, v = X_a X_t result, w = this Z readout of the mediator)",
+    "gadget_id": 24,
+    "gadget_kind": "CNOT",
+    "gate_idx": 24,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 30
+  },
+  {
+   "app_seq": 121,
+   "applications": 1,
+   "clients": [
+    1
+   ],
+   "idx": 103,
+   "near_patch": 1,
+   "op": "RequestMagicState",
+   "patches": [
+    1,
+    36
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 25,
+    "gadget_kind": "T",
+    "gate_idx": 25,
+    "is_dagger": false,
+    "role": "resource"
+   },
+   "slice": 29,
+   "state": "Magic"
+  },
+  {
+   "app_seq": 124,
+   "applications": 1,
+   "clients": [],
+   "idx": 104,
+   "is_negative": false,
+   "observable": {
+    "1": "Z",
+    "36": "Z"
+   },
+   "op": "MultiBodyMeasure",
+   "patches": [
+    1,
+    36
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 25,
+    "gadget_kind": "T",
+    "gate_idx": 25,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 30
+  },
+  {
+   "app_seq": 125,
+   "applications": 1,
+   "clients": [],
+   "idx": 105,
+   "is_negative": false,
+   "observable": {
+    "36": "X"
+   },
+   "op": "MeasureSinglePatch",
+   "patches": [
+    36
+   ],
+   "provenance": {
+    "frame": "S_t^u Z_t^w (u = ZZ(t,magic) result, w = this X readout); the compiler emits the S unconditionally",
+    "gadget_id": 25,
+    "gadget_kind": "T",
+    "gate_idx": 25,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 30
+  },
+  {
+   "app_seq": 126,
+   "applications": 1,
+   "clients": [
+    1
+   ],
+   "idx": 106,
+   "near_patch": 1,
+   "op": "RequestYState",
+   "patches": [
+    1,
+    37
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 25,
+    "gadget_kind": "T",
+    "gate_idx": 25,
+    "is_dagger": false,
+    "role": "s_gadget_member"
+   },
+   "slice": 30,
+   "state": "Y"
+  },
+  {
+   "app_seq": 133,
+   "applications": 1,
+   "clients": [],
+   "idx": 107,
+   "is_negative": false,
+   "observable": {
+    "1": "Z",
+    "37": "Z"
+   },
+   "op": "MultiBodyMeasure",
+   "patches": [
+    37,
+    1
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 25,
+    "gadget_kind": "T",
+    "gate_idx": 25,
+    "is_dagger": false,
+    "role": "s_gadget_member"
+   },
+   "slice": 31
+  },
+  {
+   "app_seq": 134,
+   "applications": 1,
+   "clients": [],
+   "idx": 108,
+   "is_negative": false,
+   "observable": {
+    "37": "X"
+   },
+   "op": "MeasureSinglePatch",
+   "patches": [
+    37
+   ],
+   "provenance": {
+    "frame": "Z_t^(u xor w) (u = ZZ(y,t) result, w = this X readout of the Y state); the compiler emits the Z unconditionally",
+    "gadget_id": 25,
+    "gadget_kind": "T",
+    "gate_idx": 25,
+    "is_dagger": false,
+    "role": "s_gadget_member"
+   },
+   "slice": 31
+  },
+  {
+   "app_seq": 139,
+   "applications": 1,
+   "clients": [],
+   "idx": 109,
+   "is_dagger": false,
+   "op": "Gate",
+   "patches": [
+    1
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 25,
+    "gadget_kind": "T",
+    "gate_idx": 25,
+    "is_dagger": false,
+    "role": "s_gadget_member"
+   },
+   "single_qubit_op": "Z",
+   "slice": 32
+  },
+  {
+   "app_seq": 140,
+   "applications": 1,
+   "clients": [
+    1
+   ],
+   "idx": 110,
+   "near_patch": 1,
+   "op": "RequestYState",
+   "patches": [
+    1,
+    38
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 26,
+    "gadget_kind": "S",
+    "gate_idx": 26,
+    "is_dagger": false,
+    "role": "s_gadget_member"
+   },
+   "slice": 32,
+   "state": "Y"
+  },
+  {
+   "app_seq": 143,
+   "applications": 1,
+   "clients": [],
+   "idx": 111,
+   "is_negative": false,
+   "observable": {
+    "1": "Z",
+    "38": "Z"
+   },
+   "op": "MultiBodyMeasure",
+   "patches": [
+    38,
+    1
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 26,
+    "gadget_kind": "S",
+    "gate_idx": 26,
+    "is_dagger": false,
+    "role": "s_gadget_member"
+   },
+   "slice": 33
+  },
+  {
+   "app_seq": 144,
+   "applications": 1,
+   "clients": [],
+   "idx": 112,
+   "is_negative": false,
+   "observable": {
+    "38": "X"
+   },
+   "op": "MeasureSinglePatch",
+   "patches": [
+    38
+   ],
+   "provenance": {
+    "frame": "Z_t^(u xor w) (u = ZZ(y,t) result, w = this X readout of the Y state); the compiler emits the Z unconditionally",
+    "gadget_id": 26,
+    "gadget_kind": "S",
+    "gate_idx": 26,
+    "is_dagger": false,
+    "role": "s_gadget_member"
+   },
+   "slice": 33
+  },
+  {
+   "app_seq": 147,
+   "applications": 1,
+   "clients": [],
+   "idx": 113,
+   "is_dagger": false,
+   "op": "Gate",
+   "patches": [
+    1
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 26,
+    "gadget_kind": "S",
+    "gate_idx": 26,
+    "is_dagger": false,
+    "role": "s_gadget_member"
+   },
+   "single_qubit_op": "Z",
+   "slice": 34
+  },
+  {
+   "app_seq": 148,
+   "applications": 1,
+   "clients": [],
+   "idx": 114,
+   "is_dagger": false,
+   "op": "Gate",
+   "patches": [
+    1
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 27,
+    "gadget_kind": "Z",
+    "gate_idx": 27,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "single_qubit_op": "Z",
+   "slice": 34
+  },
+  {
+   "app_seq": 129,
+   "applications": 1,
+   "clients": [
+    5
+   ],
+   "idx": 115,
+   "near_patch": 5,
+   "op": "RequestMagicState",
+   "patches": [
+    5,
+    39
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 28,
+    "gadget_kind": "T",
+    "gate_idx": 28,
+    "is_dagger": false,
+    "role": "resource"
+   },
+   "slice": 30,
+   "state": "Magic"
+  },
+  {
+   "app_seq": 135,
+   "applications": 1,
+   "clients": [],
+   "idx": 116,
+   "is_negative": false,
+   "observable": {
+    "39": "Z",
+    "5": "Z"
+   },
+   "op": "MultiBodyMeasure",
+   "patches": [
+    5,
+    39
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 28,
+    "gadget_kind": "T",
+    "gate_idx": 28,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 31
+  },
+  {
+   "app_seq": 136,
+   "applications": 1,
+   "clients": [],
+   "idx": 117,
+   "is_negative": false,
+   "observable": {
+    "39": "X"
+   },
+   "op": "MeasureSinglePatch",
+   "patches": [
+    39
+   ],
+   "provenance": {
+    "frame": "S_t^u Z_t^w (u = ZZ(t,magic) result, w = this X readout); the compiler emits the S unconditionally",
+    "gadget_id": 28,
+    "gadget_kind": "T",
+    "gate_idx": 28,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 31
+  },
+  {
+   "app_seq": 141,
+   "applications": 1,
+   "clients": [
+    5
+   ],
+   "idx": 118,
+   "near_patch": 5,
+   "op": "RequestYState",
+   "patches": [
+    5,
+    40
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 28,
+    "gadget_kind": "T",
+    "gate_idx": 28,
+    "is_dagger": false,
+    "role": "s_gadget_member"
+   },
+   "slice": 32,
+   "state": "Y"
+  },
+  {
+   "app_seq": 145,
+   "applications": 1,
+   "clients": [],
+   "idx": 119,
+   "is_negative": false,
+   "observable": {
+    "40": "Z",
+    "5": "Z"
+   },
+   "op": "MultiBodyMeasure",
+   "patches": [
+    40,
+    5
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 28,
+    "gadget_kind": "T",
+    "gate_idx": 28,
+    "is_dagger": false,
+    "role": "s_gadget_member"
+   },
+   "slice": 33
+  },
+  {
+   "app_seq": 146,
+   "applications": 1,
+   "clients": [],
+   "idx": 120,
+   "is_negative": false,
+   "observable": {
+    "40": "X"
+   },
+   "op": "MeasureSinglePatch",
+   "patches": [
+    40
+   ],
+   "provenance": {
+    "frame": "Z_t^(u xor w) (u = ZZ(y,t) result, w = this X readout of the Y state); the compiler emits the Z unconditionally",
+    "gadget_id": 28,
+    "gadget_kind": "T",
+    "gate_idx": 28,
+    "is_dagger": false,
+    "role": "s_gadget_member"
+   },
+   "slice": 33
+  },
+  {
+   "app_seq": 151,
+   "applications": 1,
+   "clients": [],
+   "idx": 121,
+   "is_dagger": false,
+   "op": "Gate",
+   "patches": [
+    5
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 28,
+    "gadget_kind": "T",
+    "gate_idx": 28,
+    "is_dagger": false,
+    "role": "s_gadget_member"
+   },
+   "single_qubit_op": "Z",
+   "slice": 34
+  },
+  {
+   "app_seq": 152,
+   "applications": 1,
+   "clients": [
+    5
+   ],
+   "idx": 122,
+   "near_patch": 5,
+   "op": "RequestYState",
+   "patches": [
+    5,
+    41
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 29,
+    "gadget_kind": "S",
+    "gate_idx": 29,
+    "is_dagger": false,
+    "role": "s_gadget_member"
+   },
+   "slice": 34,
+   "state": "Y"
+  },
+  {
+   "app_seq": 155,
+   "applications": 1,
+   "clients": [],
+   "idx": 123,
+   "is_negative": false,
+   "observable": {
+    "41": "Z",
+    "5": "Z"
+   },
+   "op": "MultiBodyMeasure",
+   "patches": [
+    41,
+    5
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 29,
+    "gadget_kind": "S",
+    "gate_idx": 29,
+    "is_dagger": false,
+    "role": "s_gadget_member"
+   },
+   "slice": 35
+  },
+  {
+   "app_seq": 156,
+   "applications": 1,
+   "clients": [],
+   "idx": 124,
+   "is_negative": false,
+   "observable": {
+    "41": "X"
+   },
+   "op": "MeasureSinglePatch",
+   "patches": [
+    41
+   ],
+   "provenance": {
+    "frame": "Z_t^(u xor w) (u = ZZ(y,t) result, w = this X readout of the Y state); the compiler emits the Z unconditionally",
+    "gadget_id": 29,
+    "gadget_kind": "S",
+    "gate_idx": 29,
+    "is_dagger": false,
+    "role": "s_gadget_member"
+   },
+   "slice": 35
+  },
+  {
+   "app_seq": 157,
+   "applications": 1,
+   "clients": [],
+   "idx": 125,
+   "is_dagger": false,
+   "op": "Gate",
+   "patches": [
+    5
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 29,
+    "gadget_kind": "S",
+    "gate_idx": 29,
+    "is_dagger": false,
+    "role": "s_gadget_member"
+   },
+   "single_qubit_op": "Z",
+   "slice": 36
+  },
+  {
+   "app_seq": 158,
+   "applications": 1,
+   "clients": [],
+   "idx": 126,
+   "is_dagger": false,
+   "op": "Gate",
+   "patches": [
+    5
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 30,
+    "gadget_kind": "Z",
+    "gate_idx": 30,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "single_qubit_op": "Z",
+   "slice": 36
+  },
+  {
+   "app_seq": 123,
+   "applications": 1,
+   "clients": [
+    9
+   ],
+   "idx": 127,
+   "near_patch": 9,
+   "op": "RequestMagicState",
+   "patches": [
+    9,
+    42
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 31,
+    "gadget_kind": "T",
+    "gate_idx": 31,
+    "is_dagger": false,
+    "role": "resource"
+   },
+   "slice": 29,
+   "state": "Magic"
+  },
+  {
+   "app_seq": 130,
+   "applications": 1,
+   "clients": [],
+   "idx": 128,
+   "is_negative": false,
+   "observable": {
+    "42": "Z",
+    "9": "Z"
+   },
+   "op": "MultiBodyMeasure",
+   "patches": [
+    9,
+    42
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 31,
+    "gadget_kind": "T",
+    "gate_idx": 31,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 30
+  },
+  {
+   "app_seq": 131,
+   "applications": 1,
+   "clients": [],
+   "idx": 129,
+   "is_negative": false,
+   "observable": {
+    "42": "X"
+   },
+   "op": "MeasureSinglePatch",
+   "patches": [
+    42
+   ],
+   "provenance": {
+    "frame": "S_t^u Z_t^w (u = ZZ(t,magic) result, w = this X readout); the compiler emits the S unconditionally",
+    "gadget_id": 31,
+    "gadget_kind": "T",
+    "gate_idx": 31,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 30
+  },
+  {
+   "app_seq": 132,
+   "applications": 1,
+   "clients": [
+    9
+   ],
+   "idx": 130,
+   "near_patch": 9,
+   "op": "RequestYState",
+   "patches": [
+    9,
+    43
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 31,
+    "gadget_kind": "T",
+    "gate_idx": 31,
+    "is_dagger": false,
+    "role": "s_gadget_member"
+   },
+   "slice": 30,
+   "state": "Y"
+  },
+  {
+   "app_seq": 137,
+   "applications": 1,
+   "clients": [],
+   "idx": 131,
+   "is_negative": false,
+   "observable": {
+    "43": "Z",
+    "9": "Z"
+   },
+   "op": "MultiBodyMeasure",
+   "patches": [
+    43,
+    9
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 31,
+    "gadget_kind": "T",
+    "gate_idx": 31,
+    "is_dagger": false,
+    "role": "s_gadget_member"
+   },
+   "slice": 31
+  },
+  {
+   "app_seq": 138,
+   "applications": 1,
+   "clients": [],
+   "idx": 132,
+   "is_negative": false,
+   "observable": {
+    "43": "X"
+   },
+   "op": "MeasureSinglePatch",
+   "patches": [
+    43
+   ],
+   "provenance": {
+    "frame": "Z_t^(u xor w) (u = ZZ(y,t) result, w = this X readout of the Y state); the compiler emits the Z unconditionally",
+    "gadget_id": 31,
+    "gadget_kind": "T",
+    "gate_idx": 31,
+    "is_dagger": false,
+    "role": "s_gadget_member"
+   },
+   "slice": 31
+  },
+  {
+   "app_seq": 142,
+   "applications": 1,
+   "clients": [],
+   "idx": 133,
+   "is_dagger": false,
+   "op": "Gate",
+   "patches": [
+    9
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 31,
+    "gadget_kind": "T",
+    "gate_idx": 31,
+    "is_dagger": false,
+    "role": "s_gadget_member"
+   },
+   "single_qubit_op": "Z",
+   "slice": 32
+  },
+  {
+   "app_seq": 149,
+   "applications": 1,
+   "clients": [
+    9,
+    1
+   ],
+   "idx": 134,
+   "op": "Init",
+   "patches": [
+    9,
+    1,
+    44
+   ],
+   "place_next_to": {
+    "id": 1,
+    "op": "X"
+   },
+   "provenance": {
+    "frame": "",
+    "gadget_id": 32,
+    "gadget_kind": "CNOT",
+    "gate_idx": 32,
+    "is_dagger": false,
+    "role": "mediator"
+   },
+   "slice": 34,
+   "state": "Plus"
+  },
+  {
+   "app_seq": 150,
+   "applications": 1,
+   "clients": [],
+   "idx": 135,
+   "is_negative": false,
+   "observable": {
+    "44": "Z",
+    "9": "Z"
+   },
+   "op": "MultiBodyMeasure",
+   "patches": [
+    9,
+    44
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 32,
+    "gadget_kind": "CNOT",
+    "gate_idx": 32,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 34
+  },
+  {
+   "app_seq": 153,
+   "applications": 1,
+   "clients": [],
+   "idx": 136,
+   "is_negative": false,
+   "observable": {
+    "1": "X",
+    "44": "X"
+   },
+   "op": "MultiBodyMeasure",
+   "patches": [
+    44,
+    1
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 32,
+    "gadget_kind": "CNOT",
+    "gate_idx": 32,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 35
+  },
+  {
+   "app_seq": 154,
+   "applications": 1,
+   "clients": [],
+   "idx": 137,
+   "is_negative": false,
+   "observable": {
+    "44": "Z"
+   },
+   "op": "MeasureSinglePatch",
+   "patches": [
+    44
+   ],
+   "provenance": {
+    "frame": "Z_c^v X_t^(u xor w) (u = Z_c Z_a result, v = X_a X_t result, w = this Z readout of the mediator)",
+    "gadget_id": 32,
+    "gadget_kind": "CNOT",
+    "gate_idx": 32,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 35
+  },
+  {
+   "app_seq": 159,
+   "applications": 1,
+   "clients": [
+    9,
+    5
+   ],
+   "idx": 138,
+   "op": "Init",
+   "patches": [
+    9,
+    5,
+    45
+   ],
+   "place_next_to": {
+    "id": 5,
+    "op": "X"
+   },
+   "provenance": {
+    "frame": "",
+    "gadget_id": 33,
+    "gadget_kind": "CNOT",
+    "gate_idx": 33,
+    "is_dagger": false,
+    "role": "mediator"
+   },
+   "slice": 36,
+   "state": "Plus"
+  },
+  {
+   "app_seq": 160,
+   "applications": 1,
+   "clients": [],
+   "idx": 139,
+   "is_negative": false,
+   "observable": {
+    "45": "Z",
+    "9": "Z"
+   },
+   "op": "MultiBodyMeasure",
+   "patches": [
+    9,
+    45
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 33,
+    "gadget_kind": "CNOT",
+    "gate_idx": 33,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 36
+  },
+  {
+   "app_seq": 163,
+   "applications": 1,
+   "clients": [],
+   "idx": 140,
+   "is_negative": false,
+   "observable": {
+    "45": "X",
+    "5": "X"
+   },
+   "op": "MultiBodyMeasure",
+   "patches": [
+    45,
+    5
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 33,
+    "gadget_kind": "CNOT",
+    "gate_idx": 33,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 37
+  },
+  {
+   "app_seq": 164,
+   "applications": 1,
+   "clients": [],
+   "idx": 141,
+   "is_negative": false,
+   "observable": {
+    "45": "Z"
+   },
+   "op": "MeasureSinglePatch",
+   "patches": [
+    45
+   ],
+   "provenance": {
+    "frame": "Z_c^v X_t^(u xor w) (u = Z_c Z_a result, v = X_a X_t result, w = this Z readout of the mediator)",
+    "gadget_id": 33,
+    "gadget_kind": "CNOT",
+    "gate_idx": 33,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 37
+  },
+  {
+   "app_seq": 161,
+   "applications": 1,
+   "clients": [],
+   "idx": 142,
+   "is_dagger": false,
+   "op": "Gate",
+   "patches": [
+    9
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 34,
+    "gadget_kind": "H",
+    "gate_idx": 34,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "single_qubit_op": "H",
+   "slice": 37
+  },
+  {
+   "app_seq": 162,
+   "applications": 1,
+   "clients": [],
+   "idx": 143,
+   "op": "RotateSingleCellPatch",
+   "patches": [
+    9
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 34,
+    "gadget_kind": "H",
+    "gate_idx": 34,
+    "is_dagger": false,
+    "role": "boundary_rotation"
+   },
+   "slice": 37
+  },
+  {
+   "app_seq": 168,
+   "applications": 1,
+   "clients": [
+    9
+   ],
+   "idx": 144,
+   "near_patch": 9,
+   "op": "RequestYState",
+   "patches": [
+    9,
+    46
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 35,
+    "gadget_kind": "S",
+    "gate_idx": 35,
+    "is_dagger": false,
+    "role": "s_gadget_member"
+   },
+   "slice": 40,
+   "state": "Y"
+  },
+  {
+   "app_seq": 169,
+   "applications": 1,
+   "clients": [],
+   "idx": 145,
+   "is_negative": false,
+   "observable": {
+    "46": "Z",
+    "9": "Z"
+   },
+   "op": "MultiBodyMeasure",
+   "patches": [
+    46,
+    9
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 35,
+    "gadget_kind": "S",
+    "gate_idx": 35,
+    "is_dagger": false,
+    "role": "s_gadget_member"
+   },
+   "slice": 41
+  },
+  {
+   "app_seq": 170,
+   "applications": 1,
+   "clients": [],
+   "idx": 146,
+   "is_negative": false,
+   "observable": {
+    "46": "X"
+   },
+   "op": "MeasureSinglePatch",
+   "patches": [
+    46
+   ],
+   "provenance": {
+    "frame": "Z_t^(u xor w) (u = ZZ(y,t) result, w = this X readout of the Y state); the compiler emits the Z unconditionally",
+    "gadget_id": 35,
+    "gadget_kind": "S",
+    "gate_idx": 35,
+    "is_dagger": false,
+    "role": "s_gadget_member"
+   },
+   "slice": 41
+  },
+  {
+   "app_seq": 171,
+   "applications": 1,
+   "clients": [],
+   "idx": 147,
+   "is_dagger": false,
+   "op": "Gate",
+   "patches": [
+    9
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 35,
+    "gadget_kind": "S",
+    "gate_idx": 35,
+    "is_dagger": false,
+    "role": "s_gadget_member"
+   },
+   "single_qubit_op": "Z",
+   "slice": 42
+  },
+  {
+   "app_seq": 172,
+   "applications": 1,
+   "clients": [
+    8,
+    9
+   ],
+   "idx": 148,
+   "op": "Init",
+   "patches": [
+    8,
+    9,
+    47
+   ],
+   "place_next_to": {
+    "id": 9,
+    "op": "X"
+   },
+   "provenance": {
+    "frame": "",
+    "gadget_id": 36,
+    "gadget_kind": "CNOT",
+    "gate_idx": 36,
+    "is_dagger": false,
+    "role": "mediator"
+   },
+   "slice": 42,
+   "state": "Plus"
+  },
+  {
+   "app_seq": 173,
+   "applications": 1,
+   "clients": [],
+   "idx": 149,
+   "is_negative": false,
+   "observable": {
+    "47": "Z",
+    "8": "Z"
+   },
+   "op": "MultiBodyMeasure",
+   "patches": [
+    8,
+    47
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 36,
+    "gadget_kind": "CNOT",
+    "gate_idx": 36,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 42
+  },
+  {
+   "app_seq": 174,
+   "applications": 1,
+   "clients": [],
+   "idx": 150,
+   "is_negative": false,
+   "observable": {
+    "47": "X",
+    "9": "X"
+   },
+   "op": "MultiBodyMeasure",
+   "patches": [
+    47,
+    9
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 36,
+    "gadget_kind": "CNOT",
+    "gate_idx": 36,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 43
+  },
+  {
+   "app_seq": 175,
+   "applications": 1,
+   "clients": [],
+   "idx": 151,
+   "is_negative": false,
+   "observable": {
+    "47": "Z"
+   },
+   "op": "MeasureSinglePatch",
+   "patches": [
+    47
+   ],
+   "provenance": {
+    "frame": "Z_c^v X_t^(u xor w) (u = Z_c Z_a result, v = X_a X_t result, w = this Z readout of the mediator)",
+    "gadget_id": 36,
+    "gadget_kind": "CNOT",
+    "gate_idx": 36,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 43
+  },
+  {
+   "app_seq": 176,
+   "applications": 1,
+   "clients": [
+    9,
+    2
+   ],
+   "idx": 152,
+   "op": "Init",
+   "patches": [
+    9,
+    2,
+    48
+   ],
+   "place_next_to": {
+    "id": 2,
+    "op": "X"
+   },
+   "provenance": {
+    "frame": "",
+    "gadget_id": 37,
+    "gadget_kind": "CNOT",
+    "gate_idx": 37,
+    "is_dagger": false,
+    "role": "mediator"
+   },
+   "slice": 43,
+   "state": "Plus"
+  },
+  {
+   "app_seq": 177,
+   "applications": 1,
+   "clients": [],
+   "idx": 153,
+   "is_negative": false,
+   "observable": {
+    "48": "Z",
+    "9": "Z"
+   },
+   "op": "MultiBodyMeasure",
+   "patches": [
+    9,
+    48
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 37,
+    "gadget_kind": "CNOT",
+    "gate_idx": 37,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 44
+  },
+  {
+   "app_seq": 179,
+   "applications": 1,
+   "clients": [],
+   "idx": 154,
+   "is_negative": false,
+   "observable": {
+    "2": "X",
+    "48": "X"
+   },
+   "op": "MultiBodyMeasure",
+   "patches": [
+    48,
+    2
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 37,
+    "gadget_kind": "CNOT",
+    "gate_idx": 37,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 45
+  },
+  {
+   "app_seq": 180,
+   "applications": 1,
+   "clients": [],
+   "idx": 155,
+   "is_negative": false,
+   "observable": {
+    "48": "Z"
+   },
+   "op": "MeasureSinglePatch",
+   "patches": [
+    48
+   ],
+   "provenance": {
+    "frame": "Z_c^v X_t^(u xor w) (u = Z_c Z_a result, v = X_a X_t result, w = this Z readout of the mediator)",
+    "gadget_id": 37,
+    "gadget_kind": "CNOT",
+    "gate_idx": 37,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 45
+  },
+  {
+   "app_seq": 178,
+   "applications": 1,
+   "clients": [
+    9,
+    6
+   ],
+   "idx": 156,
+   "op": "Init",
+   "patches": [
+    9,
+    6,
+    49
+   ],
+   "place_next_to": {
+    "id": 6,
+    "op": "X"
+   },
+   "provenance": {
+    "frame": "",
+    "gadget_id": 38,
+    "gadget_kind": "CNOT",
+    "gate_idx": 38,
+    "is_dagger": false,
+    "role": "mediator"
+   },
+   "slice": 44,
+   "state": "Plus"
+  },
+  {
+   "app_seq": 182,
+   "applications": 1,
+   "clients": [],
+   "idx": 157,
+   "is_negative": false,
+   "observable": {
+    "49": "Z",
+    "9": "Z"
+   },
+   "op": "MultiBodyMeasure",
+   "patches": [
+    9,
+    49
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 38,
+    "gadget_kind": "CNOT",
+    "gate_idx": 38,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 45
+  },
+  {
+   "app_seq": 184,
+   "applications": 1,
+   "clients": [],
+   "idx": 158,
+   "is_negative": false,
+   "observable": {
+    "49": "X",
+    "6": "X"
+   },
+   "op": "MultiBodyMeasure",
+   "patches": [
+    49,
+    6
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 38,
+    "gadget_kind": "CNOT",
+    "gate_idx": 38,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 46
+  },
+  {
+   "app_seq": 185,
+   "applications": 1,
+   "clients": [],
+   "idx": 159,
+   "is_negative": false,
+   "observable": {
+    "49": "Z"
+   },
+   "op": "MeasureSinglePatch",
+   "patches": [
+    49
+   ],
+   "provenance": {
+    "frame": "Z_c^v X_t^(u xor w) (u = Z_c Z_a result, v = X_a X_t result, w = this Z readout of the mediator)",
+    "gadget_id": 38,
+    "gadget_kind": "CNOT",
+    "gate_idx": 38,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 46
+  },
+  {
+   "app_seq": 4,
+   "applications": 1,
+   "clients": [],
+   "idx": 160,
+   "is_dagger": false,
+   "op": "Gate",
+   "patches": [
+    10
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 39,
+    "gadget_kind": "H",
+    "gate_idx": 39,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "single_qubit_op": "H",
+   "slice": 0
+  },
+  {
+   "app_seq": 5,
+   "applications": 1,
+   "clients": [],
+   "idx": 161,
+   "op": "RotateSingleCellPatch",
+   "patches": [
+    10
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 39,
+    "gadget_kind": "H",
+    "gate_idx": 39,
+    "is_dagger": false,
+    "role": "boundary_rotation"
+   },
+   "slice": 0
+  },
+  {
+   "app_seq": 23,
+   "applications": 1,
+   "clients": [
+    10
+   ],
+   "idx": 162,
+   "near_patch": 10,
+   "op": "RequestMagicState",
+   "patches": [
+    10,
+    50
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 40,
+    "gadget_kind": "T",
+    "gate_idx": 40,
+    "is_dagger": false,
+    "role": "resource"
+   },
+   "slice": 3,
+   "state": "Magic"
+  },
+  {
+   "app_seq": 24,
+   "applications": 1,
+   "clients": [],
+   "idx": 163,
+   "is_negative": false,
+   "observable": {
+    "10": "Z",
+    "50": "Z"
+   },
+   "op": "MultiBodyMeasure",
+   "patches": [
+    10,
+    50
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 40,
+    "gadget_kind": "T",
+    "gate_idx": 40,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 3
+  },
+  {
+   "app_seq": 25,
+   "applications": 1,
+   "clients": [],
+   "idx": 164,
+   "is_negative": false,
+   "observable": {
+    "50": "X"
+   },
+   "op": "MeasureSinglePatch",
+   "patches": [
+    50
+   ],
+   "provenance": {
+    "frame": "S_t^u Z_t^w (u = ZZ(t,magic) result, w = this X readout); the compiler emits the S unconditionally",
+    "gadget_id": 40,
+    "gadget_kind": "T",
+    "gate_idx": 40,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 3
+  },
+  {
+   "app_seq": 26,
+   "applications": 1,
+   "clients": [
+    10
+   ],
+   "idx": 165,
+   "near_patch": 10,
+   "op": "RequestYState",
+   "patches": [
+    10,
+    51
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 40,
+    "gadget_kind": "T",
+    "gate_idx": 40,
+    "is_dagger": false,
+    "role": "s_gadget_member"
+   },
+   "slice": 3,
+   "state": "Y"
+  },
+  {
+   "app_seq": 31,
+   "applications": 1,
+   "clients": [],
+   "idx": 166,
+   "is_negative": false,
+   "observable": {
+    "10": "Z",
+    "51": "Z"
+   },
+   "op": "MultiBodyMeasure",
+   "patches": [
+    51,
+    10
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 40,
+    "gadget_kind": "T",
+    "gate_idx": 40,
+    "is_dagger": false,
+    "role": "s_gadget_member"
+   },
+   "slice": 4
+  },
+  {
+   "app_seq": 32,
+   "applications": 1,
+   "clients": [],
+   "idx": 167,
+   "is_negative": false,
+   "observable": {
+    "51": "X"
+   },
+   "op": "MeasureSinglePatch",
+   "patches": [
+    51
+   ],
+   "provenance": {
+    "frame": "Z_t^(u xor w) (u = ZZ(y,t) result, w = this X readout of the Y state); the compiler emits the Z unconditionally",
+    "gadget_id": 40,
+    "gadget_kind": "T",
+    "gate_idx": 40,
+    "is_dagger": false,
+    "role": "s_gadget_member"
+   },
+   "slice": 4
+  },
+  {
+   "app_seq": 37,
+   "applications": 1,
+   "clients": [],
+   "idx": 168,
+   "is_dagger": false,
+   "op": "Gate",
+   "patches": [
+    10
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 40,
+    "gadget_kind": "T",
+    "gate_idx": 40,
+    "is_dagger": false,
+    "role": "s_gadget_member"
+   },
+   "single_qubit_op": "Z",
+   "slice": 5
+  },
+  {
+   "app_seq": 181,
+   "applications": 1,
+   "clients": [
+    2,
+    10
+   ],
+   "idx": 169,
+   "op": "Init",
+   "patches": [
+    2,
+    10,
+    52
+   ],
+   "place_next_to": {
+    "id": 10,
+    "op": "X"
+   },
+   "provenance": {
+    "frame": "",
+    "gadget_id": 41,
+    "gadget_kind": "CNOT",
+    "gate_idx": 41,
+    "is_dagger": false,
+    "role": "mediator"
+   },
+   "slice": 45,
+   "state": "Plus"
+  },
+  {
+   "app_seq": 183,
+   "applications": 1,
+   "clients": [],
+   "idx": 170,
+   "is_negative": false,
+   "observable": {
+    "2": "Z",
+    "52": "Z"
+   },
+   "op": "MultiBodyMeasure",
+   "patches": [
+    2,
+    52
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 41,
+    "gadget_kind": "CNOT",
+    "gate_idx": 41,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 46
+  },
+  {
+   "app_seq": 186,
+   "applications": 1,
+   "clients": [],
+   "idx": 171,
+   "is_negative": false,
+   "observable": {
+    "10": "X",
+    "52": "X"
+   },
+   "op": "MultiBodyMeasure",
+   "patches": [
+    52,
+    10
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 41,
+    "gadget_kind": "CNOT",
+    "gate_idx": 41,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 47
+  },
+  {
+   "app_seq": 187,
+   "applications": 1,
+   "clients": [],
+   "idx": 172,
+   "is_negative": false,
+   "observable": {
+    "52": "Z"
+   },
+   "op": "MeasureSinglePatch",
+   "patches": [
+    52
+   ],
+   "provenance": {
+    "frame": "Z_c^v X_t^(u xor w) (u = Z_c Z_a result, v = X_a X_t result, w = this Z readout of the mediator)",
+    "gadget_id": 41,
+    "gadget_kind": "CNOT",
+    "gate_idx": 41,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 47
+  },
+  {
+   "app_seq": 188,
+   "applications": 1,
+   "clients": [
+    6,
+    10
+   ],
+   "idx": 173,
+   "op": "Init",
+   "patches": [
+    6,
+    10,
+    53
+   ],
+   "place_next_to": {
+    "id": 10,
+    "op": "X"
+   },
+   "provenance": {
+    "frame": "",
+    "gadget_id": 42,
+    "gadget_kind": "CNOT",
+    "gate_idx": 42,
+    "is_dagger": false,
+    "role": "mediator"
+   },
+   "slice": 47,
+   "state": "Plus"
+  },
+  {
+   "app_seq": 189,
+   "applications": 1,
+   "clients": [],
+   "idx": 174,
+   "is_negative": false,
+   "observable": {
+    "53": "Z",
+    "6": "Z"
+   },
+   "op": "MultiBodyMeasure",
+   "patches": [
+    6,
+    53
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 42,
+    "gadget_kind": "CNOT",
+    "gate_idx": 42,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 47
+  },
+  {
+   "app_seq": 190,
+   "applications": 1,
+   "clients": [],
+   "idx": 175,
+   "is_negative": false,
+   "observable": {
+    "10": "X",
+    "53": "X"
+   },
+   "op": "MultiBodyMeasure",
+   "patches": [
+    53,
+    10
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 42,
+    "gadget_kind": "CNOT",
+    "gate_idx": 42,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 48
+  },
+  {
+   "app_seq": 191,
+   "applications": 1,
+   "clients": [],
+   "idx": 176,
+   "is_negative": false,
+   "observable": {
+    "53": "Z"
+   },
+   "op": "MeasureSinglePatch",
+   "patches": [
+    53
+   ],
+   "provenance": {
+    "frame": "Z_c^v X_t^(u xor w) (u = Z_c Z_a result, v = X_a X_t result, w = this Z readout of the mediator)",
+    "gadget_id": 42,
+    "gadget_kind": "CNOT",
+    "gate_idx": 42,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 48
+  },
+  {
+   "app_seq": 192,
+   "applications": 1,
+   "clients": [
+    10,
+    2
+   ],
+   "idx": 177,
+   "op": "Init",
+   "patches": [
+    10,
+    2,
+    54
+   ],
+   "place_next_to": {
+    "id": 2,
+    "op": "X"
+   },
+   "provenance": {
+    "frame": "",
+    "gadget_id": 43,
+    "gadget_kind": "CNOT",
+    "gate_idx": 43,
+    "is_dagger": false,
+    "role": "mediator"
+   },
+   "slice": 48,
+   "state": "Plus"
+  },
+  {
+   "app_seq": 193,
+   "applications": 1,
+   "clients": [],
+   "idx": 178,
+   "is_negative": false,
+   "observable": {
+    "10": "Z",
+    "54": "Z"
+   },
+   "op": "MultiBodyMeasure",
+   "patches": [
+    10,
+    54
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 43,
+    "gadget_kind": "CNOT",
+    "gate_idx": 43,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 49
+  },
+  {
+   "app_seq": 195,
+   "applications": 1,
+   "clients": [],
+   "idx": 179,
+   "is_negative": false,
+   "observable": {
+    "2": "X",
+    "54": "X"
+   },
+   "op": "MultiBodyMeasure",
+   "patches": [
+    54,
+    2
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 43,
+    "gadget_kind": "CNOT",
+    "gate_idx": 43,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 50
+  },
+  {
+   "app_seq": 196,
+   "applications": 1,
+   "clients": [],
+   "idx": 180,
+   "is_negative": false,
+   "observable": {
+    "54": "Z"
+   },
+   "op": "MeasureSinglePatch",
+   "patches": [
+    54
+   ],
+   "provenance": {
+    "frame": "Z_c^v X_t^(u xor w) (u = Z_c Z_a result, v = X_a X_t result, w = this Z readout of the mediator)",
+    "gadget_id": 43,
+    "gadget_kind": "CNOT",
+    "gate_idx": 43,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 50
+  },
+  {
+   "app_seq": 194,
+   "applications": 1,
+   "clients": [
+    10,
+    6
+   ],
+   "idx": 181,
+   "op": "Init",
+   "patches": [
+    10,
+    6,
+    55
+   ],
+   "place_next_to": {
+    "id": 6,
+    "op": "X"
+   },
+   "provenance": {
+    "frame": "",
+    "gadget_id": 44,
+    "gadget_kind": "CNOT",
+    "gate_idx": 44,
+    "is_dagger": false,
+    "role": "mediator"
+   },
+   "slice": 49,
+   "state": "Plus"
+  },
+  {
+   "app_seq": 198,
+   "applications": 1,
+   "clients": [],
+   "idx": 182,
+   "is_negative": false,
+   "observable": {
+    "10": "Z",
+    "55": "Z"
+   },
+   "op": "MultiBodyMeasure",
+   "patches": [
+    10,
+    55
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 44,
+    "gadget_kind": "CNOT",
+    "gate_idx": 44,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 50
+  },
+  {
+   "app_seq": 203,
+   "applications": 1,
+   "clients": [],
+   "idx": 183,
+   "is_negative": false,
+   "observable": {
+    "55": "X",
+    "6": "X"
+   },
+   "op": "MultiBodyMeasure",
+   "patches": [
+    55,
+    6
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 44,
+    "gadget_kind": "CNOT",
+    "gate_idx": 44,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 51
+  },
+  {
+   "app_seq": 204,
+   "applications": 1,
+   "clients": [],
+   "idx": 184,
+   "is_negative": false,
+   "observable": {
+    "55": "Z"
+   },
+   "op": "MeasureSinglePatch",
+   "patches": [
+    55
+   ],
+   "provenance": {
+    "frame": "Z_c^v X_t^(u xor w) (u = Z_c Z_a result, v = X_a X_t result, w = this Z readout of the mediator)",
+    "gadget_id": 44,
+    "gadget_kind": "CNOT",
+    "gate_idx": 44,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 51
+  },
+  {
+   "app_seq": 197,
+   "applications": 1,
+   "clients": [
+    2
+   ],
+   "idx": 185,
+   "near_patch": 2,
+   "op": "RequestMagicState",
+   "patches": [
+    2,
+    56
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 45,
+    "gadget_kind": "T",
+    "gate_idx": 45,
+    "is_dagger": false,
+    "role": "resource"
+   },
+   "slice": 50,
+   "state": "Magic"
+  },
+  {
+   "app_seq": 200,
+   "applications": 1,
+   "clients": [],
+   "idx": 186,
+   "is_negative": false,
+   "observable": {
+    "2": "Z",
+    "56": "Z"
+   },
+   "op": "MultiBodyMeasure",
+   "patches": [
+    2,
+    56
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 45,
+    "gadget_kind": "T",
+    "gate_idx": 45,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 51
+  },
+  {
+   "app_seq": 201,
+   "applications": 1,
+   "clients": [],
+   "idx": 187,
+   "is_negative": false,
+   "observable": {
+    "56": "X"
+   },
+   "op": "MeasureSinglePatch",
+   "patches": [
+    56
+   ],
+   "provenance": {
+    "frame": "S_t^u Z_t^w (u = ZZ(t,magic) result, w = this X readout); the compiler emits the S unconditionally",
+    "gadget_id": 45,
+    "gadget_kind": "T",
+    "gate_idx": 45,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 51
+  },
+  {
+   "app_seq": 202,
+   "applications": 1,
+   "clients": [
+    2
+   ],
+   "idx": 188,
+   "near_patch": 2,
+   "op": "RequestYState",
+   "patches": [
+    2,
+    57
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 45,
+    "gadget_kind": "T",
+    "gate_idx": 45,
+    "is_dagger": false,
+    "role": "s_gadget_member"
+   },
+   "slice": 51,
+   "state": "Y"
+  },
+  {
+   "app_seq": 209,
+   "applications": 1,
+   "clients": [],
+   "idx": 189,
+   "is_negative": false,
+   "observable": {
+    "2": "Z",
+    "57": "Z"
+   },
+   "op": "MultiBodyMeasure",
+   "patches": [
+    57,
+    2
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 45,
+    "gadget_kind": "T",
+    "gate_idx": 45,
+    "is_dagger": false,
+    "role": "s_gadget_member"
+   },
+   "slice": 52
+  },
+  {
+   "app_seq": 210,
+   "applications": 1,
+   "clients": [],
+   "idx": 190,
+   "is_negative": false,
+   "observable": {
+    "57": "X"
+   },
+   "op": "MeasureSinglePatch",
+   "patches": [
+    57
+   ],
+   "provenance": {
+    "frame": "Z_t^(u xor w) (u = ZZ(y,t) result, w = this X readout of the Y state); the compiler emits the Z unconditionally",
+    "gadget_id": 45,
+    "gadget_kind": "T",
+    "gate_idx": 45,
+    "is_dagger": false,
+    "role": "s_gadget_member"
+   },
+   "slice": 52
+  },
+  {
+   "app_seq": 215,
+   "applications": 1,
+   "clients": [],
+   "idx": 191,
+   "is_dagger": false,
+   "op": "Gate",
+   "patches": [
+    2
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 45,
+    "gadget_kind": "T",
+    "gate_idx": 45,
+    "is_dagger": false,
+    "role": "s_gadget_member"
+   },
+   "single_qubit_op": "Z",
+   "slice": 53
+  },
+  {
+   "app_seq": 216,
+   "applications": 1,
+   "clients": [
+    2
+   ],
+   "idx": 192,
+   "near_patch": 2,
+   "op": "RequestYState",
+   "patches": [
+    2,
+    58
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 46,
+    "gadget_kind": "S",
+    "gate_idx": 46,
+    "is_dagger": false,
+    "role": "s_gadget_member"
+   },
+   "slice": 53,
+   "state": "Y"
+  },
+  {
+   "app_seq": 219,
+   "applications": 1,
+   "clients": [],
+   "idx": 193,
+   "is_negative": false,
+   "observable": {
+    "2": "Z",
+    "58": "Z"
+   },
+   "op": "MultiBodyMeasure",
+   "patches": [
+    58,
+    2
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 46,
+    "gadget_kind": "S",
+    "gate_idx": 46,
+    "is_dagger": false,
+    "role": "s_gadget_member"
+   },
+   "slice": 54
+  },
+  {
+   "app_seq": 220,
+   "applications": 1,
+   "clients": [],
+   "idx": 194,
+   "is_negative": false,
+   "observable": {
+    "58": "X"
+   },
+   "op": "MeasureSinglePatch",
+   "patches": [
+    58
+   ],
+   "provenance": {
+    "frame": "Z_t^(u xor w) (u = ZZ(y,t) result, w = this X readout of the Y state); the compiler emits the Z unconditionally",
+    "gadget_id": 46,
+    "gadget_kind": "S",
+    "gate_idx": 46,
+    "is_dagger": false,
+    "role": "s_gadget_member"
+   },
+   "slice": 54
+  },
+  {
+   "app_seq": 223,
+   "applications": 1,
+   "clients": [],
+   "idx": 195,
+   "is_dagger": false,
+   "op": "Gate",
+   "patches": [
+    2
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 46,
+    "gadget_kind": "S",
+    "gate_idx": 46,
+    "is_dagger": false,
+    "role": "s_gadget_member"
+   },
+   "single_qubit_op": "Z",
+   "slice": 55
+  },
+  {
+   "app_seq": 224,
+   "applications": 1,
+   "clients": [],
+   "idx": 196,
+   "is_dagger": false,
+   "op": "Gate",
+   "patches": [
+    2
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 47,
+    "gadget_kind": "Z",
+    "gate_idx": 47,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "single_qubit_op": "Z",
+   "slice": 55
+  },
+  {
+   "app_seq": 205,
+   "applications": 1,
+   "clients": [
+    6
+   ],
+   "idx": 197,
+   "near_patch": 6,
+   "op": "RequestMagicState",
+   "patches": [
+    6,
+    59
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 48,
+    "gadget_kind": "T",
+    "gate_idx": 48,
+    "is_dagger": false,
+    "role": "resource"
+   },
+   "slice": 51,
+   "state": "Magic"
+  },
+  {
+   "app_seq": 211,
+   "applications": 1,
+   "clients": [],
+   "idx": 198,
+   "is_negative": false,
+   "observable": {
+    "59": "Z",
+    "6": "Z"
+   },
+   "op": "MultiBodyMeasure",
+   "patches": [
+    6,
+    59
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 48,
+    "gadget_kind": "T",
+    "gate_idx": 48,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 52
+  },
+  {
+   "app_seq": 212,
+   "applications": 1,
+   "clients": [],
+   "idx": 199,
+   "is_negative": false,
+   "observable": {
+    "59": "X"
+   },
+   "op": "MeasureSinglePatch",
+   "patches": [
+    59
+   ],
+   "provenance": {
+    "frame": "S_t^u Z_t^w (u = ZZ(t,magic) result, w = this X readout); the compiler emits the S unconditionally",
+    "gadget_id": 48,
+    "gadget_kind": "T",
+    "gate_idx": 48,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 52
+  },
+  {
+   "app_seq": 217,
+   "applications": 1,
+   "clients": [
+    6
+   ],
+   "idx": 200,
+   "near_patch": 6,
+   "op": "RequestYState",
+   "patches": [
+    6,
+    60
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 48,
+    "gadget_kind": "T",
+    "gate_idx": 48,
+    "is_dagger": false,
+    "role": "s_gadget_member"
+   },
+   "slice": 53,
+   "state": "Y"
+  },
+  {
+   "app_seq": 221,
+   "applications": 1,
+   "clients": [],
+   "idx": 201,
+   "is_negative": false,
+   "observable": {
+    "6": "Z",
+    "60": "Z"
+   },
+   "op": "MultiBodyMeasure",
+   "patches": [
+    60,
+    6
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 48,
+    "gadget_kind": "T",
+    "gate_idx": 48,
+    "is_dagger": false,
+    "role": "s_gadget_member"
+   },
+   "slice": 54
+  },
+  {
+   "app_seq": 222,
+   "applications": 1,
+   "clients": [],
+   "idx": 202,
+   "is_negative": false,
+   "observable": {
+    "60": "X"
+   },
+   "op": "MeasureSinglePatch",
+   "patches": [
+    60
+   ],
+   "provenance": {
+    "frame": "Z_t^(u xor w) (u = ZZ(y,t) result, w = this X readout of the Y state); the compiler emits the Z unconditionally",
+    "gadget_id": 48,
+    "gadget_kind": "T",
+    "gate_idx": 48,
+    "is_dagger": false,
+    "role": "s_gadget_member"
+   },
+   "slice": 54
+  },
+  {
+   "app_seq": 227,
+   "applications": 1,
+   "clients": [],
+   "idx": 203,
+   "is_dagger": false,
+   "op": "Gate",
+   "patches": [
+    6
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 48,
+    "gadget_kind": "T",
+    "gate_idx": 48,
+    "is_dagger": false,
+    "role": "s_gadget_member"
+   },
+   "single_qubit_op": "Z",
+   "slice": 55
+  },
+  {
+   "app_seq": 228,
+   "applications": 1,
+   "clients": [
+    6
+   ],
+   "idx": 204,
+   "near_patch": 6,
+   "op": "RequestYState",
+   "patches": [
+    6,
+    61
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 49,
+    "gadget_kind": "S",
+    "gate_idx": 49,
+    "is_dagger": false,
+    "role": "s_gadget_member"
+   },
+   "slice": 55,
+   "state": "Y"
+  },
+  {
+   "app_seq": 231,
+   "applications": 1,
+   "clients": [],
+   "idx": 205,
+   "is_negative": false,
+   "observable": {
+    "6": "Z",
+    "61": "Z"
+   },
+   "op": "MultiBodyMeasure",
+   "patches": [
+    61,
+    6
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 49,
+    "gadget_kind": "S",
+    "gate_idx": 49,
+    "is_dagger": false,
+    "role": "s_gadget_member"
+   },
+   "slice": 56
+  },
+  {
+   "app_seq": 232,
+   "applications": 1,
+   "clients": [],
+   "idx": 206,
+   "is_negative": false,
+   "observable": {
+    "61": "X"
+   },
+   "op": "MeasureSinglePatch",
+   "patches": [
+    61
+   ],
+   "provenance": {
+    "frame": "Z_t^(u xor w) (u = ZZ(y,t) result, w = this X readout of the Y state); the compiler emits the Z unconditionally",
+    "gadget_id": 49,
+    "gadget_kind": "S",
+    "gate_idx": 49,
+    "is_dagger": false,
+    "role": "s_gadget_member"
+   },
+   "slice": 56
+  },
+  {
+   "app_seq": 233,
+   "applications": 1,
+   "clients": [],
+   "idx": 207,
+   "is_dagger": false,
+   "op": "Gate",
+   "patches": [
+    6
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 49,
+    "gadget_kind": "S",
+    "gate_idx": 49,
+    "is_dagger": false,
+    "role": "s_gadget_member"
+   },
+   "single_qubit_op": "Z",
+   "slice": 57
+  },
+  {
+   "app_seq": 234,
+   "applications": 1,
+   "clients": [],
+   "idx": 208,
+   "is_dagger": false,
+   "op": "Gate",
+   "patches": [
+    6
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 50,
+    "gadget_kind": "Z",
+    "gate_idx": 50,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "single_qubit_op": "Z",
+   "slice": 57
+  },
+  {
+   "app_seq": 199,
+   "applications": 1,
+   "clients": [
+    10
+   ],
+   "idx": 209,
+   "near_patch": 10,
+   "op": "RequestMagicState",
+   "patches": [
+    10,
+    62
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 51,
+    "gadget_kind": "T",
+    "gate_idx": 51,
+    "is_dagger": false,
+    "role": "resource"
+   },
+   "slice": 50,
+   "state": "Magic"
+  },
+  {
+   "app_seq": 206,
+   "applications": 1,
+   "clients": [],
+   "idx": 210,
+   "is_negative": false,
+   "observable": {
+    "10": "Z",
+    "62": "Z"
+   },
+   "op": "MultiBodyMeasure",
+   "patches": [
+    10,
+    62
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 51,
+    "gadget_kind": "T",
+    "gate_idx": 51,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 51
+  },
+  {
+   "app_seq": 207,
+   "applications": 1,
+   "clients": [],
+   "idx": 211,
+   "is_negative": false,
+   "observable": {
+    "62": "X"
+   },
+   "op": "MeasureSinglePatch",
+   "patches": [
+    62
+   ],
+   "provenance": {
+    "frame": "S_t^u Z_t^w (u = ZZ(t,magic) result, w = this X readout); the compiler emits the S unconditionally",
+    "gadget_id": 51,
+    "gadget_kind": "T",
+    "gate_idx": 51,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 51
+  },
+  {
+   "app_seq": 208,
+   "applications": 1,
+   "clients": [
+    10
+   ],
+   "idx": 212,
+   "near_patch": 10,
+   "op": "RequestYState",
+   "patches": [
+    10,
+    63
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 51,
+    "gadget_kind": "T",
+    "gate_idx": 51,
+    "is_dagger": false,
+    "role": "s_gadget_member"
+   },
+   "slice": 51,
+   "state": "Y"
+  },
+  {
+   "app_seq": 213,
+   "applications": 1,
+   "clients": [],
+   "idx": 213,
+   "is_negative": false,
+   "observable": {
+    "10": "Z",
+    "63": "Z"
+   },
+   "op": "MultiBodyMeasure",
+   "patches": [
+    63,
+    10
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 51,
+    "gadget_kind": "T",
+    "gate_idx": 51,
+    "is_dagger": false,
+    "role": "s_gadget_member"
+   },
+   "slice": 52
+  },
+  {
+   "app_seq": 214,
+   "applications": 1,
+   "clients": [],
+   "idx": 214,
+   "is_negative": false,
+   "observable": {
+    "63": "X"
+   },
+   "op": "MeasureSinglePatch",
+   "patches": [
+    63
+   ],
+   "provenance": {
+    "frame": "Z_t^(u xor w) (u = ZZ(y,t) result, w = this X readout of the Y state); the compiler emits the Z unconditionally",
+    "gadget_id": 51,
+    "gadget_kind": "T",
+    "gate_idx": 51,
+    "is_dagger": false,
+    "role": "s_gadget_member"
+   },
+   "slice": 52
+  },
+  {
+   "app_seq": 218,
+   "applications": 1,
+   "clients": [],
+   "idx": 215,
+   "is_dagger": false,
+   "op": "Gate",
+   "patches": [
+    10
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 51,
+    "gadget_kind": "T",
+    "gate_idx": 51,
+    "is_dagger": false,
+    "role": "s_gadget_member"
+   },
+   "single_qubit_op": "Z",
+   "slice": 53
+  },
+  {
+   "app_seq": 225,
+   "applications": 1,
+   "clients": [
+    10,
+    2
+   ],
+   "idx": 216,
+   "op": "Init",
+   "patches": [
+    10,
+    2,
+    64
+   ],
+   "place_next_to": {
+    "id": 2,
+    "op": "X"
+   },
+   "provenance": {
+    "frame": "",
+    "gadget_id": 52,
+    "gadget_kind": "CNOT",
+    "gate_idx": 52,
+    "is_dagger": false,
+    "role": "mediator"
+   },
+   "slice": 55,
+   "state": "Plus"
+  },
+  {
+   "app_seq": 226,
+   "applications": 1,
+   "clients": [],
+   "idx": 217,
+   "is_negative": false,
+   "observable": {
+    "10": "Z",
+    "64": "Z"
+   },
+   "op": "MultiBodyMeasure",
+   "patches": [
+    10,
+    64
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 52,
+    "gadget_kind": "CNOT",
+    "gate_idx": 52,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 55
+  },
+  {
+   "app_seq": 229,
+   "applications": 1,
+   "clients": [],
+   "idx": 218,
+   "is_negative": false,
+   "observable": {
+    "2": "X",
+    "64": "X"
+   },
+   "op": "MultiBodyMeasure",
+   "patches": [
+    64,
+    2
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 52,
+    "gadget_kind": "CNOT",
+    "gate_idx": 52,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 56
+  },
+  {
+   "app_seq": 230,
+   "applications": 1,
+   "clients": [],
+   "idx": 219,
+   "is_negative": false,
+   "observable": {
+    "64": "Z"
+   },
+   "op": "MeasureSinglePatch",
+   "patches": [
+    64
+   ],
+   "provenance": {
+    "frame": "Z_c^v X_t^(u xor w) (u = Z_c Z_a result, v = X_a X_t result, w = this Z readout of the mediator)",
+    "gadget_id": 52,
+    "gadget_kind": "CNOT",
+    "gate_idx": 52,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 56
+  },
+  {
+   "app_seq": 235,
+   "applications": 1,
+   "clients": [
+    10,
+    6
+   ],
+   "idx": 220,
+   "op": "Init",
+   "patches": [
+    10,
+    6,
+    65
+   ],
+   "place_next_to": {
+    "id": 6,
+    "op": "X"
+   },
+   "provenance": {
+    "frame": "",
+    "gadget_id": 53,
+    "gadget_kind": "CNOT",
+    "gate_idx": 53,
+    "is_dagger": false,
+    "role": "mediator"
+   },
+   "slice": 57,
+   "state": "Plus"
+  },
+  {
+   "app_seq": 236,
+   "applications": 1,
+   "clients": [],
+   "idx": 221,
+   "is_negative": false,
+   "observable": {
+    "10": "Z",
+    "65": "Z"
+   },
+   "op": "MultiBodyMeasure",
+   "patches": [
+    10,
+    65
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 53,
+    "gadget_kind": "CNOT",
+    "gate_idx": 53,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 57
+  },
+  {
+   "app_seq": 239,
+   "applications": 1,
+   "clients": [],
+   "idx": 222,
+   "is_negative": false,
+   "observable": {
+    "6": "X",
+    "65": "X"
+   },
+   "op": "MultiBodyMeasure",
+   "patches": [
+    65,
+    6
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 53,
+    "gadget_kind": "CNOT",
+    "gate_idx": 53,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 58
+  },
+  {
+   "app_seq": 240,
+   "applications": 1,
+   "clients": [],
+   "idx": 223,
+   "is_negative": false,
+   "observable": {
+    "65": "Z"
+   },
+   "op": "MeasureSinglePatch",
+   "patches": [
+    65
+   ],
+   "provenance": {
+    "frame": "Z_c^v X_t^(u xor w) (u = Z_c Z_a result, v = X_a X_t result, w = this Z readout of the mediator)",
+    "gadget_id": 53,
+    "gadget_kind": "CNOT",
+    "gate_idx": 53,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 58
+  },
+  {
+   "app_seq": 237,
+   "applications": 1,
+   "clients": [],
+   "idx": 224,
+   "is_dagger": false,
+   "op": "Gate",
+   "patches": [
+    10
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 54,
+    "gadget_kind": "H",
+    "gate_idx": 54,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "single_qubit_op": "H",
+   "slice": 58
+  },
+  {
+   "app_seq": 238,
+   "applications": 1,
+   "clients": [],
+   "idx": 225,
+   "op": "RotateSingleCellPatch",
+   "patches": [
+    10
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 54,
+    "gadget_kind": "H",
+    "gate_idx": 54,
+    "is_dagger": false,
+    "role": "boundary_rotation"
+   },
+   "slice": 58
+  },
+  {
+   "app_seq": 244,
+   "applications": 1,
+   "clients": [
+    10
+   ],
+   "idx": 226,
+   "near_patch": 10,
+   "op": "RequestYState",
+   "patches": [
+    10,
+    66
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 55,
+    "gadget_kind": "S",
+    "gate_idx": 55,
+    "is_dagger": false,
+    "role": "s_gadget_member"
+   },
+   "slice": 61,
+   "state": "Y"
+  },
+  {
+   "app_seq": 245,
+   "applications": 1,
+   "clients": [],
+   "idx": 227,
+   "is_negative": false,
+   "observable": {
+    "10": "Z",
+    "66": "Z"
+   },
+   "op": "MultiBodyMeasure",
+   "patches": [
+    66,
+    10
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 55,
+    "gadget_kind": "S",
+    "gate_idx": 55,
+    "is_dagger": false,
+    "role": "s_gadget_member"
+   },
+   "slice": 62
+  },
+  {
+   "app_seq": 246,
+   "applications": 1,
+   "clients": [],
+   "idx": 228,
+   "is_negative": false,
+   "observable": {
+    "66": "X"
+   },
+   "op": "MeasureSinglePatch",
+   "patches": [
+    66
+   ],
+   "provenance": {
+    "frame": "Z_t^(u xor w) (u = ZZ(y,t) result, w = this X readout of the Y state); the compiler emits the Z unconditionally",
+    "gadget_id": 55,
+    "gadget_kind": "S",
+    "gate_idx": 55,
+    "is_dagger": false,
+    "role": "s_gadget_member"
+   },
+   "slice": 62
+  },
+  {
+   "app_seq": 247,
+   "applications": 1,
+   "clients": [],
+   "idx": 229,
+   "is_dagger": false,
+   "op": "Gate",
+   "patches": [
+    10
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 55,
+    "gadget_kind": "S",
+    "gate_idx": 55,
+    "is_dagger": false,
+    "role": "s_gadget_member"
+   },
+   "single_qubit_op": "Z",
+   "slice": 63
+  },
+  {
+   "app_seq": 248,
+   "applications": 1,
+   "clients": [
+    9,
+    10
+   ],
+   "idx": 230,
+   "op": "Init",
+   "patches": [
+    9,
+    10,
+    67
+   ],
+   "place_next_to": {
+    "id": 10,
+    "op": "X"
+   },
+   "provenance": {
+    "frame": "",
+    "gadget_id": 56,
+    "gadget_kind": "CNOT",
+    "gate_idx": 56,
+    "is_dagger": false,
+    "role": "mediator"
+   },
+   "slice": 63,
+   "state": "Plus"
+  },
+  {
+   "app_seq": 249,
+   "applications": 1,
+   "clients": [],
+   "idx": 231,
+   "is_negative": false,
+   "observable": {
+    "67": "Z",
+    "9": "Z"
+   },
+   "op": "MultiBodyMeasure",
+   "patches": [
+    9,
+    67
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 56,
+    "gadget_kind": "CNOT",
+    "gate_idx": 56,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 63
+  },
+  {
+   "app_seq": 250,
+   "applications": 1,
+   "clients": [],
+   "idx": 232,
+   "is_negative": false,
+   "observable": {
+    "10": "X",
+    "67": "X"
+   },
+   "op": "MultiBodyMeasure",
+   "patches": [
+    67,
+    10
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 56,
+    "gadget_kind": "CNOT",
+    "gate_idx": 56,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 64
+  },
+  {
+   "app_seq": 251,
+   "applications": 1,
+   "clients": [],
+   "idx": 233,
+   "is_negative": false,
+   "observable": {
+    "67": "Z"
+   },
+   "op": "MeasureSinglePatch",
+   "patches": [
+    67
+   ],
+   "provenance": {
+    "frame": "Z_c^v X_t^(u xor w) (u = Z_c Z_a result, v = X_a X_t result, w = this Z readout of the mediator)",
+    "gadget_id": 56,
+    "gadget_kind": "CNOT",
+    "gate_idx": 56,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 64
+  },
+  {
+   "app_seq": 252,
+   "applications": 1,
+   "clients": [
+    10,
+    7
+   ],
+   "idx": 234,
+   "op": "Init",
+   "patches": [
+    10,
+    7,
+    68
+   ],
+   "place_next_to": {
+    "id": 7,
+    "op": "X"
+   },
+   "provenance": {
+    "frame": "",
+    "gadget_id": 57,
+    "gadget_kind": "CNOT",
+    "gate_idx": 57,
+    "is_dagger": false,
+    "role": "mediator"
+   },
+   "slice": 64,
+   "state": "Plus"
+  },
+  {
+   "app_seq": 253,
+   "applications": 1,
+   "clients": [],
+   "idx": 235,
+   "is_negative": false,
+   "observable": {
+    "10": "Z",
+    "68": "Z"
+   },
+   "op": "MultiBodyMeasure",
+   "patches": [
+    10,
+    68
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 57,
+    "gadget_kind": "CNOT",
+    "gate_idx": 57,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 65
+  },
+  {
+   "app_seq": 256,
+   "applications": 1,
+   "clients": [],
+   "idx": 236,
+   "is_negative": false,
+   "observable": {
+    "68": "X",
+    "7": "X"
+   },
+   "op": "MultiBodyMeasure",
+   "patches": [
+    68,
+    7
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 57,
+    "gadget_kind": "CNOT",
+    "gate_idx": 57,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 66
+  },
+  {
+   "app_seq": 257,
+   "applications": 1,
+   "clients": [],
+   "idx": 237,
+   "is_negative": false,
+   "observable": {
+    "68": "Z"
+   },
+   "op": "MeasureSinglePatch",
+   "patches": [
+    68
+   ],
+   "provenance": {
+    "frame": "Z_c^v X_t^(u xor w) (u = Z_c Z_a result, v = X_a X_t result, w = this Z readout of the mediator)",
+    "gadget_id": 57,
+    "gadget_kind": "CNOT",
+    "gate_idx": 57,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 66
+  },
+  {
+   "app_seq": 258,
+   "applications": 1,
+   "clients": [
+    3,
+    7
+   ],
+   "idx": 238,
+   "op": "Init",
+   "patches": [
+    3,
+    7,
+    69
+   ],
+   "place_next_to": {
+    "id": 7,
+    "op": "X"
+   },
+   "provenance": {
+    "frame": "",
+    "gadget_id": 58,
+    "gadget_kind": "CNOT",
+    "gate_idx": 58,
+    "is_dagger": false,
+    "role": "mediator"
+   },
+   "slice": 66,
+   "state": "Plus"
+  },
+  {
+   "app_seq": 259,
+   "applications": 1,
+   "clients": [],
+   "idx": 239,
+   "is_negative": false,
+   "observable": {
+    "3": "Z",
+    "69": "Z"
+   },
+   "op": "MultiBodyMeasure",
+   "patches": [
+    3,
+    69
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 58,
+    "gadget_kind": "CNOT",
+    "gate_idx": 58,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 66
+  },
+  {
+   "app_seq": 262,
+   "applications": 1,
+   "clients": [],
+   "idx": 240,
+   "is_negative": false,
+   "observable": {
+    "69": "X",
+    "7": "X"
+   },
+   "op": "MultiBodyMeasure",
+   "patches": [
+    69,
+    7
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 58,
+    "gadget_kind": "CNOT",
+    "gate_idx": 58,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 67
+  },
+  {
+   "app_seq": 263,
+   "applications": 1,
+   "clients": [],
+   "idx": 241,
+   "is_negative": false,
+   "observable": {
+    "69": "Z"
+   },
+   "op": "MeasureSinglePatch",
+   "patches": [
+    69
+   ],
+   "provenance": {
+    "frame": "Z_c^v X_t^(u xor w) (u = Z_c Z_a result, v = X_a X_t result, w = this Z readout of the mediator)",
+    "gadget_id": 58,
+    "gadget_kind": "CNOT",
+    "gate_idx": 58,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 67
+  },
+  {
+   "app_seq": 254,
+   "applications": 1,
+   "clients": [
+    9,
+    10
+   ],
+   "idx": 242,
+   "op": "Init",
+   "patches": [
+    9,
+    10,
+    70
+   ],
+   "place_next_to": {
+    "id": 10,
+    "op": "X"
+   },
+   "provenance": {
+    "frame": "",
+    "gadget_id": 59,
+    "gadget_kind": "CNOT",
+    "gate_idx": 59,
+    "is_dagger": false,
+    "role": "mediator"
+   },
+   "slice": 65,
+   "state": "Plus"
+  },
+  {
+   "app_seq": 255,
+   "applications": 1,
+   "clients": [],
+   "idx": 243,
+   "is_negative": false,
+   "observable": {
+    "70": "Z",
+    "9": "Z"
+   },
+   "op": "MultiBodyMeasure",
+   "patches": [
+    9,
+    70
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 59,
+    "gadget_kind": "CNOT",
+    "gate_idx": 59,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 65
+  },
+  {
+   "app_seq": 260,
+   "applications": 1,
+   "clients": [],
+   "idx": 244,
+   "is_negative": false,
+   "observable": {
+    "10": "X",
+    "70": "X"
+   },
+   "op": "MultiBodyMeasure",
+   "patches": [
+    70,
+    10
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 59,
+    "gadget_kind": "CNOT",
+    "gate_idx": 59,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 66
+  },
+  {
+   "app_seq": 261,
+   "applications": 1,
+   "clients": [],
+   "idx": 245,
+   "is_negative": false,
+   "observable": {
+    "70": "Z"
+   },
+   "op": "MeasureSinglePatch",
+   "patches": [
+    70
+   ],
+   "provenance": {
+    "frame": "Z_c^v X_t^(u xor w) (u = Z_c Z_a result, v = X_a X_t result, w = this Z readout of the mediator)",
+    "gadget_id": 59,
+    "gadget_kind": "CNOT",
+    "gate_idx": 59,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 66
+  },
+  {
+   "app_seq": 264,
+   "applications": 1,
+   "clients": [],
+   "idx": 246,
+   "is_dagger": false,
+   "op": "Gate",
+   "patches": [
+    10
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 60,
+    "gadget_kind": "H",
+    "gate_idx": 60,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "single_qubit_op": "H",
+   "slice": 67
+  },
+  {
+   "app_seq": 265,
+   "applications": 1,
+   "clients": [],
+   "idx": 247,
+   "op": "RotateSingleCellPatch",
+   "patches": [
+    10
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 60,
+    "gadget_kind": "H",
+    "gate_idx": 60,
+    "is_dagger": false,
+    "role": "boundary_rotation"
+   },
+   "slice": 67
+  },
+  {
+   "app_seq": 269,
+   "applications": 1,
+   "clients": [],
+   "idx": 248,
+   "is_negative": false,
+   "observable": {
+    "10": "Z"
+   },
+   "op": "MeasureSinglePatch",
+   "patches": [
+    10
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 61,
+    "gadget_kind": "MEASURE",
+    "gate_idx": 61,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 70
+  },
+  {
+   "app_seq": 270,
+   "applications": 1,
+   "classical_deps": [
+    10
+   ],
+   "clients": [],
+   "idx": 249,
+   "is_dagger": false,
+   "op": "Gate",
+   "patches": [
+    6
+   ],
+   "provenance": {
+    "condition": {
+     "gate_idx": 61,
+     "patch": 10,
+     "register": "m3"
+    },
+    "frame": "",
+    "gadget_id": 62,
+    "gadget_kind": "CZ",
+    "gate_idx": 62,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "single_qubit_op": "H",
+   "slice": 71
+  },
+  {
+   "app_seq": 271,
+   "applications": 1,
+   "classical_deps": [
+    10
+   ],
+   "clients": [],
+   "idx": 250,
+   "op": "RotateSingleCellPatch",
+   "patches": [
+    6
+   ],
+   "provenance": {
+    "condition": {
+     "gate_idx": 61,
+     "patch": 10,
+     "register": "m3"
+    },
+    "frame": "",
+    "gadget_id": 62,
+    "gadget_kind": "CZ",
+    "gate_idx": 62,
+    "is_dagger": false,
+    "role": "boundary_rotation"
+   },
+   "slice": 71
+  },
+  {
+   "app_seq": 275,
+   "applications": 1,
+   "classical_deps": [
+    10
+   ],
+   "clients": [
+    2,
+    6
+   ],
+   "idx": 251,
+   "op": "Init",
+   "patches": [
+    2,
+    6,
+    71
+   ],
+   "place_next_to": {
+    "id": 6,
+    "op": "X"
+   },
+   "provenance": {
+    "condition": {
+     "gate_idx": 61,
+     "patch": 10,
+     "register": "m3"
+    },
+    "frame": "",
+    "gadget_id": 62,
+    "gadget_kind": "CZ",
+    "gate_idx": 62,
+    "is_dagger": false,
+    "role": "mediator"
+   },
+   "slice": 74,
+   "state": "Plus"
+  },
+  {
+   "app_seq": 276,
+   "applications": 1,
+   "classical_deps": [
+    10
+   ],
+   "clients": [],
+   "idx": 252,
+   "is_negative": false,
+   "observable": {
+    "2": "Z",
+    "71": "Z"
+   },
+   "op": "MultiBodyMeasure",
+   "patches": [
+    2,
+    71
+   ],
+   "provenance": {
+    "condition": {
+     "gate_idx": 61,
+     "patch": 10,
+     "register": "m3"
+    },
+    "frame": "",
+    "gadget_id": 62,
+    "gadget_kind": "CZ",
+    "gate_idx": 62,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 74
+  },
+  {
+   "app_seq": 285,
+   "applications": 1,
+   "classical_deps": [
+    10
+   ],
+   "clients": [],
+   "idx": 253,
+   "is_negative": false,
+   "observable": {
+    "6": "X",
+    "71": "X"
+   },
+   "op": "MultiBodyMeasure",
+   "patches": [
+    71,
+    6
+   ],
+   "provenance": {
+    "condition": {
+     "gate_idx": 61,
+     "patch": 10,
+     "register": "m3"
+    },
+    "frame": "",
+    "gadget_id": 62,
+    "gadget_kind": "CZ",
+    "gate_idx": 62,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 75
+  },
+  {
+   "app_seq": 286,
+   "applications": 1,
+   "classical_deps": [
+    10
+   ],
+   "clients": [],
+   "idx": 254,
+   "is_negative": false,
+   "observable": {
+    "71": "Z"
+   },
+   "op": "MeasureSinglePatch",
+   "patches": [
+    71
+   ],
+   "provenance": {
+    "condition": {
+     "gate_idx": 61,
+     "patch": 10,
+     "register": "m3"
+    },
+    "frame": "Z_c^v X_t^(u xor w) (u = Z_c Z_a result, v = X_a X_t result, w = this Z readout of the mediator)",
+    "gadget_id": 62,
+    "gadget_kind": "CZ",
+    "gate_idx": 62,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 75
+  },
+  {
+   "app_seq": 289,
+   "applications": 1,
+   "classical_deps": [
+    10
+   ],
+   "clients": [],
+   "idx": 255,
+   "is_dagger": false,
+   "op": "Gate",
+   "patches": [
+    6
+   ],
+   "provenance": {
+    "condition": {
+     "gate_idx": 61,
+     "patch": 10,
+     "register": "m3"
+    },
+    "frame": "",
+    "gadget_id": 62,
+    "gadget_kind": "CZ",
+    "gate_idx": 62,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "single_qubit_op": "H",
+   "slice": 76
+  },
+  {
+   "app_seq": 290,
+   "applications": 1,
+   "classical_deps": [
+    10
+   ],
+   "clients": [],
+   "idx": 256,
+   "op": "RotateSingleCellPatch",
+   "patches": [
+    6
+   ],
+   "provenance": {
+    "condition": {
+     "gate_idx": 61,
+     "patch": 10,
+     "register": "m3"
+    },
+    "frame": "",
+    "gadget_id": 62,
+    "gadget_kind": "CZ",
+    "gate_idx": 62,
+    "is_dagger": false,
+    "role": "boundary_rotation"
+   },
+   "slice": 76
+  },
+  {
+   "app_seq": 277,
+   "applications": 1,
+   "clients": [
+    9,
+    2
+   ],
+   "idx": 257,
+   "op": "Init",
+   "patches": [
+    9,
+    2,
+    72
+   ],
+   "place_next_to": {
+    "id": 2,
+    "op": "X"
+   },
+   "provenance": {
+    "frame": "",
+    "gadget_id": 63,
+    "gadget_kind": "CNOT",
+    "gate_idx": 63,
+    "is_dagger": false,
+    "role": "mediator"
+   },
+   "slice": 74,
+   "state": "Plus"
+  },
+  {
+   "app_seq": 278,
+   "applications": 1,
+   "clients": [],
+   "idx": 258,
+   "is_negative": false,
+   "observable": {
+    "72": "Z",
+    "9": "Z"
+   },
+   "op": "MultiBodyMeasure",
+   "patches": [
+    9,
+    72
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 63,
+    "gadget_kind": "CNOT",
+    "gate_idx": 63,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 74
+  },
+  {
+   "app_seq": 283,
+   "applications": 1,
+   "clients": [],
+   "idx": 259,
+   "is_negative": false,
+   "observable": {
+    "2": "X",
+    "72": "X"
+   },
+   "op": "MultiBodyMeasure",
+   "patches": [
+    72,
+    2
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 63,
+    "gadget_kind": "CNOT",
+    "gate_idx": 63,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 75
+  },
+  {
+   "app_seq": 284,
+   "applications": 1,
+   "clients": [],
+   "idx": 260,
+   "is_negative": false,
+   "observable": {
+    "72": "Z"
+   },
+   "op": "MeasureSinglePatch",
+   "patches": [
+    72
+   ],
+   "provenance": {
+    "frame": "Z_c^v X_t^(u xor w) (u = Z_c Z_a result, v = X_a X_t result, w = this Z readout of the mediator)",
+    "gadget_id": 63,
+    "gadget_kind": "CNOT",
+    "gate_idx": 63,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 75
+  },
+  {
+   "app_seq": 298,
+   "applications": 1,
+   "clients": [
+    2,
+    6
+   ],
+   "idx": 261,
+   "op": "Init",
+   "patches": [
+    2,
+    6,
+    73
+   ],
+   "place_next_to": {
+    "id": 6,
+    "op": "X"
+   },
+   "provenance": {
+    "frame": "",
+    "gadget_id": 64,
+    "gadget_kind": "CNOT",
+    "gate_idx": 64,
+    "is_dagger": false,
+    "role": "mediator"
+   },
+   "slice": 79,
+   "state": "Plus"
+  },
+  {
+   "app_seq": 299,
+   "applications": 1,
+   "clients": [],
+   "idx": 262,
+   "is_negative": false,
+   "observable": {
+    "2": "Z",
+    "73": "Z"
+   },
+   "op": "MultiBodyMeasure",
+   "patches": [
+    2,
+    73
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 64,
+    "gadget_kind": "CNOT",
+    "gate_idx": 64,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 79
+  },
+  {
+   "app_seq": 302,
+   "applications": 1,
+   "clients": [],
+   "idx": 263,
+   "is_negative": false,
+   "observable": {
+    "6": "X",
+    "73": "X"
+   },
+   "op": "MultiBodyMeasure",
+   "patches": [
+    73,
+    6
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 64,
+    "gadget_kind": "CNOT",
+    "gate_idx": 64,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 80
+  },
+  {
+   "app_seq": 303,
+   "applications": 1,
+   "clients": [],
+   "idx": 264,
+   "is_negative": false,
+   "observable": {
+    "73": "Z"
+   },
+   "op": "MeasureSinglePatch",
+   "patches": [
+    73
+   ],
+   "provenance": {
+    "frame": "Z_c^v X_t^(u xor w) (u = Z_c Z_a result, v = X_a X_t result, w = this Z readout of the mediator)",
+    "gadget_id": 64,
+    "gadget_kind": "CNOT",
+    "gate_idx": 64,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 80
+  },
+  {
+   "app_seq": 279,
+   "applications": 1,
+   "clients": [
+    8,
+    9
+   ],
+   "idx": 265,
+   "op": "Init",
+   "patches": [
+    8,
+    9,
+    74
+   ],
+   "place_next_to": {
+    "id": 9,
+    "op": "X"
+   },
+   "provenance": {
+    "frame": "",
+    "gadget_id": 65,
+    "gadget_kind": "CNOT",
+    "gate_idx": 65,
+    "is_dagger": false,
+    "role": "mediator"
+   },
+   "slice": 74,
+   "state": "Plus"
+  },
+  {
+   "app_seq": 280,
+   "applications": 1,
+   "clients": [],
+   "idx": 266,
+   "is_negative": false,
+   "observable": {
+    "74": "Z",
+    "8": "Z"
+   },
+   "op": "MultiBodyMeasure",
+   "patches": [
+    8,
+    74
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 65,
+    "gadget_kind": "CNOT",
+    "gate_idx": 65,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 74
+  },
+  {
+   "app_seq": 281,
+   "applications": 1,
+   "clients": [],
+   "idx": 267,
+   "is_negative": false,
+   "observable": {
+    "74": "X",
+    "9": "X"
+   },
+   "op": "MultiBodyMeasure",
+   "patches": [
+    74,
+    9
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 65,
+    "gadget_kind": "CNOT",
+    "gate_idx": 65,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 75
+  },
+  {
+   "app_seq": 282,
+   "applications": 1,
+   "clients": [],
+   "idx": 268,
+   "is_negative": false,
+   "observable": {
+    "74": "Z"
+   },
+   "op": "MeasureSinglePatch",
+   "patches": [
+    74
+   ],
+   "provenance": {
+    "frame": "Z_c^v X_t^(u xor w) (u = Z_c Z_a result, v = X_a X_t result, w = this Z readout of the mediator)",
+    "gadget_id": 65,
+    "gadget_kind": "CNOT",
+    "gate_idx": 65,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 75
+  },
+  {
+   "app_seq": 287,
+   "applications": 1,
+   "clients": [],
+   "idx": 269,
+   "is_dagger": false,
+   "op": "Gate",
+   "patches": [
+    9
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 66,
+    "gadget_kind": "H",
+    "gate_idx": 66,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "single_qubit_op": "H",
+   "slice": 76
+  },
+  {
+   "app_seq": 288,
+   "applications": 1,
+   "clients": [],
+   "idx": 270,
+   "op": "RotateSingleCellPatch",
+   "patches": [
+    9
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 66,
+    "gadget_kind": "H",
+    "gate_idx": 66,
+    "is_dagger": false,
+    "role": "boundary_rotation"
+   },
+   "slice": 76
+  },
+  {
+   "app_seq": 297,
+   "applications": 1,
+   "clients": [],
+   "idx": 271,
+   "is_negative": false,
+   "observable": {
+    "9": "Z"
+   },
+   "op": "MeasureSinglePatch",
+   "patches": [
+    9
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 67,
+    "gadget_kind": "MEASURE",
+    "gate_idx": 67,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 79
+  },
+  {
+   "app_seq": 300,
+   "applications": 1,
+   "classical_deps": [
+    9
+   ],
+   "clients": [],
+   "idx": 272,
+   "is_dagger": false,
+   "op": "Gate",
+   "patches": [
+    5
+   ],
+   "provenance": {
+    "condition": {
+     "gate_idx": 67,
+     "patch": 9,
+     "register": "m2"
+    },
+    "frame": "",
+    "gadget_id": 68,
+    "gadget_kind": "CZ",
+    "gate_idx": 68,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "single_qubit_op": "H",
+   "slice": 80
+  },
+  {
+   "app_seq": 301,
+   "applications": 1,
+   "classical_deps": [
+    9
+   ],
+   "clients": [],
+   "idx": 273,
+   "op": "RotateSingleCellPatch",
+   "patches": [
+    5
+   ],
+   "provenance": {
+    "condition": {
+     "gate_idx": 67,
+     "patch": 9,
+     "register": "m2"
+    },
+    "frame": "",
+    "gadget_id": 68,
+    "gadget_kind": "CZ",
+    "gate_idx": 68,
+    "is_dagger": false,
+    "role": "boundary_rotation"
+   },
+   "slice": 80
+  },
+  {
+   "app_seq": 307,
+   "applications": 1,
+   "classical_deps": [
+    9
+   ],
+   "clients": [
+    1,
+    5
+   ],
+   "idx": 274,
+   "op": "Init",
+   "patches": [
+    1,
+    5,
+    75
+   ],
+   "place_next_to": {
+    "id": 5,
+    "op": "X"
+   },
+   "provenance": {
+    "condition": {
+     "gate_idx": 67,
+     "patch": 9,
+     "register": "m2"
+    },
+    "frame": "",
+    "gadget_id": 68,
+    "gadget_kind": "CZ",
+    "gate_idx": 68,
+    "is_dagger": false,
+    "role": "mediator"
+   },
+   "slice": 83,
+   "state": "Plus"
+  },
+  {
+   "app_seq": 308,
+   "applications": 1,
+   "classical_deps": [
+    9
+   ],
+   "clients": [],
+   "idx": 275,
+   "is_negative": false,
+   "observable": {
+    "1": "Z",
+    "75": "Z"
+   },
+   "op": "MultiBodyMeasure",
+   "patches": [
+    1,
+    75
+   ],
+   "provenance": {
+    "condition": {
+     "gate_idx": 67,
+     "patch": 9,
+     "register": "m2"
+    },
+    "frame": "",
+    "gadget_id": 68,
+    "gadget_kind": "CZ",
+    "gate_idx": 68,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 83
+  },
+  {
+   "app_seq": 315,
+   "applications": 1,
+   "classical_deps": [
+    9
+   ],
+   "clients": [],
+   "idx": 276,
+   "is_negative": false,
+   "observable": {
+    "5": "X",
+    "75": "X"
+   },
+   "op": "MultiBodyMeasure",
+   "patches": [
+    75,
+    5
+   ],
+   "provenance": {
+    "condition": {
+     "gate_idx": 67,
+     "patch": 9,
+     "register": "m2"
+    },
+    "frame": "",
+    "gadget_id": 68,
+    "gadget_kind": "CZ",
+    "gate_idx": 68,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 84
+  },
+  {
+   "app_seq": 316,
+   "applications": 1,
+   "classical_deps": [
+    9
+   ],
+   "clients": [],
+   "idx": 277,
+   "is_negative": false,
+   "observable": {
+    "75": "Z"
+   },
+   "op": "MeasureSinglePatch",
+   "patches": [
+    75
+   ],
+   "provenance": {
+    "condition": {
+     "gate_idx": 67,
+     "patch": 9,
+     "register": "m2"
+    },
+    "frame": "Z_c^v X_t^(u xor w) (u = Z_c Z_a result, v = X_a X_t result, w = this Z readout of the mediator)",
+    "gadget_id": 68,
+    "gadget_kind": "CZ",
+    "gate_idx": 68,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 84
+  },
+  {
+   "app_seq": 318,
+   "applications": 1,
+   "classical_deps": [
+    9
+   ],
+   "clients": [],
+   "idx": 278,
+   "is_dagger": false,
+   "op": "Gate",
+   "patches": [
+    5
+   ],
+   "provenance": {
+    "condition": {
+     "gate_idx": 67,
+     "patch": 9,
+     "register": "m2"
+    },
+    "frame": "",
+    "gadget_id": 68,
+    "gadget_kind": "CZ",
+    "gate_idx": 68,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "single_qubit_op": "H",
+   "slice": 85
+  },
+  {
+   "app_seq": 319,
+   "applications": 1,
+   "classical_deps": [
+    9
+   ],
+   "clients": [],
+   "idx": 279,
+   "op": "RotateSingleCellPatch",
+   "patches": [
+    5
+   ],
+   "provenance": {
+    "condition": {
+     "gate_idx": 67,
+     "patch": 9,
+     "register": "m2"
+    },
+    "frame": "",
+    "gadget_id": 68,
+    "gadget_kind": "CZ",
+    "gate_idx": 68,
+    "is_dagger": false,
+    "role": "boundary_rotation"
+   },
+   "slice": 85
+  },
+  {
+   "app_seq": 309,
+   "applications": 1,
+   "clients": [
+    8,
+    1
+   ],
+   "idx": 280,
+   "op": "Init",
+   "patches": [
+    8,
+    1,
+    76
+   ],
+   "place_next_to": {
+    "id": 1,
+    "op": "X"
+   },
+   "provenance": {
+    "frame": "",
+    "gadget_id": 69,
+    "gadget_kind": "CNOT",
+    "gate_idx": 69,
+    "is_dagger": false,
+    "role": "mediator"
+   },
+   "slice": 83,
+   "state": "Plus"
+  },
+  {
+   "app_seq": 310,
+   "applications": 1,
+   "clients": [],
+   "idx": 281,
+   "is_negative": false,
+   "observable": {
+    "76": "Z",
+    "8": "Z"
+   },
+   "op": "MultiBodyMeasure",
+   "patches": [
+    8,
+    76
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 69,
+    "gadget_kind": "CNOT",
+    "gate_idx": 69,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 83
+  },
+  {
+   "app_seq": 313,
+   "applications": 1,
+   "clients": [],
+   "idx": 282,
+   "is_negative": false,
+   "observable": {
+    "1": "X",
+    "76": "X"
+   },
+   "op": "MultiBodyMeasure",
+   "patches": [
+    76,
+    1
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 69,
+    "gadget_kind": "CNOT",
+    "gate_idx": 69,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 84
+  },
+  {
+   "app_seq": 314,
+   "applications": 1,
+   "clients": [],
+   "idx": 283,
+   "is_negative": false,
+   "observable": {
+    "76": "Z"
+   },
+   "op": "MeasureSinglePatch",
+   "patches": [
+    76
+   ],
+   "provenance": {
+    "frame": "Z_c^v X_t^(u xor w) (u = Z_c Z_a result, v = X_a X_t result, w = this Z readout of the mediator)",
+    "gadget_id": 69,
+    "gadget_kind": "CNOT",
+    "gate_idx": 69,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 84
+  },
+  {
+   "app_seq": 328,
+   "applications": 1,
+   "clients": [
+    1,
+    5
+   ],
+   "idx": 284,
+   "op": "Init",
+   "patches": [
+    1,
+    5,
+    77
+   ],
+   "place_next_to": {
+    "id": 5,
+    "op": "X"
+   },
+   "provenance": {
+    "frame": "",
+    "gadget_id": 70,
+    "gadget_kind": "CNOT",
+    "gate_idx": 70,
+    "is_dagger": false,
+    "role": "mediator"
+   },
+   "slice": 88,
+   "state": "Plus"
+  },
+  {
+   "app_seq": 329,
+   "applications": 1,
+   "clients": [],
+   "idx": 285,
+   "is_negative": false,
+   "observable": {
+    "1": "Z",
+    "77": "Z"
+   },
+   "op": "MultiBodyMeasure",
+   "patches": [
+    1,
+    77
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 70,
+    "gadget_kind": "CNOT",
+    "gate_idx": 70,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 88
+  },
+  {
+   "app_seq": 331,
+   "applications": 1,
+   "clients": [],
+   "idx": 286,
+   "is_negative": false,
+   "observable": {
+    "5": "X",
+    "77": "X"
+   },
+   "op": "MultiBodyMeasure",
+   "patches": [
+    77,
+    5
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 70,
+    "gadget_kind": "CNOT",
+    "gate_idx": 70,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 89
+  },
+  {
+   "app_seq": 332,
+   "applications": 1,
+   "clients": [],
+   "idx": 287,
+   "is_negative": false,
+   "observable": {
+    "77": "Z"
+   },
+   "op": "MeasureSinglePatch",
+   "patches": [
+    77
+   ],
+   "provenance": {
+    "frame": "Z_c^v X_t^(u xor w) (u = Z_c Z_a result, v = X_a X_t result, w = this Z readout of the mediator)",
+    "gadget_id": 70,
+    "gadget_kind": "CNOT",
+    "gate_idx": 70,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 89
+  },
+  {
+   "app_seq": 311,
+   "applications": 1,
+   "clients": [],
+   "idx": 288,
+   "is_dagger": false,
+   "op": "Gate",
+   "patches": [
+    8
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 71,
+    "gadget_kind": "H",
+    "gate_idx": 71,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "single_qubit_op": "H",
+   "slice": 84
+  },
+  {
+   "app_seq": 312,
+   "applications": 1,
+   "clients": [],
+   "idx": 289,
+   "op": "RotateSingleCellPatch",
+   "patches": [
+    8
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 71,
+    "gadget_kind": "H",
+    "gate_idx": 71,
+    "is_dagger": false,
+    "role": "boundary_rotation"
+   },
+   "slice": 84
+  },
+  {
+   "app_seq": 324,
+   "applications": 1,
+   "clients": [],
+   "idx": 290,
+   "is_negative": false,
+   "observable": {
+    "8": "Z"
+   },
+   "op": "MeasureSinglePatch",
+   "patches": [
+    8
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 72,
+    "gadget_kind": "MEASURE",
+    "gate_idx": 72,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 87
+  },
+  {
+   "app_seq": 326,
+   "applications": 1,
+   "classical_deps": [
+    8
+   ],
+   "clients": [],
+   "idx": 291,
+   "is_dagger": false,
+   "op": "Gate",
+   "patches": [
+    4
+   ],
+   "provenance": {
+    "condition": {
+     "gate_idx": 72,
+     "patch": 8,
+     "register": "m1"
+    },
+    "frame": "",
+    "gadget_id": 73,
+    "gadget_kind": "CZ",
+    "gate_idx": 73,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "single_qubit_op": "H",
+   "slice": 88
+  },
+  {
+   "app_seq": 327,
+   "applications": 1,
+   "classical_deps": [
+    8
+   ],
+   "clients": [],
+   "idx": 292,
+   "op": "RotateSingleCellPatch",
+   "patches": [
+    4
+   ],
+   "provenance": {
+    "condition": {
+     "gate_idx": 72,
+     "patch": 8,
+     "register": "m1"
+    },
+    "frame": "",
+    "gadget_id": 73,
+    "gadget_kind": "CZ",
+    "gate_idx": 73,
+    "is_dagger": false,
+    "role": "boundary_rotation"
+   },
+   "slice": 88
+  },
+  {
+   "app_seq": 335,
+   "applications": 1,
+   "classical_deps": [
+    8
+   ],
+   "clients": [
+    0,
+    4
+   ],
+   "idx": 293,
+   "op": "Init",
+   "patches": [
+    0,
+    4,
+    78
+   ],
+   "place_next_to": {
+    "id": 4,
+    "op": "X"
+   },
+   "provenance": {
+    "condition": {
+     "gate_idx": 72,
+     "patch": 8,
+     "register": "m1"
+    },
+    "frame": "",
+    "gadget_id": 73,
+    "gadget_kind": "CZ",
+    "gate_idx": 73,
+    "is_dagger": false,
+    "role": "mediator"
+   },
+   "slice": 91,
+   "state": "Plus"
+  },
+  {
+   "app_seq": 336,
+   "applications": 1,
+   "classical_deps": [
+    8
+   ],
+   "clients": [],
+   "idx": 294,
+   "is_negative": false,
+   "observable": {
+    "0": "Z",
+    "78": "Z"
+   },
+   "op": "MultiBodyMeasure",
+   "patches": [
+    0,
+    78
+   ],
+   "provenance": {
+    "condition": {
+     "gate_idx": 72,
+     "patch": 8,
+     "register": "m1"
+    },
+    "frame": "",
+    "gadget_id": 73,
+    "gadget_kind": "CZ",
+    "gate_idx": 73,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 91
+  },
+  {
+   "app_seq": 337,
+   "applications": 1,
+   "classical_deps": [
+    8
+   ],
+   "clients": [],
+   "idx": 295,
+   "is_negative": false,
+   "observable": {
+    "4": "X",
+    "78": "X"
+   },
+   "op": "MultiBodyMeasure",
+   "patches": [
+    78,
+    4
+   ],
+   "provenance": {
+    "condition": {
+     "gate_idx": 72,
+     "patch": 8,
+     "register": "m1"
+    },
+    "frame": "",
+    "gadget_id": 73,
+    "gadget_kind": "CZ",
+    "gate_idx": 73,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 92
+  },
+  {
+   "app_seq": 338,
+   "applications": 1,
+   "classical_deps": [
+    8
+   ],
+   "clients": [],
+   "idx": 296,
+   "is_negative": false,
+   "observable": {
+    "78": "Z"
+   },
+   "op": "MeasureSinglePatch",
+   "patches": [
+    78
+   ],
+   "provenance": {
+    "condition": {
+     "gate_idx": 72,
+     "patch": 8,
+     "register": "m1"
+    },
+    "frame": "Z_c^v X_t^(u xor w) (u = Z_c Z_a result, v = X_a X_t result, w = this Z readout of the mediator)",
+    "gadget_id": 73,
+    "gadget_kind": "CZ",
+    "gate_idx": 73,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 92
+  },
+  {
+   "app_seq": 339,
+   "applications": 1,
+   "classical_deps": [
+    8
+   ],
+   "clients": [],
+   "idx": 297,
+   "is_dagger": false,
+   "op": "Gate",
+   "patches": [
+    4
+   ],
+   "provenance": {
+    "condition": {
+     "gate_idx": 72,
+     "patch": 8,
+     "register": "m1"
+    },
+    "frame": "",
+    "gadget_id": 73,
+    "gadget_kind": "CZ",
+    "gate_idx": 73,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "single_qubit_op": "H",
+   "slice": 93
+  },
+  {
+   "app_seq": 340,
+   "applications": 1,
+   "classical_deps": [
+    8
+   ],
+   "clients": [],
+   "idx": 298,
+   "op": "RotateSingleCellPatch",
+   "patches": [
+    4
+   ],
+   "provenance": {
+    "condition": {
+     "gate_idx": 72,
+     "patch": 8,
+     "register": "m1"
+    },
+    "frame": "",
+    "gadget_id": 73,
+    "gadget_kind": "CZ",
+    "gate_idx": 73,
+    "is_dagger": false,
+    "role": "boundary_rotation"
+   },
+   "slice": 93
+  },
+  {
+   "app_seq": 344,
+   "applications": 1,
+   "clients": [
+    0,
+    4
+   ],
+   "idx": 299,
+   "op": "Init",
+   "patches": [
+    0,
+    4,
+    79
+   ],
+   "place_next_to": {
+    "id": 4,
+    "op": "X"
+   },
+   "provenance": {
+    "frame": "",
+    "gadget_id": 74,
+    "gadget_kind": "CNOT",
+    "gate_idx": 74,
+    "is_dagger": false,
+    "role": "mediator"
+   },
+   "slice": 96,
+   "state": "Plus"
+  },
+  {
+   "app_seq": 345,
+   "applications": 1,
+   "clients": [],
+   "idx": 300,
+   "is_negative": false,
+   "observable": {
+    "0": "Z",
+    "79": "Z"
+   },
+   "op": "MultiBodyMeasure",
+   "patches": [
+    0,
+    79
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 74,
+    "gadget_kind": "CNOT",
+    "gate_idx": 74,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 96
+  },
+  {
+   "app_seq": 346,
+   "applications": 1,
+   "clients": [],
+   "idx": 301,
+   "is_negative": false,
+   "observable": {
+    "4": "X",
+    "79": "X"
+   },
+   "op": "MultiBodyMeasure",
+   "patches": [
+    79,
+    4
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 74,
+    "gadget_kind": "CNOT",
+    "gate_idx": 74,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 97
+  },
+  {
+   "app_seq": 347,
+   "applications": 1,
+   "clients": [],
+   "idx": 302,
+   "is_negative": false,
+   "observable": {
+    "79": "Z"
+   },
+   "op": "MeasureSinglePatch",
+   "patches": [
+    79
+   ],
+   "provenance": {
+    "frame": "Z_c^v X_t^(u xor w) (u = Z_c Z_a result, v = X_a X_t result, w = this Z readout of the mediator)",
+    "gadget_id": 74,
+    "gadget_kind": "CNOT",
+    "gate_idx": 74,
+    "is_dagger": false,
+    "role": "program"
+   },
+   "slice": 97
+  },
+  {
+   "app_seq": 6,
+   "applications": 1,
+   "cells": [
+    {
+     "col": 2,
+     "row": 6
+    },
+    {
+     "col": 3,
+     "row": 6
+    }
+   ],
+   "clients": [],
+   "idx": 303,
+   "op": "BusyRegion",
+   "patches": [
+    8
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 0,
+    "gadget_kind": "H",
+    "gate_idx": 0,
+    "is_dagger": false,
+    "role": "busy_region"
+   },
+   "slice": 1,
+   "steps_to_clear": 2
+  },
+  {
+   "app_seq": 7,
+   "applications": 1,
+   "cells": [
+    {
+     "col": 4,
+     "row": 6
+    },
+    {
+     "col": 5,
+     "row": 6
+    }
+   ],
+   "clients": [],
+   "idx": 304,
+   "op": "BusyRegion",
+   "patches": [
+    9
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 19,
+    "gadget_kind": "H",
+    "gate_idx": 19,
+    "is_dagger": false,
+    "role": "busy_region"
+   },
+   "slice": 1,
+   "steps_to_clear": 2
+  },
+  {
+   "app_seq": 8,
+   "applications": 1,
+   "cells": [
+    {
+     "col": 6,
+     "row": 6
+    },
+    {
+     "col": 7,
+     "row": 6
+    }
+   ],
+   "clients": [],
+   "idx": 305,
+   "op": "BusyRegion",
+   "patches": [
+    10
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 39,
+    "gadget_kind": "H",
+    "gate_idx": 39,
+    "is_dagger": false,
+    "role": "busy_region"
+   },
+   "slice": 1,
+   "steps_to_clear": 2
+  },
+  {
+   "app_seq": 9,
+   "applications": 1,
+   "cells": [
+    {
+     "col": 2,
+     "row": 6
+    },
+    {
+     "col": 3,
+     "row": 6
+    }
+   ],
+   "clients": [],
+   "idx": 306,
+   "op": "BusyRegion",
+   "patches": [
+    8
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 0,
+    "gadget_kind": "H",
+    "gate_idx": 0,
+    "is_dagger": false,
+    "role": "busy_region"
+   },
+   "slice": 2,
+   "steps_to_clear": 1
+  },
+  {
+   "app_seq": 10,
+   "applications": 1,
+   "cells": [
+    {
+     "col": 4,
+     "row": 6
+    },
+    {
+     "col": 5,
+     "row": 6
+    }
+   ],
+   "clients": [],
+   "idx": 307,
+   "op": "BusyRegion",
+   "patches": [
+    9
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 19,
+    "gadget_kind": "H",
+    "gate_idx": 19,
+    "is_dagger": false,
+    "role": "busy_region"
+   },
+   "slice": 2,
+   "steps_to_clear": 1
+  },
+  {
+   "app_seq": 11,
+   "applications": 1,
+   "cells": [
+    {
+     "col": 6,
+     "row": 6
+    },
+    {
+     "col": 7,
+     "row": 6
+    }
+   ],
+   "clients": [],
+   "idx": 308,
+   "op": "BusyRegion",
+   "patches": [
+    10
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 39,
+    "gadget_kind": "H",
+    "gate_idx": 39,
+    "is_dagger": false,
+    "role": "busy_region"
+   },
+   "slice": 2,
+   "steps_to_clear": 1
+  },
+  {
+   "app_seq": 12,
+   "applications": 1,
+   "cells": [
+    {
+     "col": 2,
+     "row": 6
+    },
+    {
+     "col": 3,
+     "row": 6
+    }
+   ],
+   "clients": [],
+   "idx": 309,
+   "op": "BusyRegion",
+   "patches": [
+    8
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 0,
+    "gadget_kind": "H",
+    "gate_idx": 0,
+    "is_dagger": false,
+    "role": "busy_region"
+   },
+   "slice": 3,
+   "steps_to_clear": 0
+  },
+  {
+   "app_seq": 13,
+   "applications": 1,
+   "cells": [
+    {
+     "col": 4,
+     "row": 6
+    },
+    {
+     "col": 5,
+     "row": 6
+    }
+   ],
+   "clients": [],
+   "idx": 310,
+   "op": "BusyRegion",
+   "patches": [
+    9
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 19,
+    "gadget_kind": "H",
+    "gate_idx": 19,
+    "is_dagger": false,
+    "role": "busy_region"
+   },
+   "slice": 3,
+   "steps_to_clear": 0
+  },
+  {
+   "app_seq": 14,
+   "applications": 1,
+   "cells": [
+    {
+     "col": 6,
+     "row": 6
+    },
+    {
+     "col": 7,
+     "row": 6
+    }
+   ],
+   "clients": [],
+   "idx": 311,
+   "op": "BusyRegion",
+   "patches": [
+    10
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 39,
+    "gadget_kind": "H",
+    "gate_idx": 39,
+    "is_dagger": false,
+    "role": "busy_region"
+   },
+   "slice": 3,
+   "steps_to_clear": 0
+  },
+  {
+   "app_seq": 93,
+   "applications": 1,
+   "cells": [
+    {
+     "col": 2,
+     "row": 6
+    },
+    {
+     "col": 3,
+     "row": 6
+    }
+   ],
+   "clients": [],
+   "idx": 312,
+   "op": "BusyRegion",
+   "patches": [
+    8
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 15,
+    "gadget_kind": "H",
+    "gate_idx": 15,
+    "is_dagger": false,
+    "role": "busy_region"
+   },
+   "slice": 19,
+   "steps_to_clear": 2
+  },
+  {
+   "app_seq": 94,
+   "applications": 1,
+   "cells": [
+    {
+     "col": 2,
+     "row": 6
+    },
+    {
+     "col": 3,
+     "row": 6
+    }
+   ],
+   "clients": [],
+   "idx": 313,
+   "op": "BusyRegion",
+   "patches": [
+    8
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 15,
+    "gadget_kind": "H",
+    "gate_idx": 15,
+    "is_dagger": false,
+    "role": "busy_region"
+   },
+   "slice": 20,
+   "steps_to_clear": 1
+  },
+  {
+   "app_seq": 95,
+   "applications": 1,
+   "cells": [
+    {
+     "col": 2,
+     "row": 6
+    },
+    {
+     "col": 3,
+     "row": 6
+    }
+   ],
+   "clients": [],
+   "idx": 314,
+   "op": "BusyRegion",
+   "patches": [
+    8
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 15,
+    "gadget_kind": "H",
+    "gate_idx": 15,
+    "is_dagger": false,
+    "role": "busy_region"
+   },
+   "slice": 21,
+   "steps_to_clear": 0
+  },
+  {
+   "app_seq": 165,
+   "applications": 1,
+   "cells": [
+    {
+     "col": 4,
+     "row": 6
+    },
+    {
+     "col": 5,
+     "row": 6
+    }
+   ],
+   "clients": [],
+   "idx": 315,
+   "op": "BusyRegion",
+   "patches": [
+    9
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 34,
+    "gadget_kind": "H",
+    "gate_idx": 34,
+    "is_dagger": false,
+    "role": "busy_region"
+   },
+   "slice": 38,
+   "steps_to_clear": 2
+  },
+  {
+   "app_seq": 166,
+   "applications": 1,
+   "cells": [
+    {
+     "col": 4,
+     "row": 6
+    },
+    {
+     "col": 5,
+     "row": 6
+    }
+   ],
+   "clients": [],
+   "idx": 316,
+   "op": "BusyRegion",
+   "patches": [
+    9
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 34,
+    "gadget_kind": "H",
+    "gate_idx": 34,
+    "is_dagger": false,
+    "role": "busy_region"
+   },
+   "slice": 39,
+   "steps_to_clear": 1
+  },
+  {
+   "app_seq": 167,
+   "applications": 1,
+   "cells": [
+    {
+     "col": 4,
+     "row": 6
+    },
+    {
+     "col": 5,
+     "row": 6
+    }
+   ],
+   "clients": [],
+   "idx": 317,
+   "op": "BusyRegion",
+   "patches": [
+    9
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 34,
+    "gadget_kind": "H",
+    "gate_idx": 34,
+    "is_dagger": false,
+    "role": "busy_region"
+   },
+   "slice": 40,
+   "steps_to_clear": 0
+  },
+  {
+   "app_seq": 241,
+   "applications": 1,
+   "cells": [
+    {
+     "col": 6,
+     "row": 6
+    },
+    {
+     "col": 7,
+     "row": 6
+    }
+   ],
+   "clients": [],
+   "idx": 318,
+   "op": "BusyRegion",
+   "patches": [
+    10
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 54,
+    "gadget_kind": "H",
+    "gate_idx": 54,
+    "is_dagger": false,
+    "role": "busy_region"
+   },
+   "slice": 59,
+   "steps_to_clear": 2
+  },
+  {
+   "app_seq": 242,
+   "applications": 1,
+   "cells": [
+    {
+     "col": 6,
+     "row": 6
+    },
+    {
+     "col": 7,
+     "row": 6
+    }
+   ],
+   "clients": [],
+   "idx": 319,
+   "op": "BusyRegion",
+   "patches": [
+    10
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 54,
+    "gadget_kind": "H",
+    "gate_idx": 54,
+    "is_dagger": false,
+    "role": "busy_region"
+   },
+   "slice": 60,
+   "steps_to_clear": 1
+  },
+  {
+   "app_seq": 243,
+   "applications": 1,
+   "cells": [
+    {
+     "col": 6,
+     "row": 6
+    },
+    {
+     "col": 7,
+     "row": 6
+    }
+   ],
+   "clients": [],
+   "idx": 320,
+   "op": "BusyRegion",
+   "patches": [
+    10
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 54,
+    "gadget_kind": "H",
+    "gate_idx": 54,
+    "is_dagger": false,
+    "role": "busy_region"
+   },
+   "slice": 61,
+   "steps_to_clear": 0
+  },
+  {
+   "app_seq": 266,
+   "applications": 1,
+   "cells": [
+    {
+     "col": 6,
+     "row": 6
+    },
+    {
+     "col": 7,
+     "row": 6
+    }
+   ],
+   "clients": [],
+   "idx": 321,
+   "op": "BusyRegion",
+   "patches": [
+    10
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 60,
+    "gadget_kind": "H",
+    "gate_idx": 60,
+    "is_dagger": false,
+    "role": "busy_region"
+   },
+   "slice": 68,
+   "steps_to_clear": 2
+  },
+  {
+   "app_seq": 267,
+   "applications": 1,
+   "cells": [
+    {
+     "col": 6,
+     "row": 6
+    },
+    {
+     "col": 7,
+     "row": 6
+    }
+   ],
+   "clients": [],
+   "idx": 322,
+   "op": "BusyRegion",
+   "patches": [
+    10
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 60,
+    "gadget_kind": "H",
+    "gate_idx": 60,
+    "is_dagger": false,
+    "role": "busy_region"
+   },
+   "slice": 69,
+   "steps_to_clear": 1
+  },
+  {
+   "app_seq": 268,
+   "applications": 1,
+   "cells": [
+    {
+     "col": 6,
+     "row": 6
+    },
+    {
+     "col": 7,
+     "row": 6
+    }
+   ],
+   "clients": [],
+   "idx": 323,
+   "op": "BusyRegion",
+   "patches": [
+    10
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 60,
+    "gadget_kind": "H",
+    "gate_idx": 60,
+    "is_dagger": false,
+    "role": "busy_region"
+   },
+   "slice": 70,
+   "steps_to_clear": 0
+  },
+  {
+   "app_seq": 272,
+   "applications": 1,
+   "cells": [
+    {
+     "col": 6,
+     "row": 4
+    },
+    {
+     "col": 7,
+     "row": 4
+    }
+   ],
+   "clients": [],
+   "idx": 324,
+   "op": "BusyRegion",
+   "patches": [
+    6
+   ],
+   "provenance": {
+    "condition": {
+     "gate_idx": 61,
+     "patch": 10,
+     "register": "m3"
+    },
+    "frame": "",
+    "gadget_id": 62,
+    "gadget_kind": "CZ",
+    "gate_idx": 62,
+    "is_dagger": false,
+    "role": "busy_region"
+   },
+   "slice": 72,
+   "steps_to_clear": 2
+  },
+  {
+   "app_seq": 273,
+   "applications": 1,
+   "cells": [
+    {
+     "col": 6,
+     "row": 4
+    },
+    {
+     "col": 7,
+     "row": 4
+    }
+   ],
+   "clients": [],
+   "idx": 325,
+   "op": "BusyRegion",
+   "patches": [
+    6
+   ],
+   "provenance": {
+    "condition": {
+     "gate_idx": 61,
+     "patch": 10,
+     "register": "m3"
+    },
+    "frame": "",
+    "gadget_id": 62,
+    "gadget_kind": "CZ",
+    "gate_idx": 62,
+    "is_dagger": false,
+    "role": "busy_region"
+   },
+   "slice": 73,
+   "steps_to_clear": 1
+  },
+  {
+   "app_seq": 274,
+   "applications": 1,
+   "cells": [
+    {
+     "col": 6,
+     "row": 4
+    },
+    {
+     "col": 7,
+     "row": 4
+    }
+   ],
+   "clients": [],
+   "idx": 326,
+   "op": "BusyRegion",
+   "patches": [
+    6
+   ],
+   "provenance": {
+    "condition": {
+     "gate_idx": 61,
+     "patch": 10,
+     "register": "m3"
+    },
+    "frame": "",
+    "gadget_id": 62,
+    "gadget_kind": "CZ",
+    "gate_idx": 62,
+    "is_dagger": false,
+    "role": "busy_region"
+   },
+   "slice": 74,
+   "steps_to_clear": 0
+  },
+  {
+   "app_seq": 291,
+   "applications": 1,
+   "cells": [
+    {
+     "col": 4,
+     "row": 6
+    },
+    {
+     "col": 5,
+     "row": 6
+    }
+   ],
+   "clients": [],
+   "idx": 327,
+   "op": "BusyRegion",
+   "patches": [
+    9
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 66,
+    "gadget_kind": "H",
+    "gate_idx": 66,
+    "is_dagger": false,
+    "role": "busy_region"
+   },
+   "slice": 77,
+   "steps_to_clear": 2
+  },
+  {
+   "app_seq": 292,
+   "applications": 1,
+   "cells": [
+    {
+     "col": 6,
+     "row": 4
+    },
+    {
+     "col": 7,
+     "row": 4
+    }
+   ],
+   "clients": [],
+   "idx": 328,
+   "op": "BusyRegion",
+   "patches": [
+    6
+   ],
+   "provenance": {
+    "condition": {
+     "gate_idx": 61,
+     "patch": 10,
+     "register": "m3"
+    },
+    "frame": "",
+    "gadget_id": 62,
+    "gadget_kind": "CZ",
+    "gate_idx": 62,
+    "is_dagger": false,
+    "role": "busy_region"
+   },
+   "slice": 77,
+   "steps_to_clear": 2
+  },
+  {
+   "app_seq": 293,
+   "applications": 1,
+   "cells": [
+    {
+     "col": 4,
+     "row": 6
+    },
+    {
+     "col": 5,
+     "row": 6
+    }
+   ],
+   "clients": [],
+   "idx": 329,
+   "op": "BusyRegion",
+   "patches": [
+    9
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 66,
+    "gadget_kind": "H",
+    "gate_idx": 66,
+    "is_dagger": false,
+    "role": "busy_region"
+   },
+   "slice": 78,
+   "steps_to_clear": 1
+  },
+  {
+   "app_seq": 294,
+   "applications": 1,
+   "cells": [
+    {
+     "col": 6,
+     "row": 4
+    },
+    {
+     "col": 7,
+     "row": 4
+    }
+   ],
+   "clients": [],
+   "idx": 330,
+   "op": "BusyRegion",
+   "patches": [
+    6
+   ],
+   "provenance": {
+    "condition": {
+     "gate_idx": 61,
+     "patch": 10,
+     "register": "m3"
+    },
+    "frame": "",
+    "gadget_id": 62,
+    "gadget_kind": "CZ",
+    "gate_idx": 62,
+    "is_dagger": false,
+    "role": "busy_region"
+   },
+   "slice": 78,
+   "steps_to_clear": 1
+  },
+  {
+   "app_seq": 295,
+   "applications": 1,
+   "cells": [
+    {
+     "col": 4,
+     "row": 6
+    },
+    {
+     "col": 5,
+     "row": 6
+    }
+   ],
+   "clients": [],
+   "idx": 331,
+   "op": "BusyRegion",
+   "patches": [
+    9
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 66,
+    "gadget_kind": "H",
+    "gate_idx": 66,
+    "is_dagger": false,
+    "role": "busy_region"
+   },
+   "slice": 79,
+   "steps_to_clear": 0
+  },
+  {
+   "app_seq": 296,
+   "applications": 1,
+   "cells": [
+    {
+     "col": 6,
+     "row": 4
+    },
+    {
+     "col": 7,
+     "row": 4
+    }
+   ],
+   "clients": [],
+   "idx": 332,
+   "op": "BusyRegion",
+   "patches": [
+    6
+   ],
+   "provenance": {
+    "condition": {
+     "gate_idx": 61,
+     "patch": 10,
+     "register": "m3"
+    },
+    "frame": "",
+    "gadget_id": 62,
+    "gadget_kind": "CZ",
+    "gate_idx": 62,
+    "is_dagger": false,
+    "role": "busy_region"
+   },
+   "slice": 79,
+   "steps_to_clear": 0
+  },
+  {
+   "app_seq": 304,
+   "applications": 1,
+   "cells": [
+    {
+     "col": 4,
+     "row": 4
+    },
+    {
+     "col": 3,
+     "row": 4
+    }
+   ],
+   "clients": [],
+   "idx": 333,
+   "op": "BusyRegion",
+   "patches": [
+    5
+   ],
+   "provenance": {
+    "condition": {
+     "gate_idx": 67,
+     "patch": 9,
+     "register": "m2"
+    },
+    "frame": "",
+    "gadget_id": 68,
+    "gadget_kind": "CZ",
+    "gate_idx": 68,
+    "is_dagger": false,
+    "role": "busy_region"
+   },
+   "slice": 81,
+   "steps_to_clear": 2
+  },
+  {
+   "app_seq": 305,
+   "applications": 1,
+   "cells": [
+    {
+     "col": 4,
+     "row": 4
+    },
+    {
+     "col": 3,
+     "row": 4
+    }
+   ],
+   "clients": [],
+   "idx": 334,
+   "op": "BusyRegion",
+   "patches": [
+    5
+   ],
+   "provenance": {
+    "condition": {
+     "gate_idx": 67,
+     "patch": 9,
+     "register": "m2"
+    },
+    "frame": "",
+    "gadget_id": 68,
+    "gadget_kind": "CZ",
+    "gate_idx": 68,
+    "is_dagger": false,
+    "role": "busy_region"
+   },
+   "slice": 82,
+   "steps_to_clear": 1
+  },
+  {
+   "app_seq": 306,
+   "applications": 1,
+   "cells": [
+    {
+     "col": 4,
+     "row": 4
+    },
+    {
+     "col": 3,
+     "row": 4
+    }
+   ],
+   "clients": [],
+   "idx": 335,
+   "op": "BusyRegion",
+   "patches": [
+    5
+   ],
+   "provenance": {
+    "condition": {
+     "gate_idx": 67,
+     "patch": 9,
+     "register": "m2"
+    },
+    "frame": "",
+    "gadget_id": 68,
+    "gadget_kind": "CZ",
+    "gate_idx": 68,
+    "is_dagger": false,
+    "role": "busy_region"
+   },
+   "slice": 83,
+   "steps_to_clear": 0
+  },
+  {
+   "app_seq": 317,
+   "applications": 1,
+   "cells": [
+    {
+     "col": 2,
+     "row": 6
+    },
+    {
+     "col": 3,
+     "row": 6
+    }
+   ],
+   "clients": [],
+   "idx": 336,
+   "op": "BusyRegion",
+   "patches": [
+    8
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 71,
+    "gadget_kind": "H",
+    "gate_idx": 71,
+    "is_dagger": false,
+    "role": "busy_region"
+   },
+   "slice": 85,
+   "steps_to_clear": 2
+  },
+  {
+   "app_seq": 320,
+   "applications": 1,
+   "cells": [
+    {
+     "col": 2,
+     "row": 6
+    },
+    {
+     "col": 3,
+     "row": 6
+    }
+   ],
+   "clients": [],
+   "idx": 337,
+   "op": "BusyRegion",
+   "patches": [
+    8
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 71,
+    "gadget_kind": "H",
+    "gate_idx": 71,
+    "is_dagger": false,
+    "role": "busy_region"
+   },
+   "slice": 86,
+   "steps_to_clear": 1
+  },
+  {
+   "app_seq": 321,
+   "applications": 1,
+   "cells": [
+    {
+     "col": 4,
+     "row": 4
+    },
+    {
+     "col": 5,
+     "row": 4
+    }
+   ],
+   "clients": [],
+   "idx": 338,
+   "op": "BusyRegion",
+   "patches": [
+    5
+   ],
+   "provenance": {
+    "condition": {
+     "gate_idx": 67,
+     "patch": 9,
+     "register": "m2"
+    },
+    "frame": "",
+    "gadget_id": 68,
+    "gadget_kind": "CZ",
+    "gate_idx": 68,
+    "is_dagger": false,
+    "role": "busy_region"
+   },
+   "slice": 86,
+   "steps_to_clear": 2
+  },
+  {
+   "app_seq": 322,
+   "applications": 1,
+   "cells": [
+    {
+     "col": 2,
+     "row": 6
+    },
+    {
+     "col": 3,
+     "row": 6
+    }
+   ],
+   "clients": [],
+   "idx": 339,
+   "op": "BusyRegion",
+   "patches": [
+    8
+   ],
+   "provenance": {
+    "frame": "",
+    "gadget_id": 71,
+    "gadget_kind": "H",
+    "gate_idx": 71,
+    "is_dagger": false,
+    "role": "busy_region"
+   },
+   "slice": 87,
+   "steps_to_clear": 0
+  },
+  {
+   "app_seq": 323,
+   "applications": 1,
+   "cells": [
+    {
+     "col": 4,
+     "row": 4
+    },
+    {
+     "col": 5,
+     "row": 4
+    }
+   ],
+   "clients": [],
+   "idx": 340,
+   "op": "BusyRegion",
+   "patches": [
+    5
+   ],
+   "provenance": {
+    "condition": {
+     "gate_idx": 67,
+     "patch": 9,
+     "register": "m2"
+    },
+    "frame": "",
+    "gadget_id": 68,
+    "gadget_kind": "CZ",
+    "gate_idx": 68,
+    "is_dagger": false,
+    "role": "busy_region"
+   },
+   "slice": 87,
+   "steps_to_clear": 1
+  },
+  {
+   "app_seq": 325,
+   "applications": 1,
+   "cells": [
+    {
+     "col": 4,
+     "row": 4
+    },
+    {
+     "col": 5,
+     "row": 4
+    }
+   ],
+   "clients": [],
+   "idx": 341,
+   "op": "BusyRegion",
+   "patches": [
+    5
+   ],
+   "provenance": {
+    "condition": {
+     "gate_idx": 67,
+     "patch": 9,
+     "register": "m2"
+    },
+    "frame": "",
+    "gadget_id": 68,
+    "gadget_kind": "CZ",
+    "gate_idx": 68,
+    "is_dagger": false,
+    "role": "busy_region"
+   },
+   "slice": 88,
+   "steps_to_clear": 0
+  },
+  {
+   "app_seq": 330,
+   "applications": 1,
+   "cells": [
+    {
+     "col": 2,
+     "row": 4
+    },
+    {
+     "col": 3,
+     "row": 4
+    }
+   ],
+   "clients": [],
+   "idx": 342,
+   "op": "BusyRegion",
+   "patches": [
+    4
+   ],
+   "provenance": {
+    "condition": {
+     "gate_idx": 72,
+     "patch": 8,
+     "register": "m1"
+    },
+    "frame": "",
+    "gadget_id": 73,
+    "gadget_kind": "CZ",
+    "gate_idx": 73,
+    "is_dagger": false,
+    "role": "busy_region"
+   },
+   "slice": 89,
+   "steps_to_clear": 2
+  },
+  {
+   "app_seq": 333,
+   "applications": 1,
+   "cells": [
+    {
+     "col": 2,
+     "row": 4
+    },
+    {
+     "col": 3,
+     "row": 4
+    }
+   ],
+   "clients": [],
+   "idx": 343,
+   "op": "BusyRegion",
+   "patches": [
+    4
+   ],
+   "provenance": {
+    "condition": {
+     "gate_idx": 72,
+     "patch": 8,
+     "register": "m1"
+    },
+    "frame": "",
+    "gadget_id": 73,
+    "gadget_kind": "CZ",
+    "gate_idx": 73,
+    "is_dagger": false,
+    "role": "busy_region"
+   },
+   "slice": 90,
+   "steps_to_clear": 1
+  },
+  {
+   "app_seq": 334,
+   "applications": 1,
+   "cells": [
+    {
+     "col": 2,
+     "row": 4
+    },
+    {
+     "col": 3,
+     "row": 4
+    }
+   ],
+   "clients": [],
+   "idx": 344,
+   "op": "BusyRegion",
+   "patches": [
+    4
+   ],
+   "provenance": {
+    "condition": {
+     "gate_idx": 72,
+     "patch": 8,
+     "register": "m1"
+    },
+    "frame": "",
+    "gadget_id": 73,
+    "gadget_kind": "CZ",
+    "gate_idx": 73,
+    "is_dagger": false,
+    "role": "busy_region"
+   },
+   "slice": 91,
+   "steps_to_clear": 0
+  },
+  {
+   "app_seq": 341,
+   "applications": 1,
+   "cells": [
+    {
+     "col": 2,
+     "row": 4
+    },
+    {
+     "col": 3,
+     "row": 4
+    }
+   ],
+   "clients": [],
+   "idx": 345,
+   "op": "BusyRegion",
+   "patches": [
+    4
+   ],
+   "provenance": {
+    "condition": {
+     "gate_idx": 72,
+     "patch": 8,
+     "register": "m1"
+    },
+    "frame": "",
+    "gadget_id": 73,
+    "gadget_kind": "CZ",
+    "gate_idx": 73,
+    "is_dagger": false,
+    "role": "busy_region"
+   },
+   "slice": 94,
+   "steps_to_clear": 2
+  },
+  {
+   "app_seq": 342,
+   "applications": 1,
+   "cells": [
+    {
+     "col": 2,
+     "row": 4
+    },
+    {
+     "col": 3,
+     "row": 4
+    }
+   ],
+   "clients": [],
+   "idx": 346,
+   "op": "BusyRegion",
+   "patches": [
+    4
+   ],
+   "provenance": {
+    "condition": {
+     "gate_idx": 72,
+     "patch": 8,
+     "register": "m1"
+    },
+    "frame": "",
+    "gadget_id": 73,
+    "gadget_kind": "CZ",
+    "gate_idx": 73,
+    "is_dagger": false,
+    "role": "busy_region"
+   },
+   "slice": 95,
+   "steps_to_clear": 1
+  },
+  {
+   "app_seq": 343,
+   "applications": 1,
+   "cells": [
+    {
+     "col": 2,
+     "row": 4
+    },
+    {
+     "col": 3,
+     "row": 4
+    }
+   ],
+   "clients": [],
+   "idx": 347,
+   "op": "BusyRegion",
+   "patches": [
+    4
+   ],
+   "provenance": {
+    "condition": {
+     "gate_idx": 72,
+     "patch": 8,
+     "register": "m1"
+    },
+    "frame": "",
+    "gadget_id": 73,
+    "gadget_kind": "CZ",
+    "gate_idx": 73,
+    "is_dagger": false,
+    "role": "busy_region"
+   },
+   "slice": 96,
+   "steps_to_clear": 0
+  }
+ ],
+ "ls_instructions_count": 348,
+ "schema": "scoutq-lsqecc-meta-1",
+ "slice_count": 99
+}

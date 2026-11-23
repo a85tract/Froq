@@ -1,0 +1,182 @@
+{
+ "bench": "adder_4",
+ "converter_version": "scoutq-wp3-compile/0.3",
+ "events_schema": "scoutq-events/1",
+ "slicer": "lsqecc_slicer",
+ "slicer_sha256": "e94a4e338c41e8b52efb57bad9b55beec3e3e245e770c78855f6cd289fd6cead",
+ "slicer_argv": [
+  "lsqecc_slicer",
+  "-q",
+  "-i",
+  "e2e/schedules/adder/adder_4.qasm",
+  "-L",
+  "edpc",
+  "--disttime",
+  "1",
+  "--nostagger",
+  "-P",
+  "wave",
+  "-o",
+  "e2e/schedules/adder/adder_4.slices.json",
+  "--metaout",
+  "e2e/schedules/adder/adder_4.meta.json"
+ ],
+ "compiler": {
+  "base_commit": "e88b1a4",
+  "fork": "liblsqecc_scoutq",
+  "fork_commit": "72811c099e783e1ef982154f799354fafe7ddae1"
+ },
+ "compiler_flags": {
+  "cnot_ancilla_placement_default": "AncillaNextToTarget",
+  "cnot_ancilla_placement_default_note": "value after the layout override; the parser preloads the first gate before the override, so an unannotated first CNOT keeps the built-in default AncillaFreePlacement",
+  "cnot_corrections": "never",
+  "cnot_type_default": "ZXWithMBMControlFirst",
+  "compilation_mode": "nonlocal",
+  "condensed": false,
+  "disttime": 1,
+  "explicitfactories": false,
+  "input_is_qasm": true,
+  "layout": "edpc",
+  "nostagger": true,
+  "numlanes": 1,
+  "op_ids_legacy": false,
+  "pipeline": "wave",
+  "rzprecision_log_ten_negative": "10.000000",
+  "s_gate_mode": "twists"
+ },
+ "inputs": {
+  "slices_json": "adder_4.slices.json",
+  "meta": "adder_4.meta.json",
+  "qasm": "e2e/schedules/adder/adder_4.qasm"
+ },
+ "fingerprints": {
+  "qasm": "6e0630d7cc8a6e020ba86239e3f0b066ecaa9f30182ac0ee157753fd985edc41",
+  "slices_json": "5af91804f61545eceb79280c3719d2f62dedf2c2f11cec29dbc46dc5e651d618",
+  "meta": "9e35dbcdbeb61264789bbe45f2c98fc3bd81489e0c7ad4529f95546c9672fb79",
+  "meta_note": "the meta file's slicer path is cut to its file name; before the cut its SHA-256 was c5ccafe89d0d966f1b797bed5455af354e98ed90950d339d1fec64ca4b60d033",
+  "lss": "b09a363746190790afaa590589018164e5c6fcc18b9687587e6195dc0c85616a",
+  "events": "deaa2818623ee2933f43378704bd86717d496cfe3abf3e548a0b3386259fec41"
+ },
+ "inventory_templates": {
+  "H": 15,
+  "T": 12,
+  "T1": 12,
+  "T2": 12,
+  "S": 21,
+  "CNOT_cf_patched": 36,
+  "Z": 6,
+  "MEASURE": 3,
+  "CZ": 3
+ },
+ "inventory_gadget_kinds": {
+  "H": 9,
+  "T": 12,
+  "CNOT": 33,
+  "S": 9,
+  "Z": 6,
+  "MEASURE": 3,
+  "CZ": 3
+ },
+ "source_gate_counts": {
+  "h": 9,
+  "t": 12,
+  "cx": 33,
+  "s": 9,
+  "z": 6,
+  "measure": 3,
+  "cz": 3
+ },
+ "deviations": {
+  "tdg_as_t": 0,
+  "sdg_as_s": 0,
+  "reset_dropped": 0,
+  "cz_composite": 3,
+  "measurements_kept": 3,
+  "conditional_cz": 3,
+  "cnot_placements": {
+   "requested=target|resolved=next_to_target": 36
+  },
+  "terminal_measurements": 0
+ },
+ "counts": {
+  "slices": 98,
+  "lss_instructions": 451,
+  "events": 629,
+  "lli": 348,
+  "lli_skipped": 45
+ },
+ "classical_feedback": {
+  "conditional_cz": 3,
+  "groups": [
+   {
+    "gadget": "g98",
+    "result_id": "r248",
+    "register": "m3",
+    "measured_patch": 10,
+    "readout_lss": 351,
+    "decode_anchor": 349,
+    "lss_group": [
+     352,
+     353,
+     354,
+     355,
+     356,
+     357,
+     358,
+     375,
+     376,
+     381,
+     382,
+     383,
+     384
+    ]
+   },
+   {
+    "gadget": "g107",
+    "result_id": "r271",
+    "register": "m2",
+    "measured_patch": 9,
+    "readout_lss": 385,
+    "decode_anchor": 379,
+    "lss_group": [
+     389,
+     390,
+     391,
+     392,
+     395,
+     396,
+     397,
+     413,
+     414,
+     415,
+     416,
+     417,
+     418
+    ]
+   },
+   {
+    "gadget": "g115",
+    "result_id": "r290",
+    "register": "m1",
+    "measured_patch": 8,
+    "readout_lss": 419,
+    "decode_anchor": 409,
+    "lss_group": [
+     420,
+     421,
+     422,
+     423,
+     429,
+     430,
+     431,
+     432,
+     433,
+     434,
+     435,
+     436,
+     437
+    ]
+   }
+  ]
+ }
+}

@@ -1,0 +1,447 @@
+{
+ "about": "The hardware-limit mode: the capacities, service times and overflow rules of the controller's blocks (Section 5.6). The mode reads this one file. Cycles are 3.5 ns cycles, counted from the cycle an operation is presented in to its result, as the RTL tests count them; a round is 286 of them. Every resource is a server with a budget of round_cycles a round: it serves its queue in the order given, work that misses the round carries over in order, and an event tied to an operation takes effect in the round that operation completes. Within one event the operations run in the order listed, each on its port once the previous one has completed; different events overlap across ports.",
+ "round_cycles": 286,
+ "capacities": {
+  "live_values": 64,
+  "walk_boundaries": 17,
+  "resv_slots": 64,
+  "resv_cells": 512,
+  "guard_frames": 64,
+  "decode_windows": 256,
+  "overflow": {
+   "live_values": "the value is not registered and runs as Wait-for-Decoder (hw:values_full)",
+   "walk_boundaries": "ADVANCE is not eligible at boundary 16 (hw:walk_cap)",
+   "resv_slots": "the reserve is refused: the commit is not taken, or the lazy reservation is not made (hw:resv_full)",
+   "resv_cells": "the layout is refused at load (hw:cells_over)",
+   "decode_windows": "a window waits for a slot, F_4's rule (pool:slot_wait_rounds, u:not_estimable:capacity)",
+   "walk_keys": "per (program, d, level): a site without a walk slot is refused; its values run as Wait-for-Decoder (wager2:sites_no_slot)",
+   "rebased_keys": "per (program, d, level), allocated first: a (site, b) without a rebased slot has COMMIT unauthorised at b (wager2:commit_no_slot)"
+  },
+  "walk_keys": 64,
+  "rebased_keys": 64
+ },
+ "lookup": {
+  "status": "measured: hw/rtl/se_w2_table.sv at d504c31; cycles in job 7716170 (16 of 16 cases, 195,537 lookups); Vivado w2t1_d504c31 closes 3.5 ns, WNS +0.553 ns",
+  "ports": 2,
+  "per_round": "one lookup per carrying value, at its actual age; at most 64, 32 a port, the port being the value slot's parity",
+  "latency": 8,
+  "per_cycle": 1,
+  "overflow": "cannot be exceeded (at most 64 lookups against 2 x 286 cycles); the mode asserts it (wager2:lookups per round)",
+  "jumps": "a block that passes a lane of the gap mask: on beta = 0 ADVANCE stays only under codes 0 and 1 (wager2:jump_removed); on beta = 1 it is prohibited (wager2:jump_prohibited)",
+  "state_timing": {
+   "e_and_age_bins": "advance at a round's start",
+   "c_state": "a prediction's c-state applies from the next round's start",
+   "load_bin": "round t uses the reservation manager's totals after round t - 1's tick"
+  }
+ },
+ "resv": {
+  "use": {
+   "evaluation": "improved: its out-of-context run resv5_1cb723f closes 3.5 ns (WNS +0.117 ns)",
+   "sensitivity": "as_built"
+  },
+  "mask_load": "MASK x writes mask register A or B with x: 2 cycles for each 64-bit word in which x differs from the register's previous content (16 for a full 512-cell mask). The mode keeps each register's content. Cell ids are the layout's row-major cell numbers.",
+  "as_built": {
+   "rtl": "hw/rtl/se_resv.sv at 199615d",
+   "measured": "cycles: job 7712873 (26 cases); timing: Vivado resv4, WNS +0.015 ns at 3.5 ns",
+   "ports": {
+    "op": [
+     "LAZY",
+     "ACT",
+     "REL",
+     "STARTED",
+     "HELD",
+     "TICK",
+     "TOTALS",
+     "MASKW",
+     "WS_ADD",
+     "WS_SUB",
+     "TGT_ADD",
+     "TGT_SUB",
+     "LOCK_ADD",
+     "LOCK_SUB",
+     "QUERY"
+    ]
+   },
+   "cycles": {
+    "LAZY": 2,
+    "ACT": 2,
+    "REL": 2,
+    "STARTED": 2,
+    "HELD": 2,
+    "TOTALS": 2,
+    "TICK": 67,
+    "MASKW": 2,
+    "WS_ADD": 2,
+    "WS_SUB": 2,
+    "TGT_ADD": 2,
+    "TGT_SUB": 2,
+    "LOCK_ADD": 2,
+    "LOCK_SUB": 2,
+    "QUERY": 3
+   },
+   "queue_order": {
+    "op": [
+     "tick",
+     "frame_end",
+     "script_end",
+     "dispatcher_guard_check",
+     "splice_and_rebase",
+     "decide",
+     "commit_check_and_reserve",
+     "registration"
+    ]
+   },
+   "events": {
+    "tick": [
+     [
+      "op",
+      "TICK"
+     ]
+    ],
+    "registration": [
+     [
+      "op",
+      "MASK A guard"
+     ],
+     [
+      "op",
+      "WS_ADD"
+     ],
+     [
+      "op",
+      "LAZY"
+     ]
+    ],
+    "commit_check_and_reserve": [
+     [
+      "op",
+      "MASK A script_cells"
+     ],
+     [
+      "op",
+      "MASK B own_cells"
+     ],
+     [
+      "op",
+      "QUERY"
+     ],
+     [
+      "op",
+      "HELD"
+     ],
+     [
+      "op",
+      "ACT"
+     ],
+     [
+      "op",
+      "MASK A workspace"
+     ],
+     [
+      "op",
+      "TGT_ADD"
+     ]
+    ],
+    "splice_and_rebase": [
+     [
+      "op",
+      "MASK A workspace"
+     ],
+     [
+      "op",
+      "TGT_SUB"
+     ],
+     [
+      "op",
+      "MASK A script_cells"
+     ],
+     [
+      "op",
+      "LOCK_ADD"
+     ],
+     [
+      "op",
+      "MASK A old_guard"
+     ],
+     [
+      "op",
+      "WS_SUB"
+     ],
+     [
+      "op",
+      "MASK A new_guard"
+     ],
+     [
+      "op",
+      "WS_ADD"
+     ]
+    ],
+    "decide": [
+     [
+      "op",
+      "MASK A workspace"
+     ],
+     [
+      "op",
+      "TGT_ADD"
+     ]
+    ],
+    "frame_end": [
+     [
+      "op",
+      "MASK A guard"
+     ],
+     [
+      "op",
+      "WS_SUB"
+     ],
+     [
+      "op",
+      "REL"
+     ]
+    ],
+    "script_end": [
+     [
+      "op",
+      "MASK A script_cells"
+     ],
+     [
+      "op",
+      "LOCK_SUB"
+     ]
+    ],
+    "dispatcher_guard_check": [
+     [
+      "op",
+      "MASK A patch_cells"
+     ],
+     [
+      "op",
+      "MASK B none"
+     ],
+     [
+      "op",
+      "QUERY"
+     ]
+    ]
+   }
+  },
+  "improved": {
+   "rtl": "hw/rtl/se_resv.sv at 1cb723f (round 5's three changes, msg52; the tests' deploy e8fa215 changes only the testbench)",
+   "measured": "cycles: job 7715854, 39 of 39 cases against hw/golden/resv.py (212,091 operations, 9,447 checks, 1,806 dumps; 5,090 cell operations during ticks); timing: Vivado resv5_1cb723f closes 3.5 ns, WNS +0.117 ns, WHS +0.041 ns (15,576 LUTs with 576 LUTRAM, 10,314 FFs)",
+   "ports": {
+    "slot": [
+     "LAZY",
+     "ACT",
+     "REL",
+     "STARTED",
+     "HELD",
+     "TICK",
+     "TOTALS"
+    ],
+    "cell": [
+     "MASKW",
+     "WS_ADD",
+     "WS_SUB",
+     "TGT_ADD",
+     "TGT_SUB",
+     "LOCK_ADD",
+     "LOCK_SUB",
+     "QUERY",
+     "GUARD_ADD",
+     "GUARD_SUB"
+    ],
+    "status": [
+     "CHECK"
+    ]
+   },
+   "cycles": {
+    "LAZY": 2,
+    "ACT": 2,
+    "REL": 2,
+    "STARTED": 2,
+    "HELD": 2,
+    "TOTALS": 2,
+    "TICK": 67,
+    "MASKW": 2,
+    "WS_ADD": 2,
+    "WS_SUB": 2,
+    "TGT_ADD": 2,
+    "TGT_SUB": 2,
+    "LOCK_ADD": 2,
+    "LOCK_SUB": 2,
+    "QUERY": 3,
+    "GUARD_ADD": 2,
+    "GUARD_SUB": 2,
+    "CHECK": 3
+   },
+   "status_port": {
+    "cells_per_check": 4,
+    "checks_per_cycle": 1
+   },
+   "queue_order": {
+    "slot": [
+     "tick",
+     "frame_end",
+     "commit_check_and_reserve",
+     "registration"
+    ],
+    "cell": [
+     "frame_end",
+     "script_end",
+     "splice_and_rebase",
+     "decide",
+     "commit_check_and_reserve",
+     "registration"
+    ],
+    "status": [
+     "dispatcher_guard_check"
+    ]
+   },
+   "events": {
+    "tick": [
+     [
+      "slot",
+      "TICK"
+     ]
+    ],
+    "registration": [
+     [
+      "cell",
+      "MASK A guard"
+     ],
+     [
+      "cell",
+      "GUARD_ADD"
+     ],
+     [
+      "slot",
+      "LAZY"
+     ]
+    ],
+    "commit_check_and_reserve": [
+     [
+      "cell",
+      "MASK A script_cells"
+     ],
+     [
+      "cell",
+      "MASK B own_cells"
+     ],
+     [
+      "cell",
+      "QUERY"
+     ],
+     [
+      "slot",
+      "HELD"
+     ],
+     [
+      "slot",
+      "ACT"
+     ],
+     [
+      "cell",
+      "MASK A workspace"
+     ],
+     [
+      "cell",
+      "TGT_ADD"
+     ]
+    ],
+    "splice_and_rebase": [
+     [
+      "cell",
+      "MASK A workspace"
+     ],
+     [
+      "cell",
+      "TGT_SUB"
+     ],
+     [
+      "cell",
+      "MASK A script_cells"
+     ],
+     [
+      "cell",
+      "LOCK_ADD"
+     ],
+     [
+      "cell",
+      "GUARD_SUB"
+     ],
+     [
+      "cell",
+      "MASK A new_guard"
+     ],
+     [
+      "cell",
+      "GUARD_ADD"
+     ]
+    ],
+    "decide": [
+     [
+      "cell",
+      "MASK A workspace"
+     ],
+     [
+      "cell",
+      "TGT_ADD"
+     ]
+    ],
+    "frame_end": [
+     [
+      "cell",
+      "GUARD_SUB"
+     ],
+     [
+      "slot",
+      "REL"
+     ]
+    ],
+    "script_end": [
+     [
+      "cell",
+      "MASK A script_cells"
+     ],
+     [
+      "cell",
+      "LOCK_SUB"
+     ]
+    ],
+    "dispatcher_guard_check": [
+     [
+      "status",
+      "CHECK"
+     ]
+    ]
+   }
+  },
+  "overflow": "operations wait in their port's queue order and carry over; a registration's chain starts after its guard is written, a commit's splice after its check (hw:rm_spill_cycles, the delayed events by kind and their rounds; hw:hold_check_spill)"
+ },
+ "splice": {
+  "status": "estimate",
+  "first_instruction_cycles": 10,
+  "edges_per_cycle": 1,
+  "rebase_cycles": 50,
+  "queue": 8,
+  "overflow": "splices queue; one that misses the round continues in the next, and its instructions issue as they stream (hw:splice_spill_rounds)"
+ },
+ "store": {
+  "status": "estimate",
+  "words_per_cycle": 4,
+  "uram288_budget": 64,
+  "resident": "the bodies, the per-site tables, and the rebased tables for commit boundaries b <= b_res, the largest b for which the program fits the budget",
+  "fetch_rounds": 1,
+  "fetch_tags": 64,
+  "overflow": "a commit at b > b_res fetches its rebased table from HBM, and its splice waits fetch_rounds (hw:store_fetches, hw:store_wait_rounds); instructions are issuable once their words are read (hw:store_words_spill)"
+ },
+ "queues": {
+  "resv_ops": 32,
+  "splices": 8,
+  "hbm_tags": 64,
+  "epoch": 128,
+  "win_ingress": 128,
+  "overflow": "a full queue stalls its producer: the operation waits, and its event is delayed (per queue: full cycles, operations delayed, their delay)"
+ }
+}

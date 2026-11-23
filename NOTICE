@@ -1,0 +1,6 @@
+Froq
+Copyright 2026 Yicheng Guang and Yueqi Chen
+
+This product includes SWIPER-SIM (https://github.com/jviszlai/swiper), used under the MIT License;
+see third_party/swiper/LICENSE. The copy in third_party/swiper/ is modified, and
+third_party/swiper/CHANGES.md lists the changes.

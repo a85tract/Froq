@@ -1,0 +1,53 @@
+\begin{figure}[t]
+\centering
+\resizebox{\columnwidth}{!}{%
+\begin{tikzpicture}[x=1.18cm,y=0.65cm,font=\scriptsize,every node/.style={inner sep=1pt}]
+\useasboundingbox (0.04,-0.95) rectangle (6.25,4.85);
+\fill[cBlue!20] (0.710,4.000) .. controls (1.530,4.000) and (1.530,4.160) .. (2.350,4.160) -- (2.350,3.661) .. controls (1.530,3.661) and (1.530,3.501) .. (0.710,3.501) -- cycle;
+\fill[cBlue!20] (0.710,3.501) .. controls (1.530,3.501) and (1.530,3.501) .. (2.350,3.501) -- (2.350,0.068) .. controls (1.530,0.068) and (1.530,0.068) .. (0.710,0.068) -- cycle;
+\fill[cMute!20] (0.710,0.068) .. controls (1.530,0.068) and (1.530,-0.092) .. (2.350,-0.092) -- (2.350,-0.160) .. controls (1.530,-0.160) and (1.530,-0.000) .. (0.710,-0.000) -- cycle;
+\fill[cBlue!20] (2.510,4.160) .. controls (3.330,4.160) and (3.330,4.200) .. (4.150,4.200) -- (4.150,3.710) .. controls (3.330,3.710) and (3.330,3.670) .. (2.510,3.670) -- cycle;
+\fill[cMute!20] (2.510,3.670) .. controls (3.330,3.670) and (3.330,3.650) .. (4.150,3.650) -- (4.150,3.600) .. controls (3.330,3.600) and (3.330,3.640) .. (2.510,3.640) -- cycle;
+\fill[cOrange!20] (2.510,3.640) .. controls (3.330,3.640) and (3.330,3.540) .. (4.150,3.540) -- (4.150,3.490) .. controls (3.330,3.490) and (3.330,3.610) .. (2.510,3.610) -- cycle;
+\fill[cBlue!20] (2.510,3.501) .. controls (3.330,3.501) and (3.330,3.330) .. (4.150,3.330) -- (4.150,1.376) .. controls (3.330,1.376) and (3.330,1.548) .. (2.510,1.548) -- cycle;
+\fill[cOrange!20] (2.510,1.548) .. controls (3.330,1.548) and (3.330,1.316) .. (4.150,1.316) -- (4.150,-0.164) .. controls (3.330,-0.164) and (3.330,0.068) .. (2.510,0.068) -- cycle;
+\fill[cMute!20] (2.510,-0.092) .. controls (3.330,-0.092) and (3.330,-0.324) .. (4.150,-0.324) -- (4.150,-0.374) .. controls (3.330,-0.374) and (3.330,-0.140) .. (2.510,-0.140) -- cycle;
+\fill[cMute!20] (2.510,-0.140) .. controls (3.330,-0.140) and (3.330,-0.434) .. (4.150,-0.434) -- (4.150,-0.484) .. controls (3.330,-0.484) and (3.330,-0.170) .. (2.510,-0.170) -- cycle;
+\fill[cMute] (0.550,4.000) rectangle (0.710,0.000);
+\fill[cMute] (0.550,-0.220) rectangle (0.710,-0.270);
+\fill[cBlue] (2.350,4.160) rectangle (2.510,3.661);
+\fill[cBlue] (2.350,3.501) rectangle (2.510,0.068);
+\fill[cMute] (2.350,-0.092) rectangle (2.510,-0.160);
+\fill[cBlue] (4.150,4.200) rectangle (4.310,3.710);
+\fill[cMute] (4.150,3.650) rectangle (4.310,3.600);
+\fill[cOrange] (4.150,3.540) rectangle (4.310,3.490);
+\fill[cBlue] (4.150,3.330) rectangle (4.310,1.376);
+\fill[cOrange] (4.150,1.316) rectangle (4.310,-0.164);
+\fill[cMute] (4.150,-0.324) rectangle (4.310,-0.374);
+\fill[cMute] (4.150,-0.434) rectangle (4.310,-0.484);
+\node[anchor=south,text=cMute] at (0.630,4.450) {registration};
+\node[anchor=south,text=cMute] at (2.430,4.450) {decision};
+\node[anchor=south,text=cMute] at (4.230,4.450) {final answer};
+\node[anchor=south,rotate=90,align=center] at (0.510,2.000) {registered 99.5\%\\of 7,440 a run};
+\node[anchor=north west,align=left,text=cMute] at (0.050,-0.310) {not registered 0.5\%};
+\node[anchor=east,fill=white,fill opacity=0.75,text opacity=1] at (2.180,3.911) {apply 12.5\%};
+\node[anchor=east,fill=white,fill opacity=0.75,text opacity=1] at (2.180,1.785) {defer 85.8\%};
+\node[anchor=east,fill=white,fill opacity=0.75,text opacity=1] at (2.180,-0.126) {wait 1.7\%};
+\draw[cGrid] (4.330,3.955) -- (4.500,4.060);
+\node[anchor=west,text=cInk] at (4.530,4.060) {prediction right \textbf{907}};
+\draw[cGrid] (4.330,3.625) -- (4.500,3.625);
+\node[anchor=west,text=cInk] at (4.530,3.625) {decoded first \textbf{15.0}};
+\draw[cGrid] (4.330,3.515) -- (4.500,3.180);
+\node[anchor=west,text=cOrange] at (4.530,3.180) {wrong: recovery \textbf{0.2}};
+\draw[cGrid] (4.330,2.353) -- (4.500,2.353);
+\node[anchor=west,text=cInk] at (4.530,2.353) {$S$ not needed \textbf{3,615}};
+\draw[cGrid] (4.330,0.576) -- (4.500,0.576);
+\node[anchor=west,text=cOrange] at (4.530,0.576) {$S$ needed: recovery \textbf{2,739}};
+\draw[cGrid] (4.330,-0.349) -- (4.500,-0.300);
+\node[anchor=west,text=cInk] at (4.530,-0.300) {$S$ not needed \textbf{87.8}};
+\draw[cGrid] (4.330,-0.459) -- (4.500,-0.740);
+\node[anchor=west,text=cInk] at (4.530,-0.740) {$S$ needed \textbf{37.5}};
+\end{tikzpicture}}
+\caption{Outcomes of the pending corrections in a \sys{} run.}
+\label{fig:flow}
+\end{figure}
